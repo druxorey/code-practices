@@ -70,7 +70,9 @@ int addProduct(products productList[], int actualProductQuantity, int MAX_PRODUC
     return actualProductQuantity;
 }
 
+
 void printProductList(products productList[], int actualProductQuantity) {
+    system("clear");
     cout << "Lista de productos:" << endl;
     for (int i = 0; i < actualProductQuantity; i++) {
         cout << "Producto " << i + 1 << ":" << endl;
@@ -80,6 +82,9 @@ void printProductList(products productList[], int actualProductQuantity) {
         cout << "  Categoria: " << productList[i].category << endl;
         cout << "  Fecha de vencimiento: " << productList[i].endDate.day << "/" << productList[i].endDate.month << "/" << productList[i].endDate.year << endl;
     }
+    cout << "Presiona enter para continuar...";
+    cin.ignore();
+    cin.get();
 }
 
 
@@ -88,6 +93,7 @@ bool menu(products productList[], int &actualProductQuantity, int MAX_PRODUCTS) 
     const char exit = '3';
 
     do {
+        system("clear");
         cout << "\nInventario:" << endl;
         cout << " 1 - Agregar productos" << endl;
         cout << " 2 - Mostrar productos" << endl;
@@ -95,6 +101,7 @@ bool menu(products productList[], int &actualProductQuantity, int MAX_PRODUCTS) 
         cout << "Seleccione una opcion: ";
 
         cin >> option;
+        cout << endl;
 
         switch (option) {
             case '1':
@@ -121,6 +128,7 @@ int main() {
 
     products productList[MAX_PRODUCTS];
     int actualProductQuantity = 0;
+
     menu(productList, actualProductQuantity, MAX_PRODUCTS);
 
     return 0;
