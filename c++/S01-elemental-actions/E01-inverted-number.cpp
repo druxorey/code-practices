@@ -5,21 +5,20 @@ using namespace std;
 int main(){
     int originalNumber, invertedNumber = 0;
 
-    cout << endl << "[========= NUMBER INVERTER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n" << endl;
 
-    cout << "Enter a 5 digit number: "; 
+    cout << "Enter a 4 digit number: "; 
     cin >> originalNumber;
 
-    int one,two,three,four,five;
+    int first,second,third,fourth;
 
-    one = originalNumber / 10000;
-    two = (originalNumber % 10000) / 1000;
-    three = (originalNumber % 1000) / 100;
-    four = (originalNumber % 100) /10;
-    five = originalNumber % 10;
+    first = originalNumber / 1000;
+    second = (originalNumber % 1000) / 100;
+    third = (originalNumber % 100) / 10;
+    fourth = originalNumber % 10;
 
-    invertedNumber = (five * 10000)+(four * 1000)+(three * 100)+(two * 10)+ one;        
-    
+    invertedNumber = (fourth * 1000) + (third * 100) + (second * 10) + first;
+
     cout << "The result of inverting the number is: " << invertedNumber << endl;
 
     return 0;

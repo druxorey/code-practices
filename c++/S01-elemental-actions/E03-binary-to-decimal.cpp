@@ -3,20 +3,21 @@
 using namespace std;
 
 int main(){
-    int binary = 0, decimal = 0;
-    int firstPosition,secondPosition,thirdPosition,fourthPosition;
+    int binary, decimal;
 
-    cout << endl << "[========= BINARY TO DECIMAL CALCULATOR =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= BINARY TO DECIMAL =========]\e[0m\n" << endl;
 
-    cout << "Enter a 4 digit binary number: "; 
+    cout << "Enter a 4 digit binary number: ";
     cin >> binary;
 
-    firstPosition = binary / 1000;
-    secondPosition = (binary % 1000) / 100;
-    thirdPosition = (binary % 100) / 10;
-    fourthPosition = binary % 10;
+    int first,second,third,fourth;
 
-    decimal = (firstPosition * 8) + (secondPosition * 4) + (thirdPosition * 2) + (fourthPosition * 1);
+    first = binary / 1000;
+    second = (binary % 1000) / 100;
+    third = (binary % 100) / 10;
+    fourth = binary % 10;
+
+    decimal = (first * 8) + (second * 4) + (third * 2) + (fourth * 1);
 
     cout << "The decimal value is: " << decimal << endl;
 

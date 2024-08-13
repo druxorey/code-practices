@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     int joseDistance, pedroDistance, joseJumps;
 
-    cout << endl << "[========= FROGGY DISTANCES =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= FROG JUMPS =========]\e[0m\n" << endl;
 
     cout << "Enter the distance Jose can jump: ";
     cin >> joseDistance;

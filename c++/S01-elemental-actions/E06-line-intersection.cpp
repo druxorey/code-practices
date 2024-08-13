@@ -5,20 +5,15 @@ using namespace std;
 int main(){
     float m1, b1, m2, b2, xIntersection, yIntersection;
 
-    cout << endl << "[========= INTERSECTION OF NON-PARALLEL LINES =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= LINE INTERSECTION =========]\e[0m\n" << endl;
 
-    cout << "Introduce the incline for the first line: ";
-    cin >> m1;
-    cout << "Introduce the indepentent term for the first line: ";
-    cin >> b1;
+    cout << "Enter values for the first line (m1x+b1): ";
+    cin >> m1 >> b1;
+    cout << "Enter values for the second line (m2x+b2): ";
+    cin >> m2 >> b2;
 
-    cout << "Introduce the incline for the second line: ";
-    cin >> m2;
-    cout << "Introduce the indepentent term for the second line: ";
-    cin >> b2;
-
-    xIntersection = (b2-b1)/(m1-m2);
-    yIntersection = m1*(b2-b1)/(m1-m2)+b1;
+    xIntersection = (b2 - b1) / (m1 - m2);
+    yIntersection = m1 * (b2 - b1) / (m1 - m2) + b1;
 
     cout << "The intersection is: (" << xIntersection << "," << yIntersection << ")" << endl;
 

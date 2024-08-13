@@ -7,6 +7,8 @@ int main() {
 	int firstX, firstY, secondX, secondY, thirdX, thirdY;
 	int xFinal, yFinal;
 
+    cout << "\n\e[0;35m[========= PIRATES COORDINATES =========]\e[0m\n" << endl;
+
 	cout << "Enter the first number: ";
 	cin >> firstNumber;
 	cout << "Enter the second number: ";
