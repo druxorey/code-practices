@@ -13,7 +13,7 @@ int main(){
     cin >> m2 >> b2;
 
     xIntersection = (b2 - b1) / (m1 - m2);
-    yIntersection = m1 * (b2 - b1) / (m1 - m2) + b1;
+    yIntersection = m1 * xIntersection + b1;
 
     cout << "The intersection is: (" << xIntersection << "," << yIntersection << ")" << endl;
 
