@@ -23,9 +23,11 @@ struct category {
 int categorySelection(category categories[]) {
     int category;
     system("clear");
+
     for (int i = 0; i < MAX_CATEGORIES; i++) {
         cout << i + 1 << ". " << categories[i].name << endl;
     }
+
     do {
         cout << "Select a category: ";
         cin >> category;
@@ -33,6 +35,7 @@ int categorySelection(category categories[]) {
             cout << "Invalid category" << endl;
         }
     } while (category <= 0 || category > MAX_CATEGORIES);
+
     return category - 1;
 }
 
@@ -120,6 +123,8 @@ int main() {
     do {
         system("clear");
 
+		cout << "\n\e[0;35m[========= PRODUCT STRUCTURES =========]\e[0m\n" << endl;
+
         cout << "1. Add product" << endl;
         cout << "2. List products" << endl;
         cout << "3. Add Price" << endl;
@@ -154,7 +159,7 @@ int main() {
         cout << "Press enter to continue...";
         cin.get();
         cin.ignore();
-    }while (true);
+    } while (true);
 
     return 0;
 }

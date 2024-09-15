@@ -20,7 +20,7 @@ bool isArraySum(int array[], int size, int compared) {
 int main() {
     int finalNumber, sizeArray;
 
-    printf("\n[========= SUMATORY ITEMS IN ARRAY =========]\n\n");
+    cout << "\n\e[0;35m[========= SUM PAIRS =========]\e[0m\n" << endl;
 
     printf("Enter the array size: ");
     cin >> sizeArray;
@@ -36,7 +36,6 @@ int main() {
     } else {
         printf("\nIn this array there are not 2 numbers that if we add them it gives %i.\n", finalNumber);
     }
-
 
     return 0;
 }

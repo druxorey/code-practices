@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int borderSize;
 
-    cout << endl << "[========= SQUARE BORDER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= SQUARE BORDER =========]\e[0m\n" << endl;
 
     cout << "Enter the border size: ";
     cin >> borderSize;
@@ -18,7 +18,7 @@ int main(){
             } else {
                 cout << "  ";
             }
-        }     
+        }
         cout << endl;
     }
 

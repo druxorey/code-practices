@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int squarePattern, borderSize;
 
-    cout << endl << "[========= ODD SQUARE BORDER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= NESTED SQUARE =========]\e[0m\n" << endl;
 
     cout << "1- Chess.\n2- Dots.\n3- Fractal.\n" << endl;
     cout << "Select the square pattern: ";
@@ -28,7 +28,7 @@ int main(){
                 } else {
                     cout << "  ";
                 }
-            }     
+            }
             cout << endl;
         }
 
@@ -44,7 +44,7 @@ int main(){
                 } else {
                     cout << "  ";
                 }
-            }     
+            }
             cout << endl;
         }
 
@@ -63,7 +63,7 @@ int main(){
                 } else {
                     cout << "  ";
                 }
-            }     
+            }
             cout << endl;
         }
     } 

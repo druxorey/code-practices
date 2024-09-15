@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int originalNumber, invertedNumber = 0;
 
     cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n" << endl;

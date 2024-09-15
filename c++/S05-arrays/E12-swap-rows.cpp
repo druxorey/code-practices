@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 void fillMatrix(int** matrix, int sizeMatrix) {
     int nose = 1;
     for (int i = 0; i < sizeMatrix; i++) {
@@ -15,6 +14,7 @@ void fillMatrix(int** matrix, int sizeMatrix) {
         cout << endl;
     }
 }
+
 
 void changeRows(int** matrix, int size) {
     int temporal = 0;
@@ -31,7 +31,7 @@ void changeRows(int** matrix, int size) {
 int main() {
     int sizeMatrix;
 
-    printf("\n[========= CHANGE ROWS MATRIX =========]\n\n");
+    cout << "\n\e[0;35m[========= SWAP ROWS =========]\e[0m\n" << endl;
 
     do {
         printf("Enter the size of the matrix: ");
@@ -59,5 +59,6 @@ int main() {
         delete[] matrix[i]; 
     }
     delete[] matrix; 
+
     return 0;
 }

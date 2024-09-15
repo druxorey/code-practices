@@ -11,10 +11,10 @@ void oddAndEven(int numberList[], int size, int &even, int &odd) {
     }
 }
 
-int main(){
+int main() {
     int sizeArray, evenQuantity, oddQuantity;
 
-    printf("\n[========= ODD AND EVEN IN ARRAY =========]\n\n");
+    cout << "\n\e[0;35m[========= EVEN ODD COUNT =========]\e[0m\n" << endl;
 
     printf("Enter the size of the array: ");
     cin >> sizeArray;

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int joseDistance, pedroDistance, joseJumps;
 
     cout << "\n\e[0;35m[========= FROG JUMPS =========]\e[0m\n" << endl;

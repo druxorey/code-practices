@@ -20,7 +20,7 @@ int main() {
     int sizeArray;
     int initialArray[sizeArray];
 
-    printf("\n[========= MAX ARRAY ITEM =========]\n\n");
+    cout << "\n\e[0;35m[========= MAX VALUE =========]\e[0m\n" << endl;
 
     printf("Enter the size of the array: ");
     cin >> sizeArray;

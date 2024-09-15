@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int inputNumber, i;
 
-    cout << endl << "[========= DIGITS IN A NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= DIGITS SEQUENCE =========]\e[0m\n" << endl;
 
     cout << "Enter the number: ";
     cin >> inputNumber;
@@ -13,6 +13,7 @@ int main(){
     for (i = 0; inputNumber > 0; i++) {
         inputNumber /= 10;
     }
+
     cout << "The number has " << i << " digits." << endl;
 
     return 0;

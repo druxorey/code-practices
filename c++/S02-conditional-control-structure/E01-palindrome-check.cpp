@@ -2,20 +2,27 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int inputNumber, outputNumber;
+	int firstDigit, secondDigit, thirdDigit, fourthDigit, fifthDigit;
      
-    cout << endl << "[========= CAPICUA NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << endl;
 
     cout << "Enter the number: ";
     cin >> inputNumber;
 
-    outputNumber = ((inputNumber % 10) * 10000)+(((inputNumber % 100) /10) * 1000)+(((inputNumber % 1000) / 100) * 100)+(((inputNumber % 10000) / 1000) * 10)+ (inputNumber / 10000); 
+	fifthDigit = inputNumber / 10000;
+	fourthDigit = (inputNumber % 10000) / 1000;
+	thirdDigit = (inputNumber % 1000) / 100;
+	secondDigit = (inputNumber % 100) / 10;
+	firstDigit = inputNumber % 10;
 
-    if (inputNumber == outputNumber){
-        cout << endl << "The number is capicua" << endl;
+    outputNumber = fifthDigit * 10000 +  fourthDigit * 1000 + thirdDigit * 100 + secondDigit * 10 + firstDigit;
+
+    if (inputNumber == outputNumber) {
+		printf("\nThe number %i is capicua\n", inputNumber);
     } else{
-        cout << endl << "The number is not capicua" << endl;
+		printf("\nThe number %i is not capicua\n", inputNumber);
     }
 
     return 0;

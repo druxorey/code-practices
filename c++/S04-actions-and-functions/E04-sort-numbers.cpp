@@ -2,13 +2,13 @@
 
 using namespace std;
 
-
 int maxNumber(int number) {
     int digit, max = 0;
+
     do {
         digit = number % 10;
         number /= 10;
-        if (max < digit){
+        if (max < digit) {
             max = digit;
             }
 
@@ -20,10 +20,11 @@ int maxNumber(int number) {
 
 int minNumber(int number) {
     int digit, min = 9;
+
     do {
         digit = number % 10;
         number /= 10;
-        if (min > digit){
+        if (min > digit) {
             min = digit;
             }
     } while ((number - 1) != -1);
@@ -35,7 +36,7 @@ int minNumber(int number) {
 int main(){
     int number;
 
-    cout << endl << "[========= MAX AND MIN NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= SORT NUMBERS =========]\e[0m\n" << endl;
 
     do {
         cin.clear();
@@ -45,5 +46,6 @@ int main(){
 
     printf("The max number is %i\n", maxNumber(number));
     printf("The min number is %i\n", minNumber(number));
+
     return 0;
 }

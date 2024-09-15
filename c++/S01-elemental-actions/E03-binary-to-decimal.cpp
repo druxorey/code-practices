@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int binary, decimal;
 
     cout << "\n\e[0;35m[========= BINARY TO DECIMAL =========]\e[0m\n" << endl;

@@ -2,17 +2,16 @@
 
 using namespace std;
 
-int main(){
-
+int main() {
     int binary, correctedBinary = 0, iteration = 1, decimal = 0, finalDecimal = 0;
 
-    cout << endl << "[========= INFINITE BINATY TO DECIMAL =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= BINATY TO DECIMAL =========]\e[0m\n" << endl;
 
     do {
         cout << "Enter the number: ";
         cin >> binary;
 
-        if (binary == 1 || binary == 0){
+        if (binary == 1 || binary == 0) {
             correctedBinary = correctedBinary * 10 + binary;
         } else if (binary != -1){
             cout << "Wrong number" << endl;

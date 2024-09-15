@@ -15,7 +15,7 @@ bool isInWidth (int xVertex, int xPoint, int width) {
 int main(){
     int xPoint, yPoint, xVertex, yVertex, height, width; 
 
-    printf("\n[========= POINT IN RECTANGLE =========]\n\n");
+    cout << "\n\e[0;35m[========= POINT IN RECTANGLE =========]\e[0m\n" << endl;
 
     printf("Enter the x and y position: ");
     cin >> xPoint >> yPoint;
@@ -34,5 +34,6 @@ int main(){
     } else {
         printf("The point is not in the rectangle.\n");
     }
+
     return 0;
 }

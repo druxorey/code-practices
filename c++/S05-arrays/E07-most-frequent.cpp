@@ -18,13 +18,15 @@ int repeatedItem(int array[], int size) {
             maxRepeated = evaluatedRepeated;
         }
     }
+
     return maxValue;
 }
 
 
 int main() {
     int sizeArray;
-    printf("\n[========= MAX REPEATED ITEM =========]\n\n");
+
+    cout << "\n\e[0;35m[========= MOST FREQUENT =========]\e[0m\n" << endl;
 
     cout << "Enter the size of the array: ";
     cin >> sizeArray;

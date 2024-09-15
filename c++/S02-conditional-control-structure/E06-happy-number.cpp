@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int initialNumber, one, two, three, four;
     bool isHappyNumber = false, isAscendantNumber = false;
 
-    cout << endl << "[========= HAPPY NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= HAPPY NUMBER =========]\e[0m\n" << endl;
 
     cout << "Enter a 4 digit nummber: ";
     cin >> initialNumber;
@@ -28,5 +28,6 @@ int main(){
         cout << "ascendant." << endl;
     else if (isHappyNumber)
         cout << "happy." << endl;
+
     return 0;
 }

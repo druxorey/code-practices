@@ -2,13 +2,14 @@
 
 using namespace std;
 
-
 int invertNumber (int fullNumber) {
     int invertedNumber = 0;
+
     do {
         invertedNumber = (invertedNumber * 10) + (fullNumber % 10);
         fullNumber /= 10;
     } while ((fullNumber -1) != -1);
+
     return invertedNumber;
 }
 
@@ -16,6 +17,7 @@ int invertNumber (int fullNumber) {
 int extractDigits(int fullNumber, int stop) {
     bool isEnded = false;
     int finalQuantity = 0;
+
     do {
         if (fullNumber % 10 == stop) {
             isEnded = true;
@@ -24,14 +26,15 @@ int extractDigits(int fullNumber, int stop) {
             fullNumber /= 10;
         }
     } while (!isEnded);
+
     return finalQuantity;
 }
 
 
-int main(){
+int main() {
     int fullNumber, stop;
 
-    cout << endl << "[========= LEFT DIGITS =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= EXTRACT DIGITS =========]\e[0m\n" << endl;
 
     cout << "Enter the number: ";
     cin >> fullNumber;
@@ -39,5 +42,6 @@ int main(){
     cin >> stop;
 
     cout << "The final calculation is: " << extractDigits(invertNumber(fullNumber), stop) << endl;
+
     return 0;
 }

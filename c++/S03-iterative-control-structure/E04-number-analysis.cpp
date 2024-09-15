@@ -2,11 +2,11 @@
 
 using namespace std;
 
-int main(){
+int main() {
     int number, iteration = 0, evenNumbers = 0, oddNumbers = 0, totalNumbers = 0;
 
-    cout << endl << "[========= EVEN AND ODD NUMBERS =========]" << endl << endl;
-    
+    cout << "\n\e[0;35m[========= NUMBER ANALYSYS =========]\e[0m\n" << endl;
+
     do {
         cout << "Enter the number: ";
         cin >> number;

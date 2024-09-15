@@ -3,10 +3,10 @@
 
 using namespace std;
 
-int main(){
+int main() {
     float height = 0, weight = 0, imc = 0, conversion = 0.453592;
     
-    cout << endl << "[========= IMC CALCULATOR =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= BMI CALCULATOR =========]\e[0m\n" << endl;
 
     cout << "Enter your weight in pounds: ";
     cin >> weight;

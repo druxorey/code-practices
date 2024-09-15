@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     float m1, b1, m2, b2, xIntersection, yIntersection;
 
     cout << "\n\e[0;35m[========= LINE INTERSECTION =========]\e[0m\n" << endl;

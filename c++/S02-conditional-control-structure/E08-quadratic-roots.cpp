@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     float quadraticTerm, linearTerm, constantTerm, discriminantValue, rootValue, finalPositiveValue, finalNegativeValue;
 
-    cout << endl << "[====== SECOND DEGREE POLYNOMAL CALCULATOR ======]" << endl << endl;
+    cout << "\n\e[0;35m[========= QUADRATIC ROOTS =========]\e[0m\n" << endl;
 
     cout << "Enter the quadratic term: ";
     cin >> quadraticTerm; 
@@ -24,10 +24,10 @@ int main() {
 
     } else {
         rootValue = sqrt(discriminantValue);
-        
+
         finalPositiveValue = ((-1 * linearTerm) + rootValue) / (2 * quadraticTerm);
         finalNegativeValue = ((-1 * linearTerm) - rootValue) / (2 * quadraticTerm);
-        
+
         if (finalPositiveValue < 1 and finalPositiveValue > -1) {
             cout << "The positive value of the polynomial is: " << 0 << endl;
         } else {

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
     float hourHand, minuteHand;
 
     cout << "\n\e[0;35m[========= CLOCK ANGLE =========]\e[0m\n" << endl;

@@ -4,11 +4,12 @@
 using namespace std;
 
 int main() {
-
     char letters[] = {'e', 'a', 'o', 'i', 'u'};
     char mayus[] = {'E', 'A', 'O', 'I', 'U'};
     int frequency[] = {0, 0, 0, 0, 0};
     char actualLetter;
+
+	cout << "\n\e[0;35m[========= LETTER FREQUENCY =========]\e[0m\n" << endl;
 
     cout << "Enter the path of the file: ";
     string path;

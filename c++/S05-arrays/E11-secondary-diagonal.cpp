@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 void fillMatrix(int** matrix, int sizeMatrix) {
     int nose = 1;
     for (int i = 0; i < sizeMatrix; i++) {
@@ -29,7 +28,7 @@ int diagonalMatrix(int** matrix, int sizeMatrix) {
 int main() {
     int sizeMatrix;
 
-    printf("\n[========= DIAGON MATRIX FINDER =========]\n\n");
+    cout << "\n\e[0;35m[========= SECONDARY DIAGONAL =========]\e[0m\n" << endl;
 
     printf("Enter the size of the array: ");
     cin >> sizeMatrix;
@@ -41,7 +40,7 @@ int main() {
 
     fillMatrix(matrix, sizeMatrix);
     cout << diagonalMatrix(matrix, sizeMatrix) << endl;
-    
+
     for (int i = 0; i < sizeMatrix; i++) {
         delete[] matrix[i]; 
     }

@@ -18,8 +18,8 @@ void moveInArray(int array[], int size, int move) {
 int main() {
     int sizeArray, averageNumber;
 
-    printf("\n[========= MOVE IN ARRAY =========]\n\n");
-    
+    cout << "\n\e[0;35m[========= CIRCULAR SHIFT =========]\e[0m\n" << endl;
+
     printf("Enter the size of the array: ");
     cin >> sizeArray;
     printf("Enter the averge number: ");

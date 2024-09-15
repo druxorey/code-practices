@@ -12,8 +12,8 @@ void averageInArray(int array[], int size, int number, int &quantity) {
 
 int main() {
     int sizeArray, averageNumber, quantityNumber = 0;
-    
-    printf("\n[========= AVERAGE ARRAY ITEM =========]\n\n");
+
+    cout << "\n\e[0;35m[========= GREATER THAN N =========]\e[0m\n" << endl;
 
     printf("Enter the size of the array: ");
     cin >> sizeArray;

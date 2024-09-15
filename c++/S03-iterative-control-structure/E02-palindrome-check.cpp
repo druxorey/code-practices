@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     int inputNumber;
 
-    cout << endl << "[========= INFINITE CAPICUA NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << endl;
 
     cout << "Enter the number: ";
     cin >> inputNumber;
@@ -17,7 +17,7 @@ int main() {
         capicuaNumber = capicuaNumber * 10 + temporalNumber % 10;
         temporalNumber = temporalNumber / 10;
     }
-    
+
     if (capicuaNumber == inputNumber) {
         cout << "The number " << inputNumber << " is capicua." << endl;
     } else {

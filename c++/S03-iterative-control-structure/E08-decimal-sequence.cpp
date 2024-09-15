@@ -6,7 +6,8 @@ int main() {
     bool isEnded = true;
     int inputNumber, fullNumber = 0;
 
-    cout << endl << "[========= FULL NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= DECIMAL SEQUENCE =========]\e[0m\n" << endl;
+
     do {
         cout << "Enter the number: ";
         cin >> inputNumber;

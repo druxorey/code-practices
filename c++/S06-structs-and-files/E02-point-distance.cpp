@@ -13,6 +13,8 @@ struct dot {
 int main() {
     dot dots[2];
 
+	cout << "\n\e[0;35m[========= POINT DISTANCE =========]\e[0m\n" << endl;
+
     for (int i = 0; i < 2; i++) {
         int coorditate;
         cout << "Enter coorditates for the dot number " << i+1 << ": " << endl;
@@ -31,7 +33,6 @@ int main() {
     thirdCalc =  pow((dots[0].z - dots[1].z),2);
 
     cout << "The distance between the points is: " << sqrt(firstCalc + secondCalc + thirdCalc) << endl;
-
 
     return 0;
 }

@@ -4,10 +4,12 @@ using namespace std;
 
 int daysByMonth(int month) {
     int days = 0;
+
     for (int i=1; i< month; i++) {
         if (i == 2) { days += 28; }
         else {days += (i == 4 || i == 6 || i == 9 || i == 11)? 30: 31;}
     }
+
     return days;
 }
 
@@ -29,6 +31,7 @@ int daysDifference(int firstDate, int secondDate) {
 
     firstTotal += daysByYear(firstDate % 10000);
     secondTotal += daysByYear(secondDate % 10000);
+
     return abs(firstTotal - secondTotal);
 }
 
@@ -36,7 +39,7 @@ int daysDifference(int firstDate, int secondDate) {
 int main(){
     int firstDate, secondDate;
 
-    printf("\n[========= DAYS IN THE YEAR =========]\n\n");
+    cout << "\n\e[0;35m[========= DAYS BETWEEN DATES =========]\e[0m\n" << endl;
 
     printf("Enter the first date [DDMMYYYY]: ");
     cin >> firstDate;

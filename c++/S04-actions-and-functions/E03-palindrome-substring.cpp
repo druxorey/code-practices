@@ -4,18 +4,20 @@ using namespace std;
 
 bool isCapicua(int number) {
     int capicua = 0, comparator = number;
+
     do {
         capicua = capicua * 10 + number % 10;
         number /= 10;
     } while (number - 1 != -1);
+
     return capicua == comparator;
 }
 
 
-int main(){
+int main() {
     int number;
 
-    cout << endl << "[========= FUNCTIONAL CAPICUA NUMBER =========]" << endl << endl;
+    cout << "\n\e[0;35m[========= PALINDROME SUBSTRING =========]\e[0m\n" << endl;
 
     do {
         cin.clear();

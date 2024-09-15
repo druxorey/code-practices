@@ -52,6 +52,8 @@ int main(int argc, char *argv[]) {
     string inputArgument = argv[1];
     string outputArgument = argv[2];
 
+	cout << "\n\e[0;35m[========= PEOPLE FINDER =========]\e[0m\n" << endl;
+
     ifstream inputFile(inputArgument);
 
     int size = getFileSize(inputFile);

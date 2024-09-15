@@ -6,6 +6,7 @@ using namespace std;
 
 void replaceInArray(int array[], int size, int number) {
     int i = 0, position = 0;
+
     do {
         position = pow(2,i) - 1;
         array[position] = number;
@@ -16,8 +17,8 @@ void replaceInArray(int array[], int size, int number) {
 
 int main(){
     int sizeArray, replacedNumber;
-    
-    printf("\n[========= REPLACING POWERS OF TWO =========]\n\n");
+
+    cout << "\n\e[0;35m[========= POWER OF TWO =========]\e[0m\n" << endl;
 
     printf("Enter the size of the array: ");
     cin >> sizeArray;
