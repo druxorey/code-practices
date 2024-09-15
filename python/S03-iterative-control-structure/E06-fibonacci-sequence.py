@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= FIBONACCY SEQUENCE =========]\n")
+    print("\n\033[35m[========= FIBONACCY SEQUENCE =========]\033[0m\n")
 
     value = int(input("Introduce la cantidad de iteraciones: "))
 

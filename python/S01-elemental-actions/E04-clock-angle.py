@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= CLOCK ANGLE =========]\n")
+    print("\n\033[35m[========= CLOCK ANGLE =========]\033[0m\n")
 
     hourValue = int(input("Enter the hour: "))
     minuteValue = int(input("Enter the minute: "))
@@ -11,6 +11,7 @@ def main():
     finalAngle = abs(( hourAngle + angleDifference ) - minuteAngle)
 
     print(f"The final angle is {finalAngle}")
+
 
 if __name__ == "__main__":
     main()

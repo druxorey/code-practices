@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= LINE INTERSECTION =========]\n")
+    print("\n\033[35m[========= LINE INTERSECTION =========]\033[0m\n")
 
     m1 = float(input("Enter the slope of the first line: "))
     b1 = float(input("Enter the y-intercept of the first line: "))

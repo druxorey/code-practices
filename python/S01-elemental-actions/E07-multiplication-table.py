@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= MULTIPLICATION TABLE =========]\n")
+    print("\n\033[35m[========= MULTIPLICATION TABLE =========]\033[0m\n")
 
     number = int(input("Enter a number: "))
 

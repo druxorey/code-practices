@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= QUADRATIC ROOTS =========]\n")
+    print("\n\033[35m[========= QUADRATIC ROOTS =========]\033[0m\n")
 
     a = float(input("Enter the quadratic value: "))
     b = float(input("Enter the lineal value: "))

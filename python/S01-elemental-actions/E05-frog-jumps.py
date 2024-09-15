@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= FROG JUMPS =========]\n")
+    print("\n\033[35m[========= FROG JUMPS =========]\033[0m\n")
 
     joseDistance = int(input("Enter the distance in centimeters that José has to jump: "))
     pedroDistance = int(input("Enter the distance in centimeters that Pedro has to jump: "))

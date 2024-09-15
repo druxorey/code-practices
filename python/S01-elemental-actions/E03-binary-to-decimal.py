@@ -1,5 +1,5 @@
 def main():
-    print("\n[========= BINARY TO DECIMAL =========]\n")
+    print("\n\033[35m[========= BINARY TO DECIMAL =========]\033[0m\n")
 
     binary = input("Enter a binary number: ")
 
