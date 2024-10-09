@@ -3,8 +3,7 @@
 
 <p align="center">
 <a href="#repository-structure"><img src="https://img.shields.io/badge/structure-BD93F9?style=for-the-badge"></a>
-<a href="#repository-structure"><img src="https://img.shields.io/badge/how%20to%20run-BD93F9?style=for-the-badge"></a>
-
+<a href="#how-to-execute-scripts"><img src="https://img.shields.io/badge/how%20to%20run-BD93F9?style=for-the-badge"></a>
 </p>
 
 <p align="center">A collection of coding exercises to help you improve your programming skills</p>
