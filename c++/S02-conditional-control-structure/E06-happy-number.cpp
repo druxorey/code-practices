@@ -1,33 +1,31 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int initialNumber, one, two, three, four;
-    bool isHappyNumber = false, isAscendantNumber = false;
+	int initialNumber, one, two, three, four;
+	bool isHappyNumber = false, isAscendantNumber = false;
 
-    cout << "\n\e[0;35m[========= HAPPY NUMBER =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= HAPPY NUMBER =========]\e[0m\n" << '\n';
 
-    cout << "Enter a 4 digit nummber: ";
-    cin >> initialNumber;
+	std::cout << "Enter a 4 digit nummber: ";
+	std::cin >> initialNumber;
 
-    one = initialNumber / 1000;
-    two = (initialNumber % 1000) / 100;
-    three = (initialNumber % 100) / 10;
-    four = initialNumber % 10;
+	one = initialNumber / 1000;
+	two = (initialNumber % 1000) / 100;
+	three = (initialNumber % 100) / 10;
+	four = initialNumber % 10;
 
-    isHappyNumber = initialNumber / 100 > initialNumber % 100;
-    isAscendantNumber = four > three && three > two && two > one;
+	isHappyNumber = initialNumber / 100 > initialNumber % 100;
+	isAscendantNumber = four > three && three > two && two > one;
 
-    cout << "The number is ";
-    if (isHappyNumber && isAscendantNumber)
-        cout << "very happy." << endl;
-    else if (!isHappyNumber && !isAscendantNumber)
-        cout << "unhappy." << endl;
-    else if (isAscendantNumber)
-        cout << "ascendant." << endl;
-    else if (isHappyNumber)
-        cout << "happy." << endl;
+	std::cout << "The number is ";
+	if (isHappyNumber && isAscendantNumber)
+		std::cout << "very happy." << '\n';
+	else if (!isHappyNumber && !isAscendantNumber)
+		std::cout << "unhappy." << '\n';
+	else if (isAscendantNumber)
+		std::cout << "ascendant." << '\n';
+	else if (isHappyNumber)
+		std::cout << "happy." << '\n';
 
-    return 0;
+	return 0;
 }

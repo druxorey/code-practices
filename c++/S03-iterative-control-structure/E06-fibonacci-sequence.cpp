@@ -1,26 +1,24 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    long long int iteration = 1, iterationLimit, xNumber = 0, yNumber = 1, auxiliarNumber = 0;
+	long long int iteration = 1, iterationLimit, xNumber = 0, yNumber = 1, auxiliarNumber = 0;
 
-    cout << "\n\e[0;35m[========= FIBONACCI SEQUENCE =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= FIBONACCI SEQUENCE =========]\e[0m\n" << '\n';
 
-    cout << "Enter de final position in the fibonaccci sequence: ";
-    cin >> iterationLimit;
+	std::cout << "Enter de final position in the fibonaccci sequence: ";
+	std::cin >> iterationLimit;
 
-    do {
-        cout << yNumber << endl;
+	do {
+		std::cout << yNumber << '\n';
 
-        auxiliarNumber = xNumber;
-        xNumber = yNumber;
-        yNumber = auxiliarNumber + yNumber;
-        iteration++;
+		auxiliarNumber = xNumber;
+		xNumber = yNumber;
+		yNumber = auxiliarNumber + yNumber;
+		iteration++;
 
-    } while (iteration != iterationLimit);
+	} while (iteration != iterationLimit);
 
-    cout << yNumber << endl;
+	std::cout << yNumber << '\n';
 
-    return 0;
+	return 0;
 }

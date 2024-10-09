@@ -1,30 +1,28 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 float convertMilesToKm(float miles) {
 	return miles * 1.60934;
 }
 
 
 void printDistance(float distance) {
-	cout << "\nThe distance between the two cities is " << distance << " km.\n" << endl;
+	std::cout << "\nThe distance between the two cities is " << distance << " km.\n" << '\n';
 }
 
 
 bool askForCity() {
-	string initialCity, finalCity;
+	std::string initialCity, finalCity;
 	float distance;
 
-	cout << "Enter the initial city: ";
-	cin >> initialCity;
+	std::cout << "Enter the initial city: ";
+	std::cin >> initialCity;
 
-	cout << "Enter the final city: ";
-	cin >> finalCity;
+	std::cout << "Enter the final city: ";
+	std::cin >> finalCity;
 
-	cout << "Enter the distance between " << initialCity << " and " << finalCity << " in miles: ";
-	cin >> distance;
+	std::cout << "Enter the distance between " << initialCity << " and " << finalCity << " in miles: ";
+	std::cin >> distance;
 
 	if (initialCity == finalCity and distance == 0)
 		return false;
@@ -37,12 +35,12 @@ bool askForCity() {
 
 int main() {
 
-    cout << "\n\e[0;35m[========= CITY DISTANCES =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= CITY DISTANCES =========]\e[0m\n" << '\n';
 
 	while (true) {
 		if (!askForCity())
 			break;
 	}
 
-    return 0;
+	return 0;
 }

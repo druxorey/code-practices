@@ -1,38 +1,36 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
 struct dot {
-    float x = 0;
-    float y = 0;
-    float z = 0;
+	float x = 0;
+	float y = 0;
+	float z = 0;
 };
 
 
 int main() {
-    dot dots[2];
+	dot dots[2];
 
-	cout << "\n\e[0;35m[========= POINT DISTANCE =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= POINT DISTANCE =========]\e[0m\n" << '\n';
 
-    for (int i = 0; i < 2; i++) {
-        int coorditate;
-        cout << "Enter coorditates for the dot number " << i+1 << ": " << endl;
-        cin >> coorditate;
-        dots[i].x = coorditate;
-        cin >> coorditate;
-        dots[i].y = coorditate;
-        cin >> coorditate;
-        dots[i].z = coorditate;
-    }
+	for (int i = 0; i < 2; i++) {
+		int coorditate;
+		std::cout << "Enter coorditates for the dot number " << i+1 << ": " << '\n';
+		std::cin >> coorditate;
+		dots[i].x = coorditate;
+		std::cin >> coorditate;
+		dots[i].y = coorditate;
+		std::cin >> coorditate;
+		dots[i].z = coorditate;
+	}
 
-    float firstCalc, secondCalc, thirdCalc;
+	float firstCalc, secondCalc, thirdCalc;
 
-    firstCalc =  pow((dots[0].x - dots[1].x),2);
-    secondCalc =  pow((dots[0].y - dots[1].y),2);
-    thirdCalc =  pow((dots[0].z - dots[1].z),2);
+	firstCalc =  pow((dots[0].x - dots[1].x),2);
+	secondCalc =  pow((dots[0].y - dots[1].y),2);
+	thirdCalc =  pow((dots[0].z - dots[1].z),2);
 
-    cout << "The distance between the points is: " << sqrt(firstCalc + secondCalc + thirdCalc) << endl;
+	std::cout << "The distance between the points is: " << sqrt(firstCalc + secondCalc + thirdCalc) << '\n';
 
-    return 0;
+	return 0;
 }

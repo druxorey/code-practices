@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int monthToDays(int month) {
 	switch (month) {
 		case 1:
@@ -37,19 +35,19 @@ int monthToDays(int month) {
 int main() {
 	int month, totalDays;
 
-    cout << "\n\e[0;35m[========= DAYS TO MONTH =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= DAYS TO MONTH =========]\e[0m\n" << '\n';
 
-	cout << "Enter the month number: ";
-	cin >> month;
+	std::cout << "Enter the month number: ";
+	std::cin >> month;
 
 	totalDays = monthToDays(month);
 
 	if (totalDays == -1) {
-		cout << "Invalid month." << endl;
+		std::cout << "Invalid month." << '\n';
 		return 1;
 	}
 
-	cout << "Has passed " << totalDays << " days." << endl;
+	std::cout << "Has passed " << totalDays << " days." << '\n';
 
-    return 0;
+	return 0;
 }

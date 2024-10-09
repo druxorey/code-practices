@@ -1,37 +1,35 @@
 #include <iostream>
 #include "array-functions.cpp"
 
-using namespace std;
-
 void moveInArray(int array[], int size, int move) {
-    int movedArray[size], displace = 0;
+	int movedArray[size], displace = 0;
 
-    for (int i = 0; i < size; i++) {
-        displace = (i - move < 0)? size - (move - i) : i - move ;
-        movedArray[displace] = array[i];
-    }
+	for (int i = 0; i < size; i++) {
+		displace = (i - move < 0)? size - (move - i) : i - move ;
+		movedArray[displace] = array[i];
+	}
 
-    for (int i = 0; i < size; i++) {array[i] = movedArray[i];}
+	for (int i = 0; i < size; i++) {array[i] = movedArray[i];}
 } 
 
 
 int main() {
-    int sizeArray, averageNumber;
+	int sizeArray, averageNumber;
 
-    cout << "\n\e[0;35m[========= CIRCULAR SHIFT =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= CIRCULAR SHIFT =========]\e[0m\n" << '\n';
 
-    printf("Enter the size of the array: ");
-    cin >> sizeArray;
-    printf("Enter the averge number: ");
-    cin >> averageNumber;
+	printf("Enter the size of the array: ");
+	std::cin >> sizeArray;
+	printf("Enter the averge number: ");
+	std::cin >> averageNumber;
 
-    int array[sizeArray];
+	int array[sizeArray];
 
-    fillArray(array, sizeArray);
-    printArray(array, sizeArray);
+	fillArray(array, sizeArray);
+	printArray(array, sizeArray);
 
-    moveInArray(array, sizeArray, averageNumber);
-    printArray(array, sizeArray);
+	moveInArray(array, sizeArray, averageNumber);
+	printArray(array, sizeArray);
 
-    return 0;
+	return 0;
 }

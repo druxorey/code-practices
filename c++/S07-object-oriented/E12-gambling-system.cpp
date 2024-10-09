@@ -2,100 +2,98 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
-
 struct ApuestaInfo {
-    double cantidad;
-    bool resultado;
+	double cantidad;
+	bool resultado;
 };
 
 class Usuario {
-    string nombre;
-    string contrasena;
+	std::string nombre;
+	std::string contrasena;
 
-    public:
-        Usuario(string nombre, string contrasena) : nombre(nombre), contrasena(contrasena) {}
+	public:
+		Usuario(std::string nombre, std::string contrasena) : nombre(nombre), contrasena(contrasena) {}
 
-        string getNombre() { return nombre; }
-        string getContrasena() { return contrasena; }
+		std::string getNombre() { return nombre; }
+		std::string getContrasena() { return contrasena; }
 };
 
 class Apuesta {
-    Usuario usuario;
-    ApuestaInfo apuestaInfo;
+	Usuario usuario;
+	ApuestaInfo apuestaInfo;
 
-    public:
-        Apuesta(Usuario usuario, double cantidad) : usuario(usuario) {
-            apuestaInfo.cantidad = cantidad;
-            apuestaInfo.resultado = ((int)cantidad % 5 == 0); // El resultado es verdadero si la cantidad es múltiplo de 5
-        }
+	public:
+		Apuesta(Usuario usuario, double cantidad) : usuario(usuario) {
+			apuestaInfo.cantidad = cantidad;
+			apuestaInfo.resultado = ((int)cantidad % 5 == 0); // El resultado es verdadero si la cantidad es múltiplo de 5
+		}
 
-        Usuario getUsuario() { return usuario; }
-        double getCantidad() { return apuestaInfo.cantidad; }
-        bool getResultado() { return apuestaInfo.resultado; }
+		Usuario getUsuario() { return usuario; }
+		double getCantidad() { return apuestaInfo.cantidad; }
+		bool getResultado() { return apuestaInfo.resultado; }
 };
 
 
-bool usuarioExiste(string nombre, string contrasena) {
-    ifstream archivoDatos("datos.txt");
-    string nombreGuardado, contrasenaGuardada;
+bool usuarioExiste(std::string nombre, std::string contrasena) {
+	std::ifstream archivoDatos("datos.txt");
+	std::string nombreGuardado, contrasenaGuardada;
 
-    while (archivoDatos >> nombreGuardado >> contrasenaGuardada) {
-        if (nombreGuardado == nombre && contrasenaGuardada == contrasena) {
-            return true;
-        }
-    }
+	while (archivoDatos >> nombreGuardado >> contrasenaGuardada) {
+		if (nombreGuardado == nombre && contrasenaGuardada == contrasena) {
+			return true;
+		}
+	}
 
-    return false;
+	return false;
 }
 
 
 void crearUsuario () {
-    string usuario, contrasena;
-    cout << "No estás en el sistema, regístrate [usuario contrasena]: ";
-    cin >> usuario;
-    cin >> contrasena;
-    ofstream archivoUsuarios("datos.txt", ios::app);
-    archivoUsuarios << usuario << " " << contrasena << endl;
-    archivoUsuarios.close();
+	std::string usuario, contrasena;
+	std::cout << "No estás en el sistema, regístrate [usuario contrasena]: ";
+	std::cin >> usuario;
+	std::cin >> contrasena;
+	std::ofstream archivoUsuarios("datos.txt", std::ios::app);
+	archivoUsuarios << usuario << " " << contrasena << '\n';
+	archivoUsuarios.close();
 }
 
 
 int main() {
-    string nombre, contrasena;
-    float cantidad;
-    char respuesta;
-    bool ingresa = false;
+	std::string nombre, contrasena;
+	float cantidad;
+	char respuesta;
+	bool ingresa = false;
 
-    do {
-        cout << "Ingrese su nombre de usuario: ";
-        cin >> nombre;
-        cout << "Ingrese su contraseña: ";
-        cin >> contrasena;
+	do {
+		std::cout << "Ingrese su nombre de usuario: ";
+		std::cin >> nombre;
+		std::cout << "Ingrese su contraseña: ";
+		std::cin >> contrasena;
 
-        if (!usuarioExiste(nombre, contrasena)) {
-            crearUsuario();
-        } else {
-            ingresa = true;
-        }
+		if (!usuarioExiste(nombre, contrasena)) {
+			crearUsuario();
+		} else {
+			ingresa = true;
+		}
 
-    } while (!ingresa);
+	} while (!ingresa);
 
-    Usuario usuario1(nombre, contrasena);
+	Usuario usuario1(nombre, contrasena);
 
-    cout << "Ingresa la cantidad de dinero que deseas apostar: ";
-    cin >> cantidad;
-    cout << "¿Es en efectivo? [s/n]: ";
-    cin >> respuesta;
+	std::cout << "Ingresa la cantidad de dinero que deseas apostar: ";
+	std::cin >> cantidad;
+	std::cout << "¿Es en efectivo? [s/n]: ";
+	std::cin >> respuesta;
 
-    cantidad *= (respuesta == 's' || respuesta == 'S')? 1.5 : 1;
-    Apuesta apuesta1(usuario1, cantidad);
+	cantidad *= (respuesta == 's' || respuesta == 'S')? 1.5 : 1;
+	Apuesta apuesta1(usuario1, cantidad);
 
-    if (apuesta1.getResultado()) {
-        cout << apuesta1.getUsuario().getNombre() << ", has ganado " << apuesta1.getCantidad() * 2 << endl;
-    } else {
-        cout << apuesta1.getUsuario().getNombre() << ", has perdido " << apuesta1.getCantidad() << endl;
-    }
+	if (apuesta1.getResultado()) {
+		std::cout << apuesta1.getUsuario().getNombre() << ", has ganado " << apuesta1.getCantidad() * 2 << '\n';
+	} else {
+		std::cout << apuesta1.getUsuario().getNombre() << ", has perdido " << apuesta1.getCantidad() << '\n';
+	}
 
-    return 0;
+	return 0;
 }

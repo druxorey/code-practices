@@ -1,28 +1,26 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    bool isEnded = true;
-    int inputNumber, fullNumber = 0;
+	bool isEnded = true;
+	int inputNumber, fullNumber = 0;
 
-    cout << "\n\e[0;35m[========= DECIMAL SEQUENCE =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= DECIMAL SEQUENCE =========]\e[0m\n" << '\n';
 
-    do {
-        cout << "Enter the number: ";
-        cin >> inputNumber;
+	do {
+		std::cout << "Enter the number: ";
+		std::cin >> inputNumber;
 
-        if (inputNumber == -1) {
-            isEnded = false;
-        } else if (inputNumber < 0 || inputNumber > 10) {
-            cout << "That's not acceptable, try again.." << endl;
-        } else {
-            fullNumber = (fullNumber * 10) + inputNumber;
-        }
+		if (inputNumber == -1) {
+			isEnded = false;
+		} else if (inputNumber < 0 || inputNumber > 10) {
+			std::cout << "That's not acceptable, try again.." << '\n';
+		} else {
+			fullNumber = (fullNumber * 10) + inputNumber;
+		}
 
-    } while (isEnded != false);
+	} while (isEnded != false);
 
-    cout << fullNumber << endl;
+	std::cout << fullNumber << '\n';
 
-    return 0;
+	return 0;
 }

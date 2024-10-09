@@ -1,39 +1,37 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int number, iteration = 0, evenNumbers = 0, oddNumbers = 0, totalNumbers = 0;
+	int number, iteration = 0, evenNumbers = 0, oddNumbers = 0, totalNumbers = 0;
 
-    cout << "\n\e[0;35m[========= NUMBER ANALYSYS =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= NUMBER ANALYSYS =========]\e[0m\n" << '\n';
 
-    do {
-        cout << "Enter the number: ";
-        cin >> number;
-        
-        totalNumbers += number;
-        iteration++;
+	do {
+		std::cout << "Enter the number: ";
+		std::cin >> number;
+		
+		totalNumbers += number;
+		iteration++;
 
-        if (number % 2 == 0) {
-            oddNumbers += number;
-        } else {
-            evenNumbers += number;
-        }
+		if (number % 2 == 0) {
+			oddNumbers += number;
+		} else {
+			evenNumbers += number;
+		}
 
-    } while (number != 0);
+	} while (number != 0);
 
-    float oddPercentage, evenPercentage;
+	float oddPercentage, evenPercentage;
 
-    oddPercentage = ((float)oddNumbers / totalNumbers) * 100;
-    evenPercentage = ((float)evenNumbers / totalNumbers) * 100;
+	oddPercentage = ((float)oddNumbers / totalNumbers) * 100;
+	evenPercentage = ((float)evenNumbers / totalNumbers) * 100;
 
-    cout << endl;
-    cout << "The sum of all odd numbers is: " << oddNumbers << endl;
-    cout << "The percentage of all even numbers is: " << oddPercentage << "%" << endl;
-    cout << "The sum of all even numbers is: " << evenNumbers << endl;
-    cout << "The percentage of all even numbers is: " << evenPercentage << "%" << endl;
-    cout << "The sum of all numbers is: " << totalNumbers << endl;
-    cout << "You enter a total of " << iteration << " numbers."<< endl;
+	std::cout << '\n';
+	std::cout << "The sum of all odd numbers is: " << oddNumbers << '\n';
+	std::cout << "The percentage of all even numbers is: " << oddPercentage << "%" << '\n';
+	std::cout << "The sum of all even numbers is: " << evenNumbers << '\n';
+	std::cout << "The percentage of all even numbers is: " << evenPercentage << "%" << '\n';
+	std::cout << "The sum of all numbers is: " << totalNumbers << '\n';
+	std::cout << "You enter a total of " << iteration << " numbers."<< '\n';
 
-    return 0;
+	return 0;
 }

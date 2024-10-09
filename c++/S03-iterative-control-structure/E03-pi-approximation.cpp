@@ -1,20 +1,18 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    double inputNumber, piValue = 4;
+	double inputNumber, piValue = 4;
 
-    cout << "\n\e[0;35m[========= PI APPROXIMATION =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= PI APPROXIMATION =========]\e[0m\n" << '\n';
 
-    cout << "Enter the number of iterations: ";
-    cin >> inputNumber;
+	std::cout << "Enter the number of iterations: ";
+	std::cin >> inputNumber;
 
-    for (double i = 3; i <= (inputNumber * 4) ; i += 4) {
-        piValue = piValue - (4/i) + (4/(i+2));
-    }
+	for (double i = 3; i <= (inputNumber * 4) ; i += 4) {
+		piValue = piValue - (4/i) + (4/(i+2));
+	}
 
-    cout << "The value of pi is: " << piValue << endl;
+	std::cout << "The value of pi is: " << piValue << '\n';
 
-    return 0;
+	return 0;
 }

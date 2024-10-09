@@ -1,20 +1,18 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int inputNumber, i;
+	int inputNumber, i;
 
-    cout << "\n\e[0;35m[========= DIGITS SEQUENCE =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= DIGITS SEQUENCE =========]\e[0m\n" << '\n';
 
-    cout << "Enter the number: ";
-    cin >> inputNumber;
+	std::cout << "Enter the number: ";
+	std::cin >> inputNumber;
 
-    for (i = 0; inputNumber > 0; i++) {
-        inputNumber /= 10;
-    }
+	for (i = 0; inputNumber > 0; i++) {
+		inputNumber /= 10;
+	}
 
-    cout << "The number has " << i << " digits." << endl;
+	std::cout << "The number has " << i << " digits." << '\n';
 
-    return 0;
+	return 0;
 }

@@ -1,47 +1,45 @@
 #include <iostream>
 
-using namespace std;
-
 int invertNumber (int fullNumber) {
-    int invertedNumber = 0;
+	int invertedNumber = 0;
 
-    do {
-        invertedNumber = (invertedNumber * 10) + (fullNumber % 10);
-        fullNumber /= 10;
-    } while ((fullNumber -1) != -1);
+	do {
+		invertedNumber = (invertedNumber * 10) + (fullNumber % 10);
+		fullNumber /= 10;
+	} while ((fullNumber -1) != -1);
 
-    return invertedNumber;
+	return invertedNumber;
 }
 
 
 int extractDigits(int fullNumber, int stop) {
-    bool isEnded = false;
-    int finalQuantity = 0;
+	bool isEnded = false;
+	int finalQuantity = 0;
 
-    do {
-        if (fullNumber % 10 == stop) {
-            isEnded = true;
-        } else {
-            finalQuantity = (finalQuantity * 10) + (fullNumber % 10);
-            fullNumber /= 10;
-        }
-    } while (!isEnded);
+	do {
+		if (fullNumber % 10 == stop) {
+			isEnded = true;
+		} else {
+			finalQuantity = (finalQuantity * 10) + (fullNumber % 10);
+			fullNumber /= 10;
+		}
+	} while (!isEnded);
 
-    return finalQuantity;
+	return finalQuantity;
 }
 
 
 int main() {
-    int fullNumber, stop;
+	int fullNumber, stop;
 
-    cout << "\n\e[0;35m[========= EXTRACT DIGITS =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= EXTRACT DIGITS =========]\e[0m\n" << '\n';
 
-    cout << "Enter the number: ";
-    cin >> fullNumber;
-    cout << "Enter the final number: ";
-    cin >> stop;
+	std::cout << "Enter the number: ";
+	std::cin >> fullNumber;
+	std::cout << "Enter the final number: ";
+	std::cin >> stop;
 
-    cout << "The final calculation is: " << extractDigits(invertNumber(fullNumber), stop) << endl;
+	std::cout << "The final calculation is: " << extractDigits(invertNumber(fullNumber), stop) << '\n';
 
-    return 0;
+	return 0;
 }

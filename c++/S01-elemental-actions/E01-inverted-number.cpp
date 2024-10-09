@@ -1,26 +1,24 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int originalNumber, invertedNumber = 0;
+	int originalNumber, invertedNumber = 0;
 
-    cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n" << '\n';
 
-    cout << "Enter a 4 digit number: "; 
-    cin >> originalNumber;
+	std::cout << "Enter a 4 digit number: "; 
+	std::cin >> originalNumber;
 
-    int first,second,third,fourth;
+	int first,second,third,fourth;
 
-    first = originalNumber / 1000;
-    second = (originalNumber % 1000) / 100;
-    third = (originalNumber % 100) / 10;
-    fourth = originalNumber % 10;
+	first = originalNumber / 1000;
+	second = (originalNumber % 1000) / 100;
+	third = (originalNumber % 100) / 10;
+	fourth = originalNumber % 10;
 
-    invertedNumber = (fourth * 1000) + (third * 100) + (second * 10) + first;
+	invertedNumber = (fourth * 1000) + (third * 100) + (second * 10) + first;
 
-    cout << "The result of inverting the number is: " << invertedNumber << endl;
+	std::cout << "The result of inverting the number is: " << invertedNumber << '\n';
 
-    return 0;
+	return 0;
 }
 

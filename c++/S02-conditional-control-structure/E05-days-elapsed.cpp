@@ -1,17 +1,15 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 	int inputDay, inputMonth, totalDays = 0;
 
-    cout << "\n\e[0;35m[========= DAYS ELAPSED =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= DAYS ELAPSED =========]\e[0m\n" << '\n';
 
-	cout << "Enter the day: ";
-	cin >> inputDay;
+	std::cout << "Enter the day: ";
+	std::cin >> inputDay;
 
-	cout << "Enter the month: ";
-	cin >> inputMonth;
+	std::cout << "Enter the month: ";
+	std::cin >> inputMonth;
 
 	switch (inputMonth) {
 		case 12:
@@ -40,7 +38,7 @@ int main() {
 			totalDays += inputDay;
 			break;
 		default:
-			cout << "Invalid month." << endl;
+			std::cout << "Invalid month." << '\n';
 			return 1;
 	}
 

@@ -1,33 +1,31 @@
 #include <iostream>
 
-using namespace std;
+bool isCapicua(std::string text) { 
+	int lenght = text.length(); 
 
-bool isCapicua(string text) { 
-    int lenght = text.length(); 
+	for (int i = 0 ; i <= lenght/2 ; i++) {
+		if (text[lenght-1-i] != text[i]) {
+			return false;
+		}
+	}
 
-    for (int i = 0 ; i <= lenght/2 ; i++) {
-        if (text[lenght-1-i] != text[i]) {
-            return false;
-        }
-    }
-
-    return true;
+	return true;
 }
 
 
 int main() {
-    string textNormal;
+	std::string textNormal;
 
-    cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
 
-    printf("Enter the string: ");
-    cin >> textNormal;
+	printf("Enter the string: ");
+	std::cin >> textNormal;
 
-    if (isCapicua(textNormal)) {
-        printf("The string is capicua.\n");
-    } else {
-        printf("The string is not capicua.\n");
-    }
+	if (isCapicua(textNormal)) {
+		printf("The string is capicua.\n");
+	} else {
+		printf("The string is not capicua.\n");
+	}
 
-    return 0;
+	return 0;
 }

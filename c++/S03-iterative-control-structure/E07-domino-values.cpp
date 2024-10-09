@@ -1,16 +1,14 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int i = 0, j = 0;
+	int i = 0, j = 0;
 
-    cout << "\n\e[0;35m[========= DOMINO VALUES =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= DOMINO VALUES =========]\e[0m\n" << '\n';
 
-    for (i = 0; i <= 6; i++) {
-        for (j = 0; j <= i; j++) {
-            cout << i << ":" << j << endl;
-        }
-    }
-    return 0;
+	for (i = 0; i <= 6; i++) {
+		for (j = 0; j <= i; j++) {
+			std::cout << i << ":" << j << '\n';
+		}
+	}
+	return 0;
 }

@@ -1,56 +1,54 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 	int inputMonth;
 
-    cout << "\n\e[0;35m[========= MONTH NAME =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= MONTH NAME =========]\e[0m\n" << '\n';
 
-	cout << "Enter the month number: ";
-	cin >> inputMonth;
+	std::cout << "Enter the month number: ";
+	std::cin >> inputMonth;
 
-	cout << "The month is ";
+	std::cout << "The month is ";
 
 	switch (inputMonth) {
 		case 1:
-			cout << "January" << endl;
+			std::cout << "January" << '\n';
 			break;
 		case 2:
-			cout << "February" << endl;
+			std::cout << "February" << '\n';
 			break;
 		case 3:
-			cout << "March" << endl;
+			std::cout << "March" << '\n';
 			break;
 		case 4:
-			cout << "April" << endl;
+			std::cout << "April" << '\n';
 			break;
 		case 5:
-			cout << "May" << endl;
+			std::cout << "May" << '\n';
 			break;
 		case 6:
-			cout << "June" << endl;
+			std::cout << "June" << '\n';
 			break;
 		case 7:
-			cout << "July" << endl;
+			std::cout << "July" << '\n';
 			break;
 		case 8:
-			cout << "August" << endl;
+			std::cout << "August" << '\n';
 			break;
 		case 9:
-			cout << "September" << endl;
+			std::cout << "September" << '\n';
 			break;
 		case 10:
-			cout << "October" << endl;
+			std::cout << "October" << '\n';
 			break;
 		case 11:
-			cout << "November" << endl;
+			std::cout << "November" << '\n';
 			break;
 		case 12:
-			cout << "December" << endl;
+			std::cout << "December" << '\n';
 			break;
 		default:
-			cout << "invalid" << endl;
+			std::cout << "invalid" << '\n';
 			return 1;
 	}
 

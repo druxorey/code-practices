@@ -1,25 +1,23 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
-
 int main() {
-    float hourHand, minuteHand;
+	float hourHand, minuteHand;
 
-    cout << "\n\e[0;35m[========= CLOCK ANGLE =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= CLOCK ANGLE =========]\e[0m\n" << '\n';
 
-    cout << "Enter the clock hour hand: ";
-    cin >> hourHand;
-    cout << "Enter the clock minute hand: ";
-    cin >> minuteHand;
+	std::cout << "Enter the clock hour hand: ";
+	std::cin >> hourHand;
+	std::cout << "Enter the clock minute hand: ";
+	std::cin >> minuteHand;
 
-    float hourAngle, minuteAngle, finalAngle;
+	float hourAngle, minuteAngle, finalAngle;
 
-    hourAngle = hourHand * 30;
-    minuteAngle = minuteHand * 6;
-    finalAngle = abs((hourAngle + (minuteAngle / 12)) - minuteAngle);
+	hourAngle = hourHand * 30;
+	minuteAngle = minuteHand * 6;
+	finalAngle = abs((hourAngle + (minuteAngle / 12)) - minuteAngle);
 
-    cout << "The angle between both hand's is " << finalAngle << " degrees." << endl;
+	std::cout << "The angle between both hand's is " << finalAngle << " degrees." << '\n';
 
-    return 0;
+	return 0;
 }

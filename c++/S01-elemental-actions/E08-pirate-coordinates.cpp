@@ -1,20 +1,18 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
 	int firstNumber, secondNumber, thirdNumber;
 	int firstX, firstY, secondX, secondY, thirdX, thirdY;
 	int xFinal, yFinal;
 
-    cout << "\n\e[0;35m[========= PIRATES COORDINATES =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= PIRATES COORDINATES =========]\e[0m\n" << '\n';
 
-	cout << "Enter the first number: ";
-	cin >> firstNumber;
-	cout << "Enter the second number: ";
-	cin >> secondNumber;
-	cout << "Enter the third number: ";
-	cin >> thirdNumber;
+	std::cout << "Enter the first number: ";
+	std::cin >> firstNumber;
+	std::cout << "Enter the second number: ";
+	std::cin >> secondNumber;
+	std::cout << "Enter the third number: ";
+	std::cin >> thirdNumber;
 
 	firstX = firstNumber / 100;
 	firstY = firstNumber % 100;
@@ -28,7 +26,7 @@ int main() {
 	xFinal = (firstX + secondX + thirdX) / 3;
 	yFinal = (firstY + secondY + thirdY) / 3;
 
-	cout << "The final coordinate is X:" << xFinal << " Y:" << yFinal << endl;
+	std::cout << "The final coordinate is X:" << xFinal << " Y:" << yFinal << '\n';
 
 	return 0;
 }

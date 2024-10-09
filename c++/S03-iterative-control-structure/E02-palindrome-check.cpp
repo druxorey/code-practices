@@ -1,28 +1,26 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int inputNumber;
+	int inputNumber;
 
-    cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << endl;
+	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
 
-    cout << "Enter the number: ";
-    cin >> inputNumber;
+	std::cout << "Enter the number: ";
+	std::cin >> inputNumber;
 
-    int capicuaNumber = 0;
-    int temporalNumber = inputNumber;
+	int capicuaNumber = 0;
+	int temporalNumber = inputNumber;
 
-    for (int i = 0; temporalNumber > 0; i++) {
-        capicuaNumber = capicuaNumber * 10 + temporalNumber % 10;
-        temporalNumber = temporalNumber / 10;
-    }
+	for (int i = 0; temporalNumber > 0; i++) {
+		capicuaNumber = capicuaNumber * 10 + temporalNumber % 10;
+		temporalNumber = temporalNumber / 10;
+	}
 
-    if (capicuaNumber == inputNumber) {
-        cout << "The number " << inputNumber << " is capicua." << endl;
-    } else {
-        cout << "The number " << inputNumber << " is not capicua." << endl;
-    }
+	if (capicuaNumber == inputNumber) {
+		std::cout << "The number " << inputNumber << " is capicua." << '\n';
+	} else {
+		std::cout << "The number " << inputNumber << " is not capicua." << '\n';
+	}
 
-    return 0;
+	return 0;
 }
