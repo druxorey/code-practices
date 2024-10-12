@@ -33,3 +33,5 @@
     X      X  X  X      X
     X                       X
     X  X  X  X  X  X  X
+
+11) **E11-guessing-game**: Write an algorithm that generates a random number between 1 and 100 and asks the user to guess the number. If the number is incorrect, the program should give the user a clue by telling them if the number is higher or lower than the secret number. The game should continue until the user guesses the number.

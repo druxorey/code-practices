@@ -33,3 +33,5 @@
 	X      X  X  X      X
 	X                       X
 	X  X  X  X  X  X  X
+
+11) **E11-guessing-game**: Escriba un algoritmo que genere un número aleatorio entre 1 y 100 y le pida al usuario que adivine el número. Si el número es incorrecto, el programa debe darle al usuario una pista si el número es mayor o menor que el número secreto. El juego debe continuar hasta que el usuario adivine el número.
