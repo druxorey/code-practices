@@ -20,3 +20,5 @@
 8) **E08-rectangle-intersection**: Usando la función desarrollada en el problema 7 haga una función que tome como entrada dos rectángulos y determine si algún vértice del 1er rectángulo está contenido en el 2do rectángulo.
 
 9) **E09-bank-account**: Haga un programa que simule una cuenta bancaria. Debe permitir depositar, retirar y consultar el saldo de la cuenta.
+
+10) **E10-rock-paper-scissors**: Cree un programa que simule el juego piedra-papel-tijera. El programa debe permitir al usuario jugar contra la computadora.

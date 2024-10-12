@@ -20,3 +20,5 @@
 8) **E08-rectangle-intersection**: Using the function developed in problem 7, create a function that takes as input two rectangles and determines if any vertex of the 1st rectangle is contained in the 2nd rectangle.
 
 9) **E09-bank-account**: Create a program that simulates a bank account. It should allow you to deposit, withdraw, and check the account balance.
+
+10) **E10-rock-paper-scissors**: Create a program that simulates the game rock-paper-scissors. The program should allow the user to play against the computer.
