@@ -18,3 +18,5 @@
 7) **E07-point-in-rectangle**: Haga una función para determinar si un punto (X, Y) está dentro de un rectángulo. El rectángulo es definido por la coordenada del vértice superior izquierdo, su altura y su ancho.
 
 8) **E08-rectangle-intersection**: Usando la función desarrollada en el problema 7 haga una función que tome como entrada dos rectángulos y determine si algún vértice del 1er rectángulo está contenido en el 2do rectángulo.
+
+9) **E09-bank-account**: Haga un programa que simule una cuenta bancaria. Debe permitir depositar, retirar y consultar el saldo de la cuenta.

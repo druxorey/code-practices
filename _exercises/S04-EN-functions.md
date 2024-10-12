@@ -18,3 +18,5 @@
 7) **E07-point-in-rectangle**: Create a function to determine if a point (X, Y) is inside a rectangle. The rectangle is defined by the coordinate of the top-left vertex, its height, and its width.
 
 8) **E08-rectangle-intersection**: Using the function developed in problem 7, create a function that takes as input two rectangles and determines if any vertex of the 1st rectangle is contained in the 2nd rectangle.
+
+9) **E09-bank-account**: Create a program that simulates a bank account. It should allow you to deposit, withdraw, and check the account balance.
