@@ -23,3 +23,5 @@
 11) **E11-secondary-diagonal**: Haga una función que tome como entrada una matriz cuadrada y retorne la suma de los elementos de la diagonal secundaria.
 
 12) **E12-swap-rows**: Haga una acción que tome como entrada una matriz (con cantidad par de filas) e intercambie las filas pares y las impares. **Ejemplo:** Si la matriz es {{4, 2}, {1, 2}, {6, −1}, {3, 5}}, la matriz resultante debería ser {{1, 2}, {4, 2}, {3, 5}, {6, −1}}.
+
+13) **E13-tic-tac-toe**: Haga un juego de tic-tac-toe con la computadora, El usuario debe elegir con que símbolo jugar, y el juego debe terminar cuando haya un ganador o un empate. El tablero debe ser una matriz de un tamaño n > 3.
