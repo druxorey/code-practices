@@ -9,15 +9,10 @@ void randArray(int array[], int size) {
 }
 
 
-void fillMatrix(int** matrix, int sizeMatrix) {
-    int number = 1;
-
-    for (int i = 0; i < sizeMatrix; i++) {
-        for (int j = 0; j < sizeMatrix; j++) {
-            matrix[i][j] = number + j;
-        }
-        number += sizeMatrix;
-    }
+void fillArray(int array[], int size) {
+	for (int i = 0; i < size; i++) {
+		array[i] = i;
+	}
 }
 
 
