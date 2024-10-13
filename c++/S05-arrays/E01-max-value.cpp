@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 int maxArray(int array[], int size) {
 	int maxNumber = array[0];

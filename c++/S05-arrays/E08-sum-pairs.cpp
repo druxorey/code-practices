@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 int isArraySum(int array[], int size, int compared) {
 	int times = 0;

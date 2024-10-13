@@ -1,6 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
-
+#include "../U1-libraries/dxmatrix.cpp"
 
 void changeRows(int** matrix, int size) {
 	int temporal = 0;

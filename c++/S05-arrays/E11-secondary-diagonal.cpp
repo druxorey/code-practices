@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxmatrix.cpp"
 
 int diagonalMatrix(int** matrix, int sizeMatrix) {
 	int finalSum = 0;

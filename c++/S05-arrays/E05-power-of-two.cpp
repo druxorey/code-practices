@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 void replaceInArray(int array[], int size, int number) {
 	int i = 0, position = 0;

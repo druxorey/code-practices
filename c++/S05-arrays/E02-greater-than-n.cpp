@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 void averageInArray(int array[], int size, int number, int &quantity) {
 	for (int i = 0; i < size; i++) {

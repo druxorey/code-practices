@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 void moveInArray(int array[], int size, int move) {
 	int movedArray[size], displace = 0;

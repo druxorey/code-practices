@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 int repeatedItem(int array[], int size) {
 	int maxValue = array[0], maxRepeated = 1;

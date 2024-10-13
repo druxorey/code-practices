@@ -1,5 +1,5 @@
 #include <iostream>
-#include "array-functions.cpp"
+#include "../U1-libraries/dxarray.cpp"
 
 void oddAndEven(int numberList[], int size, int &even, int &odd) {
 	even = 0, odd =0;
