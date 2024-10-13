@@ -9,21 +9,25 @@ void averageInArray(int array[], int size, int number, int &quantity) {
 
 
 int main() {
-	int sizeArray, averageNumber, quantityNumber = 0;
+	int sizeArray, thresholdValue, countGreaterThan = 0;
 
 	std::cout << "\n\e[0;35m[========= GREATER THAN N =========]\e[0m\n" << '\n';
 
 	printf("Enter the size of the array: ");
 	std::cin >> sizeArray;
 	printf("Enter the averge number: ");
-	std::cin >> averageNumber;
+	std::cin >> thresholdValue;
 
 	int array[sizeArray];
 
 	randArray(array, sizeArray);
-	averageInArray(array, sizeArray, averageNumber, quantityNumber);
+	averageInArray(array, sizeArray, thresholdValue, countGreaterThan);
 
-	printf("\nFinal quantity: %i\n", quantityNumber);
+	float percentageValue = (float)countGreaterThan / (float)sizeArray * 100.0;
+
+	printArray(array, sizeArray);
+	printf("\nFinal quantity: %i\n", countGreaterThan);
+	printf("Final percentaje: %i%%\n", (int)percentageValue);
 
 	return 0;
 }

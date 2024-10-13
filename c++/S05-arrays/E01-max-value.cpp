@@ -14,16 +14,19 @@ int maxArray(int array[], int size) {
 	return maxNumber;
 };
 
+
 int main() {
 	int sizeArray;
-	int initialArray[sizeArray];
 
 	std::cout << "\n\e[0;35m[========= MAX VALUE =========]\e[0m\n" << '\n';
 
 	printf("Enter the size of the array: ");
 	std::cin >> sizeArray;
 
+	int initialArray[sizeArray];
 	randArray(initialArray, sizeArray);
+
+	printArray(initialArray, sizeArray);
 	printf("The max number in the array is %i.\n", maxArray(initialArray, sizeArray));
 
 	return 0;

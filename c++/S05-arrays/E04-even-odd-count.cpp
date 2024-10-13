@@ -9,6 +9,7 @@ void oddAndEven(int numberList[], int size, int &even, int &odd) {
 	}
 }
 
+
 int main() {
 	int sizeArray, evenQuantity, oddQuantity;
 
@@ -21,6 +22,7 @@ int main() {
 	randArray(numberList, sizeArray);
 	oddAndEven(numberList, sizeArray, evenQuantity, oddQuantity);
 
+	printArray(numberList, sizeArray);
 	printf("In the array are %i odd numbers and %i even numbers.\n", oddQuantity, evenQuantity);
 
 	return 0;

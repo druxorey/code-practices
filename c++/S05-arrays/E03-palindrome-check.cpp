@@ -1,10 +1,10 @@
 #include <iostream>
 
-bool isCapicua(std::string text) { 
-	int lenght = text.length(); 
+bool isPalindrome(std::string text) { 
+	int length = text.length(); 
 
-	for (int i = 0 ; i <= lenght/2 ; i++) {
-		if (text[lenght-1-i] != text[i]) {
+	for (int i = 0 ; i <= length / 2 ; i++) {
+		if (text[length - 1 - i] != text[i]) {
 			return false;
 		}
 	}
@@ -14,14 +14,14 @@ bool isCapicua(std::string text) {
 
 
 int main() {
-	std::string textNormal;
+	std::string inputText;
 
 	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
 
 	printf("Enter the string: ");
-	std::cin >> textNormal;
+	std::cin >> inputText;
 
-	if (isCapicua(textNormal)) {
+	if (isPalindrome(inputText)) {
 		printf("The string is capicua.\n");
 	} else {
 		printf("The string is not capicua.\n");
