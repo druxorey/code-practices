@@ -1,17 +1,5 @@
 #include <iostream>
-
-void fillMatrix(int** matrix, int sizeMatrix) {
-	int nose = 1;
-	for (int i = 0; i < sizeMatrix; i++) {
-		for (int j = 0; j < sizeMatrix; j++) {
-			matrix[i][j] = nose + j;
-			if (nose + j < 10) {std::cout << " ";}
-			std::cout << nose + j << "|";
-		}
-		nose += sizeMatrix;
-		std::cout << '\n';
-	}
-}
+#include "array-functions.cpp"
 
 
 void changeRows(int** matrix, int size) {
@@ -41,17 +29,12 @@ int main() {
 		matrix[i] = new int[sizeMatrix];
 	}
 
+	std::cout << "\nInitial matrix\n";
 	fillMatrix(matrix, sizeMatrix);
+	printMatrix(matrix, sizeMatrix);
+	std::cout << "\nChanged matrix\n";
 	changeRows(matrix, sizeMatrix);
-
-	std::cout << '\n';
-	for (int i = 0; i < sizeMatrix; i++) {
-		for (int j = 0; j < sizeMatrix; j++) {
-			if (matrix[i][j] < 10) {std::cout << " ";}
-			std::cout << matrix[i][j] << "|";
-		}
-		std::cout << '\n';
-	}
+	printMatrix(matrix, sizeMatrix);
 
 	for (int i = 0; i < sizeMatrix; i++) {
 		delete[] matrix[i]; 

@@ -1,18 +1,5 @@
 #include <iostream>
-
-void fillMatrix(int** matrix, int sizeMatrix) {
-	int nose = 1;
-	for (int i = 0; i < sizeMatrix; i++) {
-		for (int j = 0; j < sizeMatrix; j++) {
-			matrix[i][j] = nose + j;
-			if (nose + j < 10) {std::cout << " ";}
-			std::cout << nose + j << "|";
-		}
-		nose += sizeMatrix;
-		std::cout << '\n';
-	}
-}
-
+#include "array-functions.cpp"
 
 int diagonalMatrix(int** matrix, int sizeMatrix) {
 	int finalSum = 0;
@@ -37,7 +24,8 @@ int main() {
 	}
 
 	fillMatrix(matrix, sizeMatrix);
-	std::cout << diagonalMatrix(matrix, sizeMatrix) << '\n';
+	printMatrix(matrix, sizeMatrix);
+	printf("\nThe sum of the secondary diagonal is %i.\n", diagonalMatrix(matrix, sizeMatrix));
 
 	for (int i = 0; i < sizeMatrix; i++) {
 		delete[] matrix[i]; 

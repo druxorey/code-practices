@@ -22,9 +22,9 @@ int main() {
 	std::cin >> inputText;
 
 	if (isPalindrome(inputText)) {
-		printf("The string is capicua.\n");
+		printf("The string is a palindrome.\n");
 	} else {
-		printf("The string is not capicua.\n");
+		printf("The string is not a palindrome.\n");
 	}
 
 	return 0;

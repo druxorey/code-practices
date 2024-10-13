@@ -13,10 +13,29 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= GREATER THAN N =========]\e[0m\n" << '\n';
 
-	printf("Enter the size of the array: ");
-	std::cin >> sizeArray;
-	printf("Enter the averge number: ");
-	std::cin >> thresholdValue;
+	do {
+		std::cout << "Enter the size of the array: ";
+		std::cin >> sizeArray;
+
+		if (!std::cin.fail()) { break; }
+
+		printf("Invalid input. Please try again.\n");
+		std::cin.clear();
+		std::cin.ignore(256,'\n');
+
+	} while (true);
+
+	do {
+		std::cout << "Enter the averge number: ";
+		std::cin >> thresholdValue;
+
+		if (!std::cin.fail()) { break; }
+
+		printf("Invalid input. Please try again.\n");
+		std::cin.clear();
+		std::cin.ignore(256,'\n');
+
+	} while (true);
 
 	int array[sizeArray];
 

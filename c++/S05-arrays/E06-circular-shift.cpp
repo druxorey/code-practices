@@ -25,9 +25,11 @@ int main() {
 
 	int array[sizeArray];
 
+	printf("\n\e[0;33mInitial array\e[0m\n");
 	fillArray(array, sizeArray);
 	printArray(array, sizeArray);
 
+	printf("\n\e[0;33mMoving %i in the array\e[0m\n", averageNumber);
 	moveInArray(array, sizeArray, averageNumber);
 	printArray(array, sizeArray);
 

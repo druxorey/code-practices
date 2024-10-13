@@ -1,22 +1,26 @@
 #include <iostream>
 #include "array-functions.cpp"
 
-bool isArraySum(int array[], int size, int compared) {
+int isArraySum(int array[], int size, int compared) {
+	int times = 0;
+	printf("\n");
 	for (int i = 0; i < size; i++) {
 		int firstSum = array[i];
+
 		for (int j = 0; j < size - i; j++) {
 			int secondSum = array[j+i];
 			if (firstSum + secondSum == compared) {
-				return true;
+				times++;
+				printf("%i - The numbers are %i and %i.\n", times, firstSum, secondSum);
 			}
 		}
 	}
-	return false;
+	return times;
 }
 
 
 int main() {
-	int finalNumber, sizeArray;
+	int finalNumber, sizeArray, finalTimes;
 
 	std::cout << "\n\e[0;35m[========= SUM PAIRS =========]\e[0m\n" << '\n';
 
@@ -27,12 +31,16 @@ int main() {
 	std::cin >> finalNumber;
 
 	int array[sizeArray];
-	fillArray(array, sizeArray);
+	randArray(array, sizeArray);
 
-	if (isArraySum(array, sizeArray, finalNumber)) {
-		printf("\nIn this array there is 2 numbers that if we add them it gives %i.\n", finalNumber);
+	printArray(array, sizeArray);
+
+	finalTimes = isArraySum(array, sizeArray, finalNumber);
+
+	if (finalTimes != 0) {
+		printf("\nIn this array there is %i numbers that if we add them it gives %i.\n", finalTimes, finalNumber);
 	} else {
-		printf("\nIn this array there are not 2 numbers that if we add them it gives %i.\n", finalNumber);
+		printf("In this array there is no number that if we add them it gives %i.\n", finalNumber);
 	}
 
 	return 0;
