@@ -2,7 +2,7 @@
 
 int main() {
 
-	std::cout << "\n\e[0;35m[========= STRING METHODS =========]\e[0m\n" << '\n';
+	std::cout << "\n\e[0;35m[========= ARRAY SIZE =========]\e[0m\n" << '\n';
 
 	bool boolArray[] = {true, false, true, false, true};
 	char charArray[] = {'H', 'e', 'l', 'l', 'o', '\0'};
@@ -35,6 +35,12 @@ int main() {
 	std::cout << "floatArray have " << sizeof(floatArray) / sizeof(float) << " elements" << '\n';
 	std::cout << "doubleArray have " << sizeof(doubleArray) / sizeof(double) << " elements" << '\n';
 	std::cout << "stringArray have " << sizeof(stringArray) / sizeof(std::string) << " elements" << '\n';
+
+	std::cout << '\n';
+
+	for (double element : doubleArray) {
+		std::cout << element << '\n';
+	}
 
 	return 0;
 }
