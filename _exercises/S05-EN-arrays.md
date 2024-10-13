@@ -2,7 +2,7 @@
 
 1) **E01-max-value**: Write a function that takes an array as input and returns the maximum value in it.
 
-2) **E02-greater-than-n**: Write an action that takes an array A and an integer N as input and returns (using reference parameters) the number of elements in A greater than N and their average.
+2) **E02-greater-than-n**: Write an action that takes an array A and an integer N as input and returns (using reference parameters) the number of elements in A greater than N and the percentage of elements greater than N.
 
 3) **E03-palindrome-check**: Write a function that takes a string as input and returns true if it is a palindrome.
 

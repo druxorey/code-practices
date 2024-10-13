@@ -2,7 +2,7 @@
 
 1) **E01-max-value**: Haga una función que tome como entrada un arreglo y retorne el máximo valor del mismo.
 
-2) **E02-greater-than-n**: Haga una acción que tome como entrada un arreglo A y un entero N y retorne (usando parámetros por referencia) el número de elementos de A mayores a N y su promedio.
+2) **E02-greater-than-n**: Haga una acción que tome como entrada un arreglo A y un entero N y retorne (usando parámetros por referencia) el número de elementos de A mayores a N y el porcentaje de elementos mayores a N.
 
 3) **E03-palindrome-check**: Haga una función que tome como entrada un string y retorne verdadero si es palíndromo.
 
