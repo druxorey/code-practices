@@ -20,7 +20,7 @@
 	- [S06-structs-and-files](./_exercises_/S06-EN-structs-and-files.md)
 	- [S07-object-oriented](./_exercises_/S07-EN-object-oriented.md)
 
-- **Languages**: Each programming language has its own directory. Within each, there are subdirectories named after the sections corresponding to the exercises. In each language directory, there is `S00-experiments` directory, here there will be code that will not be part of the exercises, but will be used to test the language's features.
+- **Languages**: Each programming language has its own directory. Within each, there are subdirectories named after the sections corresponding to the exercises. In each language directory, there is `U1-libraries` directory, Here are the functions that are repeated many times, to keep the code clean, and the `U2-experiments` directory, here there will be code that will not be part of the exercises, but will be used to test the language's features.
 
 ## How To Execute Scripts
 
