@@ -1,13 +1,12 @@
 #include <iostream>
-#include <iomanip>
+#include "../U1-libraries/dxinput.cpp"
 
 double deposit() {
 	double amount;
-	std::cout << "Enter the amount you want to deposit in your account: ";
-	std::cin >> amount;
+	getInput("Enter the amount you want to deposit to your account: ", amount);
 
 	if (amount < 0) {
-		std::cout << "\e[0;31mYou can't deposit a negative amount\e[0m" << '\n';
+		printf("\e[0;31mYou can't deposit a negative amount\e[0m\n");
 		return 0;
 	}
 
@@ -17,14 +16,13 @@ double deposit() {
 
 double withdraw(double balance) {
 	double amount;
-	std::cout << "Enter the amount you want to withdraw to your account: ";
-	std::cin >> amount;
+	getInput("Enter the amount you want to withdraw to your account: ", amount);
 
 	if (amount < 0) {
-		std::cout << "\e[0;31mYou can't deposit a negative amount\e[0m" << '\n';
+		printf("\e[0;31mYou can't withdraw a negative amount\e[0m\n");
 		return 0;
 	} else if (amount > balance) {
-		std::cout << "\e[0;31mYou don't have enough money in your account\e[0m" << '\n';
+		printf("\e[0;31mYou don't have enough money in your account\e[0m\n");
 		return 0;
 	}
 
@@ -33,8 +31,7 @@ double withdraw(double balance) {
 
 
 void showBalance(double balance) {
-	std::cout.precision(2);
-	std::cout << "\e[0;32mYour actual balance is $" << std::fixed << balance << "\e[0m\n";
+	printf("\e[0;32mYour actual balance is $%.2f\e[0m\n", balance );
 }
 
 
@@ -52,7 +49,7 @@ int main() {
 		std::cout << "4. Exit" << '\n';
 		std::cout << "\nSelect a choise: ";
 
-		std::cin >> choise;
+		getInput("", choise);
 
 		switch (choise) {
 			case 1: 

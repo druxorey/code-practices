@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 bool isInHeight (int yVertex, int yPoint, int height) {
 	return (yPoint >= (yVertex - height) && yPoint <= yVertex);
@@ -15,14 +16,12 @@ int main(){
 
 	std::cout << "\n\e[0;35m[========= POINT IN RECTANGLE =========]\e[0m\n" << '\n';
 
-	printf("Enter the x and y position: ");
-	std::cin >> xPoint >> yPoint;
-	printf("Enter the x and y vertex position: ");
-	std::cin >> xVertex >> yVertex;
-	printf("Enter the height: ");
-	std::cin >> height;
-	printf("Enter the width: ");
-	std::cin >> width;
+	getInput("Enter the x position: ", xPoint);
+	getInput("Enter the y position: ", yPoint);
+	getInput("Enter the x vertex position: ", xVertex);
+	getInput("Enter the y vertex position: ", yVertex);
+	getInput("Enter the height: ", height);
+	getInput("Enter the width: ", width);
 
 	bool heightValue = isInHeight(yVertex, yPoint, height);
 	bool widthValue = isInWidth(xVertex, xPoint, width);

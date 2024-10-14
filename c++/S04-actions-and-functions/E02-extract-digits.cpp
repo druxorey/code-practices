@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 int invertNumber (int fullNumber) {
 	int invertedNumber = 0;
@@ -34,12 +35,10 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= EXTRACT DIGITS =========]\e[0m\n" << '\n';
 
-	std::cout << "Enter the number: ";
-	std::cin >> fullNumber;
-	std::cout << "Enter the final number: ";
-	std::cin >> stop;
+	getInput("Enter the number: ", fullNumber);
+	getInput("Enter the final number: ", stop);
 
-	std::cout << "The final calculation is: " << extractDigits(invertNumber(fullNumber), stop) << '\n';
+	printf("The inverted number is: %d\n", invertNumber(fullNumber));
 
 	return 0;
 }

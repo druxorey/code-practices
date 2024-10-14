@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 int daysByMonth(int month) {
 	int days = 0;
@@ -39,10 +40,8 @@ int main(){
 
 	std::cout << "\n\e[0;35m[========= DAYS BETWEEN DATES =========]\e[0m\n" << '\n';
 
-	printf("Enter the first date [DDMMYYYY]: ");
-	std::cin >> firstDate;
-	printf("Enter the second date [DDMMYYYY]: ");
-	std::cin >> secondDate;
+	getInput("Enter the first date [DDMMYYYY]: ", firstDate);
+	getInput("Enter the second date [DDMMYYYY]: ", secondDate);
 
 	printf("The difference is %i days.\n",daysDifference(firstDate, secondDate));
 

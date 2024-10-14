@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 bool isPointInRectangle(int pointX, int pointY, int rectX, int rectY, int rectWidth, int rectHeight) {
 	bool isWithinWidth = pointX >= rectX && pointX <= (rectX + rectWidth);
@@ -13,15 +14,14 @@ int main(){
 
 	std::cout << "\n\e[0;35m[========= RECTANGLE INTERSECTION =========]\e[0m\n" << '\n';
 
-	std::cout << "Enter the x and y vertex position of the first rectangle: ";
-	std::cin >> firstRectX >> firstRectY;
-	std::cout << "Enter the width and height of the first rectangle: ";
-	std::cin >> firstRectWidth >> firstRectHeight;
-
-	std::cout << "Enter the x and y vertex position of the second rectangle: ";
-	std::cin >> secondRectX >> secondRectY;
-	std::cout << "Enter the width and height of the second rectangle: ";
-	std::cin >> secondRectWidth >> secondRectHeight;
+	getInput("Enter the x vertex position of the first rectangle: ", firstRectX);
+	getInput("Enter the y vertex position of the first rectangle: ", firstRectY);
+	getInput("Enter the width of the first rectangle: ", firstRectWidth);
+	getInput("Enter the height of the first rectangle: ", firstRectHeight);
+	getInput("Enter the x vertex position of the second rectangle: ", secondRectX);
+	getInput("Enter the y vertex position of the second rectangle: ", secondRectY);
+	getInput("Enter the width of the second rectangle: ", secondRectWidth);
+	getInput("Enter the height of the second rectangle: ", secondRectHeight);
 
 	bool isTopLeftInSecond = isPointInRectangle(firstRectX, firstRectY, secondRectX, secondRectY, secondRectWidth, secondRectHeight);
 	bool isTopRightInSecond = isPointInRectangle(firstRectX + firstRectWidth, firstRectY, secondRectX, secondRectY, secondRectWidth, secondRectHeight);
@@ -29,9 +29,9 @@ int main(){
 	bool isBottomRightInSecond = isPointInRectangle(firstRectX + firstRectWidth, firstRectY - firstRectHeight, secondRectX, secondRectY, secondRectWidth, secondRectHeight);
 
 	if (isTopLeftInSecond || isTopRightInSecond || isBottomLeftInSecond || isBottomRightInSecond) {
-		std::cout << "A vertex of the first rectangle is in the second rectangle.\n";
+		printf("A vertex of the first rectangle is in the second rectangle.\n");
 	} else {
-		std::cout << "No vertex of the first rectangle is in the second rectangle.\n";
+		printf("No vertex of the first rectangle is in the second rectangle.\n");
 	}
 
 	return 0;

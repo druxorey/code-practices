@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 int monthToDays(int month) {
 	switch (month) {
@@ -37,17 +38,16 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= DAYS TO MONTH =========]\e[0m\n" << '\n';
 
-	std::cout << "Enter the month number: ";
-	std::cin >> month;
+	getInput("Enter the month number: ", month);
 
 	totalDays = monthToDays(month);
 
 	if (totalDays == -1) {
-		std::cout << "Invalid month." << '\n';
+		printf("Invalid month.\n");
 		return 1;
 	}
 
-	std::cout << "Has passed " << totalDays << " days." << '\n';
+	printf("Has passed %i days.\n", totalDays);
 
 	return 0;
 }

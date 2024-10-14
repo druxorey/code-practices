@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 char generateComputerChoise() {
 	srand(time(NULL));
@@ -34,17 +35,16 @@ std::string getChoise(char choise) {
 
 
 void checkWinner(char playerChoise, char computerChoise) {
-	std::cout << '\n';
-	std::cout << "You chose " << getChoise(playerChoise) << '\n';
-	std::cout << "The computer chose " << getChoise(computerChoise) << '\n';
-	std::cout << '\n';
+
+	printf("\nYou chose %s\n", getChoise(playerChoise).c_str());
+	printf("The computer chose %s\n\n", getChoise(computerChoise).c_str());
 
 	if (playerChoise == computerChoise) {
-		std::cout << "\e[0;33mIt's a tie!\e[0m" << '\n';
+		printf("\e[0;33mIt's a tie!\e[0m\n");
 	} else if (playerChoise == 'r' && computerChoise == 's' || playerChoise == 'p' && computerChoise == 'r' || playerChoise == 's' && computerChoise == 'p') {
-		std::cout << "\e[0;32mYou win!\e[0m" << '\n';
+		printf("\e[0;32mYou win!\e[0m\n");
 	} else {
-		std::cout << "\e[0;31mYou lose!\e[0m" << '\n';
+		printf("\e[0;31mYou lose!\e[0m\n");
 	}
 }
 

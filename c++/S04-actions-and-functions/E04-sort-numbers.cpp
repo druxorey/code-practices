@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 int maxNumber(int number) {
 	int digit, max = 0;
@@ -37,10 +38,12 @@ int main(){
 	std::cout << "\n\e[0;35m[========= SORT NUMBERS =========]\e[0m\n" << '\n';
 
 	do {
-		std::cin.clear();
-		printf("Enter the number to be evaluated: ");
-		std::cin >> number;
-	} while (!(number < 100000 && number > 10000));
+		getInput("Enter the number to be evaluated: ", number);
+
+		if (!(number < 1000000 && number > 100000))
+			printf("The number must have 6 digits.\n");
+
+	} while (!(number < 1000000 && number > 100000));
 
 	printf("The max number is %i\n", maxNumber(number));
 	printf("The min number is %i\n", minNumber(number));

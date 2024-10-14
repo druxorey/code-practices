@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include "../U1-libraries/dxinput.cpp"
 
 float convertMilesToKm(float miles) {
 	return miles * 1.60934;
@@ -7,7 +7,7 @@ float convertMilesToKm(float miles) {
 
 
 void printDistance(float distance) {
-	std::cout << "\nThe distance between the two cities is " << distance << " km.\n" << '\n';
+	printf("The distance between the two cities is %.2f km.\n\n", distance);
 }
 
 
@@ -16,13 +16,12 @@ bool askForCity() {
 	float distance;
 
 	std::cout << "Enter the initial city: ";
-	std::cin >> initialCity;
+	getline(std::cin, initialCity);
 
 	std::cout << "Enter the final city: ";
-	std::cin >> finalCity;
+	getline(std::cin, finalCity);
 
-	std::cout << "Enter the distance between " << initialCity << " and " << finalCity << " in miles: ";
-	std::cin >> distance;
+	getInput("Enter the distance between \e[0;33m" + initialCity + "\e[0m and \e[0;33m" + finalCity + "\e[0m in miles: ", distance);
 
 	if (initialCity == finalCity and distance == 0)
 		return false;
