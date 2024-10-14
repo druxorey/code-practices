@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 int isArraySum(int array[], int size, int compared) {
 	int times = 0;
@@ -24,11 +25,8 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= SUM PAIRS =========]\e[0m\n" << '\n';
 
-	printf("Enter the array size: ");
-	std::cin >> sizeArray;
-
-	printf("Enter the number to be compared: ");
-	std::cin >> finalNumber;
+	getInput("Enter the array size: ", sizeArray);
+	getInput("Enter the number to be compared: ", finalNumber);
 
 	int array[sizeArray];
 	randArray(array, sizeArray);

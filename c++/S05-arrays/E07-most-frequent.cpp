@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 int repeatedItem(int array[], int size) {
 	int maxValue = array[0], maxRepeated = 1;
@@ -26,13 +27,12 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= MOST FREQUENT =========]\e[0m\n" << '\n';
 
-	std::cout << "Enter the size of the array: ";
-	std::cin >> sizeArray;
+	getInput("Enter the size of the array: ", sizeArray);
+
 	int array[sizeArray];
-
 	randArray(array, sizeArray);
-	printArray(array, sizeArray);
 
+	printArray(array, sizeArray);
 	printf("\nThe most repeated value is %i.\n", repeatedItem(array, sizeArray));
 
 	return 0;

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxmatrix.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 int diagonalMatrix(int** matrix, int sizeMatrix) {
 	int finalSum = 0;
@@ -15,8 +16,7 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= SECONDARY DIAGONAL =========]\e[0m\n" << '\n';
 
-	printf("Enter the size of the array: ");
-	std::cin >> sizeMatrix;
+	getInput("Enter the size of the matrix: ", sizeMatrix);
 
 	int** matrix = new int*[sizeMatrix]; 
 	for (int i = 0; i < sizeMatrix; i++) {

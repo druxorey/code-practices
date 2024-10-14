@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxmatrix.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 void changeRows(int** matrix, int size) {
 	int temporal = 0;
@@ -19,8 +20,7 @@ int main() {
 	std::cout << "\n\e[0;35m[========= SWAP ROWS =========]\e[0m\n" << '\n';
 
 	do {
-		printf("Enter the size of the matrix: ");
-		std::cin >> sizeMatrix;
+		getInput("Enter the size of the matrix: ", sizeMatrix);
 	} while (sizeMatrix % 2 != 0);
 
 	int** matrix = new int*[sizeMatrix]; 
@@ -28,10 +28,11 @@ int main() {
 		matrix[i] = new int[sizeMatrix];
 	}
 
-	std::cout << "\nInitial matrix\n";
+	printf("\nInitial matrix\n");
 	fillMatrix(matrix, sizeMatrix);
 	printMatrix(matrix, sizeMatrix);
-	std::cout << "\nChanged matrix\n";
+
+	printf("\nChanged matrix\n");
 	changeRows(matrix, sizeMatrix);
 	printMatrix(matrix, sizeMatrix);
 

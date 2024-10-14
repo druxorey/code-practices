@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 void replaceInArray(int array[], int size, int number) {
 	int i = 0, position = 0;
@@ -20,29 +21,8 @@ int main(){
 
 	std::cout << "\n\e[0;35m[========= POWER OF TWO =========]\e[0m\n" << '\n';
 
-	do {
-		std::cout << "Enter the size of the array: ";
-		std::cin >> sizeArray;
-
-		if (!std::cin.fail()) { break; }
-
-		printf("Invalid input. Please try again.\n");
-		std::cin.clear();
-		std::cin.ignore(256,'\n');
-
-	} while (true);
-
-	do {
-		std::cout << "Enter the size of the array: ";
-		std::cin >> sizeArray;
-
-		if (!std::cin.fail()) { break; }
-
-		printf("Invalid input. Please try again.\n");
-		std::cin.clear();
-		std::cin.ignore(256,'\n');
-
-	} while (true);
+	getInput("Enter the size of the array: ", sizeArray);
+	getInput("Enter the number to replace every N²: ", replacedNumber);
 
 	int array[sizeArray];
 

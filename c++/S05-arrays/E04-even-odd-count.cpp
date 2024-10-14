@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 void oddAndEven(int numberList[], int size, int &even, int &odd) {
 	even = 0, odd =0;
@@ -15,17 +16,7 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= EVEN ODD COUNT =========]\e[0m\n" << '\n';
 
-	do {
-		std::cout << "Enter the size of the array: ";
-		std::cin >> sizeArray;
-
-		if (!std::cin.fail()) { break; }
-
-		printf("Invalid input. Please try again.\n");
-		std::cin.clear();
-		std::cin.ignore(256,'\n');
-
-	} while (true);
+	getInput("Enter the size of the array: ", sizeArray);
 
 	int numberList[sizeArray];
 	randArray(numberList, sizeArray);

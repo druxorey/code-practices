@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 void moveInArray(int array[], int size, int move) {
 	int movedArray[size], displace = 0;
@@ -18,10 +19,8 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= CIRCULAR SHIFT =========]\e[0m\n" << '\n';
 
-	printf("Enter the size of the array: ");
-	std::cin >> sizeArray;
-	printf("Enter the averge number: ");
-	std::cin >> averageNumber;
+	getInput("Enter the size of the array: ", sizeArray);
+	getInput("Enter the average number: ", averageNumber);
 
 	int array[sizeArray];
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.cpp"
 
 void averageInArray(int array[], int size, int number, int &quantity) {
 	for (int i = 0; i < size; i++) {
@@ -13,29 +14,8 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= GREATER THAN N =========]\e[0m\n" << '\n';
 
-	do {
-		std::cout << "Enter the size of the array: ";
-		std::cin >> sizeArray;
-
-		if (!std::cin.fail()) { break; }
-
-		printf("Invalid input. Please try again.\n");
-		std::cin.clear();
-		std::cin.ignore(256,'\n');
-
-	} while (true);
-
-	do {
-		std::cout << "Enter the averge number: ";
-		std::cin >> thresholdValue;
-
-		if (!std::cin.fail()) { break; }
-
-		printf("Invalid input. Please try again.\n");
-		std::cin.clear();
-		std::cin.ignore(256,'\n');
-
-	} while (true);
+	getInput("Enter the size of the array: ", sizeArray);
+	getInput("Enter the averge number: ", thresholdValue);
 
 	int array[sizeArray];
 
@@ -45,8 +25,9 @@ int main() {
 	float percentageValue = (float)countGreaterThan / (float)sizeArray * 100.0;
 
 	printArray(array, sizeArray);
-	printf("\nFinal quantity: %i\n", countGreaterThan);
-	printf("Final percentaje: %i%%\n", (int)percentageValue);
+
+	printf("\nThe number of elements greater than %i is %i.\n", thresholdValue, countGreaterThan);
+	printf("The percentage of elements greater than %i is %.2f%%.\n", thresholdValue, percentageValue);
 
 	return 0;
 }

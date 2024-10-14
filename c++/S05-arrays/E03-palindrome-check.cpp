@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 bool isPalindrome(std::string text) { 
 	int length = text.length(); 
@@ -18,8 +19,7 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
 
-	printf("Enter the string: ");
-	std::cin >> inputText;
+	getInput("Enter the string: ", inputText);
 
 	if (isPalindrome(inputText)) {
 		printf("The string is a palindrome.\n");
