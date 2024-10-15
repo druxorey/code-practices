@@ -2,14 +2,14 @@
 
 template <typename datatype>
 void printArray(datatype array[], int size) {
-	std::cout << '\n' << "The array is: [";
+	std::cout << '\n' << "\e[0;33mThe array is: \e[0;34m[\e[0m";
 	for (int i = 0; i < size; i++) {
 		std::cout << array[i];
 		if (i != size - 1) {
 			std::cout << ",";
 		}
 	}
-	std::cout << "]" << '\n';
+	std::cout << "\e[0;34m]\e[0m" << '\n';
 }
 
 
