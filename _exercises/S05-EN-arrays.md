@@ -26,4 +26,4 @@
 
 13) **E13-tic-tac-toe**: Create a tic-tac-toe game with the computer. The user must choose which symbol to play with, and the game should end when there is a winner or a tie. The board should be a matrix of size n > 3.
 
-14) **E14-pharmacy-stock**: Create a program to keep track of a pharmacy's inventory. Given three arrays with the names of medicines, the quantity, and the value of each one, the program should calculate the total value of the inventory and the value of the stock of each medicine.
+14) **E14-pharmacy-stock**: Create a program to keep track of a pharmacy's inventory. Given three arrays with the names of medicines, the quantity, and the value of each one, the program should calculate the total value of the inventory, the value of the stock of each medicine, and be able to sort the medicines by the quantity in stock.

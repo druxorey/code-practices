@@ -26,4 +26,4 @@
 
 13) **E13-tic-tac-toe**: Haga un juego de tic-tac-toe con la computadora, El usuario debe elegir con que símbolo jugar, y el juego debe terminar cuando haya un ganador o un empate. El tablero debe ser una matriz de un tamaño n > 3.
 
-14) **E14-pharmacy-stock**: Haga un programa que permita llevar el control de un inventario de una farmacia, el programa debe, dado tres array con los nombres de los medicamentos, la cantidad y el valor de cada uno, debe de calcular el valor total del inventario y el valor del stock de cada medicamento.
+14) **E14-pharmacy-stock**: Haga un programa que permita llevar el control de un inventario de una farmacia, el programa debe, dado tres array con los nombres de los medicamentos, la cantidad y el valor de cada uno, debe de calcular el valor total del inventario, el valor del stock de cada medicamento y por último debe de poder ordenar los medicamentos por cantidad que hay en stock.
