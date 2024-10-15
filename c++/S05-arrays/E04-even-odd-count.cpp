@@ -2,17 +2,8 @@
 #include "../U1-libraries/dxarray.cpp"
 #include "../U1-libraries/dxinput.cpp"
 
-void oddAndEven(int numberList[], int size, int &even, int &odd) {
-	even = 0, odd =0;
-	for (int i = 0; i < size; i++) {
-		if (numberList[i] % 2 == 0) { even ++; }
-		else { odd ++; }
-	}
-}
-
-
 int main() {
-	int sizeArray, evenQuantity, oddQuantity;
+	int sizeArray, evenQuantity = 0, oddQuantity = 0;
 
 	std::cout << "\n\e[0;35m[========= EVEN ODD COUNT =========]\e[0m\n" << '\n';
 
@@ -20,7 +11,11 @@ int main() {
 
 	int numberList[sizeArray];
 	randArray(numberList, sizeArray);
-	oddAndEven(numberList, sizeArray, evenQuantity, oddQuantity);
+
+	for (int number : numberList) {
+		if (number % 2 == 0) { evenQuantity ++; }
+		else { oddQuantity ++; }
+	}
 
 	printArray(numberList, sizeArray);
 	printf("In the array are %i odd numbers and %i even numbers.\n", oddQuantity, evenQuantity);
