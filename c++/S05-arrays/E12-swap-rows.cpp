@@ -15,11 +15,14 @@ void changeRows(int** matrix, int size) {
 
 
 int main() {
-	int sizeMatrix;
+	int sizeMatrix = 2;
 
 	std::cout << "\n\e[0;35m[========= SWAP ROWS =========]\e[0m\n" << '\n';
 
 	do {
+		if (sizeMatrix % 2 != 0) {
+			printf("\n\e[0;31mThe number must be even\e[0m\n");
+		}
 		getInput("Enter the size of the matrix: ", sizeMatrix);
 	} while (sizeMatrix % 2 != 0);
 
