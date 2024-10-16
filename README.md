@@ -74,7 +74,7 @@ If you want to add new exercises or improve existing ones, follow these steps:
 2. Fork this repository.
 3. Create a new branch for your contribution: `git checkout -b your-branch-name`.
 4. Make your changes. To add new exercises, edit the Markdown files in the `_exercises` directory.
-5. Commit your changes, for example: `git commit -m 'fix(c++): new exercise in the conditional-structure-control section'`.
+5. Commit your changes, for example: `git commit -m 'feat(exercises): added S05[E14] 'pharmacy-value' exercise.'`.
 6. Push your changes to your forked repository: `git push origin your-branch-name`.
 7. Open a Pull Request in this repository and reference the original issue.
 
