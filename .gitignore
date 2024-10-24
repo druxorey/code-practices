@@ -11,4 +11,8 @@
 #
 # ======================================================================#
 
+# Untrack output files
 **/*.opp
+
+# Root directory to allocate test files
+.untracked
