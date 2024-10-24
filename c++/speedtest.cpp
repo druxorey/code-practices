@@ -1,20 +1,40 @@
 #include <iostream>
 #include <chrono>
 
-using namespace std;
+// The average execution time of this script is 172.1 ms after 10 test
 
-int main(){
-    int count=0, number=50000000;
-    auto start = chrono::high_resolution_clock::now();
+const int ITERATIONS = 10;
+const int NUMBER = 100000000;
 
-    for(int i=0; i<=number; i++){
+int speedtest() {
+    auto start = std::chrono::high_resolution_clock::now();
+
+    int count=0;
+    for(int i = 0; i <= NUMBER; i++){
         count += 1;
     }
 
-    auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
-    cout << "Counting to number " << number << " in C++ took " << duration.count() << " ms." << endl;
+	return duration.count();
+}
+
+
+int main(){
+	float averageExecutionTime = 0;
+
+	std::cout << "Starting speed test...\n";
+
+	for(int i = 0; i < ITERATIONS; i++){
+		float finalDuration = speedtest();
+		averageExecutionTime += finalDuration;
+		std::cout << i + 1 << ". Counting to number " << NUMBER << " in C++ took " << finalDuration << " ms\n";
+	}
+
+	averageExecutionTime /= ITERATIONS;
+
+	std::cout << "\n\e[0;32mAverage execution time: " << averageExecutionTime << " ms.\e[0m\n";
 
     return 0;
 }
