@@ -1,24 +1,30 @@
 #include <iostream>
+#include <vector>
 
 int main() {
-	long long int iteration = 1, iterationLimit, xNumber = 0, yNumber = 1, auxiliarNumber = 0;
+    long long int iterationLimit;
+    std::cout << "\n\e[0;35m[========= FIBONACCI SEQUENCE =========]\e[0m\n" << '\n';
+    std::cout << "Enter the final position in the Fibonacci sequence: ";
+    std::cin >> iterationLimit;
 
-	std::cout << "\n\e[0;35m[========= FIBONACCI SEQUENCE =========]\e[0m\n" << '\n';
+    if (iterationLimit <= 0) {
+        std::cout << "Please enter a positive integer." << '\n';
+        return 1;
+    }
 
-	std::cout << "Enter de final position in the fibonaccci sequence: ";
-	std::cin >> iterationLimit;
+    std::vector<long long int> fibonacci(iterationLimit);
+    fibonacci[0] = 0;
+    if (iterationLimit > 1) {
+        fibonacci[1] = 1;
+    }
 
-	do {
-		std::cout << yNumber << '\n';
+    for (long long int i = 2; i < iterationLimit; ++i) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
 
-		auxiliarNumber = xNumber;
-		xNumber = yNumber;
-		yNumber = auxiliarNumber + yNumber;
-		iteration++;
+    for (long long int i = 0; i < iterationLimit; ++i) {
+        std::cout << fibonacci[i] << '\n';
+    }
 
-	} while (iteration != iterationLimit);
-
-	std::cout << yNumber << '\n';
-
-	return 0;
+    return 0;
 }
