@@ -27,7 +27,7 @@ int main() {
 		return 1;
 	}
 
-	printf("Fibonacci of %d is %lld\n", number, getFibonnacci(number, memo));
+	printf("Fibonacci of %lld is %lld\n", number, getFibonnacci(number, memo));
 
 	return 0;
 }
