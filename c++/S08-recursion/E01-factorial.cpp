@@ -1,16 +1,11 @@
 #include <iostream>
-#include <unordered_map>
 #include "../U1-libraries/dxinput.cpp"
 
 typedef unsigned long long int ulli;
 
-std::unordered_map<ulli, ulli> memo;
-
 ulli getFactorial(ulli n) {
 	if (n == 0) return 1;
-	if (memo.find(n) != memo.end()) return memo[n];
-	memo[n] = n * getFactorial(n - 1);
-	return memo[n];
+	return n * getFactorial(n - 1);
 }
 
 int main() {
