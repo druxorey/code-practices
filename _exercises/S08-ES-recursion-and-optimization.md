@@ -2,7 +2,7 @@
 
 1) **E01-factorial**: Construya una función recursiva que calcule el factorial de un número entero.
 
-2) **E02-interger-combinatorics**: Construya una función recursiva que calcule el valor de la combinatoria de 2 números enteros.
+2) **E02-combinatorics**: Construya una función recursiva que calcule el valor de la combinatoria de 2 números enteros.
 
 3) **E03-recursive-fibonacci**: Dado un número N, desarrolle una función recursiva que calcule la secuencia de números de Fibonacci para N.
 
@@ -26,7 +26,7 @@
    - Si a < b entonces m.c.d.(a,b) = m.c.d.(a,b-a)
    - Si a = b entonces m.c.d.(a,b) = m.c.d.(b,a) = a = b
 
-9) **E09-recursive-function**: Asumiendo que recibe como parámetro el valor de n, escriba una función recursiva para calcular: (1 + 1/2 + 1/3 + ... + 1/n).
+9) **E09-harmonic-series**: Asumiendo que recibe como parámetro el valor de n, escriba una función recursiva para calcular: (1 + 1/2 + 1/3 + ... + 1/n).
 
 10) **E10-power**: Escriba una función recursiva para calcular la potencia de un número real elevado a un entero positivo, partiendo de:
     - x^0 = x

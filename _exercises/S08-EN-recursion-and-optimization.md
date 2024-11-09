@@ -2,7 +2,7 @@
 
 1) **E01-factorial**: Build a recursive function that calculates the factorial of an integer.
 
-2) **E02-integer-combinatorics**: Build a recursive function that calculates the combinatorial value of 2 integers.
+2) **E02-combinatorics**: Build a recursive function that calculates the combinatorial value of 2 integers.
 
 3) **E03-recursive-fibonacci**: Given a number N, develop a recursive function that calculates the Fibonacci sequence for N.
 
@@ -26,7 +26,7 @@
    - If a < b then g.c.d.(a,b) = g.c.d.(a,b-a)
    - If a = b then g.c.d.(a,b) = g.c.d.(b,a) = a = b
 
-9) **E09-recursive-function**: Assuming you receive the value of n as a parameter, write a recursive function to calculate: (1 + 1/2 + 1/3 + ... + 1/n).
+9) **E09-harmonic-series**: Assuming you receive the value of n as a parameter, write a recursive function to calculate: (1 + 1/2 + 1/3 + ... + 1/n).
 
 10) **E10-power**: Write a recursive function to calculate the power of a real number raised to a positive integer, starting from:
     - x^0 = x
