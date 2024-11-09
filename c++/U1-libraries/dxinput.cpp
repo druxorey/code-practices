@@ -1,7 +1,6 @@
 #include <iostream>
 
 template <typename datatype>
-
 void getInput(std::string message, datatype &input) {
 	do {
 		std::cout << message;
@@ -15,6 +14,7 @@ void getInput(std::string message, datatype &input) {
 
 	} while (true);
 }
+
 
 void enter() {
 	printf("\nPress enter to continue..");

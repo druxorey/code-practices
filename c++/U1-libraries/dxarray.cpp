@@ -24,6 +24,13 @@ void randArray(int array[], int size) {
 
 void fillArray(int array[], int size) {
 	for (int i = 0; i < size; i++) {
-		array[i] = i;
+		array[i] = i ;
+	}
+}
+
+
+void fillArray(char array[], int size) {
+	for (int i = 0; i < size; i++) {
+		array[i] = i + 'a';
 	}
 }
