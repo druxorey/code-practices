@@ -12,6 +12,15 @@
 
 6) **E06-sum-naturals**: Escriba un algoritmo recursivo que halle la suma de los primeros N números naturales.
 
+7) **E07-alphabet-permutations**: Desarrolle una función recursiva que dada un arreglo de caracteres de N posiciones o un String, imprima por pantalla todas las permutaciones que se puedan generar con sus letras. Por ejemplo, dado el arreglo que contiene "ABC", debería imprimir:
+
+	"AEI"
+	"AIE"
+	"EAI"
+	"EIA"
+	"IEA"
+	"IAE"
+
 7) **E07-gcd**: Escriba una función recursiva para calcular el máximo común divisor (m.c.d.) de dos números enteros dados aplicando las propiedades recurrentes.
    - Si a > b entonces m.c.d.(a,b) = m.c.d.(a-b,b)
    - Si a < b entonces m.c.d.(a,b) = m.c.d.(a,b-a)
@@ -39,6 +48,6 @@
 14) **E14-recursive-multiplication**: Suponga que solo cuenta con un lenguaje cuyas operaciones aritméticas son +, -, /; diseñe una función recursiva la cual, dados dos reales A y B, retorne como resultado la evaluación de A * B.
 
 15) **E15-parity**: Sabiendo que 0 es par, es decir,
-    - EsPar(0) = true
-    - EsImpar(0) = false
-    Y la paridad de cualquier otro entero positivo es la opuesta que la del entero anterior, desarrolle las funciones lógicas, mutuamente recursivas, EsPar y EsImpar, que se complementen a la hora de averiguar la paridad de un entero positivo.
+    - esPar(0) = true
+    - esImpar(0) = false
+    Y la paridad de cualquier otro entero positivo es la opuesta que la del entero anterior, desarrolle las funciones lógicas, mutuamente recursivas, esPar y esImpar, que se complementen a la hora de averiguar la paridad de un entero positivo.
