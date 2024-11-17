@@ -31,3 +31,11 @@
 12) **E12-eight-queens**: Las 8 reinas: El problema consiste en colocar en un tablero de ajedrez normal 8 reinas sin que alguna ataque a las demás. En el ajedrez, una reina puede atacar a otra pieza desplazándose cualquier distancia en casillas: sobre la fila que ocupa, la columna que ocupa o bien sobre la diagonal o las diagonales que ocupa. Un tablero de ajedrez normal tiene 8 filas y 8 columnas.
 
 13) **E13-cable-segments**: Utilice la técnica de backtracking para resolver el siguiente problema: En una ferretería se venden segmentos de cable. Los clientes suelen pedir varios metros de cable, por lo que siempre quedan pedazos cortos de cable sin vender. Todos esos pedazos cortos van quedando sin ser vendidos en la ferretería, por lo que se ha decidido soldar todos los pedazos para vender cables repotenciados de 100 metros, a un precio razonablemente menor. El ferretero entiende que este problema es complejo, pues tiene que tomar un conjunto de pedazos de cable que sumen exactamente 100 metros. El ferretero recurre a los estudiantes de AYED para que le resuelvan su problema, que en resumen consiste en: dada las longitudes de cada uno de los N pedazos de cable existentes, indicar si se puede generar un cable de 100 metros, y en dado caso, saber qué segmentos de cable se soldaron para generar uno de 100 metros con la menor cantidad de soldaduras posibles, para mantener los bajos costos.
+
+14) **E14-scalable-tower**: Defina una función con la que determine si puede escalar una torre. La torre está definida como una matriz de NxN, donde el nivel más externo corresponde con el borde de la matriz y cada nivel sucesivo corresponde con el borde interno del previo hasta alcanzar el centro de la misma. En cada nivel estará dispuesta una escalera. Para poder cruzar entre niveles adyacentes debe utilizar la escalera. Si al buscar una escalera en un nivel, no puede conseguir debe indicar que la torre no es escalable. La función retorna **true** en caso de poder escalar y **false** en caso contrario. Ejemplo de la disposición de niveles en una matriz de 3x3, los números representan el nivel:
+
+	1 1 1 1 1
+	1 2 2 2 1
+	1 2 3 2 1
+	1 2 2 2 1
+	1 1 1 1 1

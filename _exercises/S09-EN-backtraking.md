@@ -31,3 +31,11 @@
 12) **E12-eight-queens**: The 8 queens: The problem consists of placing 8 queens on a standard chessboard without any queen attacking another. In chess, a queen can attack another piece by moving any distance in squares: along the row it occupies, the column it occupies, or along the diagonal or diagonals it occupies. A standard chessboard has 8 rows and 8 columns.
 
 13) **E13-cable-segments**: Use the backtracking technique to solve the following problem: In a hardware store, cable segments are sold. Customers often request several meters of cable, so there are always short pieces of cable left unsold. All these short pieces remain unsold in the hardware store, so it has been decided to weld all the pieces together to sell repurposed cables of 100 meters at a reasonably lower price. The hardware store owner understands that this problem is complex, as he has to take a set of cable pieces that sum exactly 100 meters. The hardware store owner turns to AYED students to solve his problem, which in summary consists of: given the lengths of each of the N existing cable pieces, indicate if it is possible to generate a 100-meter cable, and if so, know which cable segments were welded to generate one of 100 meters with the least number of welds possible, to keep costs low.
+
+14) **E14-scalable-tower**: Define a function to determine if you can scale a tower. The tower is defined as an NxN matrix, where the outermost level corresponds to the edge of the matrix and each successive level corresponds to the inner edge of the previous one until reaching the center. At each level, a ladder is placed. To cross between adjacent levels, you must use the ladder. If you cannot find a ladder at a level, you must indicate that the tower is not scalable. The function returns **true** if it is possible to scale and **false** otherwise. Example of the level arrangement in a 3x3 matrix, the numbers represent the level:
+
+	1 1 1 1 1
+	1 2 2 2 1
+	1 2 3 2 1
+	1 2 2 2 1
+	1 1 1 1 1
