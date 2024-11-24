@@ -8,7 +8,7 @@
 
 4) **E04-arithmetic-expressions**: Given an integer N, print all arithmetic expressions composed of the operators +, -, *, and /, and the first N natural numbers in order in which the result is equal to a given R. The order of precedence is from left to right. Example: For N=4 and R=0, some expressions could be: -1 -2 +3 * 4 = 0, +1 +2 -3 *4 = 0.
 
-5) **E05-domino-locked**: A domino game is considered "locked" if the two pieces that allow players to participate in the game are the same, and none of them (in the case of four players) has any stone with that value. It is desired to know all the ways in which a domino game is locked.
+5) **E05-locked-domino**: A domino game is considered "locked" if the two pieces that allow players to participate in the game are the same, and none of them (in the case of four players) has any stone with that value. It is desired to know all the ways in which a domino game is locked.
 
 6) **E06-knight-tour**: Indicate all the ways in which the knight piece placed in the upper right corner of a chessboard can traverse it completely, without passing through the same place twice. Note that the chessboard is 8 x 8 in size, and the knight moves in an "L" shape. Now, indicate if the knight can traverse the board without passing through the same place twice.
 

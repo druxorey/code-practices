@@ -6,9 +6,9 @@
 
 3) **E03-multiple-digits**: Obtener todos los números de m cifras (m <= 9), todas ellas distintas de cero y distintas entre sí, de tal manera que el número formado por las primeras n cifras, cualquiera que sea n (n <= m) sea múltiplo de n. Por ejemplo, para m = 4 son números válidos, entre otros, los siguientes: 1236, ya que 1 es múltiplo de 1, 12 de 2, 123 de 3 y 1236 de 4. 9872, pues 9 es múltiplo de 1, 98 de 2, 987 de 3 y 9872 de 4.
 
-4) **E04-arithmetic-expressions**: Dado un entero N, imprimir todas las expresiones aritméticas compuestas por los operadores +, -, *, y /, y los primeros N números naturales en orden en la cual el resultado sea igual a un R dado. El orden de prioridad es de izquierda a derecha. Ejemplo: Para N=4 y R=0, algunas expresiones podrían ser: -1 -2 +3 * 4 = 0, +1 +2 -3 *4 = 0.
+4) **E04-arithmetic-expressions**: Dado un entero N, imprimir todas las expresiones aritméticas compuestas por los operadores +, -, *, y /, y los primeros N números naturales en orden en la cual el resultado sea igual a un R dado. El orden de prioridad es de izquierda a derecha. Ejemplo: Para N=4 y R=0, algunas expresiones podrían ser: -1 -2 +3 * 4 = 0, +1 +2 -3 * 4 = 0.
 
-5) **E05-domino-locked**: Un juego de dominó se considera “trancado” si las dos piezas que permiten a los jugadores participar en el juego son iguales, y ninguno de ellos (en el caso de cuatro jugadores) posee ninguna piedra que tenga ese valor. Se desea conocer todas las formas en las cuales un juego de dominó está trancado.
+5) **E05-locked-domino**: Un juego de dominó se considera “trancado” si las dos piezas que permiten a los jugadores participar en el juego son iguales, y ninguno de ellos (en el caso de cuatro jugadores) posee ninguna piedra que tenga ese valor. Se desea conocer todas las formas en las cuales un juego de dominó está trancado.
 
 6) **E06-knight-tour**: Se desea que usted indique todas las formas en las cuales la pieza de caballo colocada en la esquina superior derecha de un tablero de ajedrez puede recorrerlo completo, sin pasar dos veces por el mismo lugar. Tenga en cuenta que el tablero de ajedrez es de tamaño 8 x 8, y el caballo se mueve en forma de “L”. Ahora, indique si el caballo puede recorrer el tablero sin pasar dos veces por el mismo lugar.
 
