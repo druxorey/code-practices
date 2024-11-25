@@ -2,7 +2,7 @@
 
 1) **E01-binary-construction**: Write a program that generates all possible binary permutations of a given number of bits. The program should print each permutation on a new line and at the end should show the total number of permutations generated. For example, for a size of 3 bits, the permutations would be: 000, 001, 010, 011, 100, 101, 110, 111. The program should use a recursive function to generate the permutations.
 
-2) **E02-n-even-permutations**: Generate all possible permutations of an array of characters of size N. Now generate the permutations of the same array, ensuring that the sum is an even number.
+2) **E02-even-sum-permutations**: Generate all possible permutations of a character array of size N. Now generate the permutations of the same array, ensuring that the sum of the ASCII values at odd positions is an even number.
 
 3) **E03-multiple-digits**: Obtain all numbers of m digits (m <= 9), all of them different from zero and different from each other, such that the number formed by the first n digits, whatever n (n <= m) is, is a multiple of n. For example, for m = 4, valid numbers include: 1236, since 1 is a multiple of 1, 12 of 2, 123 of 3, and 1236 of 4. 9872, since 9 is a multiple of 1, 98 of 2, 987 of 3, and 9872 of 4.
 

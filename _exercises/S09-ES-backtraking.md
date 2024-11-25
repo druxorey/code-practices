@@ -2,7 +2,7 @@
 
 1) **E01-binary-construction**: Escriba un programa que genere todas las permutaciones binarias posibles de un número dado de bits. El programa debe imprimir cada permutación en una nueva línea y al final debe mostrar el número total de permutaciones generadas. Por ejemplo, para un tamaño de 3 bits, las permutaciones serían: 000, 001, 010, 011, 100, 101, 110, 111. El programa debe utilizar una función recursiva para generar las permutaciones.
 
-2) **E02-n-even-permutations**: Genere todas las permutaciones posibles de un arreglo de caracteres de tamaño N. Ahora genere las permutaciones del mismo arreglo, asegurando que la suma sea un número par.
+2) **E02-even-sum-permutations**: Genere todas las permutaciones posibles de un arreglo de caracteres de tamaño N. Ahora genere las permutaciones del mismo arreglo, asegurando que la suma del valor ASCII en las posiciones impares sea un número par.
 
 3) **E03-multiple-digits**: Obtener todos los números de m cifras (m <= 9), todas ellas distintas de cero y distintas entre sí, de tal manera que el número formado por las primeras n cifras, cualquiera que sea n (n <= m) sea múltiplo de n. Por ejemplo, para m = 4 son números válidos, entre otros, los siguientes: 1236, ya que 1 es múltiplo de 1, 12 de 2, 123 de 3 y 1236 de 4. 9872, pues 9 es múltiplo de 1, 98 de 2, 987 de 3 y 9872 de 4.
 
