@@ -19,22 +19,21 @@ int main() {
 	if (discriminantValue < 0) {
 		std::cout << "The given polynomial has no real solution" << '\n';
 		return 0;
+	}
 
+	rootValue = sqrt(discriminantValue);
+
+	finalPositiveValue = ((-1 * linearTerm) + rootValue) / (2 * quadraticTerm);
+	finalNegativeValue = ((-1 * linearTerm) - rootValue) / (2 * quadraticTerm);
+
+	if (finalPositiveValue < 1 and finalPositiveValue > -1) {
+		std::cout << "The positive value of the polynomial is: " << 0 << '\n';
 	} else {
-		rootValue = sqrt(discriminantValue);
+		std::cout << "The positive value of the polynomial is: " << finalPositiveValue << '\n';
+	}
 
-		finalPositiveValue = ((-1 * linearTerm) + rootValue) / (2 * quadraticTerm);
-		finalNegativeValue = ((-1 * linearTerm) - rootValue) / (2 * quadraticTerm);
-
-		if (finalPositiveValue < 1 and finalPositiveValue > -1) {
-			std::cout << "The positive value of the polynomial is: " << 0 << '\n';
-		} else {
-			std::cout << "The positive value of the polynomial is: " << finalPositiveValue << '\n';
-		}
-
-		if (rootValue != 0) {
-			std::cout << "The negative value of the polynomial is: " << finalNegativeValue << '\n';
-		}
+	if (rootValue != 0) {
+		std::cout << "The negative value of the polynomial is: " << finalNegativeValue << '\n';
 	}
 
 	return 0;
