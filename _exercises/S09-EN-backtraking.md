@@ -10,7 +10,7 @@
 
 5) **E05-locked-domino**: A domino game is considered "locked" if the two pieces that allow players to participate in the game are the same, and none of them (in the case of four players) has any stone with that value. It is desired to know all the ways in which a domino game is locked.
 
-6) **E06-knight-tour**: Indicate all the ways in which the knight piece placed in the upper right corner of a chessboard can traverse it completely, without passing through the same place twice. Note that the chessboard is 8 x 8 in size, and the knight moves in an "L" shape. Now, indicate if the knight can traverse the board without passing through the same place twice.
+6) **E06-knight-tour**: It is desired to indicate at least one way in which the knight piece placed in the upper right corner of a chessboard can traverse it completely, without passing through the same place twice. Also, show the moves it made. Note that the chessboard is 8 x 8 in size, and the knight moves in an "L" shape.
 
 7) **E07-river-crossing**: A shepherd is on one side of a river with a sheep, a wolf, and a cabbage. To cross to the other side, he has a very small boat in which he can only cross accompanied by one of the three at most. Create an algorithm (based on the Backtracking technique) that finds the way for the shepherd to transport the sheep, the wolf, and the cabbage, knowing that if at any given moment he leaves the wolf and the sheep alone, the wolf will eat the sheep; and similarly, if he leaves the sheep and the cabbage alone, the sheep will eat the cabbage.
 

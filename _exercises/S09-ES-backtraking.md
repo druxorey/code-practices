@@ -10,7 +10,7 @@
 
 5) **E05-locked-domino**: Un juego de dominó se considera “trancado” si las dos piezas que permiten a los jugadores participar en el juego son iguales, y ninguno de ellos (en el caso de cuatro jugadores) posee ninguna piedra que tenga ese valor. Se desea conocer todas las formas en las cuales un juego de dominó está trancado.
 
-6) **E06-knight-tour**: Se desea que usted indique todas las formas en las cuales la pieza de caballo colocada en la esquina superior derecha de un tablero de ajedrez puede recorrerlo completo, sin pasar dos veces por el mismo lugar. Tenga en cuenta que el tablero de ajedrez es de tamaño 8 x 8, y el caballo se mueve en forma de “L”. Ahora, indique si el caballo puede recorrer el tablero sin pasar dos veces por el mismo lugar.
+6) **E06-knight-tour**: Se desea que indique al menos una forma en la cual la pieza de caballo colocada en la esquina superior derecha de un tablero de ajedrez puede recorrerlo completo, sin pasar dos veces por el mismo lugar. Además, muestre los movimientos que hizo. Tenga en cuenta que el tablero de ajedrez es de tamaño 8 x 8, y el caballo se mueve en forma de “L”.
 
 7) **E07-river-crossing**: Un pastor se encuentra en una orilla de un río con una oveja, un lobo y una col. Para pasar a la otra orilla dispone de una barca muy pequeña en la que no puede cruzar más que acompañado como máximo por uno de los tres. Realice un algoritmo (basado en la técnica de Backtracking) que encuentre el modo para que el pastor pueda trasladar a la oveja, al lobo y la col, sabiendo que si en un momento dado deja solos al lobo y la oveja, éste se la comerá; y del mismo modo, si las dejara solas, la oveja se comería a la col.
 
