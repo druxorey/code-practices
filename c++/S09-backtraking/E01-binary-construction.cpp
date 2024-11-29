@@ -16,7 +16,7 @@ void binary(int n, int &permutations, std::string number="") {
 int main() {
 	int size, permutations = 0;
 
-	std::cout << "\n\e[0;35m[========= LETTERS PERMUTATIONS =========]\e[0m\n" << '\n';
+	std::cout << "\n\e[0;35m[========= BINARY CONSTRUCTION =========]\e[0m\n" << '\n';
 
 	getInput("Enter the string size: ", size);
 	binary(size, permutations);

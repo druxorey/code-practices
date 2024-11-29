@@ -48,7 +48,7 @@ int main() {
 
 	int initialNumber = 0, lookedNumber = 0;
 
-	std::cout << "\n\e[0;35m[========= MULTIPLE DIGITS =========]\e[0m\n" << '\n';
+	std::cout << "\n\e[0;35m[========= ARITHMETIC EXPRESSIONS =========]\e[0m\n" << '\n';
 
 	getInput("Enter the initial number: ", initialNumber);
 	getInput("Enter the number to look for: ", lookedNumber);
