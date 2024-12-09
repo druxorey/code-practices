@@ -27,7 +27,6 @@ void getLockedDomino(bool usedPieces[], std::string dominoPieces[], std::string 
 
     bool isLocked = true;
 
-
 	for (int i = 0; i < SIZE; i++) {
 		char left = numbersAtPlay[0];
 		char right = numbersAtPlay[numbersAtPlay.size() - 1];
@@ -47,21 +46,25 @@ void getLockedDomino(bool usedPieces[], std::string dominoPieces[], std::string 
 				isLocked = false;
 				newNumbersAtPlay = numbersAtPlay + " " + piece.substr(0, 1) + piece.substr(1, 1);
 				getLockedDomino(usedPieces, dominoPieces, newNumbersAtPlay, usedPiecesCounter);
+				newNumbersAtPlay = numbersAtPlay;
 			}
 			if (piece[1] == right) {
 				isLocked = false;
 				newNumbersAtPlay = numbersAtPlay + " " + piece.substr(1, 1) + piece.substr(0, 1);
 				getLockedDomino(usedPieces, dominoPieces, newNumbersAtPlay, usedPiecesCounter);
+				newNumbersAtPlay = numbersAtPlay;
 			}
 			if (piece[0] == left) {
 				isLocked = false;
 				newNumbersAtPlay = piece.substr(1, 1) + piece.substr(0, 1) + " " + numbersAtPlay;
 				getLockedDomino(usedPieces, dominoPieces, newNumbersAtPlay, usedPiecesCounter);
+				newNumbersAtPlay = numbersAtPlay;
 			}
 			if (piece[1] == left) {
 				isLocked = false;
 				newNumbersAtPlay = piece.substr(0, 1) + piece.substr(1, 1) + " " + numbersAtPlay;
 				getLockedDomino(usedPieces, dominoPieces, newNumbersAtPlay, usedPiecesCounter);
+				newNumbersAtPlay = numbersAtPlay;
 			}
 
 			usedPiecesCounter--;
@@ -69,7 +72,7 @@ void getLockedDomino(bool usedPieces[], std::string dominoPieces[], std::string 
 		}
 	}
 
-    if (isLocked && numbersAtPlay[0] == numbersAtPlay[numbersAtPlay.size() - 1]) {
+    if (isLocked) {
 		std::cout << "Locked Domino: " << numbersAtPlay << '\n';
 		std::cout << "Total pieces: " << usedPiecesCounter << '\n';
 		return;
