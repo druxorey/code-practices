@@ -16,11 +16,11 @@ bool recursiveEquation(int array[], int size, int lookedNumber, int a = 0, int b
 	if (!isValid(size, a, b, c, d)) return 0;
 
 	if (array[a] + array[b] * array[c] / array[d] == lookedNumber) {
-		printf("\n\e[0;33mThe numbers at positions %d, %d, %d and %d sum %d\e[0m\n", a, b, c, d, lookedNumber);
+		printf("\n\e[0;33mBy operating the numbers %d, %d, %d and %d you get to %d\e[0m\n", array[a], array[b], array[c], array[d], lookedNumber);
 		return 1;
 	}
 
-	printf("\nTrying with %d, %d, %d and %d\n", a, b, c, d);
+	printf("Trying with %d, %d, %d and %d\n", array[a], array[b], array[c], array[d]);
 
 	for (int i = 1 ; i < size; i++) {
 		if (recursiveEquation(array, size, lookedNumber, a, b, c, i + d)) return 1;
@@ -52,8 +52,12 @@ int main() {
 
 	int *array = new int[arraySize];
 
-	fillArray(array, arraySize);
+	for (int i = 0; i <= arraySize; i++) {
+		array[i] = i + 1;
+	}
+
 	recursiveEquation(array, arraySize, lookedNumber);
+	printArray(array, arraySize);
 
 	return 0;
 }
