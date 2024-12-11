@@ -53,5 +53,3 @@
     Y la paridad de cualquier otro entero positivo es la opuesta que la del entero anterior, desarrolle las funciones lógicas, mutuamente recursivas, esPar y esImpar, que se complementen a la hora de averiguar la paridad de un entero positivo.
 
 17) **E17-recursive-equation**: Cuenta con una operación definida de la siguiente forma: a + b * c / d = x. Dado un "x" y un arreglo que contiene los valores no duplicados a ser utilizados en la fórmula, encuentre los valores de: a, b, c y d para que se cumpla la operación. En una fórmula válida: a, b, c y d tienen valores distintos. Suponga que el tamaño del arreglo es mayor a cuatro. Todas las variables son de tipo entero.
-
-18) **E18-equation-optimization**: Realiza el ejercicio anterior de forma óptima, es decir, intentando optimizar la fórmula matemática para realizar menos operaciones.

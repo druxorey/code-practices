@@ -54,5 +54,3 @@
 
 
 17) **E17-recursive-equation**: It has an operation defined as follows: a + b * c / d = x. Given an "x" and an array containing non-duplicate values to be used in the formula, find the values of: a, b, c, and d such that the operation holds true. In a valid formula: a, b, c, and d have distinct values. Assume the array size is greater than four. All variables are of integer type.
-
-18) **E18-equation-optimization**: Perform the previous exercise in an optimal way, that is, trying to optimize the mathematical formula to perform fewer operations.
