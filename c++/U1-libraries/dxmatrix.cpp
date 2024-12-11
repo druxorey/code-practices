@@ -24,13 +24,18 @@ void printMatrix(datatype** matrix, int sizeMatrix, std::string trueChar = "1", 
     int digits = std::to_string(biggestNumber).length();
 
     for (int i = 0; i < sizeMatrix; i++) {
+		std::cout << "\e[0;34m|\e[0m";
+
         for (int j = 0; j < sizeMatrix; j++) {
             int currentDigits = std::to_string(matrix[i][j]).length();
-            for (int k = 0; k < digits - currentDigits; k++) {
+
+            for (int k = 1; k < digits - currentDigits; k++) {
                 std::cout << " ";
             }
+
 			if (matrix[i][j] == true) std::cout << trueChar;
 			else std::cout << falseChar;
+
             std::cout << "\e[0;34m|\e[0m";
         }
         std::cout << '\n';
