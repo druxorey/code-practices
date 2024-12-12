@@ -3,15 +3,15 @@
 #include "../U1-libraries/dxmatrix.cpp"
 
 void generateMaze(int** maze, int size) {
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if ((rand() % size) == j) maze[i][j] = 1;
-			else maze[i][j] = 0;
-		}
-	}
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if ((rand() % 100) <= 25 ) maze[i][j] = 1;
+            else maze[i][j] = 0;
+        }
+    }
 
-	maze[0][0] = 0;
-	maze[size-1][size-1] = 0;
+    maze[0][0] = 0;
+    maze[size-1][size-1] = 0;
 }
 
 
@@ -24,6 +24,7 @@ bool isValid(int** maze, int size, int i, int j) {
 
 bool mazePath(int** maze, int size, int i = 0, int j = 0) {
 	if (i == size-1 && j == size-1) {
+		maze[i][j] = 2;
 		printf("THERE IS A PATH\n");
 		printMatrix(maze, size);
 		return true; 
