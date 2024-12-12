@@ -19,7 +19,28 @@ void printMatrix(datatype (&matrix)[cols][rows]) {
 
 
 template <typename datatype>
-void printMatrix(datatype** matrix, int sizeMatrix, std::string trueChar = "1", std::string falseChar = "0") {
+void printMatrix(datatype** matrix, int sizeMatrix) {
+    int biggestNumber = sizeMatrix * sizeMatrix;
+    int digits = std::to_string(biggestNumber).length();
+
+    for (int i = 0; i < sizeMatrix; i++) {
+		std::cout << "\e[0;34m|\e[0m";
+
+        for (int j = 0; j < sizeMatrix; j++) {
+            int currentDigits = std::to_string(matrix[i][j]).length();
+
+            for (int k = 1; k < digits - currentDigits; k++) {
+                std::cout << " ";
+            }
+			std::cout << matrix[i][j] << "\e[0;34m|\e[0m";
+        }
+        std::cout << '\n';
+    }
+}
+
+
+template <typename datatype>
+void printMatrix(datatype** matrix, int sizeMatrix, std::string trueChar, std::string falseChar) {
     int biggestNumber = sizeMatrix * sizeMatrix;
     int digits = std::to_string(biggestNumber).length();
 
