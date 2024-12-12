@@ -2,8 +2,9 @@
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxmatrix.cpp"
 
+
 bool scalable(bool **matrix, int size, int i = 0) {
-	if (size <= i) return true;
+	if (size <= i || i == size / 2) return true;
 
 	bool isScalable = false;
 
@@ -25,6 +26,8 @@ int main() {
 
 	std::cout << "\n\e[0;35m[========= SCALABLE TOWER =========]\e[0m\n" << '\n';
 
+	srand(time(NULL));
+
 	getInput("Enter the tower size: ", size);
 
 	bool **tower = new bool*[size];
@@ -32,17 +35,17 @@ int main() {
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			tower[i][j] = true;
-			if (i + j == 6) tower[i][j] = true;
-			printf("%d ", tower[i][j]);
-			if (j == size - 1) printf("\n");
+			if ((rand() % size) == j) tower[i][j] = true;
+			else tower[i][j] = false;
 		}
 	}
 
+	printMatrix(tower, size);
+
 	if (scalable(tower, size)) {
-		std::cout << "The tower is scalable\n";
+		std::cout << "\e[0;32mThe tower is scalable\n";
 	} else {
-		std::cout << "The tower is not scalable\n";
+		std::cout << "\e[0;31mThe tower is not scalable\n";
 	}
 
 	for (int i = 0; i < size; i++) delete[] tower[i];
