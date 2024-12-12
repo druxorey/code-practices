@@ -13,12 +13,14 @@
 - **_exercises**: This directory contains the exercise texts in Markdown format.
 
 	- [S01-elemental-actions](./_exercises/S01-EN-elemental-actions.md)
-	- [S02-conditional-structure-control](./_exercises/S02-EN-conditional-structure-control.md)
-	- [S03-iterative-structure-control](./_exercises/S03-EN-iterative-structure-control.md)
+	- [S02-conditional-control-structures](./_exercises/S02-EN-conditional-control-structures.md)
+	- [S03-iterative-control-structures](./_exercises/S03-EN-iterative-control-structures.md)
 	- [S04-functions](./_exercises/S04-EN-functions.md)
-	- [S05-arrays](./_exercises/S05-EN-arrays.md)
+	- [S05-arrays-and-matrices](./_exercises/S05-EN-arrays-and-matrices.md)
 	- [S06-structs-and-files](./_exercises/S06-EN-structs-and-files.md)
-	- [S07-object-oriented](./_exercises/S07-EN-object-oriented.md)
+	- [S07-object-oriented-programming](./_exercises/S07-EN-object-oriented-programming.md)
+	- [S08-recursion](./_exercises/S08-EN-recursion.md)
+	- [S09-backtraking](./_exercises/S09-EN-backtraking.md)
 
 - **Languages**: Each programming language has its own directory. Within each, there are subdirectories named after the sections corresponding to the exercises. In each language directory, there is a `U1-libraries` directory, where commonly used functions are stored to keep the code clean, and a `U2-experiments` directory, where code not part of the exercises but used to test the language's features is stored. Additionally, there are directories named `U3`, `U4`, and so on, containing exercises specific to each language.
 
