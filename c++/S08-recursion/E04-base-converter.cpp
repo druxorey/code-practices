@@ -9,8 +9,10 @@ const char HEXADECIMAL_LIST[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9
 
 void getBase(int &base) {
 	std::cout << "Enter the base to be converted: \n";
-	printf("  1. Binary\n");
-	printf("  2. Hexadecimal\n");
+	printf("  [1] Binary\n");
+	printf("  [2] Octal\n");
+	printf("  [3] Decimal\n");
+	printf("  [4] Hexadecimal\n");
 	printf("Option: ");
 	std::cin >> base;
 }
