@@ -1,4 +1,4 @@
-# Recursividad y Optimización
+# Recursividad
 
 1) **E01-factorial**: Construya una función recursiva que calcule el factorial de un número entero.
 

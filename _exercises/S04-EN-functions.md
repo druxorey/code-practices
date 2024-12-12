@@ -1,4 +1,4 @@
-# Actions and Functions
+# Functions
 
 1) **E01-city-distances**: Write an algorithm that takes as input a sequence of pairs of city names and distances between these cities (measured in miles) and reports the distances in kilometers. Note that the end of the input is determined by two cities with the same name and distance 0. **Example:** For the sequence "Caracas" "Valencia" "98" "Caracas" "Maturin" "312" "Caracas" "Caracas" "0", your algorithm should print:
 

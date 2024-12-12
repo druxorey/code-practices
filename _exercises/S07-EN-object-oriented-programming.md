@@ -1,4 +1,4 @@
-# Programación Orientada a Objetos
+# Object Oriented Programming
 
 1) **E01-product-classes**: The products sold by a certain company are books and CDs. Each product is characterized by a code that uniquely identifies it, the base market price, and the VAT applied, which is different in each case: 8% for books and 12% for CDs. Additionally, the specific characteristics of each type of product are: for Books: title, author(s), year of publication, publisher, ISBN; and for CDs: title, performer, year of publication. Furthermore, this company applies a 20% discount to books and a 10% discount to CDs. Therefore, the selling price of each product will be calculated as: base price + %VAT – discount. Define the necessary classes to represent the different types of products specified.
 

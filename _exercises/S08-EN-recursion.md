@@ -1,4 +1,4 @@
-# Recursion and Optimization
+# Recursion
 
 1) **E01-factorial**: Build a recursive function that calculates the factorial of an integer.
 

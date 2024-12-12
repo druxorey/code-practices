@@ -1,4 +1,4 @@
-# Acciones y Funciones
+# Funciones
 
 1) **E01-city-distances**: Escriba un algoritmo que tome como entrada una secuencia de pares de nombres de ciudades y distancias entre estas ciudades (medidas en millas) y reporte las distancias en kilómetros. Para ello tome en cuenta que el fin de la entrada está determinado por dos ciudades con el mismo nombre y distancia 0. **Ejemplo:** Para la secuencia "Caracas" "Valencia" "98" "Caracas" "Maturin" "312" "Caracas" "Caracas" "0', su algoritmo debe imprimir:
 

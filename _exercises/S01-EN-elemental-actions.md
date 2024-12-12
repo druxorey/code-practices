@@ -1,4 +1,4 @@
-# Elementary Actions
+# Elemental Actions
 
 1) **E01-inverted-number**: Write an algorithm that reads a four-digit number and displays the number in reverse. **Example:** If the number is `4678`, the output should be `8764`.
 

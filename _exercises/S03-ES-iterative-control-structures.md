@@ -1,4 +1,4 @@
-# Estructuras de control iterativas
+# Estructuras de Control Iterativas
 
 1) **E01-digit-sequence**: Escriba un algoritmo que lea un número N y calcule e imprima el número de dígitos de N leyéndolo de izquierda a derecha. **Ejemplo:** Para el número "429356", la salida debe de ser '6'.
 
