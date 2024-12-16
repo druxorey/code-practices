@@ -57,7 +57,8 @@ int main() {
 	}
 
 	recursiveEquation(array, arraySize, lookedNumber);
-	printArray(array, arraySize);
+
+	delete[] array;
 
 	return 0;
 }
