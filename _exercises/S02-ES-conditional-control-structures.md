@@ -24,3 +24,5 @@
 7) **E07-month-name**: Haga un algoritmo que reciba como entrada un número entre 1 y 12 e imprima el nombre del mes correspondiente. Tome en cuenta posibles valores erróneos en la entrada.
 
 8) **E08-quadratic-roots**:Escriba un algoritmo que permita encontrar los valores de un polinomio de segundo grado, tiene que recibir como entrada los coeficientes de la ecuación cuadrática. El algoritmo debe imprimir las raíces de la ecuación cuadrática, y si no existe una solución real, debe de indicarse.
+
+9) **E09-coordinate-converter**: Escriba un algoritmo que convierta coordenadas polares a cartesianas y viceversa. El algoritmo debe recibir como entrada el tipo de conversión deseada (de polares a cartesianas o de cartesianas a polares) y las coordenadas correspondientes. Para la conversión de polares a cartesianas, el algoritmo debe recibir el radio (r) y el ángulo (θ) en grados, y devolver las coordenadas (x, y). Para la conversión de cartesianas a polares, el algoritmo debe recibir las coordenadas (x, y) y devolver el radio (r) y el ángulo (θ) en grados.

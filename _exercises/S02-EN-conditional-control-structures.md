@@ -25,3 +25,5 @@
 7) **E07-month-name**: Create an algorithm that takes as input a number between 1 and 12 and prints the name of the corresponding month. Consider possible erroneous input values.
 
 8) **E08-quadratic-roots**:Write an algorithm that finds the values of a second-degree polynomial. It should receive the coefficients of the quadratic equation as input. The algorithm must print the roots of the quadratic equation, and if there is no real solution, it should indicate so.
+
+9) **E09-coordinate-converter**: Write an algorithm that converts polar coordinates to Cartesian coordinates and vice versa. The algorithm should take as input the desired type of conversion (from polar to Cartesian or from Cartesian to polar) and the corresponding coordinates. For the conversion from polar to Cartesian, the algorithm should take the radius (r) and the angle (θ) in degrees, and return the coordinates (x, y). For the conversion from Cartesian to polar, the algorithm should take the coordinates (x, y) and return the radius (r) and the angle (θ) in degrees.
