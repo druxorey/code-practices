@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
 		printf("  4) Sort by cuantity\n");
 		printf("  5) Exit\n");
 
-		getInput("\nOption: ", option);
+		getcin("\nOption: ", option);
 
 		system("clear");
 		switch (option) {
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 				showTotalValue(cuantityList, priceList, listSize);
 				break;
 			case 3:
-				getInput("Enter the product number: ", option);
+				getcin("Enter the product number: ", option);
 				printf("\n\e[1;35mPRODUCT VALUE:\e[0m %.2f$\n", getProductValue(cuantityList, priceList, option - 1));
 				break;
 			case 4:

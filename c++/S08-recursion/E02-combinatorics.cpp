@@ -31,8 +31,8 @@ int main(int argc, char *argv[]) {
 
 	int n, k;
 
-	getInput("Enter the value of n: ", n);
-	getInput("Enter the value of k: ", k);
+	getcin("Enter the value of n: ", n);
+	getcin("Enter the value of k: ", k);
 
 	ulli combinatorics = getCombinatorics(n, k);
 

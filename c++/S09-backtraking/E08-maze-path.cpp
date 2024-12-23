@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 
 	int size;
 	srand(time(NULL));
-	getInput("Enter the maze size: ", size);
+	getcin("Enter the maze size: ", size);
 
 	int** maze = new int*[size];
 	for (int i = 0; i < size; i++) {

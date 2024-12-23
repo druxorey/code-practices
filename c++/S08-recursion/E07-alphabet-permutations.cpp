@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
 	int alphaberSize = 0, permutations = 0;
 
-	getInput("Enter string size: ", alphaberSize);
+	getcin("Enter string size: ", alphaberSize);
 	char letters[alphaberSize];
 	fillArray(letters, alphaberSize);
 

@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 	int number;
 
 	do {
-		getInput("Enter the number to be evaluated: ", number);
+		getcin("Enter the number to be evaluated: ", number);
 
 		if (!(number < 1000000 && number > 100000))
 			printf("The number must have 6 digits.\n");

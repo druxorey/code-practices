@@ -35,8 +35,8 @@ int main(int argc, char *argv[]) {
 
 	int fullNumber, stop;
 
-	getInput("Enter the number: ", fullNumber);
-	getInput("Enter the final number: ", stop);
+	getcin("Enter the number: ", fullNumber);
+	getcin("Enter the stop number: ", stop);
 
 	printf("The inverted number is: %d\n", invertNumber(fullNumber));
 

@@ -4,8 +4,8 @@
 int daysByMonth(int month) {
 	int days = 0;
 
-	for (int i=1; i< month; i++) {
-		if (i == 2) { days += 28; }
+	for (int i = 1; i < month; i++) {
+		if (i == 2) { days += 28;}
 		else {days += (i == 4 || i == 6 || i == 9 || i == 11)? 30: 31;}
 	}
 
@@ -15,7 +15,7 @@ int daysByMonth(int month) {
 
 int daysByYear(int year) {
 	int days = year * 365;
-	days = (year%4==0 || (year%100==0 && year%400==0))? days +=1 : days+=0; 
+	days = (year % 4 == 0 || (year % 100 == 0 && year % 400 == 0))? days += 1 : days += 0;
 	return days;
 }
 
@@ -40,10 +40,10 @@ int main(int argc, char *argv[]) {
 
 	int firstDate, secondDate;
 
-	getInput("Enter the first date [DDMMYYYY]: ", firstDate);
-	getInput("Enter the second date [DDMMYYYY]: ", secondDate);
+	getcin("Enter the first date [DDMMYYYY]: ", firstDate);
+	getcin("Enter the second date [DDMMYYYY]: ", secondDate);
 
-	printf("The difference is %i days.\n",daysDifference(firstDate, secondDate));
+	printf("The difference is %i days.\n", daysDifference(firstDate, secondDate));
 
 	return 0;
 }

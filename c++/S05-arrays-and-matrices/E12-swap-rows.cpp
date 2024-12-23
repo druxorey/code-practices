@@ -23,10 +23,10 @@ int main(int argc, char *argv[]) {
 		if (sizeMatrix % 2 != 0) {
 			printf("\n\e[0;31mThe number must be even\e[0m\n");
 		}
-		getInput("Enter the size of the matrix: ", sizeMatrix);
+		getcin("Enter the size of the matrix: ", sizeMatrix);
 	} while (sizeMatrix % 2 != 0);
 
-	int** matrix = new int*[sizeMatrix]; 
+	int** matrix = new int*[sizeMatrix];
 	for (int i = 0; i < sizeMatrix; i++) {
 		matrix[i] = new int[sizeMatrix];
 	}
@@ -40,9 +40,9 @@ int main(int argc, char *argv[]) {
 	printMatrix(matrix, sizeMatrix);
 
 	for (int i = 0; i < sizeMatrix; i++) {
-		delete[] matrix[i]; 
+		delete[] matrix[i];
 	}
-	delete[] matrix; 
+	delete[] matrix;
 
 	return 0;
 }

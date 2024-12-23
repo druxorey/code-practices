@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
 	std::string inputText;
 
-	getInput("Enter the string: ", inputText);
+	getcin("Enter the string: ", inputText);
 
 	if (isPalindrome(inputText)) {
 		printf("The string is a palindrome.\n");

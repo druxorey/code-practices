@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
 
 	int sizeArray, replacedNumber;
 
-	getInput("Enter the size of the array: ", sizeArray);
-	getInput("Enter the number to replace every N²: ", replacedNumber);
+	getcin("Enter the size of the array: ", sizeArray);
+	getcin("Enter the number to replace every N²: ", replacedNumber);
 
 	int array[sizeArray];
 

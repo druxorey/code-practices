@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "../U1-libraries/dxinput.cpp"
 
 struct dot {
 	float x = 0;
@@ -15,7 +16,7 @@ int main(int argc, char *argv[]) {
 
 	for (int i = 0; i < 2; i++) {
 		int coorditate;
-		std::cout << "Enter coorditates for the dot number " << i+1 << ": " << '\n';
+		std::cout << "Enter coorditates for the dot number " << i + 1 << ": " << '\n';
 		std::cin >> coorditate;
 		dots[i].x = coorditate;
 		std::cin >> coorditate;

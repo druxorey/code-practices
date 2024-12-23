@@ -38,13 +38,13 @@ int main(int argc, char *argv[]) {
 
 	int arraySize, lookedNumber;
 
-	getInput("Enter the size of the array: ", arraySize);
+	getcin("Enter the size of the array: ", arraySize);
 	if (arraySize < 4) {
 		printf("\n\e[0;31mThe array size must be greater or equal than 4\e[0m\n");
 		return 1;
 	}
 
-	getInput("Enter the number to look for: ", lookedNumber);
+	getcin("Enter the number to look for: ", lookedNumber);
 	if (lookedNumber < 0) {
 		printf("\n\e[0;31mThe number to look for must be greater or equal than 0\e[0m\n");
 		return 1;

@@ -13,8 +13,8 @@ int main(int argc, char *argv[]) {
 
 	int a = 0, b = 0;
 
-	getInput("Enter the first number: ", a);
-	getInput("Enter the second number: ", b);
+	getcin("Enter the first number: ", a);
+	getcin("Enter the second number: ", b);
 
 	printf("\n\e[0;33mThe result of %d * %d is %d\e[0m\n", a, b, multiply(a, b));
 

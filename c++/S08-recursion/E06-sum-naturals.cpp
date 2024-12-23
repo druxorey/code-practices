@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 
 	int size = 0;
 
-	getInput("Enter the number of naturals to sum: ", size);
+	getcin("Enter the number of naturals to sum: ", size);
 	printf("\e[0;32mThe sum of all naturals is %d\e[0m\n", sumNaturals(size));
 
 	return 0;

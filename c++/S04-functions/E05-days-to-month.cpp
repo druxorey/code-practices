@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 
 	int month, totalDays;
 
-	getInput("Enter the month number: ", month);
+	getcin("Enter the month number: ", month);
 
 	totalDays = monthToDays(month);
 

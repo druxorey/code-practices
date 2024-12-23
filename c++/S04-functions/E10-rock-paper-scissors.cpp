@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 		std::cout << " - [P] Paper" << '\n';
 		std::cout << " - [S] Scissors" << '\n';
 
-		getInput("Enter your choise: ", playerChoise);
+		getcin("Enter your choise: ", playerChoise);
 
 	} while (playerChoise != 'r' && playerChoise != 'p' && playerChoise != 's');
 

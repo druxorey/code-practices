@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 
 	int a = 0;
 
-	getInput("Enter the first number: ", a);
+	getcin("Enter the first number: ", a);
 	printf("\n\e[0;32m%d\e[0m is %s\n", a, isEven(a) ? "even" : "odd");
 
 	return 0;

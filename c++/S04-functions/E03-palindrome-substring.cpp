@@ -19,14 +19,14 @@ int main(int argc, char *argv[]) {
 	int number = 0;
 
 	do {
-		getInput("Enter the number to be evaluated: ", number);
+		getcin("Enter the number to be evaluated: ", number);
 
 		if (!(number < 1000000 && number > 100000))
 			printf("The number must have 6 digits.\n");
 
 	} while (!(number < 1000000 && number > 100000));
 
-	for (int i=0; i<=3; i++) {
+	for (int i = 0; i <= 3; i++) {
 		int evaluatedNumber = number % 1000;
 		if (isCapicua(evaluatedNumber)) {
 			printf("The number %i is capicua.\n", evaluatedNumber);

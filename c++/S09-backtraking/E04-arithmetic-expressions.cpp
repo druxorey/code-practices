@@ -49,8 +49,8 @@ int main(int argc, char *argv[]) {
 
 	int initialNumber = 0, lookedNumber = 0;
 
-	getInput("Enter the initial number: ", initialNumber);
-	getInput("Enter the number to look for: ", lookedNumber);
+	getcin("Enter the initial number: ", initialNumber);
+	getcin("Enter the number to look for: ", lookedNumber);
 
 	if (initialNumber < 1) {
 		printf("The initial number must be greater than 0.\n");

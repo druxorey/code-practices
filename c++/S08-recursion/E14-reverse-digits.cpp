@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
 	int number;
 
-	getInput("Enter a number: ", number);
+	getcin("Enter a number: ", number);
 	printf("The inverted number is: %d\n", invertNumber(number));
 
 	return 0;

@@ -16,9 +16,9 @@ int main(int argc, char *argv[]) {
 
 	int sizeMatrix;
 
-	getInput("Enter the size of the matrix: ", sizeMatrix);
+	getcin("Enter the size of the matrix: ", sizeMatrix);
 
-	int** matrix = new int*[sizeMatrix]; 
+	int** matrix = new int*[sizeMatrix];
 	for (int i = 0; i < sizeMatrix; i++) {
 		matrix[i] = new int[sizeMatrix];
 	}
@@ -28,9 +28,9 @@ int main(int argc, char *argv[]) {
 	printf("\nThe sum of the secondary diagonal is %i.\n", diagonalMatrix(matrix, sizeMatrix));
 
 	for (int i = 0; i < sizeMatrix; i++) {
-		delete[] matrix[i]; 
+		delete[] matrix[i];
 	}
-	delete[] matrix; 
+	delete[] matrix;
 
 	return 0;
 }

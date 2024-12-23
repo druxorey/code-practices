@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 
 	int size, permutations = 0;
 
-	getInput("Enter the string size: ", size);
+	getcin("Enter the string size: ", size);
 
 	char letters[size];
 

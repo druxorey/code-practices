@@ -14,8 +14,8 @@ int main(int argc, char *argv[]) {
 	double base = 0.0;
 	unsigned int exponent = 0;
 
-	getInput("Enter the base: ", base);
-	getInput("Enter the exponent: ", exponent);
+	getcin("Enter the base: ", base);
+	getcin("Enter the exponent: ", exponent);
 
 	printf("\e[0;32m%.2f raised to the power of %d is %.4f\e[0m\n", base, exponent, getPower(base, exponent));
 

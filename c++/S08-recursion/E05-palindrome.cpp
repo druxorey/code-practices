@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
 	char input[48];
 
-	getInput("Enter a word: ", input);
+	getcin("Enter a word: ", input);
 	int size = sizeof(input) / sizeof(input[0]);
 
 	if (getPalindrome(input, size)) {

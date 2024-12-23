@@ -13,7 +13,7 @@ int maxArray(int array[], int size) {
 		}
 	}
 	return maxNumber;
-};
+}
 
 
 int main(int argc, char *argv[]) {
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 
 	int sizeArray;
 
-	getInput("Enter the size of the array: ", sizeArray);
+	getcin("Enter the size of the array: ", sizeArray);
 
 	int initialArray[sizeArray];
 	randArray(initialArray, sizeArray);

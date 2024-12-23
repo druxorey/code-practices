@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
 	int size, position;
 
-	getInput("Enter the size of the array: ", size);
+	getcin("Enter the size of the array: ", size);
 	int numbers[size];
 
 	randArray(numbers, size);

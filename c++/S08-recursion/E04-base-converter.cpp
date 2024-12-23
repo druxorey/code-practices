@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 		printf("Invalid base\n");
 		return 1;
 	}
-	getInput("Enter the the number to convert: ", inputNumber);
+	getcin("Enter the the number to convert: ", inputNumber);
 
 	switch (convertedBase){
 		case 1:

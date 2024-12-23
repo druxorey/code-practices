@@ -3,7 +3,7 @@
 
 double deposit() {
 	double amount;
-	getInput("Enter the amount you want to deposit to your account: ", amount);
+	getcin("Enter the amount you want to deposit to your account: ", amount);
 
 	if (amount < 0) {
 		printf("\e[0;31mYou can't deposit a negative amount\e[0m\n");
@@ -16,7 +16,7 @@ double deposit() {
 
 double withdraw(double balance) {
 	double amount;
-	getInput("Enter the amount you want to withdraw to your account: ", amount);
+	getcin("Enter the amount you want to withdraw to your account: ", amount);
 
 	if (amount < 0) {
 		printf("\e[0;31mYou can't withdraw a negative amount\e[0m\n");
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 		std::cout << "3. Check balance" << '\n';
 		std::cout << "4. Exit" << '\n';
 
-		getInput("\nSelect a choise: ", choise);
+		getcin("\nSelect a choise: ", choise);
 
 		switch (choise) {
 			case 1:

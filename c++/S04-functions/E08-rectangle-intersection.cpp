@@ -14,16 +14,14 @@ int main(int argc, char *argv[]) {
 	int firstRectX, firstRectY, firstRectWidth, firstRectHeight;
 	int secondRectX, secondRectY, secondRectWidth, secondRectHeight;
 
-	std::cout << "\n\e[0;35m[=========  =========]\e[0m\n" << '\n';
-
-	getInput("Enter the x vertex position of the first rectangle: ", firstRectX);
-	getInput("Enter the y vertex position of the first rectangle: ", firstRectY);
-	getInput("Enter the width of the first rectangle: ", firstRectWidth);
-	getInput("Enter the height of the first rectangle: ", firstRectHeight);
-	getInput("Enter the x vertex position of the second rectangle: ", secondRectX);
-	getInput("Enter the y vertex position of the second rectangle: ", secondRectY);
-	getInput("Enter the width of the second rectangle: ", secondRectWidth);
-	getInput("Enter the height of the second rectangle: ", secondRectHeight);
+	getcin("Enter the x vertex position of the first rectangle: ", firstRectX);
+	getcin("Enter the y vertex position of the first rectangle: ", firstRectY);
+	getcin("Enter the width of the first rectangle: ", firstRectWidth);
+	getcin("Enter the height of the first rectangle: ", firstRectHeight);
+	getcin("Enter the x vertex position of the second rectangle: ", secondRectX);
+	getcin("Enter the y vertex position of the second rectangle: ", secondRectY);
+	getcin("Enter the width of the second rectangle: ", secondRectWidth);
+	getcin("Enter the height of the second rectangle: ", secondRectHeight);
 
 	bool isTopLeftInSecond = isPointInRectangle(firstRectX, firstRectY, secondRectX, secondRectY, secondRectWidth, secondRectHeight);
 	bool isTopRightInSecond = isPointInRectangle(firstRectX + firstRectWidth, firstRectY, secondRectX, secondRectY, secondRectWidth, secondRectHeight);

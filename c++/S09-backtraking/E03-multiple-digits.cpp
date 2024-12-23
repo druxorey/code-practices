@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
 
 	int size, limit = 1;
 
-	getInput("Enter the max digits: ", size);
+	getcin("Enter the max digits: ", size);
 
 	while (size - 1 > 0) {
 		limit *= 10;

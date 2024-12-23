@@ -6,10 +6,10 @@ int repeatedItem(int array[], int size) {
 	int maxValue = array[0], maxRepeated = 1;
 
 	for (int i = 0; i < size; i++) {
-		int evaluatedRepeated = 0, evaluatedValue = array[i];;
+		int evaluatedRepeated = 0, evaluatedValue = array[i];
 
 		for (int j = 0; j < size - i ; j++) {
-			if (evaluatedValue == array[j]) {evaluatedRepeated ++;}
+			if (evaluatedValue == array[j]) evaluatedRepeated ++;
 		}
 
 		if (maxRepeated < evaluatedRepeated) {
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
 	int sizeArray;
 
-	getInput("Enter the size of the array: ", sizeArray);
+	getcin("Enter the size of the array: ", sizeArray);
 
 	int array[sizeArray];
 	randArray(array, sizeArray);

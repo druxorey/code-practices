@@ -16,8 +16,8 @@ int main(int argc, char *argv[]) {
 
 	int size, number, position;
 
-	getInput("Enter the size of the array: ", size);
-	getInput("Enter the number to search: ", number);
+	getcin("Enter the size of the array: ", size);
+	getcin("Enter the number to search: ", number);
 	int numbers[size];
 
 	fillArray(numbers, size);

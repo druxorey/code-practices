@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 
 	int size, permutations = 0;
 
-	getInput("Enter the string size: ", size);
+	getcin("Enter the string size: ", size);
 	binary(size, permutations);
 	printf("\n\e[0;32mTotal permutations: %d\e[0m\n", permutations);
 

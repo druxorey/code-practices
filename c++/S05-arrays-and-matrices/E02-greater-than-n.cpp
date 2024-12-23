@@ -14,8 +14,8 @@ int main(int argc, char *argv[]) {
 
 	int sizeArray, thresholdValue, countGreaterThan = 0;
 
-	getInput("Enter the size of the array: ", sizeArray);
-	getInput("Enter the averge number: ", thresholdValue);
+	getcin("Enter the size of the array: ", sizeArray);
+	getcin("Enter the averge number: ", thresholdValue);
 
 	int array[sizeArray];
 

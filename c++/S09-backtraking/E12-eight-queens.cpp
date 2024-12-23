@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= EIGHT QUEENS =========]\e[0m\n\n";
 
 	int boardSize;
-	getInput("Enter board size: ", boardSize);
+	getcin("Enter board size: ", boardSize);
 
 	if (boardSize < 4) {
 		printf("\n\e[0;31mThe board size must be greater or equal than 4\e[0m\n");

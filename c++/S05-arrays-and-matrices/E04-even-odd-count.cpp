@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 
 	int sizeArray, evenQuantity = 0, oddQuantity = 0;
 
-	getInput("Enter the size of the array: ", sizeArray);
+	getcin("Enter the size of the array: ", sizeArray);
 
 	int numberList[sizeArray];
 	randArray(numberList, sizeArray);

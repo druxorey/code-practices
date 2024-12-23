@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../U1-libraries/dxinput.cpp"
 
 const int MAX_PRODUCTS = 3;
 const int MAX_CATEGORIES = 2;
@@ -124,15 +125,14 @@ int main(int argc, char *argv[]) {
 
 		std::cout << "\n\e[0;35m[========= PRODUCT STRUCTURES =========]\e[0m\n\n";
 
-		std::cout << "1. Add product" << '\n';
-		std::cout << "2. List products" << '\n';
-		std::cout << "3. Add Price" << '\n';
-		std::cout << "4. Search products" << '\n';
-		std::cout << "5. Exit" << '\n';
+		printf("1. Add product\n");
+		printf("2. List products\n");
+		printf("3. Add Price\n");
+		printf("4. Search products\n");
+		printf("5. Exit\n");
 
 		int option;
-		std::cout << "Select an option: ";
-		std::cin >> option;
+		getcin("Select an option: ", option);
 
 		switch (option) {
 			case 1:

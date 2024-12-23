@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	ulli number, fibonacci;
 	std::unordered_map<ulli, ulli> memo;
 
-	getInput("Enter a number: ", number);
+	getcin("Enter a number: ", number);
 
 	if (number > 199) {
 		printf("Fibonacci of %lld is too large to be calculated\n", number);

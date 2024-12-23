@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 
 	int size = 0;
 
-	getInput("Enter the number of terms to sum: ", size);
+	getcin("Enter the number of terms to sum: ", size);
 	printf("\e[0;32mThe sum of the first %d terms of the harmonic series is %f\e[0m\n", size, getHarmonic(size));
 
 	return 0;

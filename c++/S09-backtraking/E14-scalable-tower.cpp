@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 
 	srand(time(NULL));
 
-	getInput("Enter the tower size: ", size);
+	getcin("Enter the tower size: ", size);
 
 	bool **tower = new bool*[size];
 	for (int i = 0; i < size; i++) tower[i] = new bool[size];

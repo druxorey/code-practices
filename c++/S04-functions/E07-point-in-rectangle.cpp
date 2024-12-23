@@ -14,14 +14,14 @@ bool isInWidth (int xVertex, int xPoint, int width) {
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= POINT IN RECTANGLE =========]\e[0m\n\n";
 
-	int xPoint, yPoint, xVertex, yVertex, height, width; 
+	int xPoint, yPoint, xVertex, yVertex, height, width;
 
-	getInput("Enter the x position: ", xPoint);
-	getInput("Enter the y position: ", yPoint);
-	getInput("Enter the x vertex position: ", xVertex);
-	getInput("Enter the y vertex position: ", yVertex);
-	getInput("Enter the height: ", height);
-	getInput("Enter the width: ", width);
+	getcin("Enter the x position: ", xPoint);
+	getcin("Enter the y position: ", yPoint);
+	getcin("Enter the x vertex position: ", xVertex);
+	getcin("Enter the y vertex position: ", yVertex);
+	getcin("Enter the height: ", height);
+	getcin("Enter the width: ", width);
 
 	bool heightValue = isInHeight(yVertex, yPoint, height);
 	bool widthValue = isInWidth(xVertex, xPoint, width);

@@ -19,8 +19,8 @@ int main(int argc, char *argv[]) {
 
 	int sizeArray, averageNumber;
 
-	getInput("Enter the size of the array: ", sizeArray);
-	getInput("Enter the average number: ", averageNumber);
+	getcin("Enter the size of the array: ", sizeArray);
+	getcin("Enter the average number: ", averageNumber);
 
 	int array[sizeArray];
 

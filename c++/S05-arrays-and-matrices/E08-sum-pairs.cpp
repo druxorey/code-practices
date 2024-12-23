@@ -25,8 +25,8 @@ int main(int argc, char *argv[]) {
 
 	int finalNumber, sizeArray, finalTimes;
 
-	getInput("Enter the array size: ", sizeArray);
-	getInput("Enter the number to be compared: ", finalNumber);
+	getcin("Enter the array size: ", sizeArray);
+	getcin("Enter the number to be compared: ", finalNumber);
 
 	int array[sizeArray];
 	randArray(array, sizeArray);

@@ -60,8 +60,8 @@ int main(int argc, char *argv[]) {
 
 	int rows, cols;
 
-	getInput("Enter the number of rows: ", rows);
-	getInput("Enter the number of columns: ", cols);
+	getcin("Enter the number of rows: ", rows);
+	getcin("Enter the number of columns: ", cols);
 
     int** initialMatrix = createMatrix(cols, rows);
     int** finalMatrix = createMatrix(rows, cols);

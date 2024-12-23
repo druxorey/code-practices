@@ -15,15 +15,11 @@ bool askForCity() {
 	std::string initialCity, finalCity;
 	float distance;
 
-	std::cout << "Enter the initial city: ";
-	getline(std::cin, initialCity);
+	getcin("Enter the initial city: ", initialCity);
+	getcin("Enter the final city: ", finalCity);
+	getcin("Enter the distance between \e[0;33m" + initialCity + "\e[0m and \e[0;33m" + finalCity + "\e[0m in miles: ", distance);
 
-	std::cout << "Enter the final city: ";
-	getline(std::cin, finalCity);
-
-	getInput("Enter the distance between \e[0;33m" + initialCity + "\e[0m and \e[0;33m" + finalCity + "\e[0m in miles: ", distance);
-
-	if (initialCity == finalCity and distance == 0)
+	if (initialCity == finalCity && distance == 0)
 		return false;
 
 	printDistance(convertMilesToKm(distance));

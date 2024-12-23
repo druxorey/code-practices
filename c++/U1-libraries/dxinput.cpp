@@ -1,7 +1,7 @@
 #include <iostream>
 
 template <typename datatype>
-void getInput(std::string message, datatype &input) {
+void getcin(std::string message, datatype &input) {
 	do {
 		std::cout << message;
 		std::cin >> input;

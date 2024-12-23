@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
 	short int number;
 	ulli factorial;
 
-	getInput("Enter a number: ", number);
+	getcin("Enter a number: ", number);
 
 	if (number < 0) {
 		printf("Factorial of %d is undefined\n", number);

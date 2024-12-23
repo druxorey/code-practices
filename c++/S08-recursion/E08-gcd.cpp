@@ -13,8 +13,8 @@ int main(int argc, char *argv[]) {
 
 	int a = 0, b = 0;
 
-	getInput("Enter first number: ", a);
-	getInput("Enter second number: ", b);
+	getcin("Enter first number: ", a);
+	getcin("Enter second number: ", b);
 
 	printf("\n\e[0;32mGCD of %d and %d is: %d\e[0m\n", a, b, getGcd(a, b));
 
