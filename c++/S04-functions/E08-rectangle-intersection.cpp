@@ -8,11 +8,13 @@ bool isPointInRectangle(int pointX, int pointY, int rectX, int rectY, int rectWi
 }
 
 
-int main(){
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= RECTANGLE INTERSECTION =========]\e[0m\n\n";
+
 	int firstRectX, firstRectY, firstRectWidth, firstRectHeight;
 	int secondRectX, secondRectY, secondRectWidth, secondRectHeight;
 
-	std::cout << "\n\e[0;35m[========= RECTANGLE INTERSECTION =========]\e[0m\n" << '\n';
+	std::cout << "\n\e[0;35m[=========  =========]\e[0m\n" << '\n';
 
 	getInput("Enter the x vertex position of the first rectangle: ", firstRectX);
 	getInput("Enter the y vertex position of the first rectangle: ", firstRectY);

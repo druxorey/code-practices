@@ -1,10 +1,10 @@
 #include <iostream>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= DECIMAL SEQUENCE =========]\e[0m\n\n";
+
 	bool isEnded = true;
 	int inputNumber, fullNumber = 0;
-
-	std::cout << "\n\e[0;35m[========= DECIMAL SEQUENCE =========]\e[0m\n" << '\n';
 
 	do {
 		std::cout << "Enter the number: ";

@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int originalNumber, invertedNumber = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n" << '\n';
+	int originalNumber, invertedNumber = 0;
 
 	std::cout << "Enter a 4 digit number: "; 
 	std::cin >> originalNumber;

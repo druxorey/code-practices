@@ -14,11 +14,11 @@ ulli getFibonnacci(ulli n, std::unordered_map<ulli, ulli>& memo) {
 	return memo[n];
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= RECURSIVE FIBONACCI =========]\e[0m\n\n";
+
 	ulli number, fibonacci;
 	std::unordered_map<ulli, ulli> memo;
-
-	std::cout << "\n\e[0;35m[========= RECURSIVE FIBONACCI =========]\e[0m\n" << '\n';
 
 	getInput("Enter a number: ", number);
 

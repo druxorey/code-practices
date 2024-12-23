@@ -1,10 +1,10 @@
 #include <iostream>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= HAPPY NUMBER =========]\e[0m\n\n";
+
 	int initialNumber, one, two, three, four;
 	bool isHappyNumber = false, isAscendantNumber = false;
-
-	std::cout << "\n\e[0;35m[========= HAPPY NUMBER =========]\e[0m\n" << '\n';
 
 	std::cout << "Enter a 4 digit nummber: ";
 	std::cin >> initialNumber;

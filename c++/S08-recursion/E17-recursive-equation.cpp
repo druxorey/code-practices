@@ -33,8 +33,8 @@ bool recursiveEquation(int array[], int size, int lookedNumber, int a = 0, int b
 }
 
 
-int main() {
-	std::cout << "\n\e[0;35m[========= RECURSIVE EQUATION =========]\e[0m\n" << '\n';
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= RECURSIVE EQUATION =========]\e[0m\n\n";
 
 	int arraySize, lookedNumber;
 

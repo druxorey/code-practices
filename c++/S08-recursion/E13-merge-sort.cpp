@@ -26,10 +26,10 @@ void mergeSort(int array[], int size) {
 }
 
 
-int main() {
-	int size, position;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MERGE SORT =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= MERGE SORT =========]\e[0m\n" << '\n';
+	int size, position;
 
 	getInput("Enter the size of the array: ", size);
 	int numbers[size];

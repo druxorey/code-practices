@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int squarePattern, borderSize;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= NESTED SQUARE =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= NESTED SQUARE =========]\e[0m\n" << '\n';
+	int squarePattern, borderSize;
 
 	std::cout << "1- Chess.\n2- Dots.\n3- Fractal.\n" << '\n';
 	std::cout << "Select the square pattern: ";

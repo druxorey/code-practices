@@ -8,10 +8,10 @@ int multiply(int a, int b) {
 }
 
 
-int main() {
-	int a = 0, b = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= RECURSIVE MULTIPLICATION =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= RECURSIVE MULTIPLICATION =========]\e[0m\n" << '\n';
+	int a = 0, b = 0;
 
 	getInput("Enter the first number: ", a);
 	getInput("Enter the second number: ", b);

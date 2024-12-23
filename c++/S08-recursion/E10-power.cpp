@@ -8,11 +8,11 @@ double getPower(double base, int exponent) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= POWER =========]\e[0m\n\n";
+
 	double base = 0.0;
 	unsigned int exponent = 0;
-
-	std::cout << "\n\e[0;35m[========= POWER =========]\e[0m\n" << '\n';
 
 	getInput("Enter the base: ", base);
 	getInput("Enter the exponent: ", exponent);

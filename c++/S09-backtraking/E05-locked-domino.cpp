@@ -80,8 +80,8 @@ void getLockedDomino(bool usedPieces[], std::string dominoPieces[], std::string 
 }
 
 
-int main() {
-	std::cout << "\n\e[0;35m[========= LOCKED DOMINO =========]\e[0m\n" << '\n';
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= LOCKED DOMINO =========]\e[0m\n\n";
 
 	std::string dominoPieces[SIZE];
 	bool usedPieces[SIZE] = {0};

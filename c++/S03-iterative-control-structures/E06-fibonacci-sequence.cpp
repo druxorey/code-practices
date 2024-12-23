@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= FIBONACCI SEQUENCE =========]\e[0m\n\n";
+
     long long int iterationLimit;
-    std::cout << "\n\e[0;35m[========= FIBONACCI SEQUENCE =========]\e[0m\n" << '\n';
+
     std::cout << "Enter the final position in the Fibonacci sequence: ";
     std::cin >> iterationLimit;
 

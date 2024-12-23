@@ -30,10 +30,10 @@ int extractDigits(int fullNumber, int stop) {
 }
 
 
-int main() {
-	int fullNumber, stop;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= EXTRACT DIGITS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= EXTRACT DIGITS =========]\e[0m\n" << '\n';
+	int fullNumber, stop;
 
 	getInput("Enter the number: ", fullNumber);
 	getInput("Enter the final number: ", stop);

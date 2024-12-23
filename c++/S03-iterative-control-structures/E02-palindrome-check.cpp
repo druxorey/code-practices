@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int inputNumber;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
+	int inputNumber;
 
 	std::cout << "Enter the number: ";
 	std::cin >> inputNumber;

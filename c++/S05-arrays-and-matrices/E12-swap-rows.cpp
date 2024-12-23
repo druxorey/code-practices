@@ -14,10 +14,10 @@ void changeRows(int** matrix, int size) {
 }
 
 
-int main() {
-	int sizeMatrix = 2;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SWAP ROWS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SWAP ROWS =========]\e[0m\n" << '\n';
+	int sizeMatrix = 2;
 
 	do {
 		if (sizeMatrix % 2 != 0) {

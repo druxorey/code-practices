@@ -33,14 +33,14 @@ int* mergeArray(int* firstArray, int* secondArray, int firstSize, int secondSize
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MERGE ARRAYS =========]\e[0m\n\n";
+
 	int oddNumbers[] = {1,3, 5, 7, 9};
 	int evenNumbers[] = {0,2,4, 6, 8, 10};
 
 	int oddSize = sizeof(oddNumbers) / sizeof(oddNumbers[0]);
 	int evenSize = sizeof(evenNumbers) / sizeof(evenNumbers[0]);
-
-	std::cout << "\n\e[0;35m[========= MERGE ARRAYS =========]\e[0m\n" << '\n';
 
 	printf("ODD ARRAY");
 	printArray(oddNumbers, oddSize);

@@ -22,10 +22,10 @@ int repeatedItem(int array[], int size) {
 }
 
 
-int main() {
-	int sizeArray;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MOST FREQUENT =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= MOST FREQUENT =========]\e[0m\n" << '\n';
+	int sizeArray;
 
 	getInput("Enter the size of the array: ", sizeArray);
 

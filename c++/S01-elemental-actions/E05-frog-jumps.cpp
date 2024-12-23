@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int joseDistance, pedroDistance, joseJumps;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= FROG JUMPS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= FROG JUMPS =========]\e[0m\n" << '\n';
+	int joseDistance, pedroDistance, joseJumps;
 
 	std::cout << "Enter the distance Jose can jump: ";
 	std::cin >> joseDistance;

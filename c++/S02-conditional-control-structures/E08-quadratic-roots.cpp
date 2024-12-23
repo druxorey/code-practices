@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-int main() {
-	float quadraticTerm, linearTerm, constantTerm, discriminantValue, rootValue, finalPositiveValue, finalNegativeValue;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= QUADRATIC ROOTS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= QUADRATIC ROOTS =========]\e[0m\n" << '\n';
+	float quadraticTerm, linearTerm, constantTerm, discriminantValue, rootValue, finalPositiveValue, finalNegativeValue;
 
 	std::cout << "Enter the quadratic term: ";
 	std::cin >> quadraticTerm; 

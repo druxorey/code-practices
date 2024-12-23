@@ -11,10 +11,10 @@ int binarySearch(int array[], int number, int top, int bottom = 0) {
 }
 
 
-int main() {
-	int size, number, position;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= BINARY SEARCH =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= BINARY SEARCH =========]\e[0m\n" << '\n';
+	int size, number, position;
 
 	getInput("Enter the size of the array: ", size);
 	getInput("Enter the number to search: ", number);

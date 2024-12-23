@@ -44,11 +44,10 @@ void getArithmetic(int number, int lookedNumber, int array[], int size, int inde
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= ARITHMETIC EXPRESSIONS =========]\e[0m\n\n";
 
 	int initialNumber = 0, lookedNumber = 0;
-
-	std::cout << "\n\e[0;35m[========= ARITHMETIC EXPRESSIONS =========]\e[0m\n" << '\n';
 
 	getInput("Enter the initial number: ", initialNumber);
 	getInput("Enter the number to look for: ", lookedNumber);

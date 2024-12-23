@@ -20,10 +20,10 @@ int isArraySum(int array[], int size, int compared) {
 }
 
 
-int main() {
-	int finalNumber, sizeArray, finalTimes;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SUM PAIRS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SUM PAIRS =========]\e[0m\n" << '\n';
+	int finalNumber, sizeArray, finalTimes;
 
 	getInput("Enter the array size: ", sizeArray);
 	getInput("Enter the number to be compared: ", finalNumber);

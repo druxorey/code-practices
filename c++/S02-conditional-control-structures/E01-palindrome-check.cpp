@@ -1,12 +1,10 @@
 #include <iostream>
 
-using namespace std;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n\n";
 
-int main() {
 	int inputNumber, outputNumber;
 	int firstDigit, secondDigit, thirdDigit, fourthDigit, fifthDigit;
-
-	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
 
 	std::cout << "Enter the number: ";
 	std::cin >> inputNumber;

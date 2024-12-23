@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	float v1, v2, xValue;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= INTERVAL CHECK =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= INTERVAL CHECK =========]\e[0m\n" << '\n';
+	float v1, v2, xValue;
 
 	std::cout << "Enter V1: ";
 	std::cin >> v1;

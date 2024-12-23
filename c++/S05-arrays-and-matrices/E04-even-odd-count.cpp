@@ -2,10 +2,10 @@
 #include "../U1-libraries/dxarray.cpp"
 #include "../U1-libraries/dxinput.cpp"
 
-int main() {
-	int sizeArray, evenQuantity = 0, oddQuantity = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= EVEN ODD COUNT =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= EVEN ODD COUNT =========]\e[0m\n" << '\n';
+	int sizeArray, evenQuantity = 0, oddQuantity = 0;
 
 	getInput("Enter the size of the array: ", sizeArray);
 

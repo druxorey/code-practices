@@ -65,8 +65,8 @@ bool getKnightTour(int xPosition, int yPosition, squares &movesMade) {
 }
 
 
-int main() {
-    std::cout << "\n\e[0;35m[========= KNIGHT TOUR =========]\e[0m\n" << '\n';
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= KNIGHT TOUR =========]\e[0m\n\n";
 	squares movesMade;
     getKnightTour(7, 0, movesMade);
     return 0;

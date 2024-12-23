@@ -14,10 +14,10 @@ void moveInArray(int array[], int size, int move) {
 } 
 
 
-int main() {
-	int sizeArray, averageNumber;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= CIRCULAR SHIFT =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= CIRCULAR SHIFT =========]\e[0m\n" << '\n';
+	int sizeArray, averageNumber;
 
 	getInput("Enter the size of the array: ", sizeArray);
 	getInput("Enter the average number: ", averageNumber);

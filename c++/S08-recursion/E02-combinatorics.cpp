@@ -26,10 +26,10 @@ ulli getCombinatorics(int n, int k) {
     return getCombinatorics(n - 1, k - 1) + getCombinatorics(n - 1, k);
 }
 
-int main() {
-	int n, k;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= COMBINATORICS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= INTEGER COMBINATORICS =========]\e[0m\n" << '\n';
+	int n, k;
 
 	getInput("Enter the value of n: ", n);
 	getInput("Enter the value of k: ", k);

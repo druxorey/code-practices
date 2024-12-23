@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-int main() {
-	float quadratic, lineal, independent;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= QUADRATIC ROOTS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= QUADRATIC ROOTS =========]\e[0m\n" << '\n';
+	float quadratic, lineal, independent;
 
 	std::cout << "Enter the quadratic coefficient: ";
 	std::cin >> quadratic;

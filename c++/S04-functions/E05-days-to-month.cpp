@@ -33,10 +33,10 @@ int monthToDays(int month) {
 }
 
 
-int main() {
-	int month, totalDays;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= DAYS TO MONTH =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= DAYS TO MONTH =========]\e[0m\n" << '\n';
+	int month, totalDays;
 
 	getInput("Enter the month number: ", month);
 

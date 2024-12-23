@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cmath>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= BMI CALCULATOR =========]\e[0m\n\n";
+
 	float height = 0, weight = 0, imc = 0, conversion = 0.453592;
 	
-	std::cout << "\n\e[0;35m[========= BMI CALCULATOR =========]\e[0m\n" << '\n';
-
 	std::cout << "Enter your weight in pounds: ";
 	std::cin >> weight;
 	std::cout << "Enter your height in centimeters: ";

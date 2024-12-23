@@ -1,11 +1,11 @@
 #include <iostream>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PARKING FEE =========]\e[0m\n\n";
+
 	int initialHour, initialMinutes, finalHour, finalMinutes, totalMinutes, displayedHours, displayedMinutes;
 	float basicAmount = 80, extraAmount = 100, totalPayment;
 	
-	std::cout << "\n\e[0;35m[========= PARKING FEE =========]\e[0m\n" << '\n';
-
 	std::cout << "Enter the initial hour: ";
 	std::cin >> initialHour;
 	std::cout << "Enter the initial minutes: ";

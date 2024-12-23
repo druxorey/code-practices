@@ -32,10 +32,10 @@ void getPermutations(char array[], int size, int &permutations, int index = 0) {
 }
 
 
-int main() {
-	int size, permutations = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= EVEN SUM PERMUTATIONS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= EVEN SUM PERMUTATIONS =========]\e[0m\n" << '\n';
+	int size, permutations = 0;
 
 	getInput("Enter the string size: ", size);
 

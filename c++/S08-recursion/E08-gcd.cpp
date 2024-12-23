@@ -8,10 +8,10 @@ int getGcd(int a, int b) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= GCD =========]\e[0m\n\n";
+
 	int a = 0, b = 0;
-	
-	std::cout << "\n\e[0;35m[========= GCD =========]\e[0m\n" << '\n';
 
 	getInput("Enter first number: ", a);
 	getInput("Enter second number: ", b);

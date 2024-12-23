@@ -8,11 +8,11 @@ ulli getFactorial(ulli n) {
 	return n * getFactorial(n - 1);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= FACTORIAL =========]\e[0m\n\n";
+
 	short int number;
 	ulli factorial;
-
-	std::cout << "\n\e[0;35m[========= FACTORIAL =========]\e[0m\n" << '\n';
 
 	getInput("Enter a number: ", number);
 

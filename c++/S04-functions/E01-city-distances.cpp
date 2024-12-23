@@ -32,13 +32,11 @@ bool askForCity() {
 }
 
 
-int main() {
-
-	std::cout << "\n\e[0;35m[========= CITY DISTANCES =========]\e[0m\n" << '\n';
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= CITY DISTANCES =========]\e[0m\n\n";
 
 	while (true) {
-		if (!askForCity())
-			break;
+		if (!askForCity()) break;
 	}
 
 	return 0;

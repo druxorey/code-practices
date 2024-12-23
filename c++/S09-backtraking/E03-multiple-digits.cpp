@@ -39,10 +39,10 @@ void printNumbers(int size, int number = 0, int digitCount[10] = nullptr) {
 }
 
 
-int main() {
-	int size, limit = 1;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MULTIPLE DIGITS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= MULTIPLE DIGITS =========]\e[0m\n" << '\n';
+	int size, limit = 1;
 
 	getInput("Enter the max digits: ", size);
 

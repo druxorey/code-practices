@@ -7,10 +7,10 @@ double getHarmonic(int size) {
 }
 
 
-int main() {
-	int size = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= HARMONIC SERIES =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= HARMONIC SERIES =========]\e[0m\n" << '\n';
+	int size = 0;
 
 	getInput("Enter the number of terms to sum: ", size);
 	printf("\e[0;32mThe sum of the first %d terms of the harmonic series is %f\e[0m\n", size, getHarmonic(size));

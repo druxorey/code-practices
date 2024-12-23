@@ -55,10 +55,10 @@ void printMatrix(int** matrix, int rows, int cols) {
 }
 
 
-int main() {
-	int rows, cols;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= TRANSPOSE MATRIX =========]\e[0m\n\n";
 
-    std::cout << "\n\e[0;35m[========= TRANSPOSE MATRIX =========]\e[0m\n" << '\n';
+	int rows, cols;
 
 	getInput("Enter the number of rows: ", rows);
 	getInput("Enter the number of columns: ", cols);

@@ -113,7 +113,8 @@ void searchProducts(category categories[]) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+
 	category categories[MAX_CATEGORIES];
 	categories[0].name = "Electronics";
 	categories[1].name = "Clothes";
@@ -121,7 +122,7 @@ int main() {
 	do {
 		system("clear");
 
-		std::cout << "\n\e[0;35m[========= PRODUCT STRUCTURES =========]\e[0m\n" << '\n';
+		std::cout << "\n\e[0;35m[========= PRODUCT STRUCTURES =========]\e[0m\n\n";
 
 		std::cout << "1. Add product" << '\n';
 		std::cout << "2. List products" << '\n';

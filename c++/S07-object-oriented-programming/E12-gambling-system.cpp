@@ -59,7 +59,9 @@ void crearUsuario () {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= GAMBLING SYSTEM =========]\e[0m\n\n";
+
 	std::string nombre, contrasena;
 	float cantidad;
 	char respuesta;

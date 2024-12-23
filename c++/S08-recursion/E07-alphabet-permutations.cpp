@@ -24,10 +24,10 @@ void getPermutations(char array[], int size, int &permutations, int index = 0) {
 }
 
 
-int main() {
-	int alphaberSize = 0, permutations = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= ALPHABET PERMUTATIONS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= ALPHABET PERMUTATIONS =========]\e[0m\n" << '\n';
+	int alphaberSize = 0, permutations = 0;
 
 	getInput("Enter string size: ", alphaberSize);
 	char letters[alphaberSize];

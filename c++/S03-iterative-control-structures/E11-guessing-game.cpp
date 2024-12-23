@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int number = 0, guess = 0, tries = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= GUESSING GAME =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= GUESSING GAME =========]\e[0m\n" << '\n';
+	int number = 0, guess = 0, tries = 0;
 
 	srand(time(NULL));
 

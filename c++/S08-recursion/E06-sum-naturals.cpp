@@ -7,10 +7,10 @@ unsigned int sumNaturals(int size) {
 }
 
 
-int main() {
-	int size = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SUM NATURALS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SUM NATURALS =========]\e[0m\n" << '\n';
+	int size = 0;
 
 	getInput("Enter the number of naturals to sum: ", size);
 	printf("\e[0;32mThe sum of all naturals is %d\e[0m\n", sumNaturals(size));

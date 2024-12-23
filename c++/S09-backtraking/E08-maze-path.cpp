@@ -45,9 +45,8 @@ bool mazePath(int** maze, int size, int i = 0, int j = 0) {
 }
 
 
-int main() {
-
-	std::cout << "\n\e[0;35m[========= MAZE PATH =========]\e[0m\n" << '\n';
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MAZE PATH =========]\e[0m\n\n";
 
 	int size;
 	srand(time(NULL));

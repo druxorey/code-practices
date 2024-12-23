@@ -47,10 +47,10 @@ void writeFileData (people peopleList[], int size, std::string outputArgument) {
 
 
 int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PEOPLE FINDER =========]\e[0m\n\n";
+
 	std::string inputArgument = argv[1];
 	std::string outputArgument = argv[2];
-
-	std::cout << "\n\e[0;35m[========= PEOPLE FINDER =========]\e[0m\n" << '\n';
 
 	std::ifstream inputFile(inputArgument);
 

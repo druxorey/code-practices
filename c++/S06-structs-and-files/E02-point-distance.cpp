@@ -8,10 +8,10 @@ struct dot {
 };
 
 
-int main() {
-	dot dots[2];
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= POINT DISTANCE =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= POINT DISTANCE =========]\e[0m\n" << '\n';
+	dot dots[2];
 
 	for (int i = 0; i < 2; i++) {
 		int coorditate;

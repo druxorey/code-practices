@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int inputDay, inputMonth, totalDays = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= DAYS ELAPSED =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= DAYS ELAPSED =========]\e[0m\n" << '\n';
+	int inputDay, inputMonth, totalDays = 0;
 
 	std::cout << "Enter the day: ";
 	std::cin >> inputDay;

@@ -87,12 +87,12 @@ bool getCrossingPath(bool leftRiver[3], bool rightRiver[3], bool isFarmerLeft = 
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= RIVER CROSSING =========]\e[0m\n\n";
+
 	bool leftRiver[] = {1,1,1};
 	bool rightRiver[] = { 0,0,0 };
 
-    std::cout << "\n\e[0;35m[========= RIVER CROSSING =========]\e[0m\n" << '\n';
-	
 	getCrossingPath(leftRiver, rightRiver, true);
 	return 0;
 }

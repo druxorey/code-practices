@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	float m1, b1, m2, b2, xIntersection, yIntersection;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= LINE INTERSECTION =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= LINE INTERSECTION =========]\e[0m\n" << '\n';
+	float m1, b1, m2, b2, xIntersection, yIntersection;
 
 	std::cout << "Enter values for the first line (m1x+b1): ";
 	std::cin >> m1 >> b1;

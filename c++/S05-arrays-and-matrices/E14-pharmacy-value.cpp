@@ -47,7 +47,8 @@ void sortProducts(int cuantityList[], float priceList[], int size) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+
 	int cuantityList[10] = {120, 134, 319, 153, 91, 68, 73, 82, 90, 115};
 	float priceList[10] = {2.50, 3.00, 4.50, 5.20, 6.00, 7.75, 8.00, 9.50, 10.00, 11.30};
 
@@ -55,7 +56,9 @@ int main() {
 
 	do {
 		system("clear");
-		std::cout << "\n\e[0;35m[========= PHARMACY VALUE =========]\e[0m\n" << '\n';
+
+		std::cout << "\n\e[0;35m[========= PHARMACY VALUE =========]\e[0m\n\n";
+
 		printf("Enter the option you want to check:\n");
 		printf("  1) Total products\n");
 		printf("  2) Total stock value\n");

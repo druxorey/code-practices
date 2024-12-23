@@ -1,11 +1,11 @@
 #include <iostream>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PIRATES COORDINATES =========]\e[0m\n\n";
+
 	int firstNumber, secondNumber, thirdNumber;
 	int firstX, firstY, secondX, secondY, thirdX, thirdY;
 	int xFinal, yFinal;
-
-	std::cout << "\n\e[0;35m[========= PIRATES COORDINATES =========]\e[0m\n" << '\n';
 
 	std::cout << "Enter the first number: ";
 	std::cin >> firstNumber;

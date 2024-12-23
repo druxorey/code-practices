@@ -49,7 +49,7 @@ void checkWinner(char playerChoise, char computerChoise) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
 	char playerChoise, computerChoise;
 
 	do {
@@ -61,8 +61,8 @@ int main() {
 		std::cout << " - [P] Paper" << '\n';
 		std::cout << " - [S] Scissors" << '\n';
 
-		std::cout << "Enter your choise: ";
-		std::cin >> playerChoise;
+		getInput("Enter your choise: ", playerChoise);
+
 	} while (playerChoise != 'r' && playerChoise != 'p' && playerChoise != 's');
 
 	computerChoise = generateComputerChoise();

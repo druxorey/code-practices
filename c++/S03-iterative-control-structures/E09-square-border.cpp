@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int borderSize;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SQUARE BORDER =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SQUARE BORDER =========]\e[0m\n" << '\n';
+	int borderSize;
 
 	std::cout << "Enter the border size: ";
 	std::cin >> borderSize;

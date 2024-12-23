@@ -21,10 +21,10 @@ bool scalable(bool **matrix, int size, int i = 0) {
 }
 
 
-int main() {
-	unsigned int size = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SCALABLE TOWER =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SCALABLE TOWER =========]\e[0m\n" << '\n';
+	unsigned int size = 0;
 
 	srand(time(NULL));
 

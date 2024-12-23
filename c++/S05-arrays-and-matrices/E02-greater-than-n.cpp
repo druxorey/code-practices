@@ -9,10 +9,10 @@ void averageInArray(int array[], int size, int number, int &quantity) {
 }
 
 
-int main() {
-	int sizeArray, thresholdValue, countGreaterThan = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= GREATER THAN N =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= GREATER THAN N =========]\e[0m\n" << '\n';
+	int sizeArray, thresholdValue, countGreaterThan = 0;
 
 	getInput("Enter the size of the array: ", sizeArray);
 	getInput("Enter the averge number: ", thresholdValue);

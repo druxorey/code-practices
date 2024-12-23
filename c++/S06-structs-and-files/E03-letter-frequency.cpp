@@ -1,13 +1,13 @@
 #include <iostream>
 #include <fstream>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= LETTER FREQUENCY =========]\e[0m\n\n";
+
 	char letters[] = {'e', 'a', 'o', 'i', 'u'};
 	char mayus[] = {'E', 'A', 'O', 'I', 'U'};
 	int frequency[] = {0, 0, 0, 0, 0};
 	char actualLetter;
-
-	std::cout << "\n\e[0;35m[========= LETTER FREQUENCY =========]\e[0m\n" << '\n';
 
 	std::cout << "Enter the path of the file: ";
 	std::string path;

@@ -29,10 +29,10 @@ bool isSorted(int numbers[], int size) {
 }
 
 
-int main() {
-	int size;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= ARRAY OPERATIONS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= ARRAY OPERATIONS =========]\e[0m\n" << '\n';
+	int size;
 
 	getInput("Enter the size of the array: ", size);
 

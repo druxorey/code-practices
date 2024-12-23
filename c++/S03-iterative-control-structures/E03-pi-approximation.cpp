@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	double inputNumber, piValue = 4;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PI APPROXIMATION =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= PI APPROXIMATION =========]\e[0m\n" << '\n';
+	double inputNumber, piValue = 4;
 
 	std::cout << "Enter the number of iterations: ";
 	std::cin >> inputNumber;

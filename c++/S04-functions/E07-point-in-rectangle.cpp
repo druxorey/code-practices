@@ -11,10 +11,10 @@ bool isInWidth (int xVertex, int xPoint, int width) {
 }
 
 
-int main(){
-	int xPoint, yPoint, xVertex, yVertex, height, width; 
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= POINT IN RECTANGLE =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= POINT IN RECTANGLE =========]\e[0m\n" << '\n';
+	int xPoint, yPoint, xVertex, yVertex, height, width; 
 
 	getInput("Enter the x position: ", xPoint);
 	getInput("Enter the y position: ", yPoint);

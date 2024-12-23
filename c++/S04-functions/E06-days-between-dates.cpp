@@ -35,10 +35,10 @@ int daysDifference(int firstDate, int secondDate) {
 }
 
 
-int main(){
-	int firstDate, secondDate;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= DAYS BETWEEN DATES =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= DAYS BETWEEN DATES =========]\e[0m\n" << '\n';
+	int firstDate, secondDate;
 
 	getInput("Enter the first date [DDMMYYYY]: ", firstDate);
 	getInput("Enter the second date [DDMMYYYY]: ", secondDate);

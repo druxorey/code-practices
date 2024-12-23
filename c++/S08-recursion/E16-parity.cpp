@@ -18,10 +18,10 @@ bool isEven(int n) {
 }
 
 
-int main() {
-	int a = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PARITY =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= PARITY =========]\e[0m\n" << '\n';
+	int a = 0;
 
 	getInput("Enter the first number: ", a);
 	printf("\n\e[0;32m%d\e[0m is %s\n", a, isEven(a) ? "even" : "odd");

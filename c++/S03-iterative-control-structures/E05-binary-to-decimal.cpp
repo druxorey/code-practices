@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int binary, correctedBinary = 0, iteration = 1, decimal = 0, finalDecimal = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= BINATY TO DECIMAL =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= BINATY TO DECIMAL =========]\e[0m\n" << '\n';
+	int binary, correctedBinary = 0, iteration = 1, decimal = 0, finalDecimal = 0;
 
 	do {
 		std::cout << "Enter the number: ";

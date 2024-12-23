@@ -11,10 +11,10 @@ int diagonalMatrix(int** matrix, int sizeMatrix) {
 }
 
 
-int main() {
-	int sizeMatrix;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SECONDARY DIAGONAL =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SECONDARY DIAGONAL =========]\e[0m\n" << '\n';
+	int sizeMatrix;
 
 	getInput("Enter the size of the matrix: ", sizeMatrix);
 

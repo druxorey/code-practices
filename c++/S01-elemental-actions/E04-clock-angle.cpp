@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-int main() {
-	float hourHand, minuteHand;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= CLOCK ANGLE =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= CLOCK ANGLE =========]\e[0m\n" << '\n';
+	float hourHand, minuteHand;
 
 	std::cout << "Enter the clock hour hand: ";
 	std::cin >> hourHand;

@@ -13,10 +13,10 @@ bool isCapicua(int number) {
 }
 
 
-int main() {
-	int number = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PALINDROME SUBSTRING =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= PALINDROME SUBSTRING =========]\e[0m\n" << '\n';
+	int number = 0;
 
 	do {
 		getInput("Enter the number to be evaluated: ", number);

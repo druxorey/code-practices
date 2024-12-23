@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int inputNumber, i;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= DIGITS SEQUENCE =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= DIGITS SEQUENCE =========]\e[0m\n" << '\n';
+	int inputNumber, i;
 
 	std::cout << "Enter the number: ";
 	std::cin >> inputNumber;

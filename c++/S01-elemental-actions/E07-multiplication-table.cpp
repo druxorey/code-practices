@@ -1,8 +1,9 @@
 #include <iostream>
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MULTIPLICATION TABLE =========]\e[0m\n\n";
+
 	int value;
-	std::cout << "\n\e[0;35m[========= MULTIPLICATION TABLE =========]\e[0m\n" << '\n';
 
 	std::cout << "Enter a number: ";
 	std::cin >> value;

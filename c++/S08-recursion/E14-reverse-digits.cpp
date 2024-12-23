@@ -8,10 +8,10 @@ int invertNumber(int number, int inverted = 0) {
 }
 
 
-int main() {
-	int number;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= REVERSE DIGITS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= REVERSE DIGITS =========]\e[0m\n" << '\n';
+	int number;
 
 	getInput("Enter a number: ", number);
 	printf("The inverted number is: %d\n", invertNumber(number));

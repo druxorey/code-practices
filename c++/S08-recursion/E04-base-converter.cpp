@@ -30,12 +30,12 @@ std::string decimalToHexadecimal(unsigned int number) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= BASE CONVERTER =========]\e[0m\n\n";
+
 	int inputNumber, convertedBase;
 	ulli outputNumber;
 	std::string outputString;
-
-	std::cout << "\n\e[0;35m[========= BASE CONVERTER =========]\e[0m\n" << '\n';
 
 	getBase(convertedBase);
 	if (convertedBase > 2 || convertedBase < 1) {

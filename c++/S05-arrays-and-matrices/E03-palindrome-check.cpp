@@ -14,10 +14,10 @@ bool isPalindrome(std::string text) {
 }
 
 
-int main() {
-	std::string inputText;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n" << '\n';
+	std::string inputText;
 
 	getInput("Enter the string: ", inputText);
 

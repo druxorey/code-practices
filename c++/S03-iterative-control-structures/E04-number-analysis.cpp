@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int number, iteration = 0, evenNumbers = 0, oddNumbers = 0, totalNumbers = 0;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= NUMBER ANALYSYS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= NUMBER ANALYSYS =========]\e[0m\n" << '\n';
+	int number, iteration = 0, evenNumbers = 0, oddNumbers = 0, totalNumbers = 0;
 
 	do {
 		std::cout << "Enter the number: ";

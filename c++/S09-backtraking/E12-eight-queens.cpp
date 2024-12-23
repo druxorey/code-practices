@@ -34,9 +34,8 @@ bool nQueens(bool** board, int size, int row = 0, int queens = 0) {
 }
 
 
-int main() {
-
-    std::cout << "\n\e[0;35m[========= EIGHT QUEENS =========]\e[0m\n" << '\n';
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= EIGHT QUEENS =========]\e[0m\n\n";
 
 	int boardSize;
 	getInput("Enter board size: ", boardSize);

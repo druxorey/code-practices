@@ -1,14 +1,14 @@
 #include <iostream>
 
-int main() {
-	int binary, decimal;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= BINARY TO DECIMAL =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= BINARY TO DECIMAL =========]\e[0m\n" << '\n';
+	int binary, decimal;
 
 	std::cout << "Enter a 4 digit binary number: ";
 	std::cin >> binary;
 
-	int first,second,third,fourth;
+	int first, second, third, fourth;
 
 	first = binary / 1000;
 	second = (binary % 1000) / 100;

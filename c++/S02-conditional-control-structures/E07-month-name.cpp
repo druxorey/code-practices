@@ -1,9 +1,9 @@
 #include <iostream>
 
-int main() {
-	int inputMonth;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= MONTH NAME =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= MONTH NAME =========]\e[0m\n" << '\n';
+	int inputMonth;
 
 	std::cout << "Enter the month number: ";
 	std::cin >> inputMonth;

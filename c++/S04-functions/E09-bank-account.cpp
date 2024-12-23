@@ -35,7 +35,7 @@ void showBalance(double balance) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
 	double balance = 0.00;
 	int choise;
 
@@ -47,20 +47,19 @@ int main() {
 		std::cout << "2. Withdraw" << '\n';
 		std::cout << "3. Check balance" << '\n';
 		std::cout << "4. Exit" << '\n';
-		std::cout << "\nSelect a choise: ";
 
-		getInput("", choise);
+		getInput("\nSelect a choise: ", choise);
 
 		switch (choise) {
-			case 1: 
+			case 1:
 				balance += deposit();
 				showBalance(balance);
 				break;
-			case 2: 
+			case 2:
 				balance -= withdraw(balance);
 				showBalance(balance);
 				break;
-			case 3: 
+			case 3:
 				showBalance(balance);
 				break;
 			case 4:

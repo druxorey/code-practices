@@ -32,10 +32,10 @@ int minNumber(int number) {
 }
 
 
-int main(){
-	int number;
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= SORT NUMBERS =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= SORT NUMBERS =========]\e[0m\n" << '\n';
+	int number;
 
 	do {
 		getInput("Enter the number to be evaluated: ", number);

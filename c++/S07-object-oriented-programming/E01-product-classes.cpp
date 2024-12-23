@@ -34,7 +34,9 @@ class cd: public products {
 		int year;
 };
 
-int main() {
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PRODUCT CLASSES =========]\e[0m\n\n";
+
 	book b;
 	b.code = 1;
 	b.price = 20;

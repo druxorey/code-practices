@@ -8,10 +8,10 @@ bool getPalindrome(char input[], int size, int index = 0) {
 }
 
 
-int main() {
-	char input[48];
+int main(int argc, char *argv[]) {
+	std::cout << "\n\e[0;35m[========= PALINDROME =========]\e[0m\n\n";
 
-	std::cout << "\n\e[0;35m[========= PALINDROME =========]\e[0m\n" << '\n';
+	char input[48];
 
 	getInput("Enter a word: ", input);
 	int size = sizeof(input) / sizeof(input[0]);
