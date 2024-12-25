@@ -24,6 +24,4 @@
 
 12) **E12-swap-rows**: Write an action that takes a matrix (with an even number of rows) as input and swaps the even and odd rows. **Example:** If the matrix is {{4, 2}, {1, 2}, {6, −1}, {3, 5}}, the resulting matrix should be {{1, 2}, {4, 2}, {3, 5}, {6, −1}}.
 
-13) **E13-tic-tac-toe**: Create a tic-tac-toe game with the computer. The user must choose which symbol to play with, and the game should end when there is a winner or a tie. The board should be a matrix of size n > 3.
-
-14) **E14-pharmacy-stock**: Create a program to keep track of a pharmacy's inventory. Given three arrays with the names of medicines, the quantity, and the value of each one, the program should calculate the total value of the inventory, the value of the stock of each medicine, and be able to sort the medicines by the quantity in stock.
+13) **E13-pharmacy-stock**: Create a program to keep track of a pharmacy's inventory. Given three arrays with the names of medicines, the quantity, and the value of each one, the program should calculate the total value of the inventory, the value of the stock of each medicine, and be able to sort the medicines by the quantity in stock.
