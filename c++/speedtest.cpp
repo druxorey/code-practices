@@ -11,7 +11,7 @@ int speedtest() {
 
     int count=0;
     for(int i = 0; i <= NUMBER; i++){
-        count += 1;
+        count++;
     }
 
     auto end = std::chrono::high_resolution_clock::now();
@@ -22,12 +22,12 @@ int speedtest() {
 
 
 int main(){
-	float averageExecutionTime = 0;
+	float averageExecutionTime = 0, finalDuration = 0;
 
 	std::cout << "Starting speed test...\n";
 
 	for(int i = 0; i < ITERATIONS; i++){
-		float finalDuration = speedtest();
+		finalDuration = speedtest();
 		averageExecutionTime += finalDuration;
 		std::cout << i + 1 << ". Counting to number " << NUMBER << " in C++ took " << finalDuration << " ms\n";
 	}

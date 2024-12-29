@@ -25,12 +25,12 @@ float speedtest() {
 }
 
 int main() {
-	float averageExecutionTime = 0;
+	float averageExecutionTime = 0, finalDuration = 0;
 
 	printf("Starting speed test...\n");
 
 	for(int i = 0; i < ITERATIONS; i++){
-		float finalDuration = speedtest();
+		finalDuration = speedtest();
 		averageExecutionTime += finalDuration;
 		printf("%d. Counting to number %d in C took %.2f ms\n", i + 1, NUMBER, finalDuration);
 	}

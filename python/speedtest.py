@@ -19,11 +19,12 @@ def speedtest() -> float:
 
 def main():
 	averageExecutionTime: float = 0
+	finalDuration: float = 0
 
 	print("Starting speed test...")
 
 	for i in range(ITERATIONS):
-		finalDuration: float = speedtest()
+		finalDuration = speedtest()
 		averageExecutionTime += finalDuration
 		print(f"{i + 1}. Counting to {NUMBER} in Python took {finalDuration} ms")
 	
