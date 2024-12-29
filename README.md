@@ -46,7 +46,7 @@ Then run it with the next command:
 
 To execute a Go script, navigate to the directory containing the script and compile it with `go` using the following command:
 
-    go build -o script-compiled script-name.cpp 
+    go build -o script-compiled script-name.go
 
 Then run it with the next command:
 
