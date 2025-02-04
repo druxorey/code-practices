@@ -2,7 +2,7 @@
 
 1) **E01-palindrome-check**: Create an algorithm that prints *“Palindrome”* if a 5-digit input number is a palindrome, or *“Not a Palindrome”* otherwise. A number is a palindrome if it reads the same forwards and backwards. **Example:** 545 is a palindrome number.
 
-2) **E02-parking-fee**: In a parking lot, the first hour (or fraction) costs $100 and each additional hour (or fraction) costs $80. Create an algorithm that takes as input the entry and exit times of a vehicle and calculates the amount to be paid.
+2) **E02-parking-fee**: In a parking lot, the first hour is charged at a rate of $80 per hour (or fraction). After the first hour, each additional hour (or fraction) is charged at $100. Write an algorithm that takes as input the entry time and exit time of a vehicle (24h format) and calculates the amount to be paid. **Example:** If the vehicle is parked for 30 minutes, the charge will be $40. If the vehicle is parked for 1 hour and 30 minutes, the charge will be $130.
 
 3) **E03-interval-check**: Given two values V1, V2 that form a closed interval, and a value X, create an algorithm to determine if X is inside or outside the interval.
 

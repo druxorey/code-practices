@@ -2,7 +2,7 @@
 
 1) **E01-palindrome-check**: Haga un algoritmo que imprima *“Capicua”* si un número de entrada de 5 dígitos es palíndromo, o *“No es Capicúa”* en caso contrario. Un número es capicua si se escribe igual al derecho y a revés. **Ejemplo:** 545 es un número capicua.
 
-2) **E02-parking-fee**: En un estacionamiento la primera hora (o fracción) cuesta 100$ y cada hora adicional (o fracción) 80$. Haga un algoritmo que reciba como entrada la hora de entrada y hora de salida de un vehículo y calcule el monto a pagar.
+2) **E02-parking-fee**: En un estacionamiento, la primera hora se cobra a razón de 80$ por hora (o fracción). Después de la primera hora, cada hora adicional (o fracción) se cobra a 100$. Escriba un algoritmo que reciba como entrada la hora de entrada y la hora de salida de un vehículo (formato de 24h) y calcule el monto a pagar. **Ejemplo:** Si el vehículo está 30 minutos, se cobrará 40$. Si el vehículo está una 1 hora y 30 minutos, se cobrará 130$.
 
 3) **E03-interval-check**: Dados dos valores V1, V2 que forman un intervalo cerrado, y un valor X, haga un algoritmo para determinar si X está dentro o fuera del intervalo.
 
