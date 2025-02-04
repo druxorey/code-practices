@@ -8,14 +8,14 @@ int main(int argc, char *argv[]) {
 	std::cout << "Enter a 4 digit number: "; 
 	std::cin >> originalNumber;
 
-	int first,second,third,fourth;
+	int firstDigit, secondDigit, thirdDigit, fourthDigit;
 
-	first = originalNumber / 1000;
-	second = (originalNumber % 1000) / 100;
-	third = (originalNumber % 100) / 10;
-	fourth = originalNumber % 10;
+	firstDigit = originalNumber / 1000;
+	secondDigit = (originalNumber % 1000) / 100;
+	thirdDigit = (originalNumber % 100) / 10;
+	fourthDigit = originalNumber % 10;
 
-	invertedNumber = (fourth * 1000) + (third * 100) + (second * 10) + first;
+	invertedNumber = (fourthDigit * 1000) + (thirdDigit * 100) + (secondDigit * 10) + firstDigit;
 
 	std::cout << "The result of inverting the number is: " << invertedNumber << '\n';
 

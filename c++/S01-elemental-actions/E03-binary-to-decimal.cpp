@@ -3,21 +3,21 @@
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= BINARY TO DECIMAL =========]\e[0m\n\n";
 
-	int binary, decimal;
+	int binaryNumber, decimalNumber;
 
 	std::cout << "Enter a 4 digit binary number: ";
-	std::cin >> binary;
+	std::cin >> binaryNumber;
 
-	int first, second, third, fourth;
+	int firstDigit, secondDigit, thirdDigit, fourthDigit;
 
-	first = binary / 1000;
-	second = (binary % 1000) / 100;
-	third = (binary % 100) / 10;
-	fourth = binary % 10;
+	firstDigit = binaryNumber / 1000;
+	secondDigit = (binaryNumber % 1000) / 100;
+	thirdDigit = (binaryNumber % 100) / 10;
+	fourthDigit = binaryNumber % 10;
 
-	decimal = (first * 8) + (second * 4) + (third * 2) + (fourth * 1);
+	decimalNumber = (firstDigit * 8) + (secondDigit * 4) + (thirdDigit * 2) + fourthDigit;
 
-	std::cout << "The decimal value is: " << decimal << '\n';
+	std::cout << "The decimal value is: " << decimalNumber << '\n';
 
 	return 0;
 }
