@@ -4,23 +4,21 @@ int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= PALINDROME CHECK =========]\e[0m\n\n";
 
 	int inputNumber, outputNumber;
-	int firstDigit, secondDigit, thirdDigit, fourthDigit, fifthDigit;
+	int firstDigit, secondDigit, fourthDigit, fifthDigit;
 
 	std::cout << "Enter the number: ";
 	std::cin >> inputNumber;
 
-	fifthDigit = inputNumber / 10000;
-	fourthDigit = (inputNumber % 10000) / 1000;
-	thirdDigit = (inputNumber % 1000) / 100;
-	secondDigit = (inputNumber % 100) / 10;
-	firstDigit = inputNumber % 10;
+	firstDigit = inputNumber / 10000;
+	secondDigit = (inputNumber % 10000) / 1000;
 
-	outputNumber = fifthDigit * 10000 +  fourthDigit * 1000 + thirdDigit * 100 + secondDigit * 10 + firstDigit;
+	fourthDigit = (inputNumber % 100) / 10;
+	fifthDigit = inputNumber % 10;
 
-	if (inputNumber == outputNumber) {
-		printf("\nThe number %i is capicua\n", inputNumber);
-	} else{
-		printf("\nThe number %i is not capicua\n", inputNumber);
+	if (firstDigit == fifthDigit && secondDigit == fourthDigit) {
+		printf("\nThe number %i \e[0;32mis capicua\e[0m\n", inputNumber);
+	} else {
+		printf("\nThe number %i \e[0;31mis not capicua\e[0m\n", inputNumber);
 	}
 
 	return 0;
