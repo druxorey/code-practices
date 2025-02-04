@@ -10,7 +10,7 @@
 
 5) **E05-clock-angle**: Let's consider an analog clock (with hands). Given the exact time (hours and minutes), write an algorithm that calculates the angle between the clock hands. **Example:** At 3:00, the angle will be 90 degrees. At 3:15, the angle will be 7.5 degrees.
 
-6) **E06-frog-jumps**: José and Pedro are two frogs. José can jump J centimeters and Pedro can jump P centimeters. Assuming both frogs start jumping from the same point (and in the same direction), create an algorithm to determine if the frogs will land on the same point at any time before José makes K jumps. **Example:** Suppose José can jump 3 centimeters (J = 3) and Pedro can jump 5 centimeters (P = 5). If José will make a maximum of 10 jumps (K = 10), the algorithm should determine if they will land on the same point. In this case, they both land on point 15 and point 30 before José completes his 10 jumps.
+6) **E06-frog-jumps**: José and Pedro are two frogs. José can jump J centimeters and Pedro can jump P centimeters. Assuming both frogs start jumping from the same point (and in the same direction), create an algorithm to determine if the frogs will land on the same point at some moment before José makes K jumps. If they do, determine the first meeting point. **Example:** Suppose José can jump 3 centimeters (J = 3) and Pedro can jump 5 centimeters (P = 5). If José will make a maximum of 10 jumps (K = 10), they will meet for the first time at the 15 centimeter mark before José completes his 10 jumps.
 
 7) **E07-line-intersection**: Given the equations of two non-parallel lines `y = m1x + b1` and `y = m2x + b2`, write an algorithm to calculate their point of intersection.
 

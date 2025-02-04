@@ -10,7 +10,7 @@
 
 5) **E05-clock-angle**: Supongamos un reloj analógico (de agujas). Dada lo hora exacta (horas y minutos), escriba un algoritmo que calcule el ángulo entre ambas agujas. **Ejemplo:** A las 3:00 el ángulo será 90 grados. A las 3:15 el ángulo será 7,5 grados.
 
-6) **E06-frog-jumps**: José y Pedro son dos ranas. José puede dar saltos de J centímetros y Pedro puede dar saltos de P centímetros. Suponiendo que ambas ranas comienzan a saltar en el mismo punto (y en la misma dirección), haga un algoritmo que determine si las ranas coincidirán en el mismo punto en algún momento antes de que José de K saltos. **Ejemplo:** Supongamos que José puede dar saltos de 3 centímetros (J = 3) y Pedro puede dar saltos de 5 centímetros (P = 5). Si José dará un máximo de 10 saltos (K = 10), ambos coinciden en el punto 15 y en el punto 30 antes de que José complete sus 10 saltos.
+6) **E06-frog-jumps**: José y Pedro son dos ranas. José puede dar saltos de J centímetros y Pedro puede dar saltos de P centímetros. Suponiendo que ambas ranas comienzan a saltar en el mismo punto (y en la misma dirección), haga un algoritmo que determine si las ranas coincidirán en el mismo punto en algún momento antes de que José de K saltos. Si coinciden, determine el primer punto de encuentro. **Ejemplo:** Supongamos que José puede dar saltos de 3 centímetros (J = 3) y Pedro puede dar saltos de 5 centímetros (P = 5). Si José dará un máximo de 10 saltos (K = 10), ambos coinciden por primera vez en el punto 15 antes de que José complete sus 10 saltos.
 
 7) **E07-line-intersection**: Dadas las ecuaciones de dos rectas no paralelas `y = m1x+b1` y `y = m2x+b2`, escribir un algoritmo que calcule su punto de intersección.
 
