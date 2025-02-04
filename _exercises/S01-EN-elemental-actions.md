@@ -4,9 +4,9 @@
 
 2) **E02-inverted-number**: Write an algorithm that reads a four-digit number and displays the number in reverse order. **Note:** Ensure that the input is an integer, not characters. **Example:** If the number is `4678`, the output should be `8764`.
 
-3) **E03-quadratic-roots**: Write an algorithm that takes the coefficients **a**, **b**, and **c** of a quadratic equation `(ax² + bx + c = 0)` as input and prints the values of x. Assume that the equation always has real number solutions.
+3) **E03-binary-to-decimal**: Write an algorithm that converts a four-bit binary number to a decimal number. **Example:** If `1011` is input, the result should be `11`.
 
-4) **E04-binary-to-decimal**: Write an algorithm that converts a four-bit binary number to a decimal number. **Example:** If `1011` is input, the result should be `11`.
+4) **E04-quadratic-roots**: Write an algorithm that takes the coefficients **a**, **b**, and **c** of a quadratic equation `(ax² + bx + c = 0)` as input and prints the values of x. Assume that the equation always has real number solutions.
 
 5) **E05-clock-angle**: Let's consider an analog clock (with hands). Given the exact time (hours and minutes), write an algorithm that calculates the angle between the clock hands. **Example:** At 3:00, the angle will be 90 degrees. At 3:15, the angle will be 7.5 degrees.
 

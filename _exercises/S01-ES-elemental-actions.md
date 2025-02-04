@@ -4,9 +4,9 @@
 
 2) **E02-inverted-number**: Escriba un algoritmo que lea un número de cuatro dígitos y muestre en pantalla el número escrito en reverso. **Nota:** Asegúrese de que el dato ingresado sea un número entero, no caracteres. **Ejemplo:** Si el número es `4678`, la salida debería ser `8764`.
 
-3) **E03-quadratic-roots**: Escriba un algoritmo que reciba como entrada los coeficientes **a**, **b** y **c** de una ecuación de segundo grado `(ax² + bx + c = 0)`, e imprima por pantalla los valores de x. Asuma que la ecuación siempre tiene solución en números reales.
+3) **E03-binary-to-decimal**: Escriba un algoritmo que transforme un número binario de cuatro bits a un número decimal. **Ejemplo:** Si se introduce `1011` el resultado debería ser `11`.
 
-4) **E04-binary-to-decimal**: Escriba un algoritmo que transforme un número binario de cuatro bits a un número decimal. **Ejemplo:** Si se introduce `1011` el resultado debería ser `11`.
+4) **E04-quadratic-roots**: Escriba un algoritmo que reciba como entrada los coeficientes **a**, **b** y **c** de una ecuación de segundo grado `(ax² + bx + c = 0)`, e imprima por pantalla los valores de x. Asuma que la ecuación siempre tiene solución en números reales.
 
 5) **E05-clock-angle**: Supongamos un reloj analógico (de agujas). Dada lo hora exacta (horas y minutos), escriba un algoritmo que calcule el ángulo entre ambas agujas. **Ejemplo:** A las 3:00 el ángulo será 90 grados. A las 3:15 el ángulo será 7,5 grados.
 
