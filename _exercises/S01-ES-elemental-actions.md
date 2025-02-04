@@ -2,7 +2,7 @@
 
 1) **E01-legal-data**: Escriba un programa que solicite al usuario que ingrese los siguientes datos legales: nombre completo (string), edad (int), género (char), altura en metros (float/double), peso en kilogramos (float/double) y si está casado (valor booleano). Luego, el programa debe imprimir cada uno de estos valores en una nueva línea.
 
-2) **E02-inverted-number**: Escriba un algoritmo que lea un número de cuatro dígitos y muestre en pantalla el número escrito en reverso. **Ejemplo:** Si el número es `4678`, la salida debería ser `8764`.
+2) **E02-inverted-number**: Escriba un algoritmo que lea un número de cuatro dígitos y muestre en pantalla el número escrito en reverso. **Nota:** Asegúrese de que el dato ingresado sea un número entero, no caracteres. **Ejemplo:** Si el número es `4678`, la salida debería ser `8764`.
 
 3) **E03-quadratic-roots**: Escriba un algoritmo que reciba como entrada los coeficientes **a**, **b** y **c** de una ecuación de segundo grado `(ax² + bx + c = 0)`, e imprima por pantalla los valores de x. Asuma que la ecuación siempre tiene solución en números reales.
 
@@ -10,7 +10,7 @@
 
 5) **E05-clock-angle**: Supongamos un reloj analógico (de agujas). Dada lo hora exacta (horas y minutos), escriba un algoritmo que calcule el ángulo entre ambas agujas. **Ejemplo:** A las 3:00 el ángulo será 90 grados. A las 3:15 el ángulo será 7,5 grados.
 
-6) **E06-frog-jumps**: José y Pedro son dos ranas. José puede dar saltos de J centímetros y Pedro puede dar saltos de P centímetros. Suponiendo que ambas ranas comienzan a saltar en el mismo punto (y en la misma dirección), haga un algoritmo que determine si las ranas coincidirán en el mismo punto en algún momento antes de que José de K saltos.
+6) **E06-frog-jumps**: José y Pedro son dos ranas. José puede dar saltos de J centímetros y Pedro puede dar saltos de P centímetros. Suponiendo que ambas ranas comienzan a saltar en el mismo punto (y en la misma dirección), haga un algoritmo que determine si las ranas coincidirán en el mismo punto en algún momento antes de que José de K saltos. **Ejemplo:** Supongamos que José puede dar saltos de 3 centímetros (J = 3) y Pedro puede dar saltos de 5 centímetros (P = 5). Si José dará un máximo de 10 saltos (K = 10), ambos coinciden en el punto 15 y en el punto 30 antes de que José complete sus 10 saltos.
 
 7) **E07-line-intersection**: Dadas las ecuaciones de dos rectas no paralelas `y = m1x+b1` y `y = m2x+b2`, escribir un algoritmo que calcule su punto de intersección.
 
