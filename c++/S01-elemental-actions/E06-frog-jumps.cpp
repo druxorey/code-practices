@@ -13,8 +13,16 @@ int main(int argc, char *argv[]) {
 	std::cin >> pedroDistance;
 	std::cout << '\n';
 
-	if ( (joseDistance * pedroDistance) <= (joseDistance * joseJumps) ){
-		std::cout << "The frogs will meet at the same point before Jose finishes all his jumps." << '\n';
+	int mcmDivisor = (joseDistance - pedroDistance);
+
+	if (mcmDivisor == 0) mcmDivisor = joseDistance;
+	else if (mcmDivisor < 0) mcmDivisor = 1;
+
+	int mcm = (joseDistance * pedroDistance) / mcmDivisor;
+
+	if ( mcm <= joseJumps * joseDistance ){
+		std::cout << "The frogs will meet at the same point after \e[0;32m" << mcm / joseDistance << " jumps\e[0m." << '\n';
+		std::cout << "They will meet at \e[0;32m" << mcm << " cm\e[0mfrom the start." << '\n';
 	} else{
 		std::cout << "The frogs will not meet at some point before Jose finishes all his jumps." << '\n';
 	}
