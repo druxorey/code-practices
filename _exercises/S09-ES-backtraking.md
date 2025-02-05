@@ -34,8 +34,4 @@
 
 14) **E14-scalable-tower**: Defina una función con la que determine si puede escalar una torre. La torre está definida como una matriz de NxN, donde el nivel más externo corresponde con el borde de la matriz y cada nivel sucesivo corresponde con el borde interno del previo hasta alcanzar el centro de la misma. En cada nivel estará dispuesta una escalera. Para poder cruzar entre niveles adyacentes debe utilizar la escalera. Si al buscar una escalera en un nivel, no puede conseguir debe indicar que la torre no es escalable. La función retorna **true** en caso de poder escalar y **false** en caso contrario. Ejemplo de la disposición de niveles en una matriz de 3x3, los números representan el nivel:
 
-	1 1 1 1 1
-	1 2 2 2 1
-	1 2 3 2 1
-	1 2 2 2 1
-	1 1 1 1 1
+![example](images/S09-E14.webp)

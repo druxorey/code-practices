@@ -34,8 +34,4 @@
 
 14) **E14-scalable-tower**: Define a function to determine if you can scale a tower. The tower is defined as an NxN matrix, where the outermost level corresponds to the edge of the matrix and each successive level corresponds to the inner edge of the previous one until reaching the center. At each level, a ladder is placed. To cross between adjacent levels, you must use the ladder. If you cannot find a ladder at a level, you must indicate that the tower is not scalable. The function returns **true** if it is possible to scale and **false** otherwise. Example of the level arrangement in a 3x3 matrix, the numbers represent the level:
 
-	1 1 1 1 1
-	1 2 2 2 1
-	1 2 3 2 1
-	1 2 2 2 1
-	1 1 1 1 1
+![example](images/S09-E14.webp)
