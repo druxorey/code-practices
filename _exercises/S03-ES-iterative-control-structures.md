@@ -18,20 +18,10 @@
 
 9) **E09-square-border**: Escriba un algoritmo que imprima por pantalla en borde de un cuadrado de lados de tamaño N. Por ejemplo, si N = 5, el algoritmo debería imprimir:
 
-	X  X  X  X  X
-	X               X
-	X               X
-	X               X
-	X  X  X  X  X
+![example](images/S03-E09.webp)
 
 10) **E10-nested-squares**: Escriba un algoritmo que imprima por pantalla en borde de cuadrados de tamaño impar desde N hasta 1 insertados uno dentro de otro. Por ejemplo, si N = 7 debe imprimir:
 
-	X  X  X  X  X  X  X
-	X                       X
-	X      X  X  X      X
-	X      X      X      X
-	X      X  X  X      X
-	X                       X
-	X  X  X  X  X  X  X
+![example](images/S03-E10.webp)
 
 11) **E11-guessing-game**: Escriba un algoritmo que genere un número aleatorio entre 1 y 100 y le pida al usuario que adivine el número. Si el número es incorrecto, el programa debe darle al usuario una pista si el número es mayor o menor que el número secreto. El juego debe continuar hasta que el usuario adivine el número.

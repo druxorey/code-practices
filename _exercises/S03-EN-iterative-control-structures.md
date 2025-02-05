@@ -18,20 +18,10 @@
 
 9) **E09-square-border**: Write an algorithm that prints the border of a square with sides of size N. For example, if N = 5, the algorithm should print:
 
-    X  X  X  X  X
-    X               X
-    X               X
-    X               X
-    X  X  X  X  X
+![example](images/S03-E09.webp)
 
 10) **E10-nested-squares**: Write an algorithm that prints the borders of squares of odd size from N to 1 nested within each other. For example, if N = 7, it should print:
 
-    X  X  X  X  X  X  X
-    X                       X
-    X      X  X  X      X
-    X      X      X      X
-    X      X  X  X      X
-    X                       X
-    X  X  X  X  X  X  X
+![example](images/S03-E10.webp)
 
 11) **E11-guessing-game**: Write an algorithm that generates a random number between 1 and 100 and asks the user to guess the number. If the number is incorrect, the program should give the user a clue by telling them if the number is higher or lower than the secret number. The game should continue until the user guesses the number.
