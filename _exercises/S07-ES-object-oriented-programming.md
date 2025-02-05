@@ -48,3 +48,20 @@
 	4. Una Farmacia. 
 
 12) **E12-gambling-system**: Una empresa dedicada a las apuestas deportivas requiere de la migración de su viejo sistema de tickets físicos que se venden en kioskos a un sistema totalmente digital y automatizado, donde los clientes puedan autogestionar su registro, métodos de pago además de realizar sus apuestas, ver los resultados y sus ganancias/pérdidas.
+
+13) **E13-internet-movie-database**: La Internet Movie Database (IMDb) es una base de datos en línea que almacena información relacionada con películas, actores, series de televisión, entre otros. 
+
+a) Película: código, nombre, género, calificación, descripción, fecha de estreno, duración en minutos y número de actores (por película actúan de 1 a 35 actores y tiene de 1 a 4 géneros). El código almacenado comienza por la letra P, seguido por un número que representa su posición al momento de ser almacenada, ejemplo la primera película tendrá el código P1.
+
+b) Actor/Actriz: código, nombre, apellido, calificación, edad, lugar de nacimiento y número de films. El código almacenado comienza por la letra A, seguido por un número que representa su posición al momento de ser almacenada, ejemplo el primer capítulo tendrá el código A1. 
+
+c) Género: código, nombre, siglas y número de films. El código almacenado comienza por la letra G, seguido por un número que representa su posición al momento de ser almacenada, ejemplo el primer capítulo tendrá el código G1. 
+
+El programa debe cumplir con los siguientes requerimientos:
+
+- Agregar una película.
+- Agregar un género.
+- Agregar un actor/actriz.
+- Listar las películas descendentemente por calificación.
+- Listar la información de una película.
+- Listar la filmografía de un actor/actriz.

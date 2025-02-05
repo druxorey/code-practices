@@ -48,3 +48,20 @@
     4. A Pharmacy.
 
 12) **E12-gambling-system**: A company dedicated to sports betting requires the migration of its old physical ticket system, sold at kiosks, to a fully digital and automated system. This new system will allow customers to manage their registration, payment methods, place bets, and view results and their winnings/losses.
+
+13) **E13-internet-movie-database**: The Internet Movie Database (IMDb) is an online database that stores information related to movies, actors, TV series, among others.
+
+a) Movie: code, name, genre, rating, description, release date, duration in minutes, and number of actors (each movie features between 1 to 35 actors and has between 1 to 4 genres). The stored code starts with the letter P, followed by a number representing its position at the time of storage, for example, the first movie will have the code P1.
+
+b) Actor/Actress: code, first name, last name, rating, age, place of birth, and number of films. The stored code starts with the letter A, followed by a number representing its position at the time of storage, for example, the first actor will have the code A1.
+
+c) Genre: code, name, acronym, and number of films. The stored code starts with the letter G, followed by a number representing its position at the time of storage, for example, the first genre will have the code G1.
+
+The program must meet the following requirements:
+
+- Add a movie.
+- Add a genre.
+- Add an actor/actress.
+- List movies in descending order by rating.
+- List the information of a movie.
+- List the filmography of an actor/actress.
