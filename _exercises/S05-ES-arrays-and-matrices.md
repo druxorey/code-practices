@@ -25,3 +25,5 @@
 12) **E12-swap-rows**: Haga una acción que tome como entrada una matriz (con cantidad par de filas) e intercambie las filas pares y las impares. **Ejemplo:** Si la matriz es {{4, 2}, {1, 2}, {6, −1}, {3, 5}}, la matriz resultante debería ser {{1, 2}, {4, 2}, {3, 5}, {6, −1}}.
 
 13) **E13-pharmacy-stock**: Haga un programa que permita llevar el control de un inventario de una farmacia, el programa debe, dado tres array con los nombres de los medicamentos, la cantidad y el valor de cada uno, debe de calcular el valor total del inventario, el valor del stock de cada medicamento y por último debe de poder ordenar los medicamentos por cantidad que hay en stock.
+
+14) **E14-tic-tac-toe**: Realice un juego de Tic-Tac-Toe (Tres en raya) donde se pueda jugar contra la computadora o contra otra persona. El juego debe permitir ingresar las jugadas y determinar el ganador o si hay un empate.
