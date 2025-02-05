@@ -3,17 +3,17 @@
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= BINATY TO DECIMAL =========]\e[0m\n\n";
 
-	int binary, correctedBinary = 0, iteration = 1, decimal = 0, finalDecimal = 0;
+	int binary, correctedBinary = 0, decimal = 0, finalDecimal = 0;
 
 	do {
 		std::cout << "Enter the number: ";
 		std::cin >> binary;
 
-		if (binary == 1 || binary == 0) {
+		if (binary == 1 || binary == 0)
 			correctedBinary = correctedBinary * 10 + binary;
-		} else if (binary != -1){
+		else if (binary != -1)
 			std::cout << "Wrong number" << '\n';
-		}
+
 	} while (binary != -1);
 
 	std::cout << '\n' << "The binary number is : " << correctedBinary << '\n';

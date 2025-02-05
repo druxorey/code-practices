@@ -17,9 +17,9 @@ int main(int argc, char *argv[]) {
 	}
 
 	if (capicuaNumber == inputNumber) {
-		std::cout << "The number " << inputNumber << " is capicua." << '\n';
+		std::cout << "The number " << inputNumber << " \e[0;32mis capicua\e[0m." << '\n';
 	} else {
-		std::cout << "The number " << inputNumber << " is not capicua." << '\n';
+		std::cout << "The number " << inputNumber << " \e[0;31mis not capicua\e[0m." << '\n';
 	}
 
 	return 0;
