@@ -7,7 +7,7 @@ float convertMilesToKm(float miles) {
 
 
 void printDistance(float distance) {
-	printf("The distance between the two cities is %.2f km.\n\n", distance);
+	printf("\nThe distance between the two cities is \e[0;32m%.2f km\e[0m.\n\n", distance);
 }
 
 
@@ -15,8 +15,12 @@ bool askForCity() {
 	std::string initialCity, finalCity;
 	float distance;
 
-	getcin("Enter the initial city: ", initialCity);
-	getcin("Enter the final city: ", finalCity);
+	printf("Enter the initial city: ");
+	std::getline(std::cin, initialCity);
+
+	printf("Enter the final city: ");
+	std::getline(std::cin, finalCity);
+
 	getcin("Enter the distance between \e[0;33m" + initialCity + "\e[0m and \e[0;33m" + finalCity + "\e[0m in miles: ", distance);
 
 	if (initialCity == finalCity && distance == 0)
@@ -31,9 +35,7 @@ bool askForCity() {
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= CITY DISTANCES =========]\e[0m\n\n";
 
-	while (true) {
-		if (!askForCity()) break;
-	}
+	while (askForCity())
 
 	return 0;
 }
