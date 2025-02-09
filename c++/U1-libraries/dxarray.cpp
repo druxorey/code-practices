@@ -1,3 +1,4 @@
+#include <ctime>
 #include <iostream>
 
 template <typename datatype>
@@ -18,7 +19,7 @@ void printArray(datatype array[], int size) {
 
 // Function to fill an integer array with random values
 void randArray(int array[], int size) {
-	srand(time(NULL));
+	srand(time(NULL) ^ (clock()));
 
 	for (int i = 0; i < size; i++) {
 		array[i] = rand() % (size * 2);
