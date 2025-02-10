@@ -24,10 +24,11 @@ int main(int argc, char *argv[]) {
 
 	int capicuaNumber = isCapicua(number);
 
+	printf("The number %s, ", number.c_str());
 	if (capicuaNumber != -1) {
-		printf("The number %i is capicua.\n", capicuaNumber);
+		printf("\e[0;32mhas the capicua number %i\e[0m.\n", capicuaNumber);
 	} else {
-		printf("There isn't any capicua number.\n");
+		printf("\e[0;31mdoes not have a capicua number\e[0m.\n");
 	}
 
 	return 0;
