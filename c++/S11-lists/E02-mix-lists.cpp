@@ -2,26 +2,25 @@
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-typedef list<int> int_list;
 
-void printList(int_list &list) {
-	int_list::iterator listIterator = list.first();
+void printList(list<int> &myList) {
+	list<int>::iterator listIterator = myList.first();
 	int nodeIndex = 1;
 	while (listIterator != nullptr) {
-		int retrievedArr = *list.get(listIterator);
+		int retrievedArr = *myList.get(listIterator);
 		printf("Node %d: [%d]\n", nodeIndex, retrievedArr);
-		list.next(listIterator);
+		myList.next(listIterator);
 		nodeIndex++;
 	}
 }
 
 
-int_list mixLists(int_list &firstList, int_list &secondList) {
-	int_list mergedList;
+list<int> mixLists(list<int> &firstList, list<int> &secondList) {
+	list<int> mergedList;
 	int listSize = firstList.size() + secondList.size();
 
-	int_list::iterator firstListIterator = firstList.last();
-	int_list::iterator secondListIterator = secondList.last();
+	list<int>::iterator firstListIterator = firstList.last();
+	list<int>::iterator secondListIterator = secondList.last();
 
 	for (int i = 0; i < listSize; i++) {
         int firstListValue = (firstListIterator != nullptr) ? *firstList.get(firstListIterator) : -listSize;
@@ -40,7 +39,7 @@ int_list mixLists(int_list &firstList, int_list &secondList) {
 }
 
 
-void fillList(int_list &firstList, int_list &secondList, int size) {
+void fillList(list<int> &firstList, list<int> &secondList, int size) {
 	int nodeIndex = 0;
 
 	for (int i = 0; i < size; i++) {
@@ -58,7 +57,7 @@ int main(int argc, char *argv[]) {
 	int listSize;
 	getcin("Enter the size of the lists: ", listSize);
 
-	int_list firstList, secondList;
+	list<int> firstList, secondList;
 	fillList(firstList, secondList, listSize);
 
 	printf("\n\e[0;33mFirst List\e[0m:\n");
@@ -67,7 +66,7 @@ int main(int argc, char *argv[]) {
 	printf("\n\e[0;33mSecond List\e[0m:\n");
 	printList(secondList);
 
-	int_list mergedList = mixLists(firstList, secondList);
+	list<int> mergedList = mixLists(firstList, secondList);
 	printf("\n\e[0;33mMixed List\e[0m:\n");
 	printList(mergedList);
 	printf("\n");
