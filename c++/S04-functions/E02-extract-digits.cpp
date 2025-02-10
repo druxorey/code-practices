@@ -14,19 +14,15 @@ int invertNumber (int fullNumber) {
 
 
 int extractDigits(int fullNumber, int stop) {
-	bool isEnded = false;
-	int finalQuantity = 0;
+	fullNumber = invertNumber(fullNumber);
+	int extractedNumber = 0;
 
 	do {
-		if (fullNumber % 10 == stop) {
-			isEnded = true;
-		} else {
-			finalQuantity = (finalQuantity * 10) + (fullNumber % 10);
-			fullNumber /= 10;
-		}
-	} while (!isEnded);
+		extractedNumber = (extractedNumber * 10) + (fullNumber % 10);
+		fullNumber /= 10;
+	} while (fullNumber % 10 != stop);
 
-	return finalQuantity;
+	return extractedNumber;
 }
 
 
@@ -38,7 +34,7 @@ int main(int argc, char *argv[]) {
 	getcin("Enter the number: ", fullNumber);
 	getcin("Enter the stop number: ", stop);
 
-	printf("The inverted number is: %d\n", invertNumber(fullNumber));
+	printf("\nThe extracted number is: \e[0;32m%d\e[0m\n", extractDigits(fullNumber, stop));
 
 	return 0;
 }
