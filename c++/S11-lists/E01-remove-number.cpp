@@ -3,7 +3,7 @@
 #include "../U1-libraries/dxarray.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-void printList(list<int*> &arrayList, int arraySize) {
+void printArrayList(list<int*> &arrayList, int arraySize) {
 	list<int*>::iterator listIterator = arrayList.first();
 	while (listIterator != nullptr) {
 		int* retrievedArr = *arrayList.get(listIterator);
@@ -63,10 +63,12 @@ int main(int argc, char *argv[]) {
     arrayList.insert(arrayList.first(), thirdArray);
 
 	printf("\n\e[0;33mOriginal List\e[0m:\n");
-	printList(arrayList, arraySize);
+	printArrayList(arrayList, arraySize);
+
 	deleteListNumber(arrayList, arraySize, deleteNumber);
+
 	printf("\n\e[0;33mList after deleting number \e[0;32m%d\e[0m:\n", deleteNumber);
-	printList(arrayList, arraySize);
+	printArrayList(arrayList, arraySize);
 
 	return 0;
 }
