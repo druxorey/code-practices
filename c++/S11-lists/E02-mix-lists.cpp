@@ -2,19 +2,6 @@
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-
-void printList(list<int> &myList) {
-	list<int>::iterator listIterator = myList.first();
-	int nodeIndex = 1;
-	while (listIterator != nullptr) {
-		int retrievedArr = *myList.get(listIterator);
-		printf("Node %d: [%d]\n", nodeIndex, retrievedArr);
-		myList.next(listIterator);
-		nodeIndex++;
-	}
-}
-
-
 list<int> mixLists(list<int> &firstList, list<int> &secondList) {
 	list<int> mergedList;
 	int listSize = firstList.size() + secondList.size();

@@ -2,19 +2,6 @@
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-
-void printList(list<char> &myList) {
-	list<char>::iterator listIterator = myList.first();
-	int nodeIndex = 1;
-	while (listIterator != nullptr) {
-		int retrievedArr = *myList.get(listIterator);
-		printf("Node %d: [%c]\n", nodeIndex, retrievedArr);
-		myList.next(listIterator);
-		nodeIndex++;
-	}
-}
-
-
 void printList(list<char> &myList, int start, int end) {
 	int nodeIndex = start;
 
