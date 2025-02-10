@@ -1,3 +1,4 @@
+#include <iostream>
 #include "dxnode.cpp"
 
 template <typename datatype>
@@ -148,3 +149,17 @@ void list<datatype>::deleteNode(iterator i) {
 
 	delete i;
 }
+
+// Print the contents of the list
+template <typename datatype>
+void printList(list<datatype> &myList) {
+    typename list<datatype>::iterator listIterator = myList.first();
+    int nodeIndex = 1;
+    while (listIterator != nullptr) {
+        datatype retrievedData = *myList.get(listIterator);
+        std::cout << "Node " << nodeIndex << ": [" << retrievedData << "]" << std::endl;
+        myList.next(listIterator);
+        nodeIndex++;
+    }
+}
+
