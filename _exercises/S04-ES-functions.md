@@ -22,3 +22,21 @@
 9) **E09-bank-account**: Haga un programa que simule una cuenta bancaria. Debe permitir depositar, retirar y consultar el saldo de la cuenta.
 
 10) **E10-rock-paper-scissors**: Cree un programa que simule el juego piedra-papel-tijera. El programa debe permitir al usuario jugar contra la computadora.
+
+11) **E11-math-friendship**: Se dice que dos números M y N, enteros y positivos, profesan Amistad Matemática entre sí, cuando al sumar los divisores de M (salvo él mismo) se obtiene N y al sumar todos los divisores de N (salvo él mismo) se obtiene M. **Ejemplo:**
+
+	- los divisores de 220 son: 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110 que al sumarlos da 284
+	- los divisores de 284 son: 1, 2, 4, 71, 142 que al sumarlos da 220
+
+Generar un programa que dados dos números indique si los mismos profesan mutua amistad matemática.
+
+12) **E12-quadratic-friendship**: Existe lo que se llama la Amistad Cuadrática entre dos números cuando se cumple lo que se narra en el siguiente ejemplo para los números 13 y 16:
+
+	- El número 16 elevado al cuadrado da 256 y sumando sus dígitos 2+5+6-->13
+	- El número 13 elevado al cuadrado da 169 y sumando sus dígitos 1+6+9--> 16
+
+Cuando lo anterior sucede se dice que los números profesan amistad cuadrática. Realizar un programa que indique si dos números dados como datos profesan amistad cuadrática.
+
+13) **E13-greatest-common-divisor**: Realice un programa que calcule y muestre el Máximo Común Divisor (mcd) de dos números naturales dados como datos.
+
+14) **E14-least-common-multiple**: Desarrolle un programa que dados dos números naturales N y M suministrados por el usuario, calcule el Mínimo Común Múltiplo (mcm) de los mismos.

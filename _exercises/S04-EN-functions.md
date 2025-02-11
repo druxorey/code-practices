@@ -22,3 +22,21 @@
 9) **E09-bank-account**: Create a program that simulates a bank account. It should allow you to deposit, withdraw, and check the account balance.
 
 10) **E10-rock-paper-scissors**: Create a program that simulates the game rock-paper-scissors. The program should allow the user to play against the computer.
+
+11) **E11-math-friendship**: It is said that two positive integers M and N share Mathematical Friendship when the sum of the divisors of M (excluding itself) equals N and the sum of the divisors of N (excluding itself) equals M. **Example:**
+
+    - The divisors of 220 are: 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110 which sum up to 284
+    - The divisors of 284 are: 1, 2, 4, 71, 142 which sum up to 220
+
+    Create a program that, given two numbers, indicates if they share mathematical friendship.
+
+12) **E12-quadratic-friendship**: Quadratic Friendship exists between two numbers when the following example holds true for the numbers 13 and 16:
+
+    - The number 16 squared is 256 and summing its digits 2+5+6 --> 13
+    - The number 13 squared is 169 and summing its digits 1+6+9 --> 16
+
+    When the above happens, the numbers are said to share quadratic friendship. Create a program that indicates if two given numbers share quadratic friendship.
+
+13) **E13-greatest-common-divisor**: Create a program that calculates and displays the Greatest Common Divisor (GCD) of two given natural numbers.
+
+14) **E14-least-common-multiple**: Develop a program that, given two natural numbers N and M provided by the user, calculates the Least Common Multiple (LCM) of them.
