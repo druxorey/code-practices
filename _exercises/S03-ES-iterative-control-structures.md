@@ -25,3 +25,11 @@
 ![example](images/S03-E10.webp)
 
 11) **E11-guessing-game**: Escriba un algoritmo que genere un número aleatorio entre 1 y 100 y le pida al usuario que adivine el número. Si el número es incorrecto, el programa debe darle al usuario una pista si el número es mayor o menor que el número secreto. El juego debe continuar hasta que el usuario adivine el número.
+
+12) **E12-chessboard-rice**: En un tablero de ajedrez se coloca en la primera casilla un grano de arroz, en la segunda se coloca el doble de granos que en la anterior y así sucesivamente hasta la 64ava casilla. Diseñe un programa para presentar un listado en donde se indique el número de la casilla, el número de granos colocados en esa casilla y la suma de los granos acumulados hasta esa casilla.
+
+13) **E13-prime-number**: Desarrolle un programa que indique si un número entero positivo dado como dato es lo que se conoce como número primo o no.
+
+14) **E14-perfect-number**: Diseñe un programa que indique si un número entero y positivo “M” leído como dato, es perfecto o no. Sabiendo que un número es perfecto cuando la suma de todos sus divisores, salvo él mismo, es igual al mismo número. **Ejemplo:** 6 es dividido de manera exacta por 1, 2 y 3 que al sumarlos da el valor origina: 6.
+
+15) **E15-palindromic-prime**: Un número entero positivo se le llama primo capicúa cuando siendo primo también es primo cuando se invierten sus dígitos. Así tenemos que 17, 31, 37 y 113 son ejemplos de primos capicúas pues 71, 13, 73, 311 son también primos. Diseñe un programa para indicar si un número N dado como dato es primo capicúa.

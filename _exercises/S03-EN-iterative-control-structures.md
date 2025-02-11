@@ -25,3 +25,11 @@
 ![example](images/S03-E10.webp)
 
 11) **E11-guessing-game**: Write an algorithm that generates a random number between 1 and 100 and asks the user to guess the number. If the number is incorrect, the program should give the user a clue by telling them if the number is higher or lower than the secret number. The game should continue until the user guesses the number.
+
+12) **E12-chessboard-rice**: On a chessboard, one grain of rice is placed on the first square, double the grains on the second square, and so on until the 64th square. Design a program to present a list indicating the square number, the number of grains placed on that square, and the cumulative sum of grains up to that square.
+
+13) **E13-prime-number**: Develop a program that indicates whether a given positive integer is a prime number or not.
+
+14) **E14-perfect-number**: Design a program that indicates whether a given positive integer "M" is perfect or not. A number is perfect when the sum of all its divisors, except itself, equals the number. **Example:** 6 is exactly divided by 1, 2, and 3, which sum up to the original value: 6.
+
+15) **E15-palindromic-prime**: A positive integer is called a palindromic prime when it is prime and also remains prime when its digits are reversed. For example, 17, 31, 37, and 113 are palindromic primes because 71, 13, 73, and 311 are also primes. Design a program to indicate whether a given number N is a palindromic prime.
