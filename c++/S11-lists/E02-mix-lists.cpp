@@ -30,8 +30,8 @@ void fillList(list<int> &firstList, list<int> &secondList, int size) {
 	int nodeIndex = 0;
 
 	for (int i = 0; i < size; i++) {
-		firstList.insert(firstList.first(), size * 2 - nodeIndex);
-		secondList.insert(secondList.first(), size * 2 - nodeIndex + 1);
+		firstList.insert(firstList.last(), nodeIndex, false);
+		secondList.insert(secondList.last(), nodeIndex + 1, false);
 		nodeIndex += 2;
 	}
 
