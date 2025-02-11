@@ -17,3 +17,13 @@
 8) **E08-multiplication-table**: Escribe un programa que muestre la tabla de multiplicar de un número ingresado por el usuario. **Ejemplo:** Si el usuario ingresa `5`, el programa debe mostrar la tabla del 5 (5x1, 5x2, …, 5x10).
 
 9) **E09-pirate-coordinates**: Luego de un accidente marítimo un náufrago se despierta en una isla desierta, al hacer un recorrido por ella encuentra una botella con un pergamino, donde se lee la siguiente frase: "Si descifras el mensaje oculto encontrarás la manera de salir de este lugar", en el reverso de del mismo están escritos 3 números de 4 cifras. Al pasar unos minutos el náufrago descubre en el pergamino un plano cartesiano y una frase escrita con una tinta especial que se revela al tener contacto con el agua. Dicha frase decía lo siguiente: "En el centro del triángulo encontrarás la respuesta". Al terminar de leer esta información se da cuenta que al separar los números anteriores en pares (x, y) y dibujar los mismos en el plano unidos con líneas se formará un triángulo, dejando solo el cálculo del centroide del mismo para tener el punto en la isla donde se encuentra el misterioso secreto. Se requiere que realicen un programa que simula el proceso de descifrado del mensaje, leyendo los 3 números, y dando como salida la coordenada del centroide.
+
+10) **E10-cylindrical-conversion**: Diseñar un programa que dadas las coordenadas cartesianas (x, y, z) de un punto en el espacio, calcule y muestre sus coordenadas cilíndricas y sus coordenadas esféricas.
+
+11) **E11-segment-length**: Diseñe un programa que dados dos puntos en el plano por sus coordenadas (x1, y1) y (x2, y2) calcule y muestre la longitud del segmento que determinan estos puntos, y que se calculen y muestren las coordenadas del punto medio de ese segmento.
+
+12) **E12-seconds-conversion**: Diseñe un programa que dada una cantidad de segundos, entera y positiva, indique a cuanto equivale en años, meses, días, horas y segundos. Asuma años de 360 días y simplifique a que todos los meses poseen 30 días. **Ejemplo:** 31.803.310 segundos equivalen a 1 año, 3 días, 2 horas, 15 minutos y 10 segundos.
+
+13) **E13-cylinder-metrics**: Diseñe un programa que, dado un recipiente cilíndrico, solicite los datos pertinentes para poder calcular su volumen y área, y mostrar tales resultados.
+
+14) **E14-mirror-time**: Hacer un programa que, dada una hora en el espejo, devuelva la hora real. **Ejemplo:** A las 8:05 vista en el espejo es las 3:55.

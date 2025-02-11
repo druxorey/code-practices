@@ -17,3 +17,13 @@
 8) **E08-multiplication-table**: Write a program that displays the multiplication table for a number entered by the user. **Example:** If the user enters `5`, the program should show the table for 5 (5x1, 5x2, ..., 5x10).
 
 9) **E09-pirate-coordinates**: After a maritime accident, a castaway wakes up on a deserted island. While exploring it, he finds a bottle with a scroll inside, which reads: "If you decipher the hidden message, you will find a way to leave this place." On the back of the scroll, there are three 4-digit numbers. After a few minutes, the castaway discovers a Cartesian plane on the scroll and a phrase written with special ink that reveals itself when in contact with water. The phrase reads: "In the center of the triangle, you will find the answer." After reading this information, he realizes that by separating the previous numbers into pairs (x, y) and drawing them on the plane connected by lines, a triangle will be formed. The only task left is to calculate the centroid of the triangle to find the point on the island where the mysterious secret is located. A program is required to simulate the process of deciphering the message, reading the 3 numbers, and outputting the coordinates of the centroid.
+
+10) **E10-cylindrical-conversion**: Design a program that, given the Cartesian coordinates (x, y, z) of a point in space, calculates and displays its cylindrical and spherical coordinates.
+
+11) **E11-segment-length**: Design a program that, given two points on the plane by their coordinates (x1, y1) and (x2, y2), calculates and displays the length of the segment determined by these points, and calculates and displays the coordinates of the midpoint of that segment.
+
+12) **E12-seconds-conversion**: Design a program that, given a positive integer number of seconds, indicates how many years, months, days, hours, and seconds it is equivalent to. Assume years of 360 days and simplify to all months having 30 days. **Example:** 31,803,310 seconds are equivalent to 1 year, 3 days, 2 hours, 15 minutes, and 10 seconds.
+
+13) **E13-cylinder-metrics**: Design a program that, given a cylindrical container, requests the pertinent data to calculate its volume and area, and displays such results.
+
+14) **E14-mirror-time**: Write a program that, given a time seen in a mirror, returns the real time. **Example:** 8:05 seen in the mirror is 3:55.
