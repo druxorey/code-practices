@@ -26,3 +26,15 @@
 8) **E08-quadratic-roots**:Escriba un algoritmo que permita encontrar los valores de un polinomio de segundo grado, tiene que recibir como entrada los coeficientes de la ecuación cuadrática. El algoritmo debe imprimir las raíces de la ecuación cuadrática, y si no existe una solución real, debe de indicarse.
 
 9) **E09-coordinate-converter**: Escriba un algoritmo que convierta coordenadas polares a cartesianas y viceversa. El algoritmo debe recibir como entrada el tipo de conversión deseada (de polares a cartesianas o de cartesianas a polares) y las coordenadas correspondientes. Para la conversión de polares a cartesianas, el algoritmo debe recibir el radio (r) y el ángulo (θ) en grados, y devolver las coordenadas (x, y). Para la conversión de cartesianas a polares, el algoritmo debe recibir las coordenadas (x, y) y devolver el radio (r) y el ángulo (θ) en grados.
+
+10) **E10-triangle-type**: Diseñe un programa que indique si tres puntos dados por sus coordenadas (x, y) forman triángulo y en caso de formarlo debe indicarse que tipo de triángulo forma.
+
+11) **E11-triangle-area**: Dadas tres longitudes suministradas por el usuario, diseñe un programa que indique si las mismas pueden formar triángulo y de ser así también calcule y muestre el área del triángulo.
+
+12) **E12-leap-year**: Una forma de determinar si un año es bisiesto es que el mismo sea divisible de manera exacta por cuatro, pero si el mismo es fin de siglo (año secular) en este caso debe ser divisible de forma exacta por cuatrocientos. Realice un programa que basado en el criterio anterior determine si un año dado como dato es o no bisiesto, generando un mensaje adecuado.
+
+13) **E13-ork-festive-year**: Ork el planeta natal de Mork celebra un gran festejo planetario cada ocho años, de manera similar cada 72 años se celebra el cumpleaños de Orson y para hacerlo en grande se festeja también al año siguiente, pero cada 48 años la celebración que pudiese haber ese año se suspende debido al penoso recuerdo que dejó la derrota con su planeta enemigo en las Guerras Impúdicas. Realice un programa para saber si un año dado como dato es o no festivo. Asuma que el conteo de los años empezó en el año uno.
+
+14) **E14-imaginary-operations**: Realice un programa que permita al usuario llevar adelante una de las siguientes operaciones para números imaginarios: suma, resta, multiplicación o división. El usuario debe poder seleccionar una de las operaciones, dar los valores y obtener el resultado.
+
+15) **E15-automorphic-number**: Un número natural se define como Automórfico cuando su cuadrado tiene como últimas cifras las mismas que ese número. Los primeros números automórficos son 5, 6, 25, 76, 376, 625... En efecto: 52=25, 62=36, 252=625, 762=5776.

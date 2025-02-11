@@ -27,3 +27,15 @@
 8) **E08-quadratic-roots**:Write an algorithm that finds the values of a second-degree polynomial. It should receive the coefficients of the quadratic equation as input. The algorithm must print the roots of the quadratic equation, and if there is no real solution, it should indicate so.
 
 9) **E09-coordinate-converter**: Write an algorithm that converts polar coordinates to Cartesian coordinates and vice versa. The algorithm should take as input the desired type of conversion (from polar to Cartesian or from Cartesian to polar) and the corresponding coordinates. For the conversion from polar to Cartesian, the algorithm should take the radius (r) and the angle (θ) in degrees, and return the coordinates (x, y). For the conversion from Cartesian to polar, the algorithm should take the coordinates (x, y) and return the radius (r) and the angle (θ) in degrees.
+
+10) **E10-triangle-type**: Design a program that indicates if three points given by their coordinates (x, y) form a triangle and if they do, it should indicate the type of triangle formed.
+
+11) **E11-triangle-area**: Given three lengths provided by the user, design a program that indicates if they can form a triangle and if so, also calculate and display the area of the triangle.
+
+12) **E12-leap-year**: One way to determine if a year is a leap year is that it must be exactly divisible by four, but if it is a century year (secular year), it must be exactly divisible by four hundred. Create a program that based on the above criteria determines if a given year is a leap year or not, generating an appropriate message.
+
+13) **E13-ork-festive-year**: Ork, the home planet of Mork, celebrates a great planetary festivity every eight years. Similarly, every 72 years Orson's birthday is celebrated and to make it grand, it is also celebrated the following year. However, every 48 years the celebration that could have taken place that year is suspended due to the painful memory of the defeat with their enemy planet in the Impudent Wars. Create a program to determine if a given year is festive. Assume that the counting of the years started in year one.
+
+14) **E14-imaginary-operations**: Create a program that allows the user to perform one of the following operations for imaginary numbers: addition, subtraction, multiplication, or division. The user should be able to select one of the operations, provide the values, and obtain the result.
+
+15) **E15-automorphic-number**: A natural number is defined as Automorphic when its square has the same last digits as the number itself. The first automorphic numbers are 5, 6, 25, 76, 376, 625... Indeed: 5^2=25, 6^2=36, 25^2=625, 76^2=5776.
