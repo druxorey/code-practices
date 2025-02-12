@@ -1,18 +1,16 @@
 #include <iostream>
 #include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxlist.cpp"
 #include "../U1-libraries/dxring.cpp"
 
 void printCircularList(ring<char> &myList, int start, int end) {
     int nodeIndex = start;
 
-    for (int i = 0; i < start; i++) myList.next();
+    for (int i = 0; i < start - 1; i++) myList.next();
 
     for (int i = 0; i < end; i++) {
-		if (nodeIndex >= myList.size()) nodeIndex = 1;
         char retrievedArr = myList.next();
         printf("Node %d: [%c]\n", nodeIndex, retrievedArr);
-        nodeIndex++;
+        nodeIndex = (nodeIndex >= myList.size())? 1 : nodeIndex + 1;
     }
 }
 
@@ -38,7 +36,7 @@ int main(int argc, char *argv[]) {
 	fillList(circularList, listSize);
 
 	printf("\n\e[0;33mInitial List\e[0m:\n");
-	printList(circularList);
+	circularList.print();
 
 	printf("\n\e[0;33mThe %d digits after %d are\e[0m:\n", end, start);
 	printCircularList(circularList, start, end);
