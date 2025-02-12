@@ -1,20 +1,19 @@
 #include <iostream>
+#include <list>
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxarray.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-void printArrayList(list<int*> &arrayList, int arraySize) {
-	list<int*>::iterator listIterator = arrayList.first();
-	while (listIterator != nullptr) {
-		int* retrievedArr = *arrayList.get(listIterator);
-
-		printf("[");
+void printArrayList(std::list<int*> &arrayList, int arraySize) {
+	int nodeIndex = 1;
+	for (const auto &array : arrayList) {
+		printf("Array %d: [", nodeIndex);
 		for (int i = 0; i < arraySize; ++i) {
-			printf("%d", retrievedArr[i]);
+			printf("%d", array[i]);
 			if (i < arraySize - 1) printf(", ");
 		}
-		arrayList.next(listIterator);
 		printf("]\n");
+		nodeIndex++;
 	}
 }
 
@@ -26,16 +25,16 @@ void removeArrayElement(int* arr, int arraySize, int index) {
 }
 
 
-void deleteListNumber(list<int*> &arrayList, int arraySize, int deleteNumber) {
-	list<int*>::iterator listIterator = arrayList.first();
-	while(listIterator != nullptr) {
-		int* retrievedArr = *arrayList.get(listIterator);
+void deleteListNumber(std::list<int*> &arrayList, int arraySize, int deleteNumber) {
+	auto listIterator = arrayList.begin();
+	while(listIterator != arrayList.end()) {
+		int* retrievedArr = *listIterator;
 		for (int i = 0; i < arraySize; ++i) {
 			if (retrievedArr[i] == deleteNumber) {
 				removeArrayElement(retrievedArr, arraySize, i);
 			}
 		}
-		arrayList.next(listIterator);
+		listIterator++;
 	}
 }
 
@@ -56,11 +55,11 @@ int main(int argc, char *argv[]) {
 	int thirdArray[arraySize];
 	randArray(thirdArray, arraySize);
 
-	list<int*> arrayList;
+	std::list<int*> arrayList;
 
-    arrayList.insert(arrayList.first(), firstArray);
-    arrayList.insert(arrayList.first(), secondArray);
-    arrayList.insert(arrayList.first(), thirdArray);
+    arrayList.insert(arrayList.begin(), firstArray);
+    arrayList.insert(arrayList.begin(), secondArray);
+    arrayList.insert(arrayList.begin(), thirdArray);
 
 	printf("\n\e[0;33mOriginal List\e[0m:\n");
 	printArrayList(arrayList, arraySize);
@@ -69,6 +68,7 @@ int main(int argc, char *argv[]) {
 
 	printf("\n\e[0;33mList after deleting number \e[0;32m%d\e[0m:\n", deleteNumber);
 	printArrayList(arrayList, arraySize);
+	printf("\n");
 
 	return 0;
 }

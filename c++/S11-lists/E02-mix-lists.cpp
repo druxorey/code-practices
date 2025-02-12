@@ -1,62 +1,63 @@
 #include <iostream>
+#include <list>
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-list<int> mixLists(list<int> &firstList, list<int> &secondList) {
-	list<int> mergedList;
-	int listSize = firstList.size() + secondList.size();
+#define INT_MIN -2147483648
 
-	list<int>::iterator firstListIterator = firstList.last();
-	list<int>::iterator secondListIterator = secondList.last();
+std::list<int> mixLists(const std::list<int> &firstList, const std::list<int> &secondList) {
+    std::list<int> mergedList;
+    auto firstListIterator = firstList.rbegin();
+    auto secondListIterator = secondList.rbegin();
 
-	for (int i = 0; i < listSize; i++) {
-        int firstListValue = (firstListIterator != nullptr) ? *firstList.get(firstListIterator) : -listSize;
-        int secondListValue = (secondListIterator != nullptr) ? *secondList.get(secondListIterator) : -listSize;
+    while (firstListIterator != firstList.rend() || secondListIterator != secondList.rend()) {
+        int firstListValue = (firstListIterator != firstList.rend()) ? *firstListIterator : INT_MIN;
+        int secondListValue = (secondListIterator != secondList.rend()) ? *secondListIterator : INT_MIN;
 
-		if (firstListValue > secondListValue) {
-			mergedList.insert(mergedList.first(), firstListValue);
-			firstList.prev(firstListIterator);
-		} else {
-			mergedList.insert(mergedList.first(), secondListValue);
-			secondList.prev(secondListIterator);
-		}
-	}
+        if (firstListValue > secondListValue) {
+            mergedList.push_front(firstListValue);
+            if (firstListIterator != firstList.rend()) ++firstListIterator;
+        } else {
+            mergedList.push_front(secondListValue);
+            if (secondListIterator != secondList.rend()) ++secondListIterator;
+        }
+    }
 
-	return mergedList;
+    return mergedList;
 }
 
 
-void fillList(list<int> &firstList, list<int> &secondList, int size) {
-	int nodeIndex = 0;
+void fillList(std::list<int> &firstList, std::list<int> &secondList, int size) {
+    int nodeIndex = 0;
 
-	for (int i = 0; i < size; i++) {
-		firstList.insert(firstList.last(), nodeIndex, false);
-		secondList.insert(secondList.last(), nodeIndex + 1, false);
-		nodeIndex += 2;
-	}
-
+    for (int i = 0; i < size; i++) {
+        firstList.push_back(nodeIndex);
+        secondList.push_back(nodeIndex + 1);
+        nodeIndex += 2;
+    }
 }
 
 
-int main(int argc, char *argv[]) {
-	std::cout << "\n\e[0;35m[========= MIX LISTS =========]\e[0m\n\n";
+int main() {
+    std::cout << "\n\e[0;35m[========= MIX LISTS =========]\e[0m\n\n";
 
-	int listSize;
-	getcin("Enter the size of the lists: ", listSize);
+    int listSize;
+    std::cout << "Enter the size of the lists: ";
+    std::cin >> listSize;
 
-	list<int> firstList, secondList;
-	fillList(firstList, secondList, listSize);
+    std::list<int> firstList, secondList;
+    fillList(firstList, secondList, listSize);
 
-	printf("\n\e[0;33mFirst List\e[0m:\n");
-	printList(firstList);
+    std::cout << "\n\e[0;33mFirst List\e[0m:\n";
+    printList(firstList);
 
-	printf("\n\e[0;33mSecond List\e[0m:\n");
-	printList(secondList);
+    std::cout << "\n\e[0;33mSecond List\e[0m:\n";
+    printList(secondList);
 
-	list<int> mergedList = mixLists(firstList, secondList);
-	printf("\n\e[0;33mMixed List\e[0m:\n");
-	printList(mergedList);
-	printf("\n");
+    std::list<int> mergedList = mixLists(firstList, secondList);
+    std::cout << "\n\e[0;33mMixed List\e[0m:\n";
+    printList(mergedList);
+    std::cout << "\n";
 
-	return 0;
+    return 0;
 }

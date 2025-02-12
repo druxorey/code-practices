@@ -1,22 +1,23 @@
 #include <iostream>
+#include <list>
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
-void randList(list<int> &myList, int size) {
+void randList(std::list<int> &myList, int size) {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++) {
-		myList.insert(myList.first(), (rand() % (size * size)));
+		myList.insert(myList.begin(), (rand() % (size * size)));
 	}
 }
 
 
-int sumList(list<int> &myList, int size) {
+int sumList(std::list<int> &myList, int size) {
 	int finalSum = 0;
-	list<int>::iterator index = myList.first();
+	auto index = myList.begin();
 
 	for (int i = 0; i < size; i++) {
-		finalSum += *myList.get(index);
-		myList.next(index);
+		finalSum += *index;
+		index++;
 	}
 
 	return finalSum;
@@ -29,7 +30,7 @@ int main(int argc, char *argv[]) {
 	int listSize, finalSum;
 	getcin("Enter the list size: ", listSize);
 
-	list<int> intList;
+	std::list<int> intList;
 	randList(intList, listSize);
 
 	printList(intList);
