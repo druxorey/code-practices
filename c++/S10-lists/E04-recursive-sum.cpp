@@ -1,5 +1,4 @@
 #include <iostream>
-#include <list>
 #include "../U1-libraries/dxarray.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
@@ -11,7 +10,7 @@ int recursiveSum(int array[], int index) {
 }
 
 
-int getListSum(std::list<int*> myList) {
+int getListSum(dxlist<int*> myList) {
 	int finalSum = 0;
 
 	for(const auto &array: myList) {
@@ -25,7 +24,7 @@ int getListSum(std::list<int*> myList) {
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= RECURSIVE SUM =========]\e[0m\n\n";
 
-	std::list<int*> randomList;
+	dxlist<int*> randomList;
 
 	int firstArray[ARRAY_SIZE];
 	randArray(firstArray, ARRAY_SIZE);
