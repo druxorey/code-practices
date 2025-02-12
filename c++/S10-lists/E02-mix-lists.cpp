@@ -1,12 +1,11 @@
 #include <iostream>
-#include <list>
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
 
 #define INT_MIN -2147483648
 
-std::list<int> mixLists(const std::list<int> &firstList, const std::list<int> &secondList) {
-    std::list<int> mergedList;
+dxlist<int> mixLists(const dxlist<int> &firstList, const dxlist<int> &secondList) {
+    dxlist<int> mergedList;
     auto firstListIterator = firstList.rbegin();
     auto secondListIterator = secondList.rbegin();
 
@@ -27,7 +26,7 @@ std::list<int> mixLists(const std::list<int> &firstList, const std::list<int> &s
 }
 
 
-void fillList(std::list<int> &firstList, std::list<int> &secondList, int size) {
+void fillList(dxlist<int> &firstList, dxlist<int> &secondList, int size) {
     int nodeIndex = 0;
 
     for (int i = 0; i < size; i++) {
@@ -45,18 +44,18 @@ int main() {
     std::cout << "Enter the size of the lists: ";
     std::cin >> listSize;
 
-    std::list<int> firstList, secondList;
+    dxlist<int> firstList, secondList;
     fillList(firstList, secondList, listSize);
 
     std::cout << "\n\e[0;33mFirst List\e[0m:\n";
-    printList(firstList);
+	firstList.print();
 
     std::cout << "\n\e[0;33mSecond List\e[0m:\n";
-    printList(secondList);
+	secondList.print();
 
-    std::list<int> mergedList = mixLists(firstList, secondList);
+    dxlist<int> mergedList = mixLists(firstList, secondList);
     std::cout << "\n\e[0;33mMixed List\e[0m:\n";
-    printList(mergedList);
+	mergedList.print();
     std::cout << "\n";
 
     return 0;
