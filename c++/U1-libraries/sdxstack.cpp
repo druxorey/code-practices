@@ -1,4 +1,4 @@
-#include "sdxlist.cpp"
+#include "sdxdoubly_list.cpp"
 
 // Template class for a stack, inheriting privately from a list
 template <typename datatype>
