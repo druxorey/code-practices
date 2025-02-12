@@ -1,31 +1,32 @@
 #include <iostream>
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
+#include "../U1-libraries/dxcircular_list.cpp"
 
-void printList(list<char> &myList, int start, int end) {
-	int nodeIndex = start;
+void printCircularList(circularList<char> &myList, int start, int end) {
+    int nodeIndex = start;
 
-	list<char>::iterator listIterator = myList.first();
-	for (int i = 0; i < start; i++) myList.next(listIterator);
-	for (int i = 0; i < end; i++) {
-		int retrievedArr = *myList.get(listIterator);
-		printf("Node %d: [%c]\n", nodeIndex, retrievedArr);
-		myList.next(listIterator);
-		nodeIndex++;
-	}
+    for (int i = 0; i < start; i++) myList.next();
+
+    for (int i = 0; i < end; i++) {
+		if (nodeIndex >= myList.size()) nodeIndex = 1;
+        char retrievedArr = myList.next();
+        printf("Node %d: [%c]\n", nodeIndex, retrievedArr);
+        nodeIndex++;
+    }
 }
 
 
-void fillList(list<char> &myList, int size) {
+void fillList(circularList<char> &myList, int size) {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++) {
-		myList.insert(myList.first(), (rand() % 26) + 'a');
+		myList.add((rand() % 26) + 'a');
 	}
 }
 
 
 int main(int argc, char *argv[]) {
-	std::cout << "\n\e[0;35m[========= N VALUES =========]\e[0m\n\n";
+	std::cout << "\n\e[0;35m[========= CIRCULAR LIST =========]\e[0m\n\n";
 
 	int listSize, start, end;
 
@@ -33,14 +34,14 @@ int main(int argc, char *argv[]) {
 	getcin("Enter the start point: ", start);
 	getcin("Enter the n digits to print: ", end);
 
-	list<char> circularList;
+	circularList<char> circularList;
 	fillList(circularList, listSize);
 
 	printf("\n\e[0;33mInitial List\e[0m:\n");
 	printList(circularList);
 
 	printf("\n\e[0;33mThe %d digits after %d are\e[0m:\n", end, start);
-	printList(circularList, start, end);
+	printCircularList(circularList, start, end);
 
 	return 0;
 }
