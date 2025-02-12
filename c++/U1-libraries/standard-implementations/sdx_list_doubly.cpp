@@ -1,5 +1,5 @@
 #include <iostream>
-#include "sdxnode.cpp"
+#include "sdx_node.cpp"
 
 template <typename datatype>
 class list {
