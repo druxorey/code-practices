@@ -1,5 +1,5 @@
 #include <iostream>
-#include "dxnode.cpp"
+#include "sdxnode.cpp"
 
 template <typename datatype>
 class list {
@@ -150,7 +150,7 @@ void list<datatype>::deleteNode(iterator i) {
 	delete i;
 }
 
-// Print the contents of the list
+// Print the contents of the list using this implementation
 template <typename datatype>
 void printList(list<datatype> &myList) {
     typename list<datatype>::iterator listIterator = myList.first();
@@ -162,4 +162,3 @@ void printList(list<datatype> &myList) {
         nodeIndex++;
     }
 }
-
