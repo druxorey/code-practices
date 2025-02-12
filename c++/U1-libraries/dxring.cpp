@@ -1,22 +1,15 @@
-#include <iostream>
-#include <list>
+#include "dxlist.cpp"
 
 template <typename datatype>
-class ring : public std::list<datatype> {
+class ring : public dxlist<datatype> {
 	public:
-		ring();
-
 		void add(const datatype& value);
 		void remove();
 		datatype& next();
 
 	private:
-		typename std::list<datatype>::iterator it;
+		typename dxlist<datatype>::iterator it;
 };
-
-// Constructor: Initializes an empty ring
-template <typename datatype>
-ring<datatype>::ring() : it(this->begin()) {}
 
 // Allows the user to add a new value to the ring
 template <typename datatype>
