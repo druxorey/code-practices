@@ -2,9 +2,9 @@
 #include <list>
 
 template <typename datatype>
-class circularList : public std::list<datatype> {
+class ring : public std::list<datatype> {
 public:
-    circularList() : it(this->begin()) {}
+    ring() : it(this->begin()) {}
 
     void add(const datatype& value) {
         this->push_back(value);

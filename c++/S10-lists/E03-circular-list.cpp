@@ -1,9 +1,9 @@
 #include <iostream>
 #include "../U1-libraries/dxinput.cpp"
 #include "../U1-libraries/dxlist.cpp"
-#include "../U1-libraries/dxcircular_list.cpp"
+#include "../U1-libraries/dxring.cpp"
 
-void printCircularList(circularList<char> &myList, int start, int end) {
+void printCircularList(ring<char> &myList, int start, int end) {
     int nodeIndex = start;
 
     for (int i = 0; i < start; i++) myList.next();
@@ -17,7 +17,7 @@ void printCircularList(circularList<char> &myList, int start, int end) {
 }
 
 
-void fillList(circularList<char> &myList, int size) {
+void fillList(ring<char> &myList, int size) {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++) {
 		myList.add((rand() % 26) + 'a');
@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 	getcin("Enter the start point: ", start);
 	getcin("Enter the n digits to print: ", end);
 
-	circularList<char> circularList;
+	ring<char> circularList;
 	fillList(circularList, listSize);
 
 	printf("\n\e[0;33mInitial List\e[0m:\n");
