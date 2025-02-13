@@ -24,3 +24,14 @@ void dxstack<datatype>::rand(int size) {
 		this->push(::rand() % size);
 	}
 }
+
+void printStack(dxstack<int> stack) {
+	int size = stack.size(), index = 1;
+	while (!stack.empty()) {
+		if (index == 1) printf("   Top %d : [\e[0;32m%d\e[0m]\n", index, stack.top()); 
+		else if (index == size) printf("Bottom %d : [\e[0;31m%d\e[0m]\n", index, stack.top());
+		else printf("       %d : [\e[0;33m%d\e[0m]\n", index, stack.top());
+		stack.pop();
+		index++;
+	}
+}
