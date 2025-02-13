@@ -6,7 +6,6 @@ dxstack<int> inverse(dxstack<int> stack) {
 	dxstack<int> inverseStack;
 	while (!stack.empty()) {
 		int element = stack.top();
-		printf("Stack [\e[0;33m%d\e[0m]\n", element);
 		inverseStack.push(element);
 		stack.pop();
 	}
@@ -22,8 +21,13 @@ int main(int argc, char *argv[]) {
 
 	dxstack<int> stack;
 	stack.fill(stackSize);
+	printf("\n\e[0;34mInitial stack: \e[0m\n\n");
+	printStack(stack);
 
 	dxstack<int> inverseStack = inverse(stack);
+	printf("\n\e[0;34mInverse stack: \e[0m\n\n");
+	printStack(inverseStack);
+	printf("\n");
 
 	return 0;
 }

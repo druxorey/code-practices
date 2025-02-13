@@ -6,7 +6,6 @@ float getAverage(dxstack<int> stack) {
 	float finalAverage = 0, size = stack.size();
 
 	while (!stack.empty()) {
-		printf("Current average: %d\n", stack.top());
 		finalAverage += stack.top();
 		stack.pop();
 	}
@@ -23,6 +22,8 @@ int main(int argc, char *argv[]) {
 
 	dxstack<int> stack;
 	stack.rand(stackSize);
+	printf("\n\e[0;34mInitial stack: \e[0m\n\n");
+	printStack(stack);
 
 	float average = getAverage(stack);
 	printf("\n\e[0;32mThe average of the stack is: %.2f\e[0m\n\n", average);
