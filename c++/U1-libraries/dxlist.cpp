@@ -4,17 +4,17 @@
 template <typename datatype>
 class dxlist : public std::list<datatype> {
 	public:
-		void print();
+		void print() const;
 		void fill(int size, int initialValue = 0);
 		void rand(int size);
 };
 
 // Print the contents of the list using the STD implementation
 template <typename datatype>
-void dxlist<datatype>::print() {
+void dxlist<datatype>::print() const {
     int nodeIndex = 1;
     for (auto iterator = this->begin(); iterator != this->end(); ++iterator) {
-        std::cout << "Node " << nodeIndex << ": [" << *iterator << "]" << std::endl;
+		printf("Node %d: [%d]\n", nodeIndex, *iterator);
         nodeIndex++;
     }
 }
