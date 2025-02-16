@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <string>
 
 template <typename datatype>
 class dxlist : public std::list<datatype> {
@@ -13,8 +14,9 @@ class dxlist : public std::list<datatype> {
 template <typename datatype>
 void dxlist<datatype>::print() const {
     int nodeIndex = 1;
+    int maxNumber = std::to_string(this->size()).length();
     for (auto iterator = this->begin(); iterator != this->end(); ++iterator) {
-		printf("Node %d: [%d]\n", nodeIndex, *iterator);
+        printf("Node %0*d: [\e[0;33m%d\e[0m]\n", maxNumber, nodeIndex, *iterator);
         nodeIndex++;
     }
 }
