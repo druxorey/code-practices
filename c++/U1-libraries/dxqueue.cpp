@@ -27,10 +27,11 @@ void dxqueue<datatype>::rand(int size) {
 
 void printQueue(dxqueue<int> queue) {
 	int size = queue.size(), index = 1;
+    int maxNumber = std::to_string(queue.size()).length();
 	while (!queue.empty()) {
-		if (index == 1) printf("   Top %d : [\e[0;32m%d\e[0m]\n", index, queue.front());
-		else if (index == size) printf("Bottom %d : [\e[0;31m%d\e[0m]\n", index, queue.front());
-		else printf("       %d : [\e[0;33m%d\e[0m]\n", index, queue.front());
+		if (index == 1) printf("   Top %0*d : [\e[0;32m%d\e[0m]\n", maxNumber, index, queue.front());
+		else if (index == size) printf("Bottom %0*d : [\e[0;31m%d\e[0m]\n", maxNumber, index, queue.front());
+		else printf("       %0*d : [\e[0;33m%d\e[0m]\n", maxNumber, index, queue.front());
 		queue.pop();
 		index++;
 	}
