@@ -66,7 +66,7 @@ bool checkGameStatus() {
 		}
 	}
 
-    return isFull;
+	return isFull;
 }
 
 

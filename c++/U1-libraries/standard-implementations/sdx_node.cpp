@@ -5,13 +5,13 @@ class node {
 	public:
 		datatype payload;
 
-        // Initializes payload with the default value of datatype
-        node() {
+		// Initializes payload with the default value of datatype
+		node() {
 			this->payload = datatype(); 
 		}
 
-        // Initializes payload with the given value
-        node(datatype payload) {
+		// Initializes payload with the given value
+		node(datatype payload) {
 			this->payload = payload;
 		}
 };
@@ -22,12 +22,12 @@ class simpleNode : public node<datatype> {
 	public:
 		simpleNode<datatype> *next;
 
-        // Initializes payload and sets next to nullptr
-        simpleNode() : node<datatype>() {
+		// Initializes payload and sets next to nullptr
+		simpleNode() : node<datatype>() {
 			next = nullptr;
 		}
 
-        // Initializes payload with the given value and sets next to nullptr
+		// Initializes payload with the given value and sets next to nullptr
 		simpleNode(datatype payload) : node<datatype>(payload) {
 			next = nullptr;
 		}
@@ -40,7 +40,7 @@ class doubleNode : public node<datatype> {
 		doubleNode<datatype> *prev;
 		doubleNode<datatype> *next;
 
-        // Initializes payload with the given value and sets prev and next to nullptr
+		// Initializes payload with the given value and sets prev and next to nullptr
 		doubleNode(datatype payload) : node<datatype>(payload) {
 			next = nullptr;
 			prev = nullptr;

@@ -4,7 +4,7 @@
 template <typename datatype>
 class list {
 	public:
-        // Define an alias for a pointer to a doubleNode
+		// Define an alias for a pointer to a doubleNode
 		typedef doubleNode<datatype> *iterator;
 
 		list();
@@ -23,7 +23,7 @@ class list {
 	private:
 		iterator _first; // Pointer to the first node in the list
 		iterator _last; // Pointer to the last node in the list
-        int _size; // Number of nodes in the list
+		int _size; // Number of nodes in the list
 };
 
 // Constructor: Initializes an empty list
@@ -31,7 +31,7 @@ template <typename datatype>
 list<datatype>::list() {
 	this->_first = nullptr;
 	this->_last = nullptr;
-    this->_size = 0;
+	this->_size = 0;
 }
 
 // Destructor: Cleans up the list by deleting all nodes
@@ -118,7 +118,7 @@ void list<datatype>::insert(iterator i, datatype payload, bool before) {
 		return;
 	}
 
-    // Insert the new node after the node pointed to by the iterator
+	// Insert the new node after the node pointed to by the iterator
 	newNode->next = i->next;
 	newNode->prev = i;
 	if (i->next != nullptr)
@@ -153,12 +153,12 @@ void list<datatype>::deleteNode(iterator i) {
 // Print the contents of the list using this implementation
 template <typename datatype>
 void printList(list<datatype> &myList) {
-    typename list<datatype>::iterator listIterator = myList.first();
-    int nodeIndex = 1;
-    while (listIterator != nullptr) {
-        datatype retrievedData = *myList.get(listIterator);
-        std::cout << "Node " << nodeIndex << ": [" << retrievedData << "]" << std::endl;
-        myList.next(listIterator);
-        nodeIndex++;
-    }
+	typename list<datatype>::iterator listIterator = myList.first();
+	int nodeIndex = 1;
+	while (listIterator != nullptr) {
+		datatype retrievedData = *myList.get(listIterator);
+		std::cout << "Node " << nodeIndex << ": [" << retrievedData << "]" << std::endl;
+		myList.next(listIterator);
+		nodeIndex++;
+	}
 }

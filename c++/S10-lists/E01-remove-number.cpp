@@ -56,9 +56,9 @@ int main(int argc, char *argv[]) {
 
 	std::list<int*> arrayList;
 
-    arrayList.insert(arrayList.begin(), firstArray);
-    arrayList.insert(arrayList.begin(), secondArray);
-    arrayList.insert(arrayList.begin(), thirdArray);
+	arrayList.insert(arrayList.begin(), firstArray);
+	arrayList.insert(arrayList.begin(), secondArray);
+	arrayList.insert(arrayList.begin(), thirdArray);
 
 	printf("\n\e[0;33mOriginal List\e[0m:\n");
 	printArrayList(arrayList, arraySize);

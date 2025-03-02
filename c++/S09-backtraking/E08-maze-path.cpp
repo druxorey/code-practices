@@ -3,15 +3,15 @@
 #include "../U1-libraries/dxmatrix.cpp"
 
 void generateMaze(int** maze, int size) {
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-            if ((rand() % 100) <= 25 ) maze[i][j] = 1;
-            else maze[i][j] = 0;
-        }
-    }
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if ((rand() % 100) <= 25 ) maze[i][j] = 1;
+			else maze[i][j] = 0;
+		}
+	}
 
-    maze[0][0] = 0;
-    maze[size-1][size-1] = 0;
+	maze[0][0] = 0;
+	maze[size-1][size-1] = 0;
 }
 
 

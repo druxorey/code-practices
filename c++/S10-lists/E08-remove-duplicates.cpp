@@ -2,19 +2,19 @@
 #include "../U1-libraries/dxrope.cpp"
 
 void removeDuplicates(rope<int> &dataRope) {
-    auto baseNumber = dataRope.begin();
-    while (baseNumber != dataRope.end()) {
-        auto comparator = baseNumber;
-        comparator++;
-        while (comparator != dataRope.end()) {
-            if (*baseNumber == *comparator) {
-                comparator = dataRope.erase(comparator);
-            } else {
-                comparator++;
-            }
-        }
-        baseNumber++;
-    }
+	auto baseNumber = dataRope.begin();
+	while (baseNumber != dataRope.end()) {
+		auto comparator = baseNumber;
+		comparator++;
+		while (comparator != dataRope.end()) {
+			if (*baseNumber == *comparator) {
+				comparator = dataRope.erase(comparator);
+			} else {
+				comparator++;
+			}
+		}
+		baseNumber++;
+	}
 }
 
 
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 
 	rope<int> intRope;
 
-    intRope.rand(5);
+	intRope.rand(5);
 	printf("\e[0;33mOriginal rope: \e[0m\n");
 	intRope.print();
 

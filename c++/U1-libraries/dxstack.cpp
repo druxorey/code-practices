@@ -27,7 +27,7 @@ void dxstack<datatype>::rand(int size) {
 
 void printStack(dxstack<int> stack) {
 	int size = stack.size(), index = 1;
-    int maxNumber = std::to_string(stack.size()).length();
+	int maxNumber = std::to_string(stack.size()).length();
 	while (!stack.empty()) {
 		if (index == 1) printf("   Top %0*d : [\e[0;32m%d\e[0m]\n", maxNumber, index, stack.top()); 
 		else if (index == size) printf("Bottom %0*d : [\e[0;31m%d\e[0m]\n", maxNumber, index, stack.top());

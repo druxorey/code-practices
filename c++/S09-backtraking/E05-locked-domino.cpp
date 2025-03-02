@@ -23,9 +23,9 @@ std::string startGame(bool usedPieces[], std::string dominoPieces[]) {
 
 
 void getLockedDomino(bool usedPieces[], std::string dominoPieces[], std::string numbersAtPlay , short usedPiecesCounter = 0) {
-    if (usedPiecesCounter == SIZE) return;
+	if (usedPiecesCounter == SIZE) return;
 
-    bool isLocked = true;
+	bool isLocked = true;
 
 	for (int i = 0; i < SIZE; i++) {
 		char left = numbersAtPlay[0];
@@ -72,7 +72,7 @@ void getLockedDomino(bool usedPieces[], std::string dominoPieces[], std::string 
 		}
 	}
 
-    if (isLocked) {
+	if (isLocked) {
 		std::cout << "Locked Domino: " << numbersAtPlay << '\n';
 		std::cout << "Total pieces: " << usedPiecesCounter << '\n';
 		return;

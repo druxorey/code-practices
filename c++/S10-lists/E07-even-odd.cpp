@@ -4,14 +4,14 @@
 
 void getEvenOdd(dxlist<int> &initialList, dxlist<int> &oddList, dxlist<int> &evenList){
 	auto index = initialList.begin();
-    while (index != initialList.end()) {
-        int value = *index;
-        if (value % 2 == 0) {
-            evenList.insert(evenList.end(), value);
-        } else {
-            oddList.insert(oddList.end(), value);
-        }
-        index++;
+	while (index != initialList.end()) {
+		int value = *index;
+		if (value % 2 == 0) {
+			evenList.insert(evenList.end(), value);
+		} else {
+			oddList.insert(oddList.end(), value);
+		}
+		index++;
 	}
 }
 

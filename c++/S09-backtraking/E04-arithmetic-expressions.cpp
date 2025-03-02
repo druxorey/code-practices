@@ -17,30 +17,30 @@ void printArithmetic(int array[], int size, int lookedNumber, std::vector<char> 
 
 
 void getArithmetic(int number, int lookedNumber, int array[], int size, int index = 1, std::vector<char> operations = {}) {
-    if (index == size) {
-        int result = array[0];
-        for (int i = 1; i < size; i++) {
-            switch (operations[i - 1]) {
-                case '+': result += array[i]; break;
-                case '-': result -= array[i]; break;
-                case '*': result *= array[i]; break;
-                case '/': result /= array[i]; break;
-            }
-        }
-        if (result == lookedNumber) {
+	if (index == size) {
+		int result = array[0];
+		for (int i = 1; i < size; i++) {
+			switch (operations[i - 1]) {
+				case '+': result += array[i]; break;
+				case '-': result -= array[i]; break;
+				case '*': result *= array[i]; break;
+				case '/': result /= array[i]; break;
+			}
+		}
+		if (result == lookedNumber) {
 			printArithmetic(array, size, lookedNumber, operations);
-        }
-        return;
-    }
+		}
+		return;
+	}
 
-    operations.push_back('+');
-    getArithmetic(number, lookedNumber, array, size, index + 1, operations);
-    operations.back() = '-';
-    getArithmetic(number, lookedNumber, array, size, index + 1, operations);
-    operations.back() = '*';
-    getArithmetic(number, lookedNumber, array, size, index + 1, operations);
-    operations.back() = '/';
-    getArithmetic(number, lookedNumber, array, size, index + 1, operations);
+	operations.push_back('+');
+	getArithmetic(number, lookedNumber, array, size, index + 1, operations);
+	operations.back() = '-';
+	getArithmetic(number, lookedNumber, array, size, index + 1, operations);
+	operations.back() = '*';
+	getArithmetic(number, lookedNumber, array, size, index + 1, operations);
+	operations.back() = '/';
+	getArithmetic(number, lookedNumber, array, size, index + 1, operations);
 }
 
 

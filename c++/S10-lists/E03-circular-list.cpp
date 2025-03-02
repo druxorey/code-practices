@@ -3,15 +3,15 @@
 #include "../U1-libraries/dxring.cpp"
 
 void printCircularList(ring<char> &myList, int start, int end) {
-    int nodeIndex = start;
+	int nodeIndex = start;
 
-    for (int i = 0; i < start - 1; i++) myList.next();
+	for (int i = 0; i < start - 1; i++) myList.next();
 
-    for (int i = 0; i < end; i++) {
-        char retrievedArr = myList.next();
-        printf("Node %d: [%c]\n", nodeIndex, retrievedArr);
-        nodeIndex = (nodeIndex >= myList.size())? 1 : nodeIndex + 1;
-    }
+	for (int i = 0; i < end; i++) {
+		char retrievedArr = myList.next();
+		printf("Node %d: [%c]\n", nodeIndex, retrievedArr);
+		nodeIndex = (nodeIndex >= myList.size())? 1 : nodeIndex + 1;
+	}
 }
 
 

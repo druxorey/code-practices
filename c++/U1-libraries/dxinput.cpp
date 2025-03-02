@@ -7,8 +7,8 @@ void getcin(std::string message, datatype &input) {
 		std::cout << message;
 		std::cin >> input;
 
-        // If the input is valid, break the loop
-		if (!std::cin.fail()) { break; }
+		// If the input is valid, break the loop
+		if (!std::cin.fail()) break;
 
 		printf("Invalid input. Please try again.\n");
 

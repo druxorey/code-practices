@@ -3,15 +3,15 @@
 #include "../U1-libraries/dxrope.cpp"
 
 void iterativeInverse(rope<int>& list) {
-    int size = list.size();
-    for (int i = 0; i < size; i++) {
-        auto iterator = list.begin();
-        for (int j = 1; j < size - i; j++) {
-            iterator++;
-        }
-        list.push_back(*iterator);
-        list.erase(iterator);
-    }
+	int size = list.size();
+	for (int i = 0; i < size; i++) {
+		auto iterator = list.begin();
+		for (int j = 1; j < size - i; j++) {
+			iterator++;
+		}
+		list.push_back(*iterator);
+		list.erase(iterator);
+	}
 }
 
 

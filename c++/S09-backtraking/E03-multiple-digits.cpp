@@ -23,19 +23,19 @@ void printNumbers(int size, int number = 0, int digitCount[10] = nullptr) {
 		return;
 	}
 
-    if (digitCount == nullptr) {
-        int initialDigitCount[10] = {0};
-        digitCount = initialDigitCount;
-    }
+	if (digitCount == nullptr) {
+		int initialDigitCount[10] = {0};
+		digitCount = initialDigitCount;
+	}
 
-    for (int i = 0; i < 9; i++) {
-        int digit = numbers[i];
-        if (digitCount[digit] == 0) {
-            digitCount[digit]++;
-            printNumbers(size, number * 10 + digit, digitCount);
-            digitCount[digit]--;
-        }
-    }
+	for (int i = 0; i < 9; i++) {
+		int digit = numbers[i];
+		if (digitCount[digit] == 0) {
+			digitCount[digit]++;
+			printNumbers(size, number * 10 + digit, digitCount);
+			digitCount[digit]--;
+		}
+	}
 }
 
 

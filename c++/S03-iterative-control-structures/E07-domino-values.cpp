@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 			}
 
 			// Print the domino values
-            std::cout << " \e[47;30m" << i << "|" << j << "\e[0m";
+			std::cout << " \e[47;30m" << i << "|" << j << "\e[0m";
 			printLimit++;
 
 			// If the limit is reached, print a new line

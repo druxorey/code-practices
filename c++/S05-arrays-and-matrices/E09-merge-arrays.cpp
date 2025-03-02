@@ -5,29 +5,29 @@ int* mergeArray(int* firstArray, int* secondArray, int firstSize, int secondSize
 	int finalSize = firstSize + secondSize;
 	int* finalArray = new int[finalSize];
 
-    int i = 0, j = 0, k = 0;
-    while (i < firstSize && j < secondSize) {
-        if (firstArray[i] < secondArray[j]) {
-            finalArray[k] = firstArray[i];
-            i++;
-        } else {
-            finalArray[k] = secondArray[j];
-            j++;
-        }
-        k++;
-    }
+	int i = 0, j = 0, k = 0;
+	while (i < firstSize && j < secondSize) {
+		if (firstArray[i] < secondArray[j]) {
+			finalArray[k] = firstArray[i];
+			i++;
+		} else {
+			finalArray[k] = secondArray[j];
+			j++;
+		}
+		k++;
+	}
 
-    while (i < firstSize) {
-        finalArray[k] = firstArray[i];
-        i++;
-        k++;
-    }
+	while (i < firstSize) {
+		finalArray[k] = firstArray[i];
+		i++;
+		k++;
+	}
 
-    while (j < secondSize) {
-        finalArray[k] = secondArray[j];
-        j++;
-        k++;
-    }
+	while (j < secondSize) {
+		finalArray[k] = secondArray[j];
+		j++;
+		k++;
+	}
 
 	return finalArray;
 }

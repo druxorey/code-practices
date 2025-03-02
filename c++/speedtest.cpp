@@ -7,15 +7,15 @@ const int ITERATIONS = 10;
 const int NUMBER = 100000000;
 
 int speedtest() {
-    auto start = std::chrono::high_resolution_clock::now();
+	auto start = std::chrono::high_resolution_clock::now();
 
-    int count=0;
-    for(int i = 0; i <= NUMBER; i++){
-        count++;
-    }
+	int count=0;
+	for(int i = 0; i <= NUMBER; i++){
+		count++;
+	}
 
-    auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+	auto end = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
 
 	return duration.count();
 }
@@ -36,5 +36,5 @@ int main(){
 
 	std::cout << "\n\e[0;32mAverage execution time: " << averageExecutionTime << " ms.\e[0m\n";
 
-    return 0;
+	return 0;
 }
