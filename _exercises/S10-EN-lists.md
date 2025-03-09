@@ -21,3 +21,16 @@
 10) **E10-unique-count**: Given an unordered list A with repeated elements, you need to efficiently solve the following requirement: Obtain a list B that contains the elements in A without repetitions, followed by the number of occurrences. Solve the problem using pointer manipulation. The list A can be modified.
 
 11) **E11-reverse-list**: Develop two algorithms (one recursive and one iterative) to reverse a given singly linked list without creating a new list or physically moving the elements in the list.
+
+12) **E12-sum-previous**: Implement a function that receives a doubly circular linked list and an integer "n" as parameters, and returns the result of adding the previous element of the list to the current element "n" times as follows:
+
+- Given L = {1, 4, 3, 2, 3} and n = 2
+- Iteration 1: {4, 5, 8, 10, 13}
+- Iteration 2: {17, 22, 30, 40, 53}
+- Returns L = {17, 22, 30, 40, 53}
+
+13) **E13-remove-nodes**: Given a circular list, implement:
+
+a) A method that, given an initial logical position P >= 1 and an offset d >= 0, removes the element at position P + d of the circular list. Calculate the time complexity of your algorithm.
+
+b) A method that uses the previous algorithm to remove X nodes from the list, given an initial logical position P and an offset d. Note that once the position P has been shifted d positions, the next removal should take the current position P + d as the new initial position.

@@ -21,3 +21,16 @@
 10) **E10-unique-count**: Dada una lista A (desordenada y con elementos repetidos) se quiere que usted resuelva de manera eficiente el siguiente requerimiento: Obtener una lista B que contenga los elementos que están en A sin repeticiones, seguidos por el número de ocurrencias. Resuelva el problema utilizando manejo de apuntadores. La lista A puede ser modificada.
 
 11) **E11-reverse-list**: Elabore dos algoritmos (uno recursivo y otro iterativo) en el cual dada una lista lineal en forma enlazada la invierta, sin crear una nueva lista, ni mover los elementos físicamente de la lista.
+
+12) **E12-sum-previous**: Implemente una función que recibe una lista circular doblemente enlazada por parámetro y un entero “n” y retorne el resultado de sumar el elemento anterior de la lista al elemento actual n veces de la siguiente manera:
+
+	- Dada L = {1, 4, 3, 2, 3} y n = 2
+	- Iteración 1: {4, 5, 8, 10, 13}
+	- Iteración 2: {17, 22, 30, 40, 53}
+	- Retorna L= {17, 22, 30, 40, 53}
+
+13) **E13-remove-nodes**: Dada una lista circular, implemente:
+
+a) Un método que dada una posición lógica inicial P >= 1 y un desplazamiento d >= 0, elimine el elemento que ésta en la posición P + d de la lista circular. Calcule el orden en tiempo de ejecución de su algoritmo.
+
+b) Un método que utilice el algoritmo anterior para eliminar X nodos de la lista, dada una posición lógica inicial P y un desplazamiento d. Cabe destacar que una vez que la posición P se haya desplazado d posiciones, la próxima eliminación debe tomar como posición inicial dicha posición actual P + d.
