@@ -23,6 +23,8 @@
 	- [S09-backtraking](./_exercises/S09-EN-backtraking.md)
 	- [S10-lists](./_exercises/S10-EN-lists.md)
 	- [S11-queues-dequeues-stacks](./_exercises/S11-EN-queues-dequeues-stacks.md)
+	- [S12-multilinked-structures](./_exercises/S12-EN-multilinked-structures.md)
+	- [S13-trees-and-heaps](./_exercises/S13-EN-trees-and-heaps.md)
 
 - **Languages**: Each programming language has its own directory. Within each, there are subdirectories named after the sections corresponding to the exercises. In each language directory, there is a `U1-libraries` directory, where commonly used functions are stored to keep the code clean, and a `U2-experiments` directory, where code not part of the exercises but used to test the language's features is stored. Additionally, there are directories named `U3`, `U4`, and so on, containing exercises specific to each language.
 
