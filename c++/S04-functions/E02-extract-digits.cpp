@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 int invertNumber (int fullNumber) {
 	int invertedNumber = 0;

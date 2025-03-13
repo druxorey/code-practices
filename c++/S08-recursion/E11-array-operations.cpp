@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 int maxval(int numbers[], int size) {
 	if (size <= 0) return 0;

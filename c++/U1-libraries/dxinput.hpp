@@ -19,8 +19,8 @@ void getcin(std::string message, datatype &input) {
 }
 
 // Function to pause execution until the user presses Enter
-void enter() {
+inline void enter() {
 	printf("\nPress enter to continue..");
 	std::cin.get(); // Wait for user to press enter
-	std::cin.get(); // It is necessary to use two times bc the first one doesn't get the \n character
+	std::cin.ignore();
 }

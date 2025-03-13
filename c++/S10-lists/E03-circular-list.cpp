@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxring.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxring.hpp"
 
 void printCircularList(ring<char> &myList, int start, int end) {
 	int nodeIndex = start;

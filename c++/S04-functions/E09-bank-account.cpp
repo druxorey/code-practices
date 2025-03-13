@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 double deposit() {
 	double amount;

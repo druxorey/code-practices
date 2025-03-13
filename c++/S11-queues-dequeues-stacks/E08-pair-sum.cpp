@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxstack.cpp"
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxstack.hpp"
+#include "../U1-libraries/dxinput.hpp"
 
 dxstack<int> getPairs(dxstack<int> stack) {
 	dxstack<int> temporalStack;

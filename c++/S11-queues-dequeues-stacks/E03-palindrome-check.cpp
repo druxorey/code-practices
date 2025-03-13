@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxstack.cpp"
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxstack.hpp"
+#include "../U1-libraries/dxinput.hpp"
 
 dxstack<char> strToStack(std::string str) {
 	dxstack<char> stack;

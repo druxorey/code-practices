@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 bool isPalindrome(std::string text) { 
 	int length = text.length(); 

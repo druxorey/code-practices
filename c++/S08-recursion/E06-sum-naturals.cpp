@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 unsigned int sumNaturals(int size) {
 	if (size <= 0) return 0;

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxrope.cpp"
+#include "../U1-libraries/dxrope.hpp"
 
 void removeDuplicates(rope<int> &dataRope) {
 	auto baseNumber = dataRope.begin();

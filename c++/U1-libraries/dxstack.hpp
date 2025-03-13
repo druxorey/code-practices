@@ -25,7 +25,7 @@ void dxstack<datatype>::rand(int size) {
 	}
 }
 
-void printStack(dxstack<int> stack) {
+inline void printStack(dxstack<int> stack) {
 	int size = stack.size(), index = 1;
 	int maxNumber = std::to_string(stack.size()).length();
 	while (!stack.empty()) {

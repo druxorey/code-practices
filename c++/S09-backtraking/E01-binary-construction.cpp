@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 void binary(int n, int &permutations, std::string number="") {
 	if (n <= 0) {

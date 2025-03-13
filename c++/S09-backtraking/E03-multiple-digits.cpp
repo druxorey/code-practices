@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 const int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 

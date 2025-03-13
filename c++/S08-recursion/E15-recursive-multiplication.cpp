@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 int multiply(int a, int b) {
 	if (b == 0) return 0;

@@ -1,4 +1,4 @@
-#include "dxlist.cpp"
+#include "dxlist.hpp"
 
 template <typename datatype>
 class ring : public dxlist<datatype> {

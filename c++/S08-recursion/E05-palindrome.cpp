@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 bool getPalindrome(char input[], int size, int index = 0) {
 	if (size <= 0) return true;

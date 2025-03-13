@@ -18,7 +18,7 @@ void printArray(datatype array[], int size) {
 }
 
 // Function to fill an integer array with random values
-void randArray(int array[], int size) {
+inline void randArray(int array[], int size) {
 	srand(time(NULL) ^ (clock()));
 
 	for (int i = 0; i < size; i++) {
@@ -27,14 +27,14 @@ void randArray(int array[], int size) {
 }
 
 // Function to fill an integer array with sequential values
-void fillArray(int array[], int size) {
+inline void fillArray(int array[], int size) {
 	for (int i = 0; i < size; i++) {
 		array[i] = i ;
 	}
 }
 
 // Function to fill a char array with sequential alphabetic characters
-void fillArray(char array[], int size) {
+inline void fillArray(char array[], int size) {
 	for (int i = 0; i < size; i++) {
 		array[i] = i + 'a';
 	}

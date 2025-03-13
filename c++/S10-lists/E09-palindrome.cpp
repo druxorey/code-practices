@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxrope.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxrope.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 
 void strToRope(rope<char> &dataRope, std::string word) {

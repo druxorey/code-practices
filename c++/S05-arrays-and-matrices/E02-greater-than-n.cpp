@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxarray.cpp"
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxarray.hpp"
+#include "../U1-libraries/dxinput.hpp"
 
 void averageInArray(int array[], int size, int number, int &quantity) {
 	for (int i = 0; i < size; i++) {

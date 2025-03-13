@@ -1,7 +1,7 @@
 #include <iostream>
 
 // Function to get the biggest number in a matrix
-int getBiggestNumber(int** matrix, int size) {
+inline int getBiggestNumber(int** matrix, int size) {
 	int biggestNumber = matrix[size-1][size-1];
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
@@ -78,7 +78,7 @@ void fillMatrix(int (&matrix)[cols][rows]) {
 }
 
 // Function to fill a dynamically allocated matrix with sequential numbers
-void fillMatrix(int** matrix, int size) {
+inline void fillMatrix(int** matrix, int size) {
 	int number = 1;
 
 	for (int i = 0; i < size; i++) {

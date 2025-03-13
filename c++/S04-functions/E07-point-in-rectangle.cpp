@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 bool isInHeight (int yVertex, int yPoint, int height) {
 	return (yPoint >= (yVertex - height) && yPoint <= yVertex);

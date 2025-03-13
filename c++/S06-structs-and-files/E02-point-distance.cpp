@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 struct dot {
 	float x = 0;

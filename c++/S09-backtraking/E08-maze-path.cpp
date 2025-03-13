@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxmatrix.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxmatrix.hpp"
 
 void generateMaze(int** maze, int size) {
 	for (int i = 0; i < size; i++) {

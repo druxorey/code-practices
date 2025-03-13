@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxrope.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxrope.hpp"
 
 rope<int> reorderList(rope<int> list) {
 	rope<int> finalSum;

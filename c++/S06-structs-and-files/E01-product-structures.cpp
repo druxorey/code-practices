@@ -1,35 +1,74 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 const int MAX_PRODUCTS = 3;
 const int MAX_CATEGORIES = 2;
 
 struct product {
-	int code = 0;
+	unsigned int code = 0;
 	std::string name = "No name";
 	std::string description = "No description";
-	float price = 0;
+	double price = 0.0;
 };
 
 struct category {
 	std::string name = "No name";
-	int code = 0;
-	int quantity = 0;
+	unsigned int code = 0;
+	unsigned int quantity = 0;
 	product products[MAX_PRODUCTS];
 };
 
 
+int terminalSize() {
+    FILE* pipe = popen("tput cols", "r");
+    if (!pipe) {
+        std::cerr << "Failed to run command" << std::endl;
+        return 1;
+    }
+    char buffer[128];
+    std::string result = "";
+    while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+        result += buffer;
+    }
+    pclose(pipe);
+    return std::stoi(result);
+}
+
+
+void title(std::string title) {
+	system("clear");
+	int spaces = ((terminalSize() - title.size()) / 2) - 3;
+    printf("\n   \e[1;38m\e[45m[");
+	for (int i = 0; i < spaces; i++) std::cout << "=";
+	std::cout << title;
+	for (int i = 0; i < spaces - 2; i++) std::cout << "=";
+	printf("]\e[0m   \n\n");
+}
+
+
+void option(std::string option, int number) {
+	printf("	[%d] %s\n", number, option.c_str());
+}
+
+
+template <typename datatype>
+datatype input() {
+	datatype value;
+	getcin("\n	Select an option [n]: ", value);
+	return value;
+}
+
+
 int categorySelection(category categories[]) {
 	int category;
-	system("clear");
+	title(" SELECT A CATEGORY ");
 
 	for (int i = 0; i < MAX_CATEGORIES; i++) {
-		std::cout << i + 1 << ". " << categories[i].name << '\n';
+		option(categories[i].name, i + 1);
 	}
 
 	do {
-		std::cout << "Select a category: ";
-		std::cin >> category;
+		category = input<int>();
 		if (category <= 0 || category > MAX_CATEGORIES) {
 			std::cout << "Invalid category" << '\n';
 		}
@@ -40,7 +79,7 @@ int categorySelection(category categories[]) {
 
 
 product requestProduct(category categories[], int selectedCategory) {
-	int newProductIndex = categories[selectedCategory].quantity ++;
+	int newProductIndex = categories[selectedCategory].quantity++;
 
 	std::cout << '\n' << "Enter the product code: ";
 	std::cin >> categories[selectedCategory].products[newProductIndex].code;
@@ -115,44 +154,29 @@ void searchProducts(category categories[]) {
 
 
 int main(int argc, char *argv[]) {
-
 	category categories[MAX_CATEGORIES];
 	categories[0].name = "Electronics";
 	categories[1].name = "Clothes";
 
+
 	do {
-		system("clear");
+		title(" PRODUCT STRUCTURES ");
 
-		std::cout << "\n\e[0;35m[========= PRODUCT STRUCTURES =========]\e[0m\n\n";
+		option("Add product", 1);
+		option("List products", 2);
+		option("Add Price", 3);
+		option("Search products", 4);
+		option("Exit", 5);
 
-		printf("1. Add product\n");
-		printf("2. List products\n");
-		printf("3. Add Price\n");
-		printf("4. Search products\n");
-		printf("5. Exit\n");
-
-		int option;
-		getcin("Select an option: ", option);
+		int option = input<int>();
 
 		switch (option) {
-			case 1:
-				addProduct(categories);
-				break;
-			case 2:
-				printProducts(categories);
-				break;
-			case 3:
-				addPrice(categories);
-				break;
-			case 4:
-				searchProducts(categories);
-				break;
-			case 5:
-				std::cout << "Goodbye" << '\n';
-				return 0;
-			default:
-				std::cout << "Invalid option" << '\n';
-				break;
+			case 1: addProduct(categories); break;
+			case 2: printProducts(categories); break;
+			case 3: addPrice(categories); break;
+			case 4: searchProducts(categories); break;
+			case 5: std::cout << "Goodbye" << '\n'; return 0;
+			default: std::cout << "Invalid option" << '\n'; break;
 		}
 
 		std::cout << "Press enter to continue...";

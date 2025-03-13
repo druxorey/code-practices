@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 double getProductValue (int cuantityList[], float priceList[], int index){
 	return cuantityList[index] * priceList[index];

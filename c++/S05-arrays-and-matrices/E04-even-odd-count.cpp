@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxarray.cpp"
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxarray.hpp"
+#include "../U1-libraries/dxinput.hpp"
 
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= EVEN ODD COUNT =========]\e[0m\n\n";

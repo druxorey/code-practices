@@ -25,7 +25,7 @@ void dxqueue<datatype>::rand(int size) {
 	}
 }
 
-void printQueue(dxqueue<int> queue) {
+inline void printQueue(dxqueue<int> queue) {
 	int size = queue.size(), index = 1;
 	int maxNumber = std::to_string(queue.size()).length();
 	while (!queue.empty()) {

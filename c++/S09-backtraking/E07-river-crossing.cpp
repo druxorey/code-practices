@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxarray.hpp"
 
 bool isValidMove(bool riverSide[3]) {
 	if (riverSide[0] && riverSide[1]) return false;

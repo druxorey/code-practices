@@ -1,4 +1,4 @@
-#include "dxlist.cpp"
+#include "dxlist.hpp"
 
 template <typename datatype>
 class rope : private dxlist<datatype> {

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxarray.cpp"
-#include "../U1-libraries/dxlist.cpp"
+#include "../U1-libraries/dxarray.hpp"
+#include "../U1-libraries/dxlist.hpp"
 
 const int ARRAY_SIZE = 32;
 

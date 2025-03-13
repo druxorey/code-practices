@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxqueue.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxqueue.hpp"
 
 float getAverage(dxqueue<int> queue) {
 	float sum = 0;

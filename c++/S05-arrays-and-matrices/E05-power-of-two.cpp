@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
-#include "../U1-libraries/dxarray.cpp"
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxarray.hpp"
+#include "../U1-libraries/dxinput.hpp"
 
 void replaceInArray(int array[], int size, int number) {
 	int i = 0, position = 0;

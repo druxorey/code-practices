@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxinput.hpp"
 
 int** createMatrix(int rows, int cols) {
 	int** matrix = new int*[rows];

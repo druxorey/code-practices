@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 int binarySearch(int array[], int number, int top, int bottom = 0) {
 	int middle = (top + bottom) / 2;

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 void printArithmetic(int array[], int size, int lookedNumber, std::vector<char> operations) {
 	printf("\e[0;34m[\e[0m");

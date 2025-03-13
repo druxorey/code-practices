@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 bool isValid(int size, int a, int b, int c, int d) {
 	if (a >= size || b >= size || c >= size || d >= size) return 0;

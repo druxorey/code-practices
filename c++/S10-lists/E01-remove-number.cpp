@@ -1,7 +1,7 @@
 #include <iostream>
 #include <list>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxarray.hpp"
 
 void printArrayList(std::list<int*> &arrayList, int arraySize) {
 	int nodeIndex = 1;

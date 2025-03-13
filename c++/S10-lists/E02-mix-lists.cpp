@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxlist.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxlist.hpp"
 
 #define INT_MIN -2147483648
 

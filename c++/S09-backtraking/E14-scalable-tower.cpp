@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxinput.cpp"
-#include "../U1-libraries/dxmatrix.cpp"
+#include "../U1-libraries/dxinput.hpp"
+#include "../U1-libraries/dxmatrix.hpp"
 
 
 bool scalable(bool **matrix, int size, int i = 0) {

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../U1-libraries/dxarray.cpp"
-#include "../U1-libraries/dxinput.cpp"
+#include "../U1-libraries/dxarray.hpp"
+#include "../U1-libraries/dxinput.hpp"
 
 int isArraySum(int array[], int size, int compared) {
 	int times = 0;

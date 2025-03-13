@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../U1-libraries/dxarray.cpp"
+#include "../U1-libraries/dxarray.hpp"
 
 int* mergeArray(int* firstArray, int* secondArray, int firstSize, int secondSize) {
 	int finalSize = firstSize + secondSize;
