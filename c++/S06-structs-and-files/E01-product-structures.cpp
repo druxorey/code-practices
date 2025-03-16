@@ -52,10 +52,16 @@ void option(std::string option, int number) {
 
 
 template <typename datatype>
-datatype input() {
+datatype input(std::string message) {
 	datatype value;
-	getcin("\n	Select an option [n]: ", value);
+	getcin(message, value);
 	return value;
+}
+
+void exit() {
+	printf("	\e[0;33mEnter to exit\e[0m");
+	std::cin.get();
+	std::cin.ignore();
 }
 
 
@@ -68,7 +74,7 @@ int categorySelection(category categories[]) {
 	}
 
 	do {
-		category = input<int>();
+		category = input<int>("\n	Select an option [n]: ");
 		if (category <= 0 || category > MAX_CATEGORIES) {
 			std::cout << "Invalid category" << '\n';
 		}
@@ -81,15 +87,18 @@ int categorySelection(category categories[]) {
 product requestProduct(category categories[], int selectedCategory) {
 	int newProductIndex = categories[selectedCategory].quantity++;
 
-	std::cout << '\n' << "Enter the product code: ";
-	std::cin >> categories[selectedCategory].products[newProductIndex].code;
-	std::cin.ignore();
-	std::cout << "Enter the product name: ";
-	getline(std::cin, categories[selectedCategory].products[newProductIndex].name);
-	std::cout << "Enter the product description: ";
-	getline(std::cin, categories[selectedCategory].products[newProductIndex].description);
-	std::cout << "Enter the product price: ";
-	std::cin >> categories[selectedCategory].products[newProductIndex].price;
+	title(" FILL THE PRODUCT INFORMATION ");
+
+	std::cout << "	Enter the product name: ";
+	std::getline(std::cin >> std::ws, categories[selectedCategory].products[newProductIndex].name);
+	std::cin.clear();
+
+	std::cout << "	Enter the product description: ";
+	std::getline(std::cin >> std::ws, categories[selectedCategory].products[newProductIndex].description);
+	std::cin.clear();
+
+	categories[selectedCategory].products[newProductIndex].code = input<int>("	Enter the code: ");
+	categories[selectedCategory].products[newProductIndex].price = input<double>("	Enter the price: ");
 
 	return categories[selectedCategory].products[newProductIndex];
 }
@@ -97,59 +106,79 @@ product requestProduct(category categories[], int selectedCategory) {
 
 void addProduct(category categories[]) {
 	int selectedCategory = categorySelection(categories);
+	char isConfirmed = 'y';
+
 	if (categories[selectedCategory].quantity >= MAX_PRODUCTS) {
 		std::cout << "The category is full" << '\n';
 		return;
 	}
-	requestProduct(categories, selectedCategory);
+
+	do {
+		requestProduct(categories, selectedCategory);
+		isConfirmed = tolower(input<char>("\n\e[0;33m	Do you confirm add the product? [y/n]: \e[0m"));
+	} while (isConfirmed == 'n');
 }
 
 
 void printProducts(category categories[]) {
 	int selectedCategory = categorySelection(categories);
 
-	std::cout << '\n' << " - Category: " << categories[selectedCategory].name << '\n';
-	std::cout << " - Quantity: " << categories[selectedCategory].quantity << '\n' << '\n';
+	title(" LIST OF PRODUCTS ");
+
+	std::cout << "	 - Category: " << categories[selectedCategory].name << '\n';
+	std::cout << "	 - Quantity: " << categories[selectedCategory].quantity << '\n' << '\n';
 
 	for (int j = 0; j < MAX_PRODUCTS; j++) {
-		std::cout << "	- Product: " << categories[selectedCategory].products[j].name << '\n';
-		std::cout << "	- Description: " << categories[selectedCategory].products[j].description << '\n';
-		std::cout << "	- Price: " << categories[selectedCategory].products[j].price << '\n' << '\n';
+		std::cout << "		- Product: " << categories[selectedCategory].products[j].name << '\n';
+		std::cout << "		- Description: " << categories[selectedCategory].products[j].description << '\n';
+		std::cout << "		- Price: " << categories[selectedCategory].products[j].price << '\n' << '\n';
 	}
+
+	exit();
 }
 
 
 void addPrice(category categories[]) {
 	int selectedCode, addPercentage;
-	std::cout << "Enter the product code: ";
-	std::cin >> selectedCode;
-	std::cout << "Enter the percentage to add: ";
-	std::cin >> addPercentage;
+
+	title(" ADD PERCENTAGE TO PRICE ");
+
+	selectedCode = input<int>("	Enter the product code: ");
+	addPercentage = input<int>("	Enter the percentage to add: ");
 
 	for (int i = 0; i < MAX_CATEGORIES; i++) {
 		for (int j = 0; j < MAX_PRODUCTS; j++) {
 			if (categories[i].products[j].code == selectedCode) {
 				categories[i].products[j].price += categories[i].products[j].price * addPercentage / 100;
+				printf("	\e[0;33mPrice updated\e[0m");
 			}
 		}
 	}
+
+	exit();
 }
 
 
 void searchProducts(category categories[]) {
 	int searchCode;
-	std::cout << "Enter the product code: ";
-	std::cin >> searchCode;
+	bool found = false;
+
+	title(" SEARCH PRODUCTS ");
+
+	searchCode = input<int>("	Enter the product code: ");
 
 	for (int i = 0; i < MAX_CATEGORIES; i++) {
 		for (int j = 0; j < MAX_PRODUCTS; j++) {
 			if (categories[i].products[j].code == searchCode) {
-				std::cout << "The product is in the system " << '\n';
-				return;
+				found = true;
 			}
 		}
 	}
-	std::cout << "Product not found" << '\n';
+
+	if (!found) std::cout << "\n	\e[0;31mProduct not found\e[0m\n\n";
+	else std::cout << "\n	\e[0;32mThe product is in the system\e[0m\n\n";
+
+	exit();
 }
 
 
@@ -157,7 +186,6 @@ int main(int argc, char *argv[]) {
 	category categories[MAX_CATEGORIES];
 	categories[0].name = "Electronics";
 	categories[1].name = "Clothes";
-
 
 	do {
 		title(" PRODUCT STRUCTURES ");
@@ -168,20 +196,17 @@ int main(int argc, char *argv[]) {
 		option("Search products", 4);
 		option("Exit", 5);
 
-		int option = input<int>();
+		int option = input<int>("\n	Select an option [n]: ");
 
 		switch (option) {
 			case 1: addProduct(categories); break;
 			case 2: printProducts(categories); break;
 			case 3: addPrice(categories); break;
 			case 4: searchProducts(categories); break;
-			case 5: std::cout << "Goodbye" << '\n'; return 0;
-			default: std::cout << "Invalid option" << '\n'; break;
+			case 5: std::cout << "\n	Goodbye" << '\n'; return 0;
+			default: std::cout << "\n	Invalid option" << '\n'; break;
 		}
 
-		std::cout << "Press enter to continue...";
-		std::cin.get();
-		std::cin.ignore();
 	} while (true);
 
 	return 0;
