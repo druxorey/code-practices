@@ -162,18 +162,14 @@ void addPrice(category categories[]) {
 
 	title(" ADD PERCENTAGE TO PRICE ");
 
-	selectedCode = input<int>("	Enter the product code: ");
+	selectedCode = input<int>("	Enter the category code: ") - 1;
 	addPercentage = input<int>("	Enter the percentage to add: ");
 
-	for (int i = 0; i < MAX_CATEGORIES; i++) {
-		for (int j = 0; j < MAX_PRODUCTS; j++) {
-			if (categories[i].products[j].code == selectedCode) {
-				categories[i].products[j].price += categories[i].products[j].price * addPercentage / 100;
-				printf("	\e[0;33mPrice updated\e[0m");
-			}
-		}
+	for (int i = 0; i < MAX_PRODUCTS; i++) {
+		categories[selectedCode].products[i].price += categories[selectedCode].products[i].price * addPercentage / 100;
 	}
 
+	printf("	\e[0;33mPrice updated\e[0m");
 	exit();
 }
 
