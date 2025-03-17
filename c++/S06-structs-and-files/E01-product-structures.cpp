@@ -1,8 +1,10 @@
 #include <iostream>
 #include "../U1-libraries/dxinput.hpp"
 
-const int MAX_PRODUCTS = 3;
-const int MAX_CATEGORIES = 2;
+const int MAX_PRODUCTS = 5;
+const int MAX_CATEGORIES = 5;
+
+int categoryIndex = 0;
 
 struct product {
 	unsigned int code = 0;
@@ -58,6 +60,7 @@ datatype input(std::string message) {
 	return value;
 }
 
+
 void exit() {
 	printf("	\e[0;33mEnter to exit\e[0m");
 	std::cin.get();
@@ -69,15 +72,17 @@ int categorySelection(category categories[]) {
 	int category;
 	title(" SELECT A CATEGORY ");
 
-	for (int i = 0; i < MAX_CATEGORIES; i++) {
+	for (int i = 0; i < categoryIndex + 1; i++) {
 		option(categories[i].name, i + 1);
 	}
 
 	do {
 		category = input<int>("\n	Select an option [n]: ");
+
 		if (category <= 0 || category > MAX_CATEGORIES) {
 			std::cout << "Invalid category" << '\n';
 		}
+
 	} while (category <= 0 || category > MAX_CATEGORIES);
 
 	return category - 1;
@@ -117,6 +122,20 @@ void addProduct(category categories[]) {
 		requestProduct(categories, selectedCategory);
 		isConfirmed = tolower(input<char>("\n\e[0;33m	Do you confirm add the product? [y/n]: \e[0m"));
 	} while (isConfirmed == 'n');
+}
+
+
+void addCategory(category categories[]) {
+	int newCategoryIndex = categoryIndex + 1;
+
+	title(" FILL THE CATEGORY INFORMATION ");
+
+	std::cout << "	Enter the category name: ";
+	std::getline(std::cin >> std::ws, categories[newCategoryIndex].name);
+	std::cin.clear();
+	categories[newCategoryIndex].code = newCategoryIndex + 1;
+
+	categoryIndex++;
 }
 
 
@@ -182,28 +201,51 @@ void searchProducts(category categories[]) {
 }
 
 
-int main(int argc, char *argv[]) {
-	category categories[MAX_CATEGORIES];
+void initialize(category categories[]) {
 	categories[0].name = "Electronics";
 	categories[1].name = "Clothes";
+
+	categories[0].products[0].code = 1;
+	categories[0].products[0].name = "Laptop";
+	categories[0].products[0].description = "Acer Aspire 5";
+	categories[0].products[0].price = 500.0;
+
+	categories[1].products[0].code = 2;
+	categories[1].products[0].name = "Shirt";
+	categories[1].products[0].description = "Polo";
+	categories[1].products[0].price = 20.0;
+
+	categories[0].quantity = 1;
+	categories[1].quantity = 1;
+
+	categoryIndex = 1;
+}
+
+
+int main(int argc, char *argv[]) {
+	category categories[MAX_CATEGORIES];
+
+	initialize(categories);
 
 	do {
 		title(" PRODUCT STRUCTURES ");
 
 		option("Add product", 1);
-		option("List products", 2);
-		option("Add Price", 3);
-		option("Search products", 4);
-		option("Exit", 5);
+		option("Add category", 2);
+		option("List products", 3);
+		option("Increase price to a category", 4);
+		option("Search products", 5);
+		option("Exit", 6);
 
 		int option = input<int>("\n	Select an option [n]: ");
 
 		switch (option) {
 			case 1: addProduct(categories); break;
-			case 2: printProducts(categories); break;
-			case 3: addPrice(categories); break;
-			case 4: searchProducts(categories); break;
-			case 5: std::cout << "\n	Goodbye" << '\n'; return 0;
+			case 2: addCategory(categories); break;
+			case 3: printProducts(categories); break;
+			case 4: addPrice(categories); break;
+			case 5: searchProducts(categories); break;
+			case 6: std::cout << "\n	Goodbye" << '\n'; return 0;
 			default: std::cout << "\n	Invalid option" << '\n'; break;
 		}
 
