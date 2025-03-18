@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 	isArgumentValid(argc, argv, 1);
 
 	std::string inputArgument = argv[1];
-	std::string outputArgument = "E04-people-filter.out";
+	std::string outputArgument = "E04-adults.out";
 
 	int listSize;
 	people* peopleList = getPeopleList(inputArgument, listSize);
