@@ -36,32 +36,51 @@ void writeFileData (people peopleList[], int size, std::string outputArgument) {
 
 	if (outputFile.is_open()) {
 		for (int i = 0; i < size; i++) {
-			if (peopleList[i].age >= 18) {
+
+			if (peopleList[i].age < 18) {
+				printf("\e[0;31m[WARNING]\e[0m %s is under 18 years old\n", peopleList[i].name.c_str());
+			}
+
 			outputFile << peopleList[i].age << ";";
 			outputFile << peopleList[i].identificator << "\n";
-			}
 		}
 		outputFile.close();
 	}
+
+	printf("\n\e[0;32m[INFO]\e[0m Data saved in %s\n\n", outputArgument.c_str());
+}
+
+
+void isArgumentValid(int argc, char *argv[]) {
+	if (argc != 2) {
+		std::cerr << "\e[0;31m[ERROR]\e[0m Usage: " << argv[0] << " <input-file>\n";
+		exit(1);
+	}
+}
+
+
+people* getPeopleList(std::string inputArgument, int &size) {
+	std::ifstream inputFile(inputArgument);
+	size = getFileSize(inputFile);
+	people* peopleList = new people[size];
+	readFileData(peopleList, inputFile, size);
+	inputFile.close();
+	return peopleList;
 }
 
 
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= PEOPLE FINDER =========]\e[0m\n\n";
 
+	isArgumentValid(argc, argv);
+
 	std::string inputArgument = argv[1];
-	std::string outputArgument = argv[2];
+	std::string outputArgument = "E04-people-filter.out";
 
-	std::ifstream inputFile(inputArgument);
+	int listSize;
+	people* peopleList = getPeopleList(inputArgument, listSize);
 
-	int size = getFileSize(inputFile);
-	people peopleList[size];
-
-	readFileData(peopleList, inputFile, size);
-
-	inputFile.close();
-
-	writeFileData(peopleList, size, outputArgument);
+	writeFileData(peopleList, listSize, outputArgument);
 
 	return 0;
 }
