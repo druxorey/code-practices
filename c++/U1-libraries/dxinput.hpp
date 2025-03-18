@@ -24,3 +24,11 @@ inline void enter() {
 	std::cin.get(); // Wait for user to press enter
 	std::cin.ignore();
 }
+
+
+inline void isArgumentValid(int argc, char *argv[], int expected) {
+	if (argc != expected + 1) {
+		std::cerr << "\e[0;31m[ERROR]\e[0m Usage: " << argv[0] << " <input-file>\n";
+		exit(1);
+	}
+}

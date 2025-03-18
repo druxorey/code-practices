@@ -1,19 +1,12 @@
 #include <iostream>
 #include <fstream>
+#include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxarray.hpp"
 
 const int MAX_LETTERS = 26;
 const char letters[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
 						  'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
 						  'u', 'v', 'w', 'x', 'y', 'z'};
-
-void isArgumentValid(int argc, char *argv[]) {
-	if (argc != 2) {
-		std::cerr << "\e[0;31m[ERROR]\e[0m Usage: " << argv[0] << " <filename>\n";
-		exit(1);
-	}
-}
-
 
 void getFrequency(std::ifstream &file, int frequency[], int &other) {
 	char actualLetter;
@@ -45,7 +38,7 @@ void printFrequency(int frequency[], int others) {
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= LETTER FREQUENCY =========]\e[0m\n\n";
 
-	isArgumentValid(argc, argv);
+	isArgumentValid(argc, argv, 1);
 
 	std::ifstream file(argv[1]);
 

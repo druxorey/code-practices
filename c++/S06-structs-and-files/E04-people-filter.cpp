@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "../U1-libraries/dxinput.hpp"
 
 struct people {
 	int identificator;
@@ -51,14 +52,6 @@ void writeFileData (people peopleList[], int size, std::string outputArgument) {
 }
 
 
-void isArgumentValid(int argc, char *argv[]) {
-	if (argc != 2) {
-		std::cerr << "\e[0;31m[ERROR]\e[0m Usage: " << argv[0] << " <input-file>\n";
-		exit(1);
-	}
-}
-
-
 people* getPeopleList(std::string inputArgument, int &size) {
 	std::ifstream inputFile(inputArgument);
 	size = getFileSize(inputFile);
@@ -72,7 +65,7 @@ people* getPeopleList(std::string inputArgument, int &size) {
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= PEOPLE FINDER =========]\e[0m\n\n";
 
-	isArgumentValid(argc, argv);
+	isArgumentValid(argc, argv, 1);
 
 	std::string inputArgument = argv[1];
 	std::string outputArgument = "E04-people-filter.out";
