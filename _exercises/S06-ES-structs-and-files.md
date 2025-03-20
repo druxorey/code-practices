@@ -8,9 +8,11 @@
 
 2) **E02-point-distance**: Un punto en 3 dimensiones tiene tres coordenadas X, Y, Z. Defina un registro para representarlos. Usando el registro definido anteriormente, haga una función que calcule la distancia entre los puntos.
 
-3) **E03-letter-frequency**: Desarrolle un algoritmo que lea todos los caracteres de un archivo denominado `letras.in`, cuente la frecuencia de cada letra del archivo e imprima dicha frecuencia en pantalla. No se debe diferenciar entre letras mayúsculas y minúsculas. Los caracteres que no sean letras deben contabilizarse en una categoría separada denominada "Caracteres Extra".
+3) **E03-letter-frequency**: Desarrolle un algoritmo que lea todos los caracteres de un archivo denominado `letters.in`, cuente la frecuencia de cada letra del archivo e imprima dicha frecuencia en pantalla. No se debe diferenciar entre letras mayúsculas y minúsculas. Los caracteres que no sean letras deben contabilizarse en una categoría separada denominada "Caracteres Extra".
 
-4) **E04-people-filter**: Dado un archivo `personas.in` con información sobre personas, se desea que haga un algoritmo que lea el archivo y lo cargue en un arreglo de registros. Luego, debe almacenar en otro archivo únicamente las cédulas y edades de las personas que tengan más de 18 años. La primera línea del archivo `personas.in` contiene el número N de personas almacenadas en el archivo. Por cada persona habrá una línea con su cédula, luego una línea con su nombre completo, luego una línea con su edad, y finalmente una línea con su sexo. A lo sumo habrán 100 personas en el archivo. El registro para almacenar la información de una persona es el siguiente:
+4) **E04-people-filter**: Dado un archivo `people.in` con información sobre personas, se desea que haga un algoritmo que lea el archivo y lo cargue en un arreglo de registros. Luego, debe almacenar en otro archivo `adults.out` únicamente las edades seguidas de un `;` y las cédulas de las personas que tengan más de 18 años. as personas que no cumplan con esta condición deben ser mostradas por pantalla. 
+
+La primera línea del archivo `people.in` contiene el número N de personas almacenadas en el archivo. Por cada persona habrá una línea con su cédula, luego una línea con su nombre completo, luego una línea con su edad, y finalmente una línea con su sexo. El registro para almacenar la información de una persona es el siguiente:
 
 ``` c++
 struct person {
