@@ -1,4 +1,4 @@
-#include "sdx_list_doubly.cpp"
+#include "sdx_list_doubly_linked.hpp"
 
 // Template class for a queue, inheriting privately from a list
 template <typename datatype>

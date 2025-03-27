@@ -1,5 +1,5 @@
 #include <iostream>
-#include "snode.cpp"
+#include "standard_node.hpp"
 
 template <typename datatype>
 class list {
