@@ -72,6 +72,16 @@ Then run it with the next command:
 
     ./script-name
 
+### Java
+
+To execute a Java program, navigate to the directory containing the `.java` file and compile it using the following command:
+
+    javac ScriptName.java
+
+Then run it with the next command:
+
+    java ScriptName
+
 ## Contribute
 
 If you want to add new exercises or improve existing ones, follow these steps:
