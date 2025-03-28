@@ -2,7 +2,7 @@
 #include "../U1-libraries/dxstack.hpp"
 #include "../U1-libraries/dxinput.hpp"
 
-float getAverage(dxstack<int> stack) {
+float getAverage(DxStack<int> stack) {
 	float finalAverage = 0, size = stack.size();
 
 	while (!stack.empty()) {
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	int stackSize;
 	getcin("Enter the size of the stack: ", stackSize);
 
-	dxstack<int> stack;
+	DxStack<int> stack;
 	stack.rand(stackSize);
 	printf("\n\e[0;34mInitial stack: \e[0m\n\n");
 	printStack(stack);

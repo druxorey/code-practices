@@ -1,11 +1,13 @@
 #include "sdx_list_doubly_linked.hpp"
 
+#pragma once
+
 // Template class for a stack, inheriting privately from a list
 template <typename datatype>
-class stack : private list<datatype> {
+class StandardStack : private StandardDoubleList<datatype> {
 	public:
-		stack();
-		~stack();
+		StandardStack();
+		~StandardStack();
 
 		void push(datatype payload);
 		datatype *pop();
@@ -14,26 +16,26 @@ class stack : private list<datatype> {
 };
 
 template <typename datatype>
-stack<datatype>::stack() : list<datatype>() {
+StandardStack<datatype>::StandardStack() : StandardDoubleList<datatype>() {
 	// No additional initialization required, just call the base class constructor
 }
 
 template <typename datatype>
-stack<datatype>::~stack() {
+StandardStack<datatype>::~StandardStack() {
 	// No additional cleanup required, just call the base class destructor
 }
 
 // Push method implementation
 template <typename datatype>
-void stack<datatype>::push(datatype payload) {
+void StandardStack<datatype>::push(datatype payload) {
 	// Insert the payload at the beginning of the list
 	this->insert(this->firts(), payload, false);
 }
 
 // Pop method implementation
 template <typename datatype>
-datatype *stack<datatype>::pop() {
-	if (list<datatype>::isEmpty()) return nullptr;
+datatype *StandardStack<datatype>::pop() {
+	if (StandardDoubleList<datatype>::isEmpty()) return nullptr;
 
 	// Create a copy of the payload at the first node
 	datatype *payload = new datatype(*this->get(this->first()));
@@ -44,11 +46,11 @@ datatype *stack<datatype>::pop() {
 }
 
 template <typename datatype>
-bool stack<datatype>::isEmpty() const {
-	return list<datatype>::isEmpty();
+bool StandardStack<datatype>::isEmpty() const {
+	return StandardDoubleList<datatype>::isEmpty();
 }
 
 template <typename datatype>
-int stack<datatype>::size() const {
-	return list<datatype>::size();
+int StandardStack<datatype>::size() const {
+	return StandardDoubleList<datatype>::size();
 }

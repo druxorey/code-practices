@@ -1,13 +1,15 @@
 #include <iostream>
 #include "sdx_node.hpp"
 
+#pragma once
+
 template <typename datatype>
-class list {
+class StandardSimplyList {
 public:
 
 	class iterator {
 	public:
-		iterator(doubleNode<datatype>* ptr = nullptr) : node(ptr) {}
+		iterator(DoubleNode<datatype>* ptr = nullptr) : node(ptr) {}
 
 		datatype& operator*() const { return node->payload; }
 		datatype* operator->() const { return &(node->payload); }
@@ -38,12 +40,12 @@ public:
 		bool operator!=(const iterator& other) const { return node != other.node; }
 
 	private:
-		doubleNode<datatype>* node;
-		friend class list<datatype>;
+		DoubleNode<datatype>* node;
+		friend class StandardSimplyList<datatype>;
 	};
 
-	list();
-	~list();
+	StandardSimplyList();
+	~StandardSimplyList();
 
 	iterator begin() const { return iterator(_first); }
 	iterator end() const { return iterator(nullptr); }
@@ -57,44 +59,44 @@ public:
 	iterator insert(iterator pos, const datatype& payload);
 
 private:
-	doubleNode<datatype>* _first;
-	doubleNode<datatype>* _last;
+	DoubleNode<datatype>* _first;
+	DoubleNode<datatype>* _last;
 	int _size;
 };
 
 template <typename datatype>
-list<datatype>::list() : _first(nullptr), _last(nullptr), _size(0) {}
+StandardSimplyList<datatype>::StandardSimplyList() : _first(nullptr), _last(nullptr), _size(0) {}
 
 template <typename datatype>
-list<datatype>::~list() {
+StandardSimplyList<datatype>::~StandardSimplyList() {
 	while (!empty()) {
 		erase(begin());
 	}
 }
 
 template <typename datatype>
-bool list<datatype>::empty() const {
+bool StandardSimplyList<datatype>::empty() const {
 	return _first == nullptr;
 }
 
 template <typename datatype>
-int list<datatype>::size() const {
+int StandardSimplyList<datatype>::size() const {
 	return _size;
 }
 
 template <typename datatype>
-void list<datatype>::push_back(const datatype& payload) {
+void StandardSimplyList<datatype>::push_back(const datatype& payload) {
 	insert(end(), payload);
 }
 
 template <typename datatype>
-void list<datatype>::push_front(const datatype& payload) {
+void StandardSimplyList<datatype>::push_front(const datatype& payload) {
 	insert(begin(), payload);
 }
 
 template <typename datatype>
-typename list<datatype>::iterator list<datatype>::insert(iterator pos, const datatype& payload) {
-	doubleNode<datatype>* newNode = new doubleNode<datatype>(payload);
+typename StandardSimplyList<datatype>::iterator StandardSimplyList<datatype>::insert(iterator pos, const datatype& payload) {
+	DoubleNode<datatype>* newNode = new DoubleNode<datatype>(payload);
 	_size++;
 
 	if (empty()) {
@@ -103,7 +105,7 @@ typename list<datatype>::iterator list<datatype>::insert(iterator pos, const dat
 		return iterator(newNode);
 	}
 
-	doubleNode<datatype>* current = pos.node;
+	DoubleNode<datatype>* current = pos.node;
 
 	if (current == nullptr) {
 		newNode->prev = _last;
@@ -125,8 +127,8 @@ typename list<datatype>::iterator list<datatype>::insert(iterator pos, const dat
 }
 
 template <typename datatype>
-void list<datatype>::erase(iterator pos) {
-	doubleNode<datatype>* current = pos.node;
+void StandardSimplyList<datatype>::erase(iterator pos) {
+	DoubleNode<datatype>* current = pos.node;
 	if (current == nullptr) return;
 
 	_size--;
@@ -140,7 +142,7 @@ void list<datatype>::erase(iterator pos) {
 }
 
 template <typename datatype>
-void list<datatype>::print() const {
+void StandardSimplyList<datatype>::print() const {
 	int nodeIndex = 1;
 	int maxNumber = std::to_string(this->size()).length();
 	for (auto iterator = this->begin(); iterator != this->end(); ++iterator) {

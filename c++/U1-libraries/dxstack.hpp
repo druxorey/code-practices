@@ -1,8 +1,10 @@
 #include <iostream>
 #include <stack>
 
+#pragma once
+
 template <typename datatype>
-class dxstack : public std::stack<datatype> {
+class DxStack : public std::stack<datatype> {
 	public:
 		void fill(int size, int initialValue = 0);
 		void rand(int size);
@@ -10,7 +12,7 @@ class dxstack : public std::stack<datatype> {
 
 // Fill the stack with values
 template <typename datatype>
-void dxstack<datatype>::fill(int size, int initialValue) {
+void DxStack<datatype>::fill(int size, int initialValue) {
 	for (int i = initialValue; i < size + initialValue; i++) {
 		this->push(i);
 	}
@@ -18,14 +20,14 @@ void dxstack<datatype>::fill(int size, int initialValue) {
 
 // Fill the stack with random values
 template <typename datatype>
-void dxstack<datatype>::rand(int size) {
+void DxStack<datatype>::rand(int size) {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++) {
 		this->push(::rand() % size);
 	}
 }
 
-inline void printStack(dxstack<int> stack) {
+inline void printStack(DxStack<int> stack) {
 	int size = stack.size(), index = 1;
 	int maxNumber = std::to_string(stack.size()).length();
 	while (!stack.empty()) {

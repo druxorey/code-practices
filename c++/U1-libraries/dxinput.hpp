@@ -1,5 +1,7 @@
 #include <iostream>
 
+#pragma once
+
 // Template function to get user input
 template <typename datatype>
 void getcin(std::string message, datatype &input) {

@@ -3,18 +3,18 @@
 #pragma once
 
 template <typename datatype> 
-class heap {
+class Heap {
 	public:
-		heap(const int resizeStep = 16);
-		~heap();
+		Heap(const int resizeStep = 16);
+		~Heap();
 
 		datatype top();
 		void insert(datatype x);
 		bool isEmpty();
-		void merge(heap<datatype> x);
-		void mergeWithoutDuplicates(heap<datatype> x);
+		void merge(Heap<datatype> x);
+		void mergeWithoutDuplicates(Heap<datatype> x);
 
-		friend std::ostream &operator<<(std::ostream &out, heap &object);
+		friend std::ostream &operator<<(std::ostream &out, Heap &object);
 
 	private:
 		const int resizeStep;
@@ -34,7 +34,7 @@ class heap {
 
 // Resize the internal array to the new size
 template <typename datatype>
-inline void heap<datatype>::resizeArray(int newSize) {
+inline void Heap<datatype>::resizeArray(int newSize) {
 	datatype *newData = new datatype[newSize];
 	
 	memcpy(data, newData, elementCount * sizeof(datatype)); // Copy the memory from data to newData
@@ -45,25 +45,25 @@ inline void heap<datatype>::resizeArray(int newSize) {
 
 // Get the index of the left child
 template <typename datatype>
-inline int heap<datatype>::getLeftChildIndex(int parentIndex) { 
+inline int Heap<datatype>::getLeftChildIndex(int parentIndex) { 
 	return parentIndex * 2 + 1;
 }
 
 // Get the index of the right child
 template <typename datatype>
-inline int heap<datatype>::getRightChildIndex(int parentIndex) { 
+inline int Heap<datatype>::getRightChildIndex(int parentIndex) { 
 	return parentIndex * 2 + 2;
 }
 
 // Get the index of the parent
 template <typename datatype>
-inline int heap<datatype>::getParentIndex(int childIndex) { 
+inline int Heap<datatype>::getParentIndex(int childIndex) { 
 	return (childIndex - 1) / 2;
 }
 
 // Check if the subtree rooted at parentIndex is a heap
 template <typename datatype>
-inline bool heap<datatype>::isHeap(int parentIndex) {
+inline bool Heap<datatype>::isHeap(int parentIndex) {
 	if (parentIndex < 0) return true;
 
 	int leftIndex = getLeftChildIndex(parentIndex);
@@ -80,7 +80,7 @@ inline bool heap<datatype>::isHeap(int parentIndex) {
 
 // Swap the elements at indexA and indexB
 template <typename datatype>
-inline void heap<datatype>::swap(int indexA, int indexB) {
+inline void Heap<datatype>::swap(int indexA, int indexB) {
 	datatype aux = data[indexA];
 	data[indexA] = data[indexB];
 	data[indexB] = aux;
@@ -88,7 +88,7 @@ inline void heap<datatype>::swap(int indexA, int indexB) {
 
 // Sink the value at parentIndex down to its correct position
 template <typename datatype>
-inline void heap<datatype>::sinkValue(int parentIndex) {
+inline void Heap<datatype>::sinkValue(int parentIndex) {
 	if (isHeap(parentIndex)) return;
 
 	int leftChild = getLeftChildIndex(parentIndex);
@@ -105,7 +105,7 @@ inline void heap<datatype>::sinkValue(int parentIndex) {
 
 // Float the value at childIndex up to its correct position
 template <typename datatype>
-inline void heap<datatype>::floatValue(int childIndex) {
+inline void Heap<datatype>::floatValue(int childIndex) {
 	int parentIndex = getParentIndex(childIndex);
 
 	if (isHeap(parentIndex)) return;
@@ -117,7 +117,7 @@ inline void heap<datatype>::floatValue(int childIndex) {
 
 // Constructor to initialize the heap
 template <typename datatype>
-heap<datatype>::heap(const int resizeStep) : resizeStep(resizeStep) {
+Heap<datatype>::Heap(const int resizeStep) : resizeStep(resizeStep) {
 	elementCount = 0;
 	data = new datatype[resizeStep];
 	actualSize = resizeStep;
@@ -125,13 +125,13 @@ heap<datatype>::heap(const int resizeStep) : resizeStep(resizeStep) {
 
 // Destructor to clean up the heap
 template <typename datatype>
-heap<datatype>::~heap() {
+Heap<datatype>::~Heap() {
 	delete[] data;
 }
 
 // Remove and return the top element of the heap
 template <typename datatype>
-inline datatype heap<datatype>::top() {
+inline datatype Heap<datatype>::top() {
 	datatype topValue = data[0];
 
 	data[0] = data[elementCount - 1];
@@ -148,7 +148,7 @@ inline datatype heap<datatype>::top() {
 
 // Insert a new element into the heap
 template <typename datatype>
-inline void heap<datatype>::insert(datatype x) {
+inline void Heap<datatype>::insert(datatype x) {
 	// Resize the array if necessary
 	if (elementCount + 1 > actualSize)
 		resizeArray(actualSize + resizeStep);
@@ -160,13 +160,13 @@ inline void heap<datatype>::insert(datatype x) {
 
 // Check if the heap is empty
 template <typename datatype>
-inline bool heap<datatype>::isEmpty() {
+inline bool Heap<datatype>::isEmpty() {
 	return elementCount <= 0;
 }
 
 // Merge another heap into this heap
 template <typename datatype>
-inline void heap<datatype>::merge(heap<datatype> x) {
+inline void Heap<datatype>::merge(Heap<datatype> x) {
 	while (!x.isEmpty()) {
 		datatype y = x.top();
 		insert(y);
@@ -175,10 +175,10 @@ inline void heap<datatype>::merge(heap<datatype> x) {
 
 // Merge another heap into this heap without duplicates
 template <typename datatype>
-inline void heap<datatype>::mergeWithoutDuplicates(heap<datatype> x) {
+inline void Heap<datatype>::mergeWithoutDuplicates(Heap<datatype> x) {
 	while (!x.isEmpty()) {
 		datatype y = x.top();
-		heap aux;
+		Heap aux;
 		while (!isEmpty()) {
 			datatype z = top();
 			if (z == y)
@@ -193,7 +193,7 @@ inline void heap<datatype>::mergeWithoutDuplicates(heap<datatype> x) {
 
 // Overload the << operator to print the heap
 template <typename datatype>
-std::ostream &operator<<(std::ostream &out, heap<datatype> &object) {
+std::ostream &operator<<(std::ostream &out, Heap<datatype> &object) {
 	out << "Data: ";
 	for (int i = 0; i < object.elementCount; i++)
 		out << object.data[i] << "; ";

@@ -2,7 +2,7 @@
 #include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxrope.hpp"
 
-void iterativeInverse(rope<int>& list) {
+void iterativeInverse(Rope<int>& list) {
 	int size = list.size();
 	for (int i = 0; i < size; i++) {
 		auto iterator = list.begin();
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	int listSize;
 	getcin("Enter the list size: ", listSize);
 
-	rope<int> list;
+	Rope<int> list;
 	list.fill(listSize, 1);
 	printf("\n\e[0;33mNormal List\e[0m:\n");
 	list.print();

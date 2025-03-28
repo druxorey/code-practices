@@ -2,16 +2,16 @@
 #include "../U1-libraries/dxstack.hpp"
 #include "../U1-libraries/dxinput.hpp"
 
-dxstack<char> strToStack(std::string str) {
-	dxstack<char> stack;
+DxStack<char> strToStack(std::string str) {
+	DxStack<char> stack;
 	for(const char &c : str) stack.push(c);
 	return stack;
 }
 
 
-bool isPalindrome(dxstack<char> stack) {
+bool isPalindrome(DxStack<char> stack) {
 	int size = stack.size();
-	dxstack<char> fistHalf;
+	DxStack<char> fistHalf;
 
 	for (int i = 0; i < size / 2; i++) {
 		fistHalf.push(stack.top());
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 	std::string word;
 	getcin("Enter a word: ", word);
 
-	dxstack<char> stack = strToStack(word);
+	DxStack<char> stack = strToStack(word);
 
 	if (isPalindrome(stack))
 		printf("\n\e[0;32mThe word \"%s\" is a palindrome\e[0m\n\n", word.c_str());

@@ -1,5 +1,7 @@
 #include <iostream>
 
+#pragma once
+
 // Function to get the biggest number in a matrix
 inline int getBiggestNumber(int** matrix, int size) {
 	int biggestNumber = matrix[size-1][size-1];

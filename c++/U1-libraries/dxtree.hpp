@@ -2,32 +2,32 @@
 
 #pragma once
 
-class generalTreeNode {
+class TreeNode {
 	public:
 		int value; // Value stored in the node
 		int childrenCount; // Number of children nodes
-		std::list<generalTreeNode*> children; // List of pointers to children nodes
+		std::list<TreeNode*> children; // List of pointers to children nodes
 
-		generalTreeNode(int value) : value(value), childrenCount(0) {}
-		~generalTreeNode();
+		TreeNode(int value) : value(value), childrenCount(0) {}
+		~TreeNode();
 
 		// Method to check if the node is a leaf (has no children)
 		bool isLeaf();
 };
 
-class tree {
+class Tree {
 	public:
-		generalTreeNode root; // Root node of the tree
+		TreeNode root; // Root node of the tree
 
 		// Constructor initializing the tree with a root value
-		tree(int rootValue) : root(rootValue) {}
+		Tree(int rootValue) : root(rootValue) {}
 
 		// Method to add a child node to a given parent node
-		void addChildren(int value, generalTreeNode* parent);
+		void addChildren(int value, TreeNode* parent);
 };
 
 // Destructor implementation to delete all children nodes
-inline generalTreeNode::~generalTreeNode() {
+inline TreeNode::~TreeNode() {
 	while (!children.empty()) {
 		delete children.front(); // Delete the first child node
 		childrenCount--; // Decrease the children count
@@ -36,15 +36,15 @@ inline generalTreeNode::~generalTreeNode() {
 }
 
 // Method implementation to check if the node is a leaf
-inline bool generalTreeNode::isLeaf() {
+inline bool TreeNode::isLeaf() {
 	return children.empty();
 }
 
 // Method implementation to add a child node to a given parent node
-inline void tree::addChildren(int value, generalTreeNode* parent) {
+inline void Tree::addChildren(int value, TreeNode* parent) {
 	if (parent == nullptr) return; // Do nothing if the parent is null
 
-	generalTreeNode* newChild = new generalTreeNode(value); // Create a new child node
+	TreeNode* newChild = new TreeNode(value); // Create a new child node
 	parent->children.push_back(newChild); // Add the new child to the parent's children list
 	parent->childrenCount++; // Increase the parent's children count
 }

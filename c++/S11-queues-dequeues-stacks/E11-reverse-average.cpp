@@ -2,7 +2,7 @@
 #include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxqueue.hpp"
 
-float getAverage(dxqueue<int> queue) {
+float getAverage(DxQueue<int> queue) {
 	float sum = 0;
 
 	for (int i = 0; i < queue.size(); i++) {
@@ -14,7 +14,7 @@ float getAverage(dxqueue<int> queue) {
 }
 
 
-void reverseQueue(dxqueue<int> &queue) {
+void reverseQueue(DxQueue<int> &queue) {
 	if (queue.empty()) return;
 
 	int front = queue.front();
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	int queueSize;
 	getcin("Enter the size of the queue: ", queueSize);
 
-	dxqueue<int> queue;
+	DxQueue<int> queue;
 
 	queue.rand(queueSize);
 	printf("\n\e[0;34mInitial queue: \e[0m\n\n");

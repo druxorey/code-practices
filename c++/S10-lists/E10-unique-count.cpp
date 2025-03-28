@@ -7,8 +7,8 @@ struct value {
 	int occurences = 0;
 };
 
-dxlist<value> getOccurences(dxlist<int> list) {
-	dxlist<value> uniqueList;
+DxList<value> getOccurences(DxList<int> list) {
+	DxList<value> uniqueList;
 
 	value firstValue;
 	firstValue.number = list.front();
@@ -34,7 +34,7 @@ dxlist<value> getOccurences(dxlist<int> list) {
 }
 
 
-void printList(dxlist<value> list) {
+void printList(DxList<value> list) {
 	int index = 1;
 	for (const value &element : list) {
 		printf("Node %d: [Number: %d, Occurences: %d]\n", index, element.number, element.occurences);
@@ -49,12 +49,12 @@ int main(int argc, char *argv[]) {
 	int listSize;
 	getcin("Enter the list size: ", listSize);
 
-	dxlist<int> messyList;
+	DxList<int> messyList;
 	messyList.rand(listSize);
 	printf("\n\e[0;33mMessy List\e[0m:\n");
 	messyList.print();
 
-	dxlist<value> uniqueList = getOccurences(messyList);
+	DxList<value> uniqueList = getOccurences(messyList);
 	printf("\n\e[0;33mUnique List\e[0m:\n");
 	printList(uniqueList);
 

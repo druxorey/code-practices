@@ -10,7 +10,7 @@ int recursiveSum(int array[], int index) {
 }
 
 
-int getListSum(dxlist<int*> myList) {
+int getListSum(DxList<int*> myList) {
 	int finalSum = 0;
 
 	for(const auto &array: myList) {
@@ -24,7 +24,7 @@ int getListSum(dxlist<int*> myList) {
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= RECURSIVE SUM =========]\e[0m\n\n";
 
-	dxlist<int*> randomList;
+	DxList<int*> randomList;
 
 	int firstArray[ARRAY_SIZE];
 	randArray(firstArray, ARRAY_SIZE);

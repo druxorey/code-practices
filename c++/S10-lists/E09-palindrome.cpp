@@ -1,17 +1,16 @@
 #include <iostream>
 #include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxrope.hpp"
-#include "../U1-libraries/dxarray.hpp"
 
 
-void strToRope(rope<char> &dataRope, std::string word) {
+void strToRope(Rope<char> &dataRope, std::string word) {
 	for(const char &c : word) {
 		dataRope.push_back(c);
 	}
 }
 
 
-bool isPalindrome(rope<char> &dataRope) {
+bool isPalindrome(Rope<char> &dataRope) {
 	std::string word;
 	for(const char &c : dataRope) word.insert(word.begin(), c);
 	int index = 0;
@@ -29,7 +28,7 @@ int main(int argc, char *argv[]) {
 	std::string word = "anitalavalatina";
 	getcin("Enter a word: ", word);
 
-	rope<char> dataRope;
+	Rope<char> dataRope;
 	strToRope(dataRope, word);
 	dataRope.print();
 

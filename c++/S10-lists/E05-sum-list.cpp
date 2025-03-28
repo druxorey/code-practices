@@ -2,7 +2,7 @@
 #include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxlist.hpp"
 
-int sumList(dxlist<int> &myList, int size) {
+int sumList(DxList<int> &myList, int size) {
 	int finalSum = 0;
 	auto index = myList.begin();
 
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
 	int listSize, finalSum;
 	getcin("Enter the list size: ", listSize);
 
-	dxlist<int> intList;
+	DxList<int> intList;
 	intList.rand(listSize);
 	intList.print();
 

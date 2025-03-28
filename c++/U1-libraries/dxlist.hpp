@@ -2,8 +2,10 @@
 #include <list>
 #include <string>
 
+#pragma once
+
 template <typename datatype>
-class dxlist : public std::list<datatype> {
+class DxList : public std::list<datatype> {
 	public:
 		void print() const;
 		void fill(int size, int initialValue = 0);
@@ -12,7 +14,7 @@ class dxlist : public std::list<datatype> {
 
 // Print the contents of the list using the STD implementation
 template <typename datatype>
-void dxlist<datatype>::print() const {
+void DxList<datatype>::print() const {
 	int nodeIndex = 1;
 	int maxNumber = std::to_string(this->size()).length();
 	for (auto iterator = this->begin(); iterator != this->end(); ++iterator) {
@@ -23,7 +25,7 @@ void dxlist<datatype>::print() const {
 
 // Fill the list with values
 template <typename datatype>
-void dxlist<datatype>::fill(int size, int initialValue) {
+void DxList<datatype>::fill(int size, int initialValue) {
 	for (int i = initialValue; i < size + initialValue; i++) {
 		this->push_back(i);
 	}
@@ -31,7 +33,7 @@ void dxlist<datatype>::fill(int size, int initialValue) {
 
 // Fill the list with random values
 template <typename datatype>
-void dxlist<datatype>::rand(int size) {
+void DxList<datatype>::rand(int size) {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++) {
 		this->push_back(::rand() % size);

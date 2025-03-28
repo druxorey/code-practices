@@ -1,109 +1,111 @@
 #include <iostream>
 #include "standard_node.hpp"
 
+#pragma once
+
 template <typename datatype>
-class list {
+class StandardList {
 public:
 
-	class iterator {
+	class Iterator {
 	public:
-		iterator(doubleNode<datatype>* ptr = nullptr) : node(ptr) {}
+		Iterator(StandardNode<datatype>* ptr = nullptr) : node(ptr) {}
 
 		datatype& operator*() const { return node->payload; }
 		datatype* operator->() const { return &(node->payload); }
 
-		iterator& operator++() {
+		Iterator& operator++() {
 			node = node->next;
 			return *this;
 		}
 
-		iterator operator++(int) {
-			iterator temp = *this;
+		Iterator operator++(int) {
+			Iterator temp = *this;
 			node = node->next;
 			return temp;
 		}
 
-		iterator& operator--() {
+		Iterator& operator--() {
 			node = node->prev;
 			return *this;
 		}
 
-		iterator operator--(int) {
-			iterator temp = *this;
+		Iterator operator--(int) {
+			Iterator temp = *this;
 			node = node->prev;
 			return temp;
 		}
 
-		bool operator==(const iterator& other) const { return node == other.node; }
-		bool operator!=(const iterator& other) const { return node != other.node; }
+		bool operator==(const Iterator& other) const { return node == other.node; }
+		bool operator!=(const Iterator& other) const { return node != other.node; }
 
 	private:
-		doubleNode<datatype>* node;
-		friend class list<datatype>;
+		StandardNode<datatype>* node;
+		friend class StandardList<datatype>;
 	};
 
-	list();
-	~list();
+	StandardList();
+	~StandardList();
 
-	iterator begin() const { return iterator(_first); }
-	iterator end() const { return iterator(nullptr); }
+	Iterator begin() const { return Iterator(_first); }
+	Iterator end() const { return Iterator(nullptr); }
 
 	bool empty() const;
 	int size() const;
 	void push_back(const datatype& payload);
 	void push_front(const datatype& payload);
-	void erase(iterator pos);
+	void erase(Iterator pos);
 	void print() const;
-	iterator insert(iterator pos, const datatype& payload);
+	Iterator insert(Iterator pos, const datatype& payload);
 
 private:
-	doubleNode<datatype>* _first;
-	doubleNode<datatype>* _last;
+	StandardNode<datatype>* _first;
+	StandardNode<datatype>* _last;
 	int _size;
 };
 
 template <typename datatype>
-list<datatype>::list() : _first(nullptr), _last(nullptr), _size(0) {}
+StandardList<datatype>::StandardList() : _first(nullptr), _last(nullptr), _size(0) {}
 
 template <typename datatype>
-list<datatype>::~list() {
+StandardList<datatype>::~StandardList() {
 	while (!empty()) {
 		erase(begin());
 	}
 }
 
 template <typename datatype>
-bool list<datatype>::empty() const {
+bool StandardList<datatype>::empty() const {
 	return _first == nullptr;
 }
 
 template <typename datatype>
-int list<datatype>::size() const {
+int StandardList<datatype>::size() const {
 	return _size;
 }
 
 template <typename datatype>
-void list<datatype>::push_back(const datatype& payload) {
+void StandardList<datatype>::push_back(const datatype& payload) {
 	insert(end(), payload);
 }
 
 template <typename datatype>
-void list<datatype>::push_front(const datatype& payload) {
+void StandardList<datatype>::push_front(const datatype& payload) {
 	insert(begin(), payload);
 }
 
 template <typename datatype>
-typename list<datatype>::iterator list<datatype>::insert(iterator pos, const datatype& payload) {
-	doubleNode<datatype>* newNode = new doubleNode<datatype>(payload);
+typename StandardList<datatype>::Iterator StandardList<datatype>::insert(Iterator pos, const datatype& payload) {
+	StandardNode<datatype>* newNode = new StandardNode<datatype>(payload);
 	_size++;
 
 	if (empty()) {
 		_first = newNode;
 		_last = newNode;
-		return iterator(newNode);
+		return Iterator(newNode);
 	}
 
-	doubleNode<datatype>* current = pos.node;
+	StandardNode<datatype>* current = pos.node;
 
 	if (current == nullptr) {
 		newNode->prev = _last;
@@ -121,12 +123,12 @@ typename list<datatype>::iterator list<datatype>::insert(iterator pos, const dat
 		}
 	}
 
-	return iterator(newNode);
+	return Iterator(newNode);
 }
 
 template <typename datatype>
-void list<datatype>::erase(iterator pos) {
-	doubleNode<datatype>* current = pos.node;
+void StandardList<datatype>::erase(Iterator pos) {
+	StandardNode<datatype>* current = pos.node;
 	if (current == nullptr) return;
 
 	_size--;
@@ -140,7 +142,7 @@ void list<datatype>::erase(iterator pos) {
 }
 
 template <typename datatype>
-void list<datatype>::print() const {
+void StandardList<datatype>::print() const {
 	int nodeIndex = 1;
 	int maxNumber = std::to_string(this->size()).length();
 	for (auto iterator = this->begin(); iterator != this->end(); ++iterator) {

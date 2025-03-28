@@ -2,8 +2,8 @@
 #include "../U1-libraries/dxstack.hpp"
 #include "../U1-libraries/dxinput.hpp"
 
-dxstack<int> sumStacks(dxstack<int> first, dxstack<int> second) {
-	dxstack<int> result;
+DxStack<int> sumStacks(DxStack<int> first, DxStack<int> second) {
+	DxStack<int> result;
 	int firstValue, secondValue, sum;
 
 	while (!first.empty() && !second.empty()) {
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	int stackSize;
 	getcin("Enter the size of the stack: ", stackSize);
 
-	dxstack<int> firstStack, secondStack, resultStack;
+	DxStack<int> firstStack, secondStack, resultStack;
 
 	firstStack.rand(stackSize);
 	secondStack.rand(stackSize);

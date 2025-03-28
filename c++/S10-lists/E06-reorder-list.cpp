@@ -2,8 +2,8 @@
 #include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxrope.hpp"
 
-rope<int> reorderList(rope<int> list) {
-	rope<int> finalSum;
+Rope<int> reorderList(Rope<int> list) {
+	Rope<int> finalSum;
 	int leftIterator = 0;
 	int rightIterator = list.size() - 1;
 
@@ -37,12 +37,12 @@ int main(int argc, char *argv[]) {
 	int listSize;
 	getcin("Enter the list size: ", listSize);
 
-	rope<int> intList;
+	Rope<int> intList;
 	intList.fill(listSize, 1);
 	printf("\n\e[0;34m Initial List: \e[0m\n\n");
 	intList.print();
 
-	rope<int> reorderedList = reorderList(intList);
+	Rope<int> reorderedList = reorderList(intList);
 	printf("\n\e[0;34m Reordered List: \e[0m\n\n");
 	reorderedList.print();
 

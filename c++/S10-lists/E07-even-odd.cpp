@@ -2,7 +2,7 @@
 #include "../U1-libraries/dxinput.hpp"
 #include "../U1-libraries/dxlist.hpp"
 
-void getEvenOdd(dxlist<int> &initialList, dxlist<int> &oddList, dxlist<int> &evenList){
+void getEvenOdd(DxList<int> &initialList, DxList<int> &oddList, DxList<int> &evenList){
 	auto index = initialList.begin();
 	while (index != initialList.end()) {
 		int value = *index;
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= EVEN ODD =========]\e[0m\n\n";
 
 	int listSize;
-	dxlist<int> initialList, oddList, evenList;
+	DxList<int> initialList, oddList, evenList;
 
 	getcin("Enter the list size: ", listSize);
 	initialList.fill(listSize);

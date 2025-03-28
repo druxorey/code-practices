@@ -1,8 +1,10 @@
 #include <iostream>
 #include <queue>
 
+#pragma once
+
 template <typename datatype>
-class dxqueue : public std::queue<datatype> {
+class DxQueue : public std::queue<datatype> {
 	public:
 		void fill(int size, int initialValue = 0);
 		void rand(int size);
@@ -10,7 +12,7 @@ class dxqueue : public std::queue<datatype> {
 
 // Fill the queue with values
 template <typename datatype>
-void dxqueue<datatype>::fill(int size, int initialValue) {
+void DxQueue<datatype>::fill(int size, int initialValue) {
 	for (int i = initialValue; i < size + initialValue; i++) {
 		this->push(i);
 	}
@@ -18,14 +20,14 @@ void dxqueue<datatype>::fill(int size, int initialValue) {
 
 // Fill the queue with random values
 template <typename datatype>
-void dxqueue<datatype>::rand(int size) {
+void DxQueue<datatype>::rand(int size) {
 	srand(time(NULL));
 	for (int i = 0; i < size; i++) {
 		this->push(::rand() % size);
 	}
 }
 
-inline void printQueue(dxqueue<int> queue) {
+inline void printQueue(DxQueue<int> queue) {
 	int size = queue.size(), index = 1;
 	int maxNumber = std::to_string(queue.size()).length();
 	while (!queue.empty()) {

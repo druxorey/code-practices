@@ -4,8 +4,8 @@
 
 #define INT_MIN -2147483648
 
-dxlist<int> mixLists(const dxlist<int> &firstList, const dxlist<int> &secondList) {
-	dxlist<int> mergedList;
+DxList<int> mixLists(const DxList<int> &firstList, const DxList<int> &secondList) {
+	DxList<int> mergedList;
 	auto firstListIterator = firstList.rbegin();
 	auto secondListIterator = secondList.rbegin();
 
@@ -26,7 +26,7 @@ dxlist<int> mixLists(const dxlist<int> &firstList, const dxlist<int> &secondList
 }
 
 
-void fillList(dxlist<int> &firstList, dxlist<int> &secondList, int size) {
+void fillList(DxList<int> &firstList, DxList<int> &secondList, int size) {
 	int nodeIndex = 0;
 
 	for (int i = 0; i < size; i++) {
@@ -44,7 +44,7 @@ int main() {
 	std::cout << "Enter the size of the lists: ";
 	std::cin >> listSize;
 
-	dxlist<int> firstList, secondList;
+	DxList<int> firstList, secondList;
 	fillList(firstList, secondList, listSize);
 
 	std::cout << "\n\e[0;33mFirst List\e[0m:\n";
@@ -53,7 +53,7 @@ int main() {
 	std::cout << "\n\e[0;33mSecond List\e[0m:\n";
 	secondList.print();
 
-	dxlist<int> mergedList = mixLists(firstList, secondList);
+	DxList<int> mergedList = mixLists(firstList, secondList);
 	std::cout << "\n\e[0;33mMixed List\e[0m:\n";
 	mergedList.print();
 	std::cout << "\n";

@@ -2,9 +2,9 @@
 #include "../U1-libraries/dxstack.hpp"
 #include "../U1-libraries/dxinput.hpp"
 
-int getSum(dxstack<int> stack, int sumSize) {
+int getSum(DxStack<int> stack, int sumSize) {
 	int finalSum = 0;
-	dxstack<int> temporalStack;
+	DxStack<int> temporalStack;
 
 	for (int i = 0; i <= (stack.size() - sumSize); i++) {
 		temporalStack.push(stack.top());
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 	getcin("Enter the size of the stack: ", stackSize);
 	getcin("Enter the number of elements to sum: ", sumSize);
 
-	dxstack<int> stack;
+	DxStack<int> stack;
 	stack.fill(stackSize, 1);
 	printf("\n\e[0;34mInitial stack: \e[0m\n\n");
 	printStack(stack);

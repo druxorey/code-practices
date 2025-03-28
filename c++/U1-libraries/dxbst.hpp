@@ -1,51 +1,53 @@
 #include <iostream>
 
-class binaryTreeNode {
+#pragma once
+
+class BstNode {
 	public:
 		int value;
-		binaryTreeNode *leftChild;
-		binaryTreeNode *rightChild;
+		BstNode *leftChild;
+		BstNode *rightChild;
 
-		binaryTreeNode();
-		binaryTreeNode(int value);
-		~binaryTreeNode();
+		BstNode();
+		BstNode(int value);
+		~BstNode();
 
 		// Function to check if the node is a leaf (no children)
 		bool isLeaf();
 
 		// Overload the << operator to print the binaryTreeNode object
-		friend std::ostream &operator<<(std::ostream &out, binaryTreeNode &object);
+		friend std::ostream &operator<<(std::ostream &out, BstNode &object);
 		// Overload the << operator to print the binaryTreeNode pointer
-		friend std::ostream &operator<<(std::ostream &out, binaryTreeNode *&object);
+		friend std::ostream &operator<<(std::ostream &out, BstNode *&object);
 };
 
 // Default constructor implementation
-inline binaryTreeNode::binaryTreeNode() {
+inline BstNode::BstNode() {
 	this->value = 0;
 	leftChild = NULL;
 	rightChild = NULL;
 }
 
 // Constructor with a value parameter implementation
-inline binaryTreeNode::binaryTreeNode(int value) {
+inline BstNode::BstNode(int value) {
 	this->value = value;
 	leftChild = NULL;
 	rightChild = NULL;
 }
 
 // Destructor implementation
-inline binaryTreeNode::~binaryTreeNode() {
+inline BstNode::~BstNode() {
 	if (leftChild != NULL) delete leftChild;
 	if (rightChild != NULL) delete rightChild;
 }
 
 // Function to check if the node is a leaf (no children)
-inline bool binaryTreeNode::isLeaf() {
+inline bool BstNode::isLeaf() {
 	return leftChild == NULL && rightChild == NULL;
 }
 
 // Overload the << operator to print the binaryTreeNode object
-inline std::ostream &operator<<(std::ostream &out, binaryTreeNode &object) {
+inline std::ostream &operator<<(std::ostream &out, BstNode &object) {
 	out << "BinaryNode Payload: " << object.value;
 
 	out << " Left Child: ";
@@ -64,7 +66,7 @@ inline std::ostream &operator<<(std::ostream &out, binaryTreeNode &object) {
 }
 
 // Overload the << operator to print the binaryTreeNode pointer
-inline std::ostream &operator<<(std::ostream &out, binaryTreeNode *&object) {
+inline std::ostream &operator<<(std::ostream &out, BstNode *&object) {
 	if (object == NULL) {
 		out << "null";
 		return out;
@@ -88,38 +90,38 @@ inline std::ostream &operator<<(std::ostream &out, binaryTreeNode *&object) {
 }
 
 
-class binaryTree {
+class Bst {
 	public:
-		binaryTreeNode *root;
+		BstNode *root;
 
-		binaryTree();
+		Bst();
 		void insert(int value); // Function to insert a value into the tree
 		bool found(int value); // Function to check if a value is found in the tree
 
 	private:
-		void insert(int value, binaryTreeNode *&root); // Helper function to insert a value into the tree
-		bool found(int value, binaryTreeNode *root); // Helper function to check if a value is found in the tree
+		void insert(int value, BstNode *&root); // Helper function to insert a value into the tree
+		bool found(int value, BstNode *root); // Helper function to check if a value is found in the tree
 };
 
 // Default constructor implementation
-inline binaryTree::binaryTree() {
+inline Bst::Bst() {
 	root = NULL;
 }
 
 // Function to insert a value into the tree
-inline void binaryTree::insert(int value) {
+inline void Bst::insert(int value) {
 	insert(value, root);
 }
 
 // Function to check if a value is found in the tree
-inline bool binaryTree::found(int value) {
+inline bool Bst::found(int value) {
 	return found(value, root);
 }
 
 // Helper function to insert a value into the tree
-inline void binaryTree::insert(int value, binaryTreeNode *&root) {
+inline void Bst::insert(int value, BstNode *&root) {
 	if (root == NULL) {
-		root = new binaryTreeNode(value);
+		root = new BstNode(value);
 		return;
 	}
 
@@ -130,7 +132,7 @@ inline void binaryTree::insert(int value, binaryTreeNode *&root) {
 }
 
 // Helper function to check if a value is found in the tree
-inline bool binaryTree::found(int value, binaryTreeNode *root) {
+inline bool Bst::found(int value, BstNode *root) {
 	if (root == NULL) return false;
 	if (root->value == value) return true;
 	if (root->value < value) return found(value, root->rightChild);

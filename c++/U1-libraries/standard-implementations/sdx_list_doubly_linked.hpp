@@ -1,14 +1,16 @@
 #include <iostream>
 #include "sdx_node.hpp"
 
+#pragma once
+
 template <typename datatype>
-class list {
+class StandardDoubleList {
 	public:
 		// Define an alias for a pointer to a doubleNode
-		typedef doubleNode<datatype> *iterator;
+		typedef DoubleNode<datatype> *iterator;
 
-		list();
-		~list();
+		StandardDoubleList();
+		~StandardDoubleList();
 
 		iterator first();
 		iterator last();
@@ -28,7 +30,7 @@ class list {
 
 // Constructor: Initializes an empty list
 template <typename datatype>
-list<datatype>::list() {
+StandardDoubleList<datatype>::StandardDoubleList() {
 	this->_first = nullptr;
 	this->_last = nullptr;
 	this->_size = 0;
@@ -36,7 +38,7 @@ list<datatype>::list() {
 
 // Destructor: Cleans up the list by deleting all nodes
 template <typename datatype>
-list<datatype>::~list() {
+StandardDoubleList<datatype>::~StandardDoubleList() {
 	while (!this->isEmpty()) {
 		// Delete nodes one by one until the list is empty
 		this->deleteNode(this->first());
@@ -45,55 +47,55 @@ list<datatype>::~list() {
 
 // Returns an iterator to the first node in the list
 template <typename datatype>
-typename::list<datatype>::iterator list<datatype>::first() {
+typename::StandardDoubleList<datatype>::iterator StandardDoubleList<datatype>::first() {
 	return this->_first;
 }
 
 // Returns an iterator to the last node in the list
 template <typename datatype>
-typename::list<datatype>::iterator list<datatype>::last() {
+typename::StandardDoubleList<datatype>::iterator StandardDoubleList<datatype>::last() {
 	return this->_last;
 }
 
 // Returns a pointer to the data stored in the node pointed to by the iterator
 template <typename datatype>
-datatype *list<datatype>::get(iterator i) const {
+datatype *StandardDoubleList<datatype>::get(iterator i) const {
 	if (i == nullptr) return nullptr;
 	return &i->payload;
 }
 
 // Advances the iterator to the next node
 template <typename datatype>
-void list<datatype>::next(iterator &i) const {
+void StandardDoubleList<datatype>::next(iterator &i) const {
 	if (i == nullptr) return;
 	i = i->next;
 }
 
 // Moves the iterator to the previous node
 template <typename datatype>
-void list<datatype>::prev(iterator &i) const {
+void StandardDoubleList<datatype>::prev(iterator &i) const {
 	if (i == nullptr) return;
 	i = i->prev;
 }
 
 // The list is empty if _first is null
 template <typename datatype>
-bool list<datatype>::isEmpty() const {
+bool StandardDoubleList<datatype>::isEmpty() const {
 	return this->_first == nullptr;
 }
 
 // Return the number of nodes in the list
 template <typename datatype>
-int list<datatype>::size() const {
+int StandardDoubleList<datatype>::size() const {
 	return this->_size;
 }
 
 // Inserts a new node with the given payload before or after the node pointed
 // to by the iterator
 template <typename datatype>
-void list<datatype>::insert(iterator i, datatype payload, bool before) {
+void StandardDoubleList<datatype>::insert(iterator i, datatype payload, bool before) {
 	// Create a new node with the given payload
-	doubleNode<datatype> *newNode = new doubleNode<datatype>(payload);
+	DoubleNode<datatype> *newNode = new DoubleNode<datatype>(payload);
 
 	this->_size++;
 
@@ -133,7 +135,7 @@ void list<datatype>::insert(iterator i, datatype payload, bool before) {
 
 // Deletes the node pointed to by the iterator
 template <typename datatype>
-void list<datatype>::deleteNode(iterator i) {
+void StandardDoubleList<datatype>::deleteNode(iterator i) {
 	if (i == nullptr) return;
 
 	this->_size--;
@@ -152,8 +154,8 @@ void list<datatype>::deleteNode(iterator i) {
 
 // Print the contents of the list using this implementation
 template <typename datatype>
-void printList(list<datatype> &myList) {
-	typename list<datatype>::iterator listIterator = myList.first();
+void printList(StandardDoubleList<datatype> &myList) {
+	typename StandardDoubleList<datatype>::iterator listIterator = myList.first();
 	int nodeIndex = 1;
 	while (listIterator != nullptr) {
 		datatype retrievedData = *myList.get(listIterator);

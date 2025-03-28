@@ -1,19 +1,21 @@
 #include "dxlist.hpp"
 
+#pragma once
+
 template <typename datatype>
-class ring : public dxlist<datatype> {
+class Ring : public DxList<datatype> {
 	public:
 		void add(const datatype& value);
 		void remove();
 		datatype& next();
 
 	private:
-		typename dxlist<datatype>::iterator it;
+		typename DxList<datatype>::iterator it;
 };
 
 // Allows the user to add a new value to the ring
 template <typename datatype>
-void ring<datatype>::add(const datatype& value) {
+void Ring<datatype>::add(const datatype& value) {
 	this->push_back(value);
 	if (this->size() == 1) {
 		it = this->begin();
@@ -22,7 +24,7 @@ void ring<datatype>::add(const datatype& value) {
 
 // Allows the user to remove the current value from the ring
 template <typename datatype>
-void ring<datatype>::remove() {
+void Ring<datatype>::remove() {
 	if (!this->empty()) {
 		it = this->erase(it);
 		if (it == this->end() && !this->empty()) {
@@ -33,7 +35,7 @@ void ring<datatype>::remove() {
 
 // Allows the user to get the next value in the ring in a circular way
 template <typename datatype>
-datatype& ring<datatype>:: next() {
+datatype& Ring<datatype>:: next() {
 	if (this->empty()) {
 		throw std::out_of_range("List is empty");
 	}

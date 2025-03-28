@@ -2,8 +2,8 @@
 #include "../U1-libraries/dxstack.hpp"
 #include "../U1-libraries/dxinput.hpp"
 
-dxstack<int> getPairs(dxstack<int> stack) {
-	dxstack<int> temporalStack;
+DxStack<int> getPairs(DxStack<int> stack) {
+	DxStack<int> temporalStack;
 	int sum;
 
 	while (!stack.empty()) {
@@ -36,13 +36,13 @@ int main(int argc, char *argv[]) {
 	int stackSize;
 	getcin("Enter the size of the stack: ", stackSize);
 
-	dxstack<int> stack;
+	DxStack<int> stack;
 	stack.rand(stackSize);
 
 	printf("\n\e[0;34mInitial stack: \e[0m\n\n");
 	printStack(stack);
 
-	dxstack<int> pairStack = getPairs(stack);
+	DxStack<int> pairStack = getPairs(stack);
 	printf("\n\e[0;34mPair stack: \e[0m\n\n");
 	printStack(pairStack);
 
