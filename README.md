@@ -46,6 +46,14 @@ Then run it with the next command:
 
     ./script-name
 
+If you want to compile the test cases, use the following command:
+
+    g++ -DENABLE_TEST script-name.cpp -o script-compiled
+
+Then run it with the next command:
+
+	./script-compiled
+
 ### Golang
 
 To execute a Go script, navigate to the directory containing the script and compile it with `go` using the following command:
