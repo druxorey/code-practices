@@ -2,7 +2,10 @@
 
 #pragma once
 
-// Template function to get user input
+#define repeat(n) for(int i = 0; i < n; i++) // Macro to simplify loop syntax
+#define enter std::cin.get(); std::cin.ignore() // Macro to handle user input pause
+
+// Template function to get user input with validation
 template <typename datatype>
 void getcin(std::string message, datatype &input) {
 	do {
@@ -20,14 +23,7 @@ void getcin(std::string message, datatype &input) {
 	} while (true);
 }
 
-// Function to pause execution until the user presses Enter
-inline void enter() {
-	printf("\nPress enter to continue..");
-	std::cin.get(); // Wait for user to press enter
-	std::cin.ignore();
-}
-
-
+// Function to validate the number of command-line arguments
 inline void isArgumentValid(int argc, char *argv[], int expected) {
 	if (argc != expected + 1) {
 		std::cerr << "\e[0;31m[ERROR]\e[0m Usage: " << argv[0] << " <input-file>\n";
