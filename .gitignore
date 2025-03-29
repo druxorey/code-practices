@@ -14,6 +14,7 @@
 # Untrack output files
 **/*.out
 **/*.exe
+**/*.class
 
 # Root directory to allocate test files
 .untracked
