@@ -1,4 +1,6 @@
+#include <cstdlib>
 #include <list>
+#include <iostream>
 
 #pragma once
 
@@ -17,7 +19,7 @@ class Cell {
 		Cell(unsigned int rowIndex, unsigned int columnIndex) : row(rowIndex), column(columnIndex) {}
 
 		// Constructor initializing row, column, and value with given parameters
-		Cell(unsigned int rowIndex, unsigned int columnIndex, datatype value) : Cell(rowIndex, columnIndex), value(value) {}
+		Cell(unsigned int rowIndex, unsigned int columnIndex, datatype value) : row(rowIndex), column(columnIndex), value(value) {}
 };
 
 // Template class representing a row in the sparse matrix
@@ -38,25 +40,21 @@ class Row {
 template<typename datatype>
 class SparseMatrix {
 	public:
-		// Constructor initializing the null value
-		SparseMatrix(datatype nullValue) : nullValue(nullValue) {}
-
-		// Method to get the value at a specific row and column
-		datatype get(int rowIndex, int columnIndex);
-
-		// Method to set the value at a specific row and column
-		void set(int rowIndex, int columnIndex, datatype value);
+		SparseMatrix(datatype nullValue) : nullValue(nullValue) {} // Constructor initializing the null value
+		datatype get(int rowIndex, int columnIndex); // Method to get the value at a specific row and column
+		void set(int rowIndex, int columnIndex, datatype value); // Method to set the value at a specific row and column
+		void fill(int rows, int columns, int elements);
+		void print(int rows, int columns);
 
 	private:
 		datatype nullValue; // Value to return when the element does not exist
 		std::list<Row<datatype>> rows; // List of rows in the matrix
 
-		// Method to get a pointer to a row by its index
-		Row<datatype>* getRow(int index);
-
-		// Method to get a pointer to a cell by its row and column
-		Cell<datatype>* getCell(Row<datatype>* row, int column);
+		Row<datatype>* getRow(int index); // Method to get a pointer to a row by its index
+		Cell<datatype>* getCell(Row<datatype>* row, int column); // Method to get a pointer to a cell by its row and column
 };
+
+
 
 // Implementation of the get method
 template<typename datatype>
@@ -119,4 +117,41 @@ Cell<datatype>* SparseMatrix<datatype>::getCell(Row<datatype>* row, int column) 
 	}
 
 	return nullptr;
+}
+
+// Method to fill the sparse matrix with random values
+template<typename datatype>
+void SparseMatrix<datatype>::fill(int rows, int columns, int elements) {
+	int thisRow, thisColumn, newValue;
+	srand(time(NULL));
+
+	int maxElements = columns * rows;
+	if (elements > maxElements) elements = maxElements;
+
+	for (int i = 0; i < elements; i++) {
+		thisRow = rand() % rows;
+		thisColumn = rand() % columns;
+		newValue = rand() % 10;
+
+		if (get(thisRow, thisColumn) != 0) {
+			elements++;
+			continue;
+		}
+
+		set(thisRow, thisColumn, newValue);
+	}
+}
+
+// Implementation of the print method
+template<typename datatype>
+void SparseMatrix<datatype>::print(int rows, int columns) {
+	for (int i = 0; i < rows; i++) {
+		std::cout << "\e[0;34m|\e[0m"; // Print the initial separator
+		for (int j = 0; j < columns; j++) {
+			int value = this->get(i, j); // Devuelve 10
+			std::cout << value; // Print falseChar if the element is false
+			std::cout << "\e[0;34m|\e[0m"; // Print the separator
+		}
+		std::cout << '\n';
+	}
 }
