@@ -6,7 +6,7 @@ int main(int argc, char *argv[]) {
 
 	ulli seconds, minutes, hours, days, weeks, months, years;
 
-	printf("Enter the seconds: ");
+	std::cout << "Enter the seconds: ";
 	std::cin >> seconds;
 
 	minutes = seconds / 60;
@@ -16,13 +16,13 @@ int main(int argc, char *argv[]) {
 	months = days / 30;
 	years = days / 365;
 
-	printf("\n\e[0;32m[+] \e[0mSeconds: %llu\n", seconds);
-	printf("\e[0;32m[+] \e[0mMinutes: %llu\n", minutes);
-	printf("\e[0;32m[+] \e[0mHours: %llu\n", hours);
-	printf("\e[0;32m[+] \e[0mDays: %llu\n", days);
-	printf("\e[0;32m[+] \e[0mWeeks: %llu\n", weeks);
-	printf("\e[0;32m[+] \e[0mMonths: %llu\n", months);
-	printf("\e[0;32m[+] \e[0mYears: %llu\n", years);
+	std::cout << "\n\e[0;32m[+] \e[0mSeconds: " << seconds << '\n';
+	std::cout << "\e[0;32m[+] \e[0mMinutes: " << minutes << '\n';
+	std::cout << "\e[0;32m[+] \e[0mHours: " << hours << '\n';
+	std::cout << "\e[0;32m[+] \e[0mDays: " << days << '\n';
+	std::cout << "\e[0;32m[+] \e[0mWeeks: " << weeks << '\n';
+	std::cout << "\e[0;32m[+] \e[0mMonths: " << months << '\n';
+	std::cout << "\e[0;32m[+] \e[0mYears: " << years << "\n\n";
 
 	return 0;
 }

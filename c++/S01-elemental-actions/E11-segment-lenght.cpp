@@ -14,10 +14,10 @@ int main(int argc, char *argv[]) {
 
 	double lenght = sqrt( pow((x2 - x1), 2) + pow((y2 - y1), 2));
 	double xHalf = ((x1 - x2) / 2) + x1;
-	double tHalf = ((y1 - y2) / 2) + y1;
+	double yHalf = ((y1 - y2) / 2) + y1;
 
-	printf("The lenght of the segment is: \e[0;32m%.2f\e[0m\n", lenght);
-	printf("The middle point of the segment is: \e[0;32m(%.2f, %.2f)\e[0m\n", xHalf, tHalf);
+	printf("\nThe length of the segment is: \e[0;32m%.2f\e[0m\n", lenght);
+	printf("The middle point of the segment is: \e[0;32m(%.2f, %.2f)\e[0m\n\n", xHalf, yHalf);
 
 	return 0;
 }

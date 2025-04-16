@@ -17,8 +17,9 @@ int main(int argc, char *argv[]) {
 	double sphericalAngle = cylindricalAngle;
 	double sphericalHeight = acos(zCartesian / sphericalRadius);
 
-	printf(" - Cylindrical Coordinates: (r, θ, z) = \e[0;32m(%.4f, %.4f, %.4f)\e[0m\n", cylindricalRadius, cylindricalAngle, cylindricalHeight);
-	printf(" - Spherical Coordinates: (r, θ, φ) = \e[0;32m(%.4f, %.4f, %.4f)\e[0m\n", sphericalRadius, sphericalAngle, sphericalHeight);
+	printf("\n\e[1;32m[RESULT]\e[0m The coordinates in different systems are:\n");
+	printf(" - Cylindrical Coordinates: r = \e[0;32m%.4f\e[0m, θ = \e[0;32m%.4f\e[0m, z = \e[0;32m%.4f\e[0m\n", cylindricalRadius, cylindricalAngle, cylindricalHeight);
+	printf(" - Spherical Coordinates: r = \e[0;32m%.4f\e[0m, θ = \e[0;32m%.4f\e[0m, φ = \e[0;32m%.4f\e[0m\n", sphericalRadius, sphericalAngle, sphericalHeight);
 
 	return 0;
 }

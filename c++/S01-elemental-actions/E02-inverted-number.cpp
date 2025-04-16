@@ -3,22 +3,21 @@
 int main(int argc, char *argv[]) {
 	std::cout << "\n\e[0;35m[========= INVERTED NUMBER =========]\e[0m\n\n";
 
-	int originalNumber, invertedNumber = 0;
+	int inputNumber, invertedNumber = 0;
 
-	std::cout << "Enter a 4 digit number: "; 
-	std::cin >> originalNumber;
+	std::cout << "Please enter a 4-digit number to invert: ";
+	std::cin >> inputNumber;
 
-	int firstDigit, secondDigit, thirdDigit, fourthDigit;
+	int digit1, digit2, digit3, digit4;
 
-	firstDigit = originalNumber / 1000;
-	secondDigit = (originalNumber % 1000) / 100;
-	thirdDigit = (originalNumber % 100) / 10;
-	fourthDigit = originalNumber % 10;
+	digit1 = (inputNumber / 1000);
+	digit2 = (inputNumber % 1000) / 100;
+	digit3 = (inputNumber % 100) / 10;
+	digit4 = (inputNumber % 10);
 
-	invertedNumber = (fourthDigit * 1000) + (thirdDigit * 100) + (secondDigit * 10) + firstDigit;
+	invertedNumber = (digit4 * 1000) + (digit3 * 100) + (digit2 * 10) + digit1;
 
-	std::cout << "The result of inverting the number is: " << invertedNumber << '\n';
+	std::cout << "\n\e[1;32m[RESULT]\e[0m The inverted number is: " << invertedNumber << "\n\n";
 
 	return 0;
 }
-

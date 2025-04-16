@@ -5,15 +5,15 @@ int main(int argc, char *argv[]) {
 
 	int hour, minute;
 
-	printf("Enter the hour: ");
+	std::cout << "Enter the hour: ";
 	std::cin >> hour;
-	printf("Enter the minute: ");
+	std::cout << "Enter the minutes: ";
 	std::cin >> minute;
 
 	int mirrorHour = 11 - hour;
 	int mirrorMinute = 60 - minute;
 
-	printf("\n\e[0;32mThe mirror time is: %02d:%02d\e[0m\n\n", mirrorHour, mirrorMinute);
+	printf("\n\e[1;32m[RESULT]\e[0m The mirror time is: \e[0;32m%02d:%02d\e[0m\n\n", mirrorHour, mirrorMinute);
 
 	return 0;
 }

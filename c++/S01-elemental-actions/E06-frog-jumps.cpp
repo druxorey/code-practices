@@ -5,11 +5,11 @@ int main(int argc, char *argv[]) {
 
 	int joseDistance, pedroDistance, joseJumps;
 
-	std::cout << "Enter the distance Jose can jump: ";
+	std::cout << "Enter the distance Jose can jump (in cm): ";
 	std::cin >> joseDistance;
-	std::cout << "Enter the times Jose will jump: ";
+	std::cout << "Enter the number of jumps Jose will make: ";
 	std::cin >> joseJumps;
-	std::cout << "Enter the distance Pedro can jump: ";
+	std::cout << "Enter the distance Pedro can jump (in cm): ";
 	std::cin >> pedroDistance;
 	std::cout << '\n';
 
@@ -20,11 +20,12 @@ int main(int argc, char *argv[]) {
 
 	int mcm = (joseDistance * pedroDistance) / mcmDivisor;
 
-	if ( mcm <= joseJumps * joseDistance ){
-		std::cout << "The frogs will meet at the same point after \e[0;32m" << mcm / joseDistance << " jumps\e[0m." << '\n';
-		std::cout << "They will meet at \e[0;32m" << mcm << " cm\e[0mfrom the start." << '\n';
-	} else{
-		std::cout << "The frogs will not meet at some point before Jose finishes all his jumps." << '\n';
+	if (mcm <= joseJumps * joseDistance) {
+		std::cout << "\n\e[1;32m[RESULT]\e[0m The frogs will meet at the same point:\n";
+		std::cout << "  - Jumps required: " << mcm / joseDistance << '\n';
+		std::cout << "  - Distance from start: " << mcm << " cm\n\n";
+	} else {
+		std::cout << "\e[1;31m[RESULT]\e[0m The frogs will not meet before Jose finishes all his jumps.\n\n";
 	}
 
 	return 0;

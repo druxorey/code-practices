@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	xFinal = (firstX + secondX + thirdX) / 3;
 	yFinal = (firstY + secondY + thirdY) / 3;
 
-	std::cout << "The final coordinate is X:" << xFinal << " Y:" << yFinal << '\n';
+	std::cout << "\n\e[1;32m[RESULT]\e[0m The final coordinate is X:" << xFinal << " Y:" << yFinal << "\n\n";
 
 	return 0;
 }

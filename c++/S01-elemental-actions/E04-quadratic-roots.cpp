@@ -6,20 +6,21 @@ int main(int argc, char *argv[]) {
 
 	float quadratic, lineal, independent;
 
-	std::cout << "Enter the quadratic coefficient: ";
+	std::cout << "Enter the coefficient A (quadratic term): ";
 	std::cin >> quadratic;
-	std::cout << "Enter the lineal coefficient: ";
+	std::cout << "Enter the coefficient B (linear term): ";
 	std::cin >> lineal;
-	std::cout << "Enter the independent term: ";
+	std::cout << "Enter the coefficient C (constant term): ";
 	std::cin >> independent;
 
 	float discriminant = lineal * lineal - 4 * quadratic * independent;
 
-	float firstRoot = (-1 * lineal + sqrt(discriminant)) / (2 * quadratic);
-	float secondRoot = (-1 * lineal - sqrt(discriminant)) / (2 * quadratic);
+	float firstRoot = (-lineal + sqrt(discriminant)) / (2 * quadratic);
+	float secondRoot = (-lineal - sqrt(discriminant)) / (2 * quadratic);
 
-	std::cout << "\nThe first root is: " << firstRoot << '\n';
-	std::cout << "The second root is: " << secondRoot << '\n';
+	std::cout << "\n\e[1;32m[RESULT]\e[0m The roots of the quadratic equation are:\n";
+	std::cout << " - Root 1: " << firstRoot << '\n';
+	std::cout << " - Root 2: " << secondRoot << "\n\n";
 
 	return 0;
 }
