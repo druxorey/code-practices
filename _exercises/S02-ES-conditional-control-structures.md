@@ -1,6 +1,6 @@
 # Estructuras de Control Condicional
 
-1) **E01-palindrome-check**: Haga un algoritmo que imprima *“Capicua”* si un número de entrada de 5 dígitos es palíndromo, o *“No es Capicúa”* en caso contrario. Un número es capicua si se escribe igual al derecho y a revés. **Ejemplo:** 545 es un número capicua.
+1) **E01-palindrome-check**: Haga un algoritmo que imprima *“Capicúa”* si un número de entrada de 5 dígitos es palíndromo, o *“No es Capicúa”* en caso contrario. Un número es palíndromo si se escribe igual al derecho y a revés. **Ejemplo:** 545 es un número palíndromo.
 
 2) **E02-parking-fee**: En un estacionamiento, la primera hora se cobra a razón de 80$ por hora (o fracción). Después de la primera hora, cada hora adicional (o fracción) se cobra a 100$. Escriba un algoritmo que reciba como entrada la hora de entrada y la hora de salida de un vehículo (formato de 24h) y calcule el monto a pagar. **Ejemplo:** Si el vehículo está 30 minutos, se cobrará 40$. Si el vehículo está una 1 hora y 30 minutos, se cobrará 130$.
 

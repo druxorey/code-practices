@@ -2,7 +2,7 @@
 
 1) **E01-digit-sequence**: Escriba un algoritmo que lea un número N y calcule e imprima el número de dígitos de N leyéndolo de izquierda a derecha. **Ejemplo:** Para el número "429356", la salida debe de ser '6'.
 
-2) **E02-palindrome-check**: Haga un algoritmo que determine si un número de N dígitos es palindromo. **Ejemplo:** El número "87436863478" al igual que el número "13655631".
+2) **E02-palindrome-check**: Haga un algoritmo que determine si un número de N dígitos es palíndromo. **Ejemplo:** El número "87436863478" al igual que el número "13655631".
 
 3) **E03-pi-approximation**: Escriba un algoritmo utilizando un ciclo para que calcule el valor aproximado de π usando la serie: `π = 4 − 4/3 + 4/5 − 4/7 + 4/9 . . . ± 4/n`.
 
