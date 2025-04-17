@@ -1,27 +1,158 @@
 # Elemental Actions
 
-1) **E01-legal-data**: Write a program that prompts the user to enter the following legal data: full name (string), age (int), gender (char), height in meters (float/double), weight in kilograms (float/double), and marital status (boolean value). Then, the program should print each of these values on a new line.
+## **E01-legal-data**:
 
-2) **E02-inverted-number**: Write an algorithm that reads a four-digit number and displays it reversed on the screen. **Example:** If the number is `4678`, the output should be `8764`.
+Write a program that asks the user to input the following legal data: full name (string), age (int), gender (char), height in meters (float/double), weight in kilograms (float/double), and marital status (boolean value). Then, the program must print each of these values on a new line.
 
-3) **E03-four-bit-decimal**: Write an algorithm that converts a four-bit binary number to a decimal number. **Note:** Ensure that the input is an integer, not characters. **Example:** If `1011` is entered, the result should be `11`.
+## **E02-inverted-number**:
 
-4) **E04-quadratic-roots**: Write an algorithm that takes as input the coefficients **a**, **b**, and **c** of a quadratic equation `(ax² + bx + c = 0)` and prints the values of x. Assume the equation always has real solutions. **Example:** If the coefficients are `a = 1`, `b = -3`, and `c = 2`, the solutions are `x1 = 2` and `x2 = 1`.
+Write an algorithm that reads a four-digit number and displays the number written in reverse.
 
-5) **E05-clock-angle**: Suppose an analog clock (with hands). Given the exact time (hours and minutes), write an algorithm that calculates the angle between the two hands. **Example:** At 3:00, the angle is 90 degrees. At 3:15, the angle is 7.5 degrees.
+**Example:**
 
-6) **E06-frog-jumps**: José and Pedro are two frogs. José can jump J centimeters, and Pedro can jump P centimeters. Assuming both frogs start jumping from the same point (and in the same direction), write an algorithm to determine if the frogs will land at the same point at some moment before José makes K jumps. If they meet, determine the first meeting point. **Example:** Suppose José can jump 3 centimeters (J = 3) and Pedro can jump 5 centimeters (P = 5). If José will make a maximum of 10 jumps (K = 10), they both meet for the first time at point 15 before José completes his 10 jumps.
+| Input  | Output |
+|--------|--------|
+| `4678` | `8764` |
+| `1234` | `4321` |
+| `1000` | `0001` |
+| `9876` | `6789` |
 
-7) **E07-line-intersection**: Given the equations of two non-parallel lines `y = m1x+b1` and `y = m2x+b2`, write an algorithm to calculate their intersection point. **Example:** If the equations are `y = 2x + 3` and `y = -x + 1`, the intersection point is `(x = -2/3, y = 5/3)`.
 
-8) **E08-multiplication-table**: Write a program that displays the multiplication table of a number entered by the user. **Example:** If the user enters `5`, the program should display the table of 5 (5x1, 5x2,…, 5x10).
+## **E03-four-bit-decimal**:
 
-9) **E09-pirate-coordinates**: After a maritime accident, a castaway wakes up on a deserted island. While exploring, they find a bottle with a scroll that reads: "If you decipher the hidden message, you will find a way to leave this place." On the back, three four-digit numbers are written. After a while, the castaway discovers a Cartesian plane on the scroll and a phrase written in special ink that reveals itself when in contact with water. The phrase reads: "In the center of the triangle, you will find the answer." After reading this, they realize that by separating the numbers into pairs (x, y) and plotting them on the plane connected by lines, a triangle is formed, leaving only the calculation of its centroid to find the point on the island where the mysterious secret is located. Write a program that simulates the process of deciphering the message, reading the 3 numbers, and outputting the centroid coordinates. **Example:** If the numbers are `1234`, `5678`, and `9101`, the points are `(12, 34)`, `(56, 78)`, and `(91, 01)`, and the centroid is `(53, 38)`.
+Write an algorithm that converts a four-bit binary number into a decimal number. **Note:** Ensure that the input is an integer, not characters.
 
-10) **E10-cylindrical-conversion**: Design a program that, given the Cartesian coordinates (x, y, z) of a point in space, calculates and displays its cylindrical and spherical coordinates. **Example:** If the coordinates are (3, 3, 4), the cylindrical coordinates are (4.24, 0.78, 4), and the spherical coordinates are (5.83, 0.78, 46.69).
+**Example:**
 
-11) **E11-segment-length**: Design a program that, given two points on the plane by their coordinates (x1, y1) and (x2, y2), calculates and displays the length of the segment determined by these points and calculates and displays the coordinates of the midpoint of that segment. **Note:** Assume the first point is always smaller than the second. **Example:** If the points are (1, 2) and (4, 6), the segment length is 5, and the midpoint is (2, 4).
+| Input  | Output |
+|--------|--------|
+| `1011` | `11`   |
+| `0001` | `1`    |
+| `1111` | `15`   |
+| `0100` | `4`    |
 
-12) **E12-seconds-conversion**: Design a program that, given a positive integer number of seconds, indicates how many years, months, days, hours, and seconds it equals. Assume years have 360 days and simplify all months to have 30 days. **Example:** 31,803,310 seconds equals 1 year, 3 days, 2 hours, 15 minutes, and 10 seconds.
 
-13) **E13-mirror-time**: Write a program that, given a time seen in a mirror, returns the real time. **Example:** At 8:05 seen in the mirror, the real time is 3:55.
+## **E04-quadratic-roots**:
+
+Write an algorithm that takes as input the coefficients **a**, **b**, and **c** of a quadratic equation `(ax² + bx + c = 0)` and prints the values of x. Assume the equation always has real-number solutions.
+
+**Example:**
+
+| Input                  | Output         |
+|------------------------|----------------|
+| `a = 1, b = -3, c = 2` | `x1 = 2, x2 = 1` |
+| `a = 1, b = -2, c = 1` | `x1 = 1, x2 = 1` |
+| `a = 2, b = 5, c = 3`  | `x1 = -1, x2 = -1.5` |
+
+
+## **E05-clock-angle**:
+
+Suppose an analog clock (with hands). Given the exact time (hours and minutes), write an algorithm that calculates the angle between the two hands.
+
+**Example:**
+
+| Input         | Output       |
+|---------------|--------------|
+| `time = 3:00` | `90 degrees` |
+| `time = 3:15` | `7.5 degrees`|
+| `time = 6:00` | `180 degrees`|
+| `time = 12:00`| `0 degrees`  |
+
+
+## **E06-frog-jumps**:
+
+José and Pedro are two frogs. José can jump J centimeters, and Pedro can jump P centimeters. Assuming both frogs start jumping from the same point (and in the same direction), write an algorithm to determine if the frogs will meet at the same point at any time before José makes K jumps. If they meet, determine the first meeting point.
+
+**Example:**
+
+| Input                          | Output                  |
+|--------------------------------|-------------------------|
+| `J = 3, P = 5, K = 10`         | `Meet at 15`           |
+| `J = 2, P = 4, K = 5`          | `Do not meet`          |
+| `J = 6, P = 9, K = 15`         | `Meet at 18`           |
+
+
+## **E07-line-intersection**:
+
+Given the equations of two non-parallel lines `y = m1x+b1` and `y = m2x+b2`, write an algorithm that calculates their intersection point.
+
+**Example:**
+
+| Input                          | Output                |
+|--------------------------------|-----------------------|
+| `m1 = 2, b1 = 3, m2 = -1, b2 = 1`| `(x = -2/3, y = 5/3)` |
+| `m1 = 1, b1 = 0, m2 = -1, b2 = 2`| `(x = 1, y = 1)`      |
+
+
+## **E08-multiplication-table**:
+
+Write a program that displays the multiplication table of a number entered by the user.
+
+**Example:**
+
+| Input | Output               |
+|-------|----------------------|
+| `5`   | `5x1=5, 5x2=10,...` |
+| `3`   | `3x1=3, 3x2=6,...`  |
+
+
+## **E09-pirate-coordinates**:
+
+After a maritime accident, a castaway wakes up on a deserted island. While exploring, they find a bottle with a scroll inside, which reads: "If you decipher the hidden message, you will find a way to leave this place." On the back of the scroll, three 4-digit numbers are written. After a few minutes, the castaway discovers a Cartesian plane on the scroll and a phrase written in special ink that reveals itself when in contact with water. The phrase says: "At the center of the triangle, you will find the answer." After reading this, they realize that separating the numbers into pairs (x, y) and plotting them on the plane, connected by lines, forms a triangle. The task is to calculate the centroid of the triangle to find the point on the island where the mysterious secret lies. Write a program that simulates the process of deciphering the message, reading the 3 numbers, and outputting the centroid coordinates.
+
+**Example:**
+
+| Input                  | Output       |
+|------------------------|--------------|
+| `1234, 5678, 9101`     | `(53, 38)`   |
+| `1111, 2222, 3333`     | `(22, 22)`   |
+
+
+## **E10-cylindrical-conversion**:
+
+Design a program that, given the Cartesian coordinates (x, y, z) of a point in space, calculates and displays its cylindrical and spherical coordinates.
+
+**Example:**
+
+| Input          | Output                              |
+|----------------|-------------------------------------|
+| `(3, 3, 4)`    | `Cylindrical: (4.24, 0.78, 4)`      |
+|                | `Spherical: (5.83, 0.78, 46.69)`    |
+
+
+## **E11-segment-length**:
+
+Design a program that, given two points in the plane by their coordinates (x1, y1) and (x2, y2), calculates and displays the length of the segment determined by these points and the coordinates of the midpoint of that segment. **Note:** Assume the first point is always smaller than the second.
+
+**Example:**
+
+| Input                  | Output                     |
+|------------------------|----------------------------|
+| `(1, 2), (4, 6)`       | `Length: 5, Midpoint: (2, 4)` |
+| `(0, 0), (3, 4)`       | `Length: 5, Midpoint: (1.5, 2)` |
+
+
+## **E12-seconds-conversion**:
+
+Design a program that, given a positive integer number of seconds, indicates how many years, months, days, hours, and seconds it is equivalent to. Assume years have 360 days and simplify all months to have 30 days.
+
+**Example:**
+
+| Input       | Output                                |
+|-------------|---------------------------------------|
+| `31803310`  | `1 year, 3 days, 2 hours, 15 minutes, 10 seconds` |
+| `86400`     | `1 day, 0 hours, 0 minutes, 0 seconds` |
+
+
+## **E13-mirror-time**:
+
+Write a program that, given a time seen in a mirror, returns the real time.
+
+**Example:**
+
+| Input       | Output       |
+|-------------|--------------|
+| `8:05`      | `3:55`       |
+| `6:30`      | `5:30`       |
+| `12:00`     | `12:00`      |
+
